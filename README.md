@@ -9,7 +9,7 @@ Um cadastro de motorista possui os campos: Nome (primeiro e último), Carro (mar
 Além do cadastro também será necessário disponibilizar uma listagem dos cadastros em ordem alfabética por nome ou sobrenome.
 
 ### Obrigatório
- - .NET Core
+ - .NET Core - C#
  - WebAPI
  - IoC
  - Código limpo
