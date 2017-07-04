@@ -1,6 +1,7 @@
 ﻿using System;
+using Wappa.Framework.Google.Geocoding.Core;
 
-namespace Wappa.Framework.Google.Geocoding
+namespace Wappa.Framework.Google.Geocoding.Exceptions
 {
     public class GoogleGeocodingException : Exception
     {

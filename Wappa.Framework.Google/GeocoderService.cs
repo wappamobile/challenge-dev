@@ -9,6 +9,7 @@ using Wappa.Framework.Google.Geocoding.Core;
 using System.Linq;
 using System.Xml.XPath;
 using System.IO;
+using Wappa.Framework.Google.Geocoding.Exceptions;
 
 namespace Wappa.Framework.Google.Geocoding
 {

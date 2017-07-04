@@ -1,4 +1,4 @@
-﻿namespace Wappa.Framework.Google.Geocoding
+﻿namespace Wappa.Framework.Google.Geocoding.Core
 {
     public enum GoogleStatus
     {
