@@ -8,14 +8,14 @@ namespace Wappa.Framework.Model.Abstrato
     public abstract class Pessoa
     {
         /// <summary>
-        /// Primeiro nome
+        /// Primeiro Nome
         /// </summary>
-        public string PrimeiroNome { get; set; }
+        public string Nome { get; set; }
 
         /// <summary>
         /// Último Nome
         /// </summary>
-        public string UltimoNome { get; set; }
+        public string Sobrenome { get; set; }
 
         /// <summary>
         /// Dados de onde reside
