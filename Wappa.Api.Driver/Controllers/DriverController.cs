@@ -11,10 +11,9 @@ namespace Wappa.Api.Driver.Controllers
     public class DriverController : Controller
     {
         /// <summary>
-        /// 
+        /// Sbphqk
         /// </summary>
         /// <example>GET: api/Driver</example>
-        /// <returns>Lista contendo todos os motoristas</returns>
         [HttpGet]
         public IEnumerable<Motorista> Get()
         {
@@ -31,7 +30,6 @@ namespace Wappa.Api.Driver.Controllers
         /// </summary>
         /// <example>GET: api/Driver/5</example>
         /// <param name="id"></param>
-        /// <returns></returns>
         [HttpGet("{id}", Name = "Get")]
         public string Get(int id)
         {

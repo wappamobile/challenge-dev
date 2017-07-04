@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Wappa.Api.Driver.Settings;
 using Wappa.Service.Geocoder;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace Wappa.Framework.Driver
 {
@@ -35,7 +36,19 @@ namespace Wappa.Framework.Driver
             services.AddOptions();
 
             services.Configure<DriverSettings>(Configuration.GetSection("DriverSettings"));
+
             services.AddSingleton<IGeocodingService, GeocodingService>();
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info
+                {
+                    Title = "Wappa Driver Api",
+                    Version = "v1",
+                    Description = "Wappa Driver Web API Documentation",
+                    Contact = new Contact { Name = "Jeffersonn Barboza", Email = "jeffersonnlucas@gmail.com", Url = "https://www.linkedin.com/in/jeffersonnlucas" }
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,6 +58,12 @@ namespace Wappa.Framework.Driver
             loggerFactory.AddDebug();
 
             app.UseMvc();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Wappa Driver Api V1");
+            });
         }
     }
 }
