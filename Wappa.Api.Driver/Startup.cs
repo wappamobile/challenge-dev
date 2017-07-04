@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Wappa.Api.Driver.Settings;
+using Wappa.Service.Geocoder;
 
 namespace Wappa.Framework.Driver
 {
@@ -29,6 +31,11 @@ namespace Wappa.Framework.Driver
         {
             // Add framework services.
             services.AddMvc();
+
+            services.AddOptions();
+
+            services.Configure<DriverSettings>(Configuration.GetSection("DriverSettings"));
+            services.AddSingleton<IGeocodingService, GeocodingService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

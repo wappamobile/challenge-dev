@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Controllers\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
   <ItemGroup>
@@ -24,7 +25,9 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.1" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Wappa.Api.Common.Model\Wappa.Framework.Model.csproj" />
+    <ProjectReference Include="..\Wappa.Framework.Data\Wappa.Framework.Data.csproj" />
+    <ProjectReference Include="..\Wappa.Framework.Model\Wappa.Framework.Model.csproj" />
+    <ProjectReference Include="..\Wappa.Service.Google\Wappa.Service.Geocoder.csproj" />
   </ItemGroup>
 
 </Project>
