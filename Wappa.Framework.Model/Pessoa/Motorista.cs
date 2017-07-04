@@ -5,6 +5,5 @@
     /// </summary>
     public sealed class Motorista : Abstrato.Pessoa
     {
-
     }
 }
