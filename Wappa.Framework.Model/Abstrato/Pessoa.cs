@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Runtime.Serialization;
 using Wappa.Framework.Model.Comum;
 
 namespace Wappa.Framework.Model.Abstrato
@@ -7,8 +7,14 @@ namespace Wappa.Framework.Model.Abstrato
     /// <summary>
     /// Classe base para definicao de uma Pessoa
     /// </summary>
+    [Serializable]
     public abstract class Pessoa
     {
+        /// <summary>
+        /// Identificador
+        /// </summary>
+        public long PessoaId { get; set; }
+
         /// <summary>
         /// Primeiro Nome
         /// </summary>
@@ -22,12 +28,23 @@ namespace Wappa.Framework.Model.Abstrato
         /// <summary>
         /// Uniao de Nome e Sobrenome
         /// </summary>
+        [IgnoreDataMember]
         public string NomeCompleto { get { return $"{this.Nome} {this.Sobrenome}"; } }
 
         /// <summary>
         /// Dados de onde reside
         /// </summary>
         public Endereco Endereco { get; set; }
+
+        public void Atualizar(Pessoa pessoa)
+        {
+            if (!this.Equals(pessoa))
+            {
+                this.Nome = pessoa.Nome;
+                this.Sobrenome = pessoa.Sobrenome;
+                this.Endereco.Atualizar(pessoa.Endereco);
+            }
+        }
 
         public override bool Equals(object obj)
         {

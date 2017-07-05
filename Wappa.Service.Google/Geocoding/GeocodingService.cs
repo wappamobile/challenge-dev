@@ -10,12 +10,26 @@ namespace Wappa.Service.Geocoder
 {
     public class GeocodingService : IGeocodingService
     {
-        public async Task<Endereco> ObterLocalizacaoAsync()
-        {
-            IGeocoderService geocoder = new GeocoderService() { ApiKey = "AIzaSyBsMg2pHj_HKH8SiMYQ3gvbCkobUotdKwg" };
-            IEnumerable<Address> addresses = await geocoder.GeocodeAsync("Avenida Bosque da Saude 710 Sao Paulo SP Brasil");
+        private string apiKey;
 
-            return new Endereco();
+        public GeocodingService(string apiKey)
+        {
+            this.apiKey = apiKey;
+        }
+
+        public async Task<Endereco> ObterLocalizacaoAsync(Endereco endereco)
+        {
+            IGeocoderService geocoder = new GeocoderService() { ApiKey = this.apiKey };
+            IEnumerable<Address> addresses = await geocoder.GeocodeAsync(endereco.Rua, endereco.Cidade, endereco.UF, endereco.CEP, endereco.Pais);
+
+            if(addresses.Any())
+            {
+                Address address = addresses.First();
+                endereco.Longitude = address.Coordinates.Longitude;
+                endereco.Latitude = address.Coordinates.Latitude;
+            }
+
+            return endereco;
         }
     }
 }

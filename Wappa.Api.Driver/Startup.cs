@@ -7,9 +7,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Wappa.Api.Driver.Settings;
 using Wappa.Service.Geocoder;
 using Swashbuckle.AspNetCore.Swagger;
+using Wappa.Framework.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace Wappa.Framework.Driver
 {
@@ -35,9 +36,7 @@ namespace Wappa.Framework.Driver
 
             services.AddOptions();
 
-            services.Configure<DriverSettings>(Configuration.GetSection("DriverSettings"));
-
-            services.AddSingleton<IGeocodingService, GeocodingService>();
+            services.AddSingleton<IGeocodingService>(new GeocodingService(Configuration.GetValue<string>("googleApiKey")));
 
             services.AddSwaggerGen(c =>
             {
@@ -48,7 +47,12 @@ namespace Wappa.Framework.Driver
                     Description = "Wappa Driver Web API Documentation",
                     Contact = new Contact { Name = "Jeffersonn Barboza", Email = "jeffersonnlucas@gmail.com", Url = "https://www.linkedin.com/in/jeffersonnlucas" }
                 });
+                c.IncludeXmlComments(string.Format(@"{0}\.xml", AppContext.BaseDirectory));
             });
+
+            services.AddEntityFrameworkSqlServer()
+                .AddDbContext<DriverContext>(
+                options => options.UseSqlServer(Configuration.GetConnectionString("BaseLiveDemo")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

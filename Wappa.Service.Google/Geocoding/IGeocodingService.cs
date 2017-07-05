@@ -5,6 +5,6 @@ namespace Wappa.Service.Geocoder
 {
     public interface IGeocodingService
     {
-        Task<Endereco> ObterLocalizacaoAsync();
+        Task<Endereco> ObterLocalizacaoAsync(Endereco endereco);
     }
 }
