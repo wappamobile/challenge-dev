@@ -1,0 +1,7 @@
+# Visual Studio Files
+
+*/obj
+*/bin
+*/wwwroot
+.vs
+**/PublishProfiles
