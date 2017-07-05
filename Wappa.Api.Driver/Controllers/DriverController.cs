@@ -12,6 +12,8 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 using Wappa.Framework.Model;
+using Swashbuckle.AspNetCore.SwaggerGen;
+using Wappa.Framework.Model.Enum;
 
 namespace Wappa.Api.Driver.Controllers
 {
@@ -30,6 +32,7 @@ namespace Wappa.Api.Driver.Controllers
         /// <param name="nome">Nome que será usado como filtro de busca</param>
         /// <param name="sobrenome">Sobrenome que será usado como filtro de busca</param>
         [HttpGet]
+        [Route("FindBy")]
         public IEnumerable<Motorista> Get([FromServices]DriverContext context, [FromQuery]string nome, [FromQuery]string sobrenome)
         {
             IEnumerable<Motorista> resposta = null;
@@ -38,6 +41,21 @@ namespace Wappa.Api.Driver.Controllers
                 resposta = BuscarPorNomeSobrenome(context, nome, sobrenome);
 
             return resposta;
+        }
+
+        /// <summary>
+        /// Consulta todos os motoristas e ordena o resultado
+        /// </summary>
+        /// <remarks>Método responsável por retornar a lista ordenada com base no tipo de ordenacao selecionado</remarks>
+        /// <param name="context">contexto de base</param>
+        /// <param name="ordenacao">Tipo de ordenacao</param>
+        [HttpGet]
+        [Route("All")]
+        public IEnumerable<Motorista> Get([FromServices]DriverContext context, [FromQuery]Ordenacao ordenacao)
+        {
+            IEnumerable<Motorista> motoristas = ObterMotoristasOrdenados(context, ordenacao);
+
+            return motoristas.Any() ? motoristas : null;
         }
 
         /// <summary>
@@ -83,23 +101,13 @@ namespace Wappa.Api.Driver.Controllers
         [HttpPut("{id}")]
         public void Put([FromServices]DriverContext context, long id, [FromBody]Motorista motorista)
         {
-            try
+            if (ValidarMotoristaExistente(context, id))
             {
-                if (ValidarMotoristaExistente(context, id))
-                {
-                    Motorista motoristaAtual = ObterMotorista(context, id);
+                Motorista motoristaAtual = ObterMotorista(context, id);
 
-                    AtualizarDadosMotorista(motoristaAtual, motorista);
+                AtualizarDadosMotorista(motoristaAtual, motorista);
 
-                    context.SaveChanges();
-                }
-            }
-            catch (Exception ex)
-            {
-                if (ex is HttpResponseException)
-                    throw;
-
-                throw new HttpResponseException(HttpStatusCode.InternalServerError);
+                context.SaveChanges();
             }
         }
 
@@ -112,25 +120,15 @@ namespace Wappa.Api.Driver.Controllers
         [HttpDelete("{id}")]
         public void Delete([FromServices]DriverContext context, long id)
         {
-            try
+            if (ValidarMotoristaExistente(context, id))
             {
-                if (ValidarMotoristaExistente(context, id))
-                {
-                    Motorista motorista = ObterMotorista(context, id);
+                Motorista motorista = ObterMotorista(context, id);
 
-                    context.Motoristas.Remove(motorista);
-                    context.Carros.Remove(motorista.Carro);
-                    context.Enderecos.Remove(motorista.Endereco);
+                context.Motoristas.Remove(motorista);
+                context.Carros.Remove(motorista.Carro);
+                context.Enderecos.Remove(motorista.Endereco);
 
-                    context.SaveChanges();
-                }
-            }
-            catch (Exception ex)
-            {
-                if (ex is HttpResponseException)
-                    throw;
-
-                throw new HttpResponseException(HttpStatusCode.InternalServerError);
+                context.SaveChanges();
             }
         }
 
@@ -155,21 +153,11 @@ namespace Wappa.Api.Driver.Controllers
 
         private void CriarMotorista(DriverContext context, Motorista motorista)
         {
-            try
-            {
-                ValidarMotoristaExistente(context, motorista);
+            ValidarMotoristaExistente(context, motorista);
 
-                context.Motoristas.Add(motorista);
+            context.Motoristas.Add(motorista);
 
-                context.SaveChanges();
-            }
-            catch (Exception ex)
-            {
-                if (ex is HttpResponseException)
-                    throw;
-
-                throw new HttpResponseException(HttpStatusCode.InternalServerError);
-            }
+            context.SaveChanges();
         }
 
         private void ValidarMotoristaExistente(DriverContext context, Motorista motorista)
@@ -197,27 +185,51 @@ namespace Wappa.Api.Driver.Controllers
 
         private static IEnumerable<Motorista> BuscarPorNomeSobrenome(DriverContext context, string nome, string sobrenome)
         {
-            try
+            IQueryable<Motorista> query = from m in context.Motoristas
+                                          .Include(m => m.Endereco)
+                                          .Include(m => m.Carro)
+                                          select m;
+
+            if (!string.IsNullOrWhiteSpace(nome))
+                query = query.Where(c => c.Nome.Contains(nome));
+
+            if (!string.IsNullOrWhiteSpace(sobrenome))
+                query = query.Where(c => c.Sobrenome.Contains(sobrenome));
+
+            IEnumerable<Motorista> motoristas = query.OrderBy(c => c.NomeCompleto).ToList();
+
+            return motoristas.Any() ? motoristas : null;
+        }
+
+        private IEnumerable<Motorista> ObterMotoristasOrdenados(DriverContext context, Ordenacao ordenacao)
+        {
+            IQueryable<Motorista> query = from m in context.Motoristas
+                                                      .Include(m => m.Endereco)
+                                                      .Include(m => m.Carro)
+                                          select m;
+
+            query = DefinirTipoOrdenacao(ordenacao, query);
+
+            IEnumerable<Motorista> motoristas = query.ToList();
+
+            return motoristas;
+        }
+
+        private IQueryable<Motorista> DefinirTipoOrdenacao(Ordenacao ordenacao, IQueryable<Motorista> query)
+        {
+            switch (ordenacao.TipoOrdenacao)
             {
-                IQueryable<Motorista> query = from m in context.Motoristas
-                                              .Include(m => m.Endereco)
-                                              .Include(m => m.Carro)
-                                              select m;
-
-                if (!string.IsNullOrWhiteSpace(nome))
-                    query = query.Where(c => c.Nome.Contains(nome));
-
-                if (!string.IsNullOrWhiteSpace(sobrenome))
-                    query = query.Where(c => c.Sobrenome.Contains(sobrenome));
-
-                IEnumerable<Motorista> motoristas = query.OrderBy(c => c.NomeCompleto).ToList();
-
-                return motoristas.Any() ? motoristas : null;
+                case TipoOrdenacao.Nome:
+                    query = query.OrderBy(m => m.Nome);
+                    break;
+                case TipoOrdenacao.Sobrenome:
+                    query = query.OrderBy(m => m.Sobrenome);
+                    break;
+                default:
+                    break;
             }
-            catch (Exception)
-            {
-                throw new HttpResponseException(HttpStatusCode.InternalServerError);
-            }
+
+            return query;
         }
     }
 }

@@ -11,11 +11,21 @@ using Wappa.Service.Geocoder;
 using Swashbuckle.AspNetCore.Swagger;
 using Wappa.Framework.Data;
 using Microsoft.EntityFrameworkCore;
+using System.Net;
+using Microsoft.AspNetCore.Diagnostics;
+using System.Web.Http;
 
 namespace Wappa.Framework.Driver
 {
+    /// <summary>
+    /// Classe de Startup
+    /// </summary>
     public class Startup
     {
+        /// <summary>
+        /// Construtor
+        /// </summary>
+        /// <param name="env"></param>
         public Startup(IHostingEnvironment env)
         {
             var builder = new ConfigurationBuilder()
@@ -26,9 +36,15 @@ namespace Wappa.Framework.Driver
             Configuration = builder.Build();
         }
 
+        /// <summary>
+        /// Configuration
+        /// </summary>
         public IConfigurationRoot Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        /// <summary>
+        /// This method gets called by the runtime. Use this method to add services to the container.
+        /// </summary>
+        /// <param name="services">services</param>
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
@@ -48,6 +64,7 @@ namespace Wappa.Framework.Driver
                     Contact = new Contact { Name = "Jeffersonn Barboza", Email = "jeffersonnlucas@gmail.com", Url = "https://www.linkedin.com/in/jeffersonnlucas" }
                 });
                 c.IncludeXmlComments(string.Format(@"{0}\.xml", AppContext.BaseDirectory));
+                c.DescribeAllEnumsAsStrings();
             });
 
             services.AddEntityFrameworkSqlServer()
@@ -55,7 +72,12 @@ namespace Wappa.Framework.Driver
                 options => options.UseSqlServer(Configuration.GetConnectionString("BaseLiveDemo")));
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        /// <summary>
+        /// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        /// </summary>
+        /// <param name="app">app</param>
+        /// <param name="env">env</param>
+        /// <param name="loggerFactory">loogFactory</param>
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
