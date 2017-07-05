@@ -3,16 +3,22 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp1.1</TargetFramework>
     <PackageTargetFallback>portable-net45+win8</PackageTargetFallback>
+    <ApplicationInsightsResourceId>/subscriptions/6a36875f-0246-4c70-8679-18efef0c3cf8/resourcegroups/LiveDemo/providers/microsoft.insights/components/challengedevsenior</ApplicationInsightsResourceId>
+    <ApplicationInsightsAnnotationResourceId>/subscriptions/6a36875f-0246-4c70-8679-18efef0c3cf8/resourceGroups/LiveDemo/providers/microsoft.insights/components/challengedevsenior</ApplicationInsightsAnnotationResourceId>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>bin\Debug\netcoreapp1.1\.xml</DocumentationFile>
-    <OutputPath>bin\Debug\netcoreapp1.1\</OutputPath>
+    <DocumentationFile>bin\Debug\netcoreapp1.1\DriverApi.xml</DocumentationFile>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netcoreapp1.1\DriverApi.xml</DocumentationFile>
+    <OutputPath>bin\Release\</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
     <Folder Include="Controllers\" />
-    <Folder Include="wwwroot\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
@@ -34,5 +40,15 @@
     <ProjectReference Include="..\Wappa.Framework.Model\Wappa.Framework.Model.csproj" />
     <ProjectReference Include="..\Wappa.Service.Google\Wappa.Service.Geocoder.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
+  </ItemGroup>
+  
+	<Target Name="PrepublishScript" BeforeTargets="PrepareForPublish">
+	  <ItemGroup>
+		<DocFile Include="bin\$(Configuration)\$(TargetFramework)\*.xml" />
+	  </ItemGroup>
+	  <Copy SourceFiles="@(DocFile)" DestinationFolder="$(PublishDir)" SkipUnchangedFiles="false" />
+	</Target>
 
 </Project>

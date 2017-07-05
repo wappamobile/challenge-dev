@@ -14,6 +14,8 @@ using Microsoft.EntityFrameworkCore;
 using System.Net;
 using Microsoft.AspNetCore.Diagnostics;
 using System.Web.Http;
+using Microsoft.Extensions.PlatformAbstractions;
+using System.IO;
 
 namespace Wappa.Framework.Driver
 {
@@ -33,6 +35,12 @@ namespace Wappa.Framework.Driver
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
+
+            if (env.IsDevelopment())
+            {
+                builder.AddApplicationInsightsSettings(developerMode: true);
+            }
+
             Configuration = builder.Build();
         }
 
@@ -63,13 +71,17 @@ namespace Wappa.Framework.Driver
                     Description = "Wappa Driver Web API Documentation",
                     Contact = new Contact { Name = "Jeffersonn Barboza", Email = "jeffersonnlucas@gmail.com", Url = "https://www.linkedin.com/in/jeffersonnlucas" }
                 });
-                c.IncludeXmlComments(string.Format(@"{0}\.xml", AppContext.BaseDirectory));
+                string basePath = PlatformServices.Default.Application.ApplicationBasePath;
+                string xmlPath = Path.Combine(basePath, "DriverApi.xml");
+                c.IncludeXmlComments(xmlPath);
                 c.DescribeAllEnumsAsStrings();
             });
 
             services.AddEntityFrameworkSqlServer()
                 .AddDbContext<DriverContext>(
                 options => options.UseSqlServer(Configuration.GetConnectionString("BaseLiveDemo")));
+
+            services.AddApplicationInsightsTelemetry(Configuration);
         }
 
         /// <summary>
@@ -83,7 +95,9 @@ namespace Wappa.Framework.Driver
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
-            app.UseMvc();
+            app.UseStaticFiles();
+
+            app.UseMvcWithDefaultRoute();
 
             app.UseSwagger();
             app.UseSwaggerUI(c =>
