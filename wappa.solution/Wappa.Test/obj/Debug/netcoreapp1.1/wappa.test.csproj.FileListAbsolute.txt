@@ -1,0 +1,15 @@
+c:\Users\clebe\Dropbox\DEV\VSCode\wappa.solution\wappa.test\bin\Debug\netcoreapp1.1\wappa.test.deps.json
+c:\Users\clebe\Dropbox\DEV\VSCode\wappa.solution\wappa.test\bin\Debug\netcoreapp1.1\wappa.test.runtimeconfig.json
+c:\Users\clebe\Dropbox\DEV\VSCode\wappa.solution\wappa.test\bin\Debug\netcoreapp1.1\wappa.test.runtimeconfig.dev.json
+c:\Users\clebe\Dropbox\DEV\VSCode\wappa.solution\wappa.test\obj\Debug\netcoreapp1.1\wappa.test.AssemblyInfo.cs
+c:\Users\clebe\Dropbox\DEV\VSCode\wappa.solution\wappa.test\bin\Debug\netcoreapp1.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+c:\Users\clebe\Dropbox\DEV\VSCode\wappa.solution\wappa.test\bin\Debug\netcoreapp1.1\xunit.runner.utility.netstandard15.dll
+c:\Users\clebe\Dropbox\DEV\VSCode\wappa.solution\wappa.test\bin\Debug\netcoreapp1.1\xunit.runner.reporters.netstandard15.dll
+c:\Users\clebe\Dropbox\DEV\VSCode\wappa.solution\wappa.test\bin\Debug\netcoreapp1.1\wappa.test.dll
+c:\Users\clebe\Dropbox\DEV\VSCode\wappa.solution\wappa.test\bin\Debug\netcoreapp1.1\wappa.test.pdb
+c:\Users\clebe\Dropbox\DEV\VSCode\wappa.solution\wappa.test\bin\Debug\netcoreapp1.1\wappa.dll
+c:\Users\clebe\Dropbox\DEV\VSCode\wappa.solution\wappa.test\bin\Debug\netcoreapp1.1\wappa.domain.dll
+c:\Users\clebe\Dropbox\DEV\VSCode\wappa.solution\wappa.test\bin\Debug\netcoreapp1.1\wappa.domain.pdb
+c:\Users\clebe\Dropbox\DEV\VSCode\wappa.solution\wappa.test\bin\Debug\netcoreapp1.1\wappa.pdb
+c:\Users\clebe\Dropbox\DEV\VSCode\wappa.solution\wappa.test\obj\Debug\netcoreapp1.1\wappa.test.dll
+c:\Users\clebe\Dropbox\DEV\VSCode\wappa.solution\wappa.test\obj\Debug\netcoreapp1.1\wappa.test.pdb
