@@ -1,0 +1,6 @@
+c:\Users\clebe\Dropbox\DEV\VSCode\wappa.solution\wappa.domain\bin\Debug\netstandard1.4\wappa.domain.deps.json
+c:\Users\clebe\Dropbox\DEV\VSCode\wappa.solution\wappa.domain\bin\Debug\netstandard1.4\wappa.domain.dll
+c:\Users\clebe\Dropbox\DEV\VSCode\wappa.solution\wappa.domain\bin\Debug\netstandard1.4\wappa.domain.pdb
+c:\Users\clebe\Dropbox\DEV\VSCode\wappa.solution\wappa.domain\obj\Debug\netstandard1.4\wappa.domain.AssemblyInfo.cs
+c:\Users\clebe\Dropbox\DEV\VSCode\wappa.solution\wappa.domain\obj\Debug\netstandard1.4\wappa.domain.dll
+c:\Users\clebe\Dropbox\DEV\VSCode\wappa.solution\wappa.domain\obj\Debug\netstandard1.4\wappa.domain.pdb

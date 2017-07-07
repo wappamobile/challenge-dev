@@ -1,0 +1,10 @@
+c:\Users\clebe\Dropbox\DEV\VSCode\wappa.solution\wappa\bin\Debug\netcoreapp1.1\wappa.deps.json
+c:\Users\clebe\Dropbox\DEV\VSCode\wappa.solution\wappa\bin\Debug\netcoreapp1.1\wappa.runtimeconfig.json
+c:\Users\clebe\Dropbox\DEV\VSCode\wappa.solution\wappa\bin\Debug\netcoreapp1.1\wappa.runtimeconfig.dev.json
+c:\Users\clebe\Dropbox\DEV\VSCode\wappa.solution\wappa\bin\Debug\netcoreapp1.1\wappa.dll
+c:\Users\clebe\Dropbox\DEV\VSCode\wappa.solution\wappa\bin\Debug\netcoreapp1.1\wappa.pdb
+c:\Users\clebe\Dropbox\DEV\VSCode\wappa.solution\wappa\bin\Debug\netcoreapp1.1\wappa.domain.dll
+c:\Users\clebe\Dropbox\DEV\VSCode\wappa.solution\wappa\bin\Debug\netcoreapp1.1\wappa.domain.pdb
+c:\Users\clebe\Dropbox\DEV\VSCode\wappa.solution\wappa\obj\Debug\netcoreapp1.1\wappa.AssemblyInfo.cs
+c:\Users\clebe\Dropbox\DEV\VSCode\wappa.solution\wappa\obj\Debug\netcoreapp1.1\wappa.dll
+c:\Users\clebe\Dropbox\DEV\VSCode\wappa.solution\wappa\obj\Debug\netcoreapp1.1\wappa.pdb
