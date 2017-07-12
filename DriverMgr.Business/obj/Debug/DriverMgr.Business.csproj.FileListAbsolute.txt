@@ -1,0 +1,9 @@
+F:\Documents\Profissional\Entrevistas\DriversManager\DriverMgr.Business\obj\Debug\DriverMgr.Business.csprojResolveAssemblyReference.cache
+F:\Documents\Profissional\Entrevistas\DriversManager\DriverMgr.Business\bin\Debug\DriverMgr.Business.dll
+F:\Documents\Profissional\Entrevistas\DriversManager\DriverMgr.Business\bin\Debug\DriverMgr.Business.pdb
+F:\Documents\Profissional\Entrevistas\DriversManager\DriverMgr.Business\bin\Debug\DriverMgr.DataAccess.dll
+F:\Documents\Profissional\Entrevistas\DriversManager\DriverMgr.Business\bin\Debug\DriverMgr.TO.dll
+F:\Documents\Profissional\Entrevistas\DriversManager\DriverMgr.Business\bin\Debug\DriverMgr.DataAccess.pdb
+F:\Documents\Profissional\Entrevistas\DriversManager\DriverMgr.Business\bin\Debug\DriverMgr.TO.pdb
+F:\Documents\Profissional\Entrevistas\DriversManager\DriverMgr.Business\obj\Debug\DriverMgr.Business.dll
+F:\Documents\Profissional\Entrevistas\DriversManager\DriverMgr.Business\obj\Debug\DriverMgr.Business.pdb
