@@ -1,22 +1,38 @@
 # challenge-dev-senior
 
-## Objetivo
-Objetivo deste teste Ã© avaliar como vocÃª irÃ¡ considerar questÃµes como arquitetura e design de software, modelagem e aplicaÃ§Ã£o de tÃ©cnicas e conceitos de programaÃ§Ã£o, e nÃ£o simplesmente resolver o problema proposto, visto que o mesmo nÃ£o oferece dificuldades reais para implementaÃ§Ã£o.  
-FaÃ§a um fork deste projeto e ao concluir envie um pull request com sua implementaÃ§Ã£o. Ao enviar o pull request nos informe quanto tempo vocÃª levou para desenvolver a soluÃ§Ã£o.
+## Alterações
+Feito por Jônatas Piazzi
 
-## Escopo
-Precisamos de uma biblioteca para gerenciar o cadastro de motoristas.  
-Front-end nÃ£o Ã© necessÃ¡rio e nÃ£o serÃ¡ avaliado, mas precisamos de uma API que permita criar, editar e excluir um motorista.  
-Um cadastro de motorista possui os campos: Nome (primeiro e Ãºltimo), Carro (marca, modelo e placa) e endereÃ§o completo. Adicionamente, ao cadastrar um endereÃ§o deve ser buscada as coordenadas utilizando a [API do Google Maps](https://developers.google.com/maps/documentation/geocoding) e elas devem ser armazenadas junto com o cadastro.  
-AlÃ©m do cadastro tambÃ©m serÃ¡ necessÃ¡rio disponibilizar uma listagem dos cadastros em ordem alfabÃ©tica por nome ou sobrenome.
+### Sobre o Projeto
+ - Utilizado: Visual Studio 2017 Community
+ - .Net 4.5.2
+ - C# 6
 
-### ObrigatÃ³rio
- - .NET Core - C#
- - WebAPI
- - IoC
- - CÃ³digo limpo
+## **Arquitetura**
 
-### DesejÃ¡vel
- - DocumentaÃ§Ã£o da API
- - Testes
- - InstruÃ§Ãµes de setup para execuÃ§Ã£o do projeto
+### **DriverMgr.Api**
+ 
+Este projeto é o WebAPI que esporta o serviço como rest.
+> Destaque ao arquivo: ~/App_Start/DataFactoryProvider.cs
+
+### **DriverMgr.Business**
+ 
+Este projeto é o coração do sistema, aqui devem ser postas todas as regras de negócio necessárias. 
+Foi feito um módulo de validação de objetos por DataAnnotation o que simplifica reduz grande parte de código.
+> Olhar método: `DriverBL.ValidateDriver`
+> E classe: `ValidatorBase`.
+
+### **DriverMgr.DataAccess**
+ 
+Para garantir baixo acoplamento e escalabilidade e IoC foi utilizado Factory Pattern.
+Sendo assim a classe DataFactory serve como injetora de dependência para qualquer classe dentro da Business.
+
+## **Sobre Google Maps API.**
+
+O Google Maps API é uma API baseada em javascript. Portanto a utilização desta API seria implementada na aplicação que consumir o WebAPI. (talvez uma Web App Single Page, ex: AngularJS). Tudo que seria transmitido para o WebAPI seriam os valores de longitude e latitude (o objeto DriverTO já tem essas propriedades).
+
+Como a implementação dessa API é rasoavelmente simples (Eu já utilizei a mesma em 2 projetos anteriores) e não foi exigido uma aplicação Front-End, eu não implementei essa funcionalidade.
+
+## **Sobre o Tempo Consumido.**
+
+Eu iniciei o projeto as 20:40 e terminei as 24:03, portanto foram gastos 3:23 min. Caso fosse ser criado uma aplicação de apresentação com o Google Maps API eu calcularia que demoraria mais 1:20 minutos.

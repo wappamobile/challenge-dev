@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - DataAccess", "4 - DataA
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - ReadMe", "1 - ReadMe", "{8150B8E0-2564-4F19-B75B-D46B093ED2EF}"
 	ProjectSection(SolutionItems) = preProject
-		ReadMe.txt = ReadMe.txt
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriverMgr.DataAccess", "DriverMgr.DataAccess\DriverMgr.DataAccess.csproj", "{9C02E033-11DB-43E5-BFA7-8EFE7D42740D}"
