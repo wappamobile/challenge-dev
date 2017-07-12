@@ -1,0 +1,9 @@
+F:\Documents\Profissional\Entrevistas\DriversManager\DriverMgr.DataAccessMock\bin\Debug\DriverMgr.DataAccessMock.dll
+F:\Documents\Profissional\Entrevistas\DriversManager\DriverMgr.DataAccessMock\bin\Debug\DriverMgr.DataAccessMock.pdb
+F:\Documents\Profissional\Entrevistas\DriversManager\DriverMgr.DataAccessMock\bin\Debug\DriverMgr.DataAccess.dll
+F:\Documents\Profissional\Entrevistas\DriversManager\DriverMgr.DataAccessMock\bin\Debug\DriverMgr.TO.dll
+F:\Documents\Profissional\Entrevistas\DriversManager\DriverMgr.DataAccessMock\bin\Debug\DriverMgr.DataAccess.pdb
+F:\Documents\Profissional\Entrevistas\DriversManager\DriverMgr.DataAccessMock\bin\Debug\DriverMgr.TO.pdb
+F:\Documents\Profissional\Entrevistas\DriversManager\DriverMgr.DataAccessMock\obj\Debug\DriverMgr.DataAccessMock.csprojResolveAssemblyReference.cache
+F:\Documents\Profissional\Entrevistas\DriversManager\DriverMgr.DataAccessMock\obj\Debug\DriverMgr.DataAccessMock.dll
+F:\Documents\Profissional\Entrevistas\DriversManager\DriverMgr.DataAccessMock\obj\Debug\DriverMgr.DataAccessMock.pdb
