@@ -1,0 +1,18 @@
+------------------
+SETUP DO PROJETO |
+------------------
+
+1 - Certificar que o projeto TesteDev está setado como "Set as Startup Project";
+2 - No projeto TesteDev, no arquivo appsettings.json, alterar a chave "DefaultConnection" para uma conexão válida;
+3 - Build na solution para dar o restore nos packages;
+4 - Executar;
+5 - O projeto está configurado para rodar usando o Swagger. Dessa forma, os testes da API podem ser feitos diretamente nele, usando os modelos de json que ele fornece e substituindo os valores;
+
+-------------------------
+TEMPO DE DESENVOLVIMENTO |
+-------------------------
+
+Início: 19:00hs
+Término: 00:15hs
+Total: 5:15hs
+
