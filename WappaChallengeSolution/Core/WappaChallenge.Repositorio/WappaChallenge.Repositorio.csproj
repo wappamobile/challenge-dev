@@ -9,6 +9,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Moq" Version="4.7.145" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\WappaChallenge.Dominio\WappaChallenge.Dominio.csproj" />
   </ItemGroup>
 

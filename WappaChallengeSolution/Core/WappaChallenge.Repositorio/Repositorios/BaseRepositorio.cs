@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq.Expressions;
 using WappaChallenge.Dominio.Entidades;
 using WappaChallenge.Dominio.Interfaces.Repositorio;
 
 namespace WappaChallenge.Repositorio.Repositorios
 {
-    public abstract class BaseRepositorio<T, TId> : IBaseRepositorio<T, TId> where T : BaseDominio<TId>
+    public abstract class BaseRepositorio<T> : IBaseRepositorio<T> where T : BaseDominio
     {
-        private readonly IDatabase<T, TId> _database;
+        private readonly IDatabase _database;
 
-        public BaseRepositorio(IDatabase<T, TId> database)
+        public BaseRepositorio(IDatabase database)
         {
             this._database = database;
         }
@@ -20,14 +19,14 @@ namespace WappaChallenge.Repositorio.Repositorios
             return this._database.Atualizar(entidade);
         }
 
-        public ICollection<T> Buscar(Expression<Func<T, bool>> query)
+        public IEnumerable<T> Buscar(Func<T, bool> query)
         {
             return this._database.Buscar(query);
         }
 
-        public T BuscarPorId(TId entidadeId)
+        public T BuscarPorId(int entidadeId)
         {
-            return this._database.BuscarPorId(entidadeId);
+            return this._database.BuscarPorId<T>(entidadeId);
         }
 
         public T Cadastrar(T entidade)
@@ -35,9 +34,14 @@ namespace WappaChallenge.Repositorio.Repositorios
             return this._database.Cadastrar(entidade);
         }
 
-        public void Excluir(TId entidadeId)
+        public void Excluir(int entidadeId)
         {
-            this._database.Excluir(entidadeId);
+            this._database.Excluir<T>(entidadeId);
+        }
+
+        public IEnumerable<T> ObterTodos()
+        {
+            return this._database.ObterTodos<T>();
         }
     }
 }

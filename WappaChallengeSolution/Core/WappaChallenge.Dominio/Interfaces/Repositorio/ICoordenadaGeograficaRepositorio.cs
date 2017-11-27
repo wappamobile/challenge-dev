@@ -2,7 +2,7 @@
 
 namespace WappaChallenge.Dominio.Interfaces.Repositorio
 {
-    public interface ICoordenadaGeograficaRepositorio : IBaseRepositorio<CoordenadaGeografica, int>
+    public interface ICoordenadaGeograficaRepositorio : IBaseRepositorio<CoordenadaGeografica>
     {
     }
 }

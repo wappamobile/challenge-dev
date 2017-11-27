@@ -7,3 +7,14 @@ D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Reposit
 D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Repositorio\obj\Debug\netcoreapp2.0\WappaChallenge.Repositorio.dll
 D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Repositorio\obj\Debug\netcoreapp2.0\WappaChallenge.Repositorio.pdb
 D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Repositorio\obj\Debug\netcoreapp2.0\WappaChallenge.Repositorio.csprojResolveAssemblyReference.cache
+C:\Users\andrey.alves\Documents\Git\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Repositorio\bin\Debug\netcoreapp2.0\WappaChallenge.Repositorio.deps.json
+C:\Users\andrey.alves\Documents\Git\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Repositorio\bin\Debug\netcoreapp2.0\WappaChallenge.Repositorio.dll
+C:\Users\andrey.alves\Documents\Git\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Repositorio\bin\Debug\netcoreapp2.0\WappaChallenge.Repositorio.pdb
+C:\Users\andrey.alves\Documents\Git\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Repositorio\bin\Debug\netcoreapp2.0\WappaChallenge.Dominio.dll
+C:\Users\andrey.alves\Documents\Git\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Repositorio\bin\Debug\netcoreapp2.0\WappaChallenge.Dominio.pdb
+C:\Users\andrey.alves\Documents\Git\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Repositorio\obj\Debug\netcoreapp2.0\WappaChallenge.Repositorio.csprojResolveAssemblyReference.cache
+C:\Users\andrey.alves\Documents\Git\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Repositorio\obj\Debug\netcoreapp2.0\WappaChallenge.Repositorio.csproj.CoreCompileInputs.cache
+C:\Users\andrey.alves\Documents\Git\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Repositorio\obj\Debug\netcoreapp2.0\WappaChallenge.Repositorio.AssemblyInfoInputs.cache
+C:\Users\andrey.alves\Documents\Git\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Repositorio\obj\Debug\netcoreapp2.0\WappaChallenge.Repositorio.AssemblyInfo.cs
+C:\Users\andrey.alves\Documents\Git\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Repositorio\obj\Debug\netcoreapp2.0\WappaChallenge.Repositorio.dll
+C:\Users\andrey.alves\Documents\Git\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Repositorio\obj\Debug\netcoreapp2.0\WappaChallenge.Repositorio.pdb

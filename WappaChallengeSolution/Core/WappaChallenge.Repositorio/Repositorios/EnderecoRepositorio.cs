@@ -3,9 +3,9 @@ using WappaChallenge.Dominio.Interfaces.Repositorio;
 
 namespace WappaChallenge.Repositorio.Repositorios
 {
-    public class EnderecoRepositorio : BaseRepositorio<Endereco, int>, IEnderecoRepositorio
+    public class EnderecoRepositorio : BaseRepositorio<Endereco>, IEnderecoRepositorio
     {
-        public EnderecoRepositorio(IDatabase<Endereco, int> database) : base(database)
+        public EnderecoRepositorio(IDatabase database) : base(database)
         {
         }
     }

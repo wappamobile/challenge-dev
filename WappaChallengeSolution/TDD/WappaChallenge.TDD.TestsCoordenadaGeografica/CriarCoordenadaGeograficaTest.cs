@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using WappaChallenge.Dominio.Entidades;
 
-namespace WappaChallenge.TDD.TestsCoordenadaGeografica
+namespace TDD.TestsCoordenadaGeografica
 {
     [TestClass]
     public class CriarCoordenadaGeograficaTest

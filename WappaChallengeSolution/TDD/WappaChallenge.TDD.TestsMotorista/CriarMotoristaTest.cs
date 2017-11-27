@@ -2,7 +2,7 @@
 using WappaChallenge.Dominio.Exceptions;
 using WappaChallenge.Dominio.Entidades;
 
-namespace WappaChallenge.TDD.TestsCoordenadaGeografica
+namespace TDD.TestsMotorista
 {
     [TestClass]
     public class CriarMotoristaTest

@@ -8,10 +8,13 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Package Description</description>
     <dependencies>
-      <group targetFramework=".NETCoreApp2.0" />
+      <group targetFramework=".NETCoreApp2.0">
+        <dependency id="WappaChallenge.Dominio" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="Moq" version="4.7.145" exclude="Build,Analyzers" />
+      </group>
     </dependencies>
   </metadata>
   <files>
-    <file src="D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Repositorio\bin\Debug\netcoreapp2.0\WappaChallenge.Repositorio.dll" target="lib\netcoreapp2.0\WappaChallenge.Repositorio.dll" />
+    <file src="C:\Users\andrey.alves\Documents\Git\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Repositorio\bin\Debug\netcoreapp2.0\WappaChallenge.Repositorio.dll" target="lib\netcoreapp2.0\WappaChallenge.Repositorio.dll" />
   </files>
 </package>

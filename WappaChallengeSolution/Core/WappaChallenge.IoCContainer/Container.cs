@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using WappaChallenge.Dominio.Interfaces.Repositorio;
-using WappaChallenge.Repositorio.Databases;
 using WappaChallenge.Repositorio.Repositorios;
 
 namespace WappaChallenge.IoCContainer
@@ -9,7 +8,7 @@ namespace WappaChallenge.IoCContainer
     {
         public static void RegisterServices(IServiceCollection services)
         { 
-            services.AddScoped(typeof(IDatabase<,>), typeof(ArquivoTextoDB<,>));
+            //services.AddScoped(typeof(IDatabase<,>), typeof(ArquivoTextoDB<,>));
 
             services.AddScoped<ICoordenadaGeograficaRepositorio, CoordenadaGeograficaRepositorio>();
             services.AddScoped<IEnderecoRepositorio, EnderecoRepositorio>();

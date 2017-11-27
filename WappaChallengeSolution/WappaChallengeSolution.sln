@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+VisualStudioVersion = 15.0.27004.2008
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TDD", "TDD", "{05C6A6D9-17D1-4AAA-A0D8-5F9CD5793ABC}"
 EndProject
@@ -9,25 +9,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebServices", "WebServices"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{BB670843-31B8-445C-A5F9-284C3F1C2F5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WappaChallenge.IoCContainer", "Core\WappaChallenge.IoCContainer\WappaChallenge.IoCContainer.csproj", "{2833CED9-E9B6-44F7-A710-C959BBCC387A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WappaChallenge.IoCContainer", "Core\WappaChallenge.IoCContainer\WappaChallenge.IoCContainer.csproj", "{2833CED9-E9B6-44F7-A710-C959BBCC387A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WappaChallenge.Repositorio", "Core\WappaChallenge.Repositorio\WappaChallenge.Repositorio.csproj", "{EEC21219-6D6D-4331-9699-83C331EC974B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WappaChallenge.Repositorio", "Core\WappaChallenge.Repositorio\WappaChallenge.Repositorio.csproj", "{EEC21219-6D6D-4331-9699-83C331EC974B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WappaChallenge.Dominio", "Core\WappaChallenge.Dominio\WappaChallenge.Dominio.csproj", "{F788957C-7A2D-44C9-8D3F-2DD2D613CEAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WappaChallenge.Dominio", "Core\WappaChallenge.Dominio\WappaChallenge.Dominio.csproj", "{F788957C-7A2D-44C9-8D3F-2DD2D613CEAA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dominio", "Dominio", "{C97EEE6C-33D6-4C32-8309-9811BCC381C5}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repositorio", "Repositorio", "{EF07CE47-412A-4F48-8B4E-D4D977C48460}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TDD.TestsCoordenadaGeografica", "TDD\WappaChallenge.TDD.TestsCoordenadaGeografica\TDD.TestsCoordenadaGeografica.csproj", "{538D8B60-1270-4EC7-8B04-5D7A49CA31C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WappaChallenge.TDD.TestsCoordenadaGeografica", "TDD\WappaChallenge.TDD.TestsCoordenadaGeografica\WappaChallenge.TDD.TestsCoordenadaGeografica.csproj", "{538D8B60-1270-4EC7-8B04-5D7A49CA31C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TDD.TestsEndereco", "TDD\WappaChallenge.TDD.TestsEndereco\TDD.TestsEndereco.csproj", "{CEA1F5E1-C5B3-43D9-8564-52DDFA10DED7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WappaChallenge.TDD.TestsEndereco", "TDD\WappaChallenge.TDD.TestsEndereco\WappaChallenge.TDD.TestsEndereco.csproj", "{CEA1F5E1-C5B3-43D9-8564-52DDFA10DED7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TDD.TestsMotorista", "TDD\WappaChallenge.TDD.TestsMotorista\TDD.TestsMotorista.csproj", "{9DA09EA4-248F-4EC5-959A-275ABD62C88B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WappaChallenge.TDD.TestsMotorista", "TDD\WappaChallenge.TDD.TestsMotorista\WappaChallenge.TDD.TestsMotorista.csproj", "{9DA09EA4-248F-4EC5-959A-275ABD62C88B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TDD.TestsVeiculo", "TDD\WappaChallenge.TDD.TestsVeiculo\TDD.TestsVeiculo.csproj", "{EBD776A7-CC63-443E-97C9-142E9307CC5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WappaChallenge.TDD.TestsVeiculo", "TDD\WappaChallenge.TDD.TestsVeiculo\WappaChallenge.TDD.TestsVeiculo.csproj", "{EBD776A7-CC63-443E-97C9-142E9307CC5C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WappaChallenge.AppServices", "Core\WappaChallenge.AppServices\WappaChallenge.AppServices.csproj", "{CBF1E522-F749-4527-A4FA-404B5D55692F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WappaChallenge.TDD.TestsCoordenadasGeograficasRepositorio", "TDD\WappaChallenge.TDD.TestsCoordenadasGeograficasRepositorio\WappaChallenge.TDD.TestsCoordenadasGeograficasRepositorio.csproj", "{F931175E-ED6B-4561-B141-62525A011CD4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WappaChallenge.DTO", "Core\WappaChallenge.DTO\WappaChallenge.DTO.csproj", "{13F8A1BD-CB0D-4EE9-8874-C2CE46E3EB70}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,10 +63,14 @@ Global
 		{EBD776A7-CC63-443E-97C9-142E9307CC5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBD776A7-CC63-443E-97C9-142E9307CC5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBD776A7-CC63-443E-97C9-142E9307CC5C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F931175E-ED6B-4561-B141-62525A011CD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F931175E-ED6B-4561-B141-62525A011CD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F931175E-ED6B-4561-B141-62525A011CD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F931175E-ED6B-4561-B141-62525A011CD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBF1E522-F749-4527-A4FA-404B5D55692F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBF1E522-F749-4527-A4FA-404B5D55692F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBF1E522-F749-4527-A4FA-404B5D55692F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBF1E522-F749-4527-A4FA-404B5D55692F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13F8A1BD-CB0D-4EE9-8874-C2CE46E3EB70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13F8A1BD-CB0D-4EE9-8874-C2CE46E3EB70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13F8A1BD-CB0D-4EE9-8874-C2CE46E3EB70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13F8A1BD-CB0D-4EE9-8874-C2CE46E3EB70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,12 +80,12 @@ Global
 		{EEC21219-6D6D-4331-9699-83C331EC974B} = {BB670843-31B8-445C-A5F9-284C3F1C2F5D}
 		{F788957C-7A2D-44C9-8D3F-2DD2D613CEAA} = {BB670843-31B8-445C-A5F9-284C3F1C2F5D}
 		{C97EEE6C-33D6-4C32-8309-9811BCC381C5} = {05C6A6D9-17D1-4AAA-A0D8-5F9CD5793ABC}
-		{EF07CE47-412A-4F48-8B4E-D4D977C48460} = {05C6A6D9-17D1-4AAA-A0D8-5F9CD5793ABC}
 		{538D8B60-1270-4EC7-8B04-5D7A49CA31C5} = {C97EEE6C-33D6-4C32-8309-9811BCC381C5}
 		{CEA1F5E1-C5B3-43D9-8564-52DDFA10DED7} = {C97EEE6C-33D6-4C32-8309-9811BCC381C5}
 		{9DA09EA4-248F-4EC5-959A-275ABD62C88B} = {C97EEE6C-33D6-4C32-8309-9811BCC381C5}
 		{EBD776A7-CC63-443E-97C9-142E9307CC5C} = {C97EEE6C-33D6-4C32-8309-9811BCC381C5}
-		{F931175E-ED6B-4561-B141-62525A011CD4} = {EF07CE47-412A-4F48-8B4E-D4D977C48460}
+		{CBF1E522-F749-4527-A4FA-404B5D55692F} = {BB670843-31B8-445C-A5F9-284C3F1C2F5D}
+		{13F8A1BD-CB0D-4EE9-8874-C2CE46E3EB70} = {BB670843-31B8-445C-A5F9-284C3F1C2F5D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {68D65FC0-2E11-42F4-881A-76F80E4E786E}

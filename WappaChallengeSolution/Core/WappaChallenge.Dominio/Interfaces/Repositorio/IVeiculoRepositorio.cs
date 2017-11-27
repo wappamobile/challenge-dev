@@ -2,7 +2,7 @@
 
 namespace WappaChallenge.Dominio.Interfaces.Repositorio
 {
-    public interface IVeiculoRepositorio : IBaseRepositorio<Veiculo, int>
+    public interface IVeiculoRepositorio : IBaseRepositorio<Veiculo>
     {
     }
 }

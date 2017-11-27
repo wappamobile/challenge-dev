@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq.Expressions;
 using WappaChallenge.Dominio.Entidades;
 
 namespace WappaChallenge.Dominio.Interfaces.Repositorio
 {
-    public interface IBaseRepositorio<T, TId> where T : BaseDominio<TId>
+    public interface IBaseRepositorio<T> where T : BaseDominio
     {
         T Cadastrar(T entidade);
         T Atualizar(T entidade);
-        void Excluir(TId entidadeId);
-        T BuscarPorId(TId entidadeId);
-        ICollection<T> Buscar(Expression<Func<T, bool>> query);
+        void Excluir(int entidadeId);
+        T BuscarPorId(int entidadeId);
+        IEnumerable<T> Buscar(Func<T, bool> query);
+        IEnumerable<T> ObterTodos();
     }
 }

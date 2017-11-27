@@ -2,7 +2,7 @@
 
 namespace WappaChallenge.Dominio.Entidades
 {
-    public class Endereco : BaseDominio<int>
+    public class Endereco : BaseDominio
     {
         [Required(AllowEmptyStrings = false, ErrorMessage = "O logradouro é obrigatório.")]
         public string Logradouro { get; protected set; }

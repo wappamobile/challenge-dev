@@ -664,7 +664,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\desen\\.nuget\\packages\\": {},
+    "C:\\Users\\andrey.alves\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -673,17 +673,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "D:\\Repositório\\challenge-dev\\WappaChallengeSolution\\Core\\WappaChallenge.Dominio\\WappaChallenge.Dominio.csproj",
+      "projectUniqueName": "C:\\Users\\andrey.alves\\Documents\\Git\\challenge-dev\\WappaChallengeSolution\\Core\\WappaChallenge.Dominio\\WappaChallenge.Dominio.csproj",
       "projectName": "WappaChallenge.Dominio",
-      "projectPath": "D:\\Repositório\\challenge-dev\\WappaChallengeSolution\\Core\\WappaChallenge.Dominio\\WappaChallenge.Dominio.csproj",
-      "packagesPath": "C:\\Users\\desen\\.nuget\\packages\\",
-      "outputPath": "D:\\Repositório\\challenge-dev\\WappaChallengeSolution\\Core\\WappaChallenge.Dominio\\obj\\",
+      "projectPath": "C:\\Users\\andrey.alves\\Documents\\Git\\challenge-dev\\WappaChallengeSolution\\Core\\WappaChallenge.Dominio\\WappaChallenge.Dominio.csproj",
+      "packagesPath": "C:\\Users\\andrey.alves\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\andrey.alves\\Documents\\Git\\challenge-dev\\WappaChallengeSolution\\Core\\WappaChallenge.Dominio\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\desen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\andrey.alves\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -710,7 +710,7 @@
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.0",
+            "version": "2.0.0",
             "autoReferenced": true
           }
         },

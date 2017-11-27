@@ -2,7 +2,7 @@
 
 namespace WappaChallenge.Dominio.Entidades
 {
-    public class Motorista : BaseDominio<int>
+    public class Motorista : BaseDominio
     {
         [Required(AllowEmptyStrings = false, ErrorMessage = "O primeiro nome é obrigatório.")]
         public string PrimeiroNome { get; protected set; }

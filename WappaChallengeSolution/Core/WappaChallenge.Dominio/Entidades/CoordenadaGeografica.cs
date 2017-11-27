@@ -2,7 +2,7 @@
 
 namespace WappaChallenge.Dominio.Entidades
 {
-    public class CoordenadaGeografica : BaseDominio<int>
+    public class CoordenadaGeografica : BaseDominio
     {
         [Required]
         public float Latitude { get; protected set; }

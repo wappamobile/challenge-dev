@@ -7,3 +7,12 @@ D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Dominio
 D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Dominio\obj\Debug\netcoreapp2.0\WappaChallenge.Dominio.AssemblyInfo.cs
 D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Dominio\obj\Debug\netcoreapp2.0\WappaChallenge.Dominio.dll
 D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Dominio\obj\Debug\netcoreapp2.0\WappaChallenge.Dominio.pdb
+C:\Users\andrey.alves\Documents\Git\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Dominio\obj\Debug\netcoreapp2.0\WappaChallenge.Dominio.csprojResolveAssemblyReference.cache
+C:\Users\andrey.alves\Documents\Git\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Dominio\obj\Debug\netcoreapp2.0\WappaChallenge.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\andrey.alves\Documents\Git\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Dominio\obj\Debug\netcoreapp2.0\WappaChallenge.Dominio.AssemblyInfoInputs.cache
+C:\Users\andrey.alves\Documents\Git\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Dominio\obj\Debug\netcoreapp2.0\WappaChallenge.Dominio.AssemblyInfo.cs
+C:\Users\andrey.alves\Documents\Git\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Dominio\obj\Debug\netcoreapp2.0\WappaChallenge.Dominio.dll
+C:\Users\andrey.alves\Documents\Git\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Dominio\obj\Debug\netcoreapp2.0\WappaChallenge.Dominio.pdb
+C:\Users\andrey.alves\Documents\Git\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Dominio\bin\Debug\netcoreapp2.0\WappaChallenge.Dominio.deps.json
+C:\Users\andrey.alves\Documents\Git\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Dominio\bin\Debug\netcoreapp2.0\WappaChallenge.Dominio.dll
+C:\Users\andrey.alves\Documents\Git\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Dominio\bin\Debug\netcoreapp2.0\WappaChallenge.Dominio.pdb

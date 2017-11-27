@@ -2,7 +2,7 @@
 
 namespace WappaChallenge.Dominio.Entidades
 {
-    public class Veiculo : BaseDominio<int>
+    public class Veiculo : BaseDominio
     {
         [Required(AllowEmptyStrings = false, ErrorMessage = "A marca é obrigatória.")]
         public string Marca { get; protected set; }

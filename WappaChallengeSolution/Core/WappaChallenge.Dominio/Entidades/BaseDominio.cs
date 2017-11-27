@@ -5,9 +5,9 @@ using WappaChallenge.Dominio.Exceptions;
 
 namespace WappaChallenge.Dominio.Entidades
 {
-    public abstract class BaseDominio<TId>
+    public abstract class BaseDominio
     {
-        public TId Id { get; protected set; }
+        public int Id { get; set; }
         public DateTime? DataCadastrado { get; protected set; } = DateTime.Now;
         public ICollection<ValidationResult> Erros { get; protected set; }
 

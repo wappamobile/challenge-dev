@@ -3,9 +3,9 @@ using WappaChallenge.Dominio.Interfaces.Repositorio;
 
 namespace WappaChallenge.Repositorio.Repositorios
 {
-    public class VeiculoRepositorio : BaseRepositorio<Veiculo, int>, IVeiculoRepositorio
+    public class VeiculoRepositorio : BaseRepositorio<Veiculo>, IVeiculoRepositorio
     {
-        public VeiculoRepositorio(IDatabase<Veiculo, int> database) : base(database)
+        public VeiculoRepositorio(IDatabase database) : base(database)
         {
         }
     }

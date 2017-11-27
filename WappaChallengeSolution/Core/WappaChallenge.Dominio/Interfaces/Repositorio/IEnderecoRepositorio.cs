@@ -2,7 +2,7 @@
 
 namespace WappaChallenge.Dominio.Interfaces.Repositorio
 {
-    public interface IEnderecoRepositorio : IBaseRepositorio<Endereco, int>
+    public interface IEnderecoRepositorio : IBaseRepositorio<Endereco>
     {
     }
 }
