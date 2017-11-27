@@ -1,0 +1,47 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.0",
+    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.0": {
+      "WappaChallenge.AppServices/1.0.0": {
+        "dependencies": {
+          "WappaChallenge.DTO": "1.0.0",
+          "WappaChallenge.Dominio": "1.0.0"
+        },
+        "runtime": {
+          "WappaChallenge.AppServices.dll": {}
+        }
+      },
+      "WappaChallenge.Dominio/1.0.0": {
+        "runtime": {
+          "WappaChallenge.Dominio.dll": {}
+        }
+      },
+      "WappaChallenge.DTO/1.0.0": {
+        "runtime": {
+          "WappaChallenge.DTO.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WappaChallenge.AppServices/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WappaChallenge.Dominio/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WappaChallenge.DTO/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WappaChallenge.Dominio\WappaChallenge.Dominio.csproj" />
+    <ProjectReference Include="..\WappaChallenge.DTO\WappaChallenge.DTO.csproj" />
+  </ItemGroup>
+
+</Project>
