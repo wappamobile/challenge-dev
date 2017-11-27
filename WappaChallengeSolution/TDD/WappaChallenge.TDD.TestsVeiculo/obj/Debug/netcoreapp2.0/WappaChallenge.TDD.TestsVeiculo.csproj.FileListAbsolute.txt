@@ -1,0 +1,15 @@
+D:\Repositório\challenge-dev\WappaChallengeSolution\TDD\WappaChallenge.TDD.TestsVeiculo\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\Repositório\challenge-dev\WappaChallengeSolution\TDD\WappaChallenge.TDD.TestsVeiculo\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\Repositório\challenge-dev\WappaChallengeSolution\TDD\WappaChallenge.TDD.TestsVeiculo\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\Repositório\challenge-dev\WappaChallengeSolution\TDD\WappaChallenge.TDD.TestsVeiculo\bin\Debug\netcoreapp2.0\WappaChallenge.TDD.TestsVeiculo.deps.json
+D:\Repositório\challenge-dev\WappaChallengeSolution\TDD\WappaChallenge.TDD.TestsVeiculo\bin\Debug\netcoreapp2.0\WappaChallenge.TDD.TestsVeiculo.runtimeconfig.json
+D:\Repositório\challenge-dev\WappaChallengeSolution\TDD\WappaChallenge.TDD.TestsVeiculo\bin\Debug\netcoreapp2.0\WappaChallenge.TDD.TestsVeiculo.runtimeconfig.dev.json
+D:\Repositório\challenge-dev\WappaChallengeSolution\TDD\WappaChallenge.TDD.TestsVeiculo\bin\Debug\netcoreapp2.0\WappaChallenge.TDD.TestsVeiculo.dll
+D:\Repositório\challenge-dev\WappaChallengeSolution\TDD\WappaChallenge.TDD.TestsVeiculo\bin\Debug\netcoreapp2.0\WappaChallenge.TDD.TestsVeiculo.pdb
+D:\Repositório\challenge-dev\WappaChallengeSolution\TDD\WappaChallenge.TDD.TestsVeiculo\bin\Debug\netcoreapp2.0\WappaChallenge.Dominio.dll
+D:\Repositório\challenge-dev\WappaChallengeSolution\TDD\WappaChallenge.TDD.TestsVeiculo\bin\Debug\netcoreapp2.0\WappaChallenge.Dominio.pdb
+D:\Repositório\challenge-dev\WappaChallengeSolution\TDD\WappaChallenge.TDD.TestsVeiculo\obj\Debug\netcoreapp2.0\WappaChallenge.TDD.TestsVeiculo.csproj.CoreCompileInputs.cache
+D:\Repositório\challenge-dev\WappaChallengeSolution\TDD\WappaChallenge.TDD.TestsVeiculo\obj\Debug\netcoreapp2.0\WappaChallenge.TDD.TestsVeiculo.AssemblyInfoInputs.cache
+D:\Repositório\challenge-dev\WappaChallengeSolution\TDD\WappaChallenge.TDD.TestsVeiculo\obj\Debug\netcoreapp2.0\WappaChallenge.TDD.TestsVeiculo.AssemblyInfo.cs
+D:\Repositório\challenge-dev\WappaChallengeSolution\TDD\WappaChallenge.TDD.TestsVeiculo\obj\Debug\netcoreapp2.0\WappaChallenge.TDD.TestsVeiculo.dll
+D:\Repositório\challenge-dev\WappaChallengeSolution\TDD\WappaChallenge.TDD.TestsVeiculo\obj\Debug\netcoreapp2.0\WappaChallenge.TDD.TestsVeiculo.pdb

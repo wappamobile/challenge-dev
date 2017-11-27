@@ -1,0 +1,8 @@
+D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.IoCContainer\bin\Debug\netcoreapp2.0\WappaChallenge.IoCContainer.deps.json
+D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.IoCContainer\bin\Debug\netcoreapp2.0\WappaChallenge.IoCContainer.dll
+D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.IoCContainer\bin\Debug\netcoreapp2.0\WappaChallenge.IoCContainer.pdb
+D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.IoCContainer\obj\Debug\netcoreapp2.0\WappaChallenge.IoCContainer.csproj.CoreCompileInputs.cache
+D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.IoCContainer\obj\Debug\netcoreapp2.0\WappaChallenge.IoCContainer.AssemblyInfoInputs.cache
+D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.IoCContainer\obj\Debug\netcoreapp2.0\WappaChallenge.IoCContainer.AssemblyInfo.cs
+D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.IoCContainer\obj\Debug\netcoreapp2.0\WappaChallenge.IoCContainer.dll
+D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.IoCContainer\obj\Debug\netcoreapp2.0\WappaChallenge.IoCContainer.pdb

@@ -1,0 +1,8 @@
+D:\Repositório\challenge-dev\WappaChallengeSolution\.vs\WappaChallengeSolution\lut\0\b\WappaChallenge.Dominio\Debug\netcoreapp2.0\WappaChallenge.Dominio.deps.json
+D:\Repositório\challenge-dev\WappaChallengeSolution\.vs\WappaChallengeSolution\lut\0\b\WappaChallenge.Dominio\Debug\netcoreapp2.0\WappaChallenge.Dominio.dll
+D:\Repositório\challenge-dev\WappaChallengeSolution\.vs\WappaChallengeSolution\lut\0\b\WappaChallenge.Dominio\Debug\netcoreapp2.0\WappaChallenge.Dominio.pdb
+D:\Repositório\challenge-dev\WappaChallengeSolution\.vs\WappaChallengeSolution\lut\0\i\WappaChallenge.Dominio\Debug\netcoreapp2.0\WappaChallenge.Dominio.csproj.CoreCompileInputs.cache
+D:\Repositório\challenge-dev\WappaChallengeSolution\.vs\WappaChallengeSolution\lut\0\i\WappaChallenge.Dominio\Debug\netcoreapp2.0\WappaChallenge.Dominio.AssemblyInfoInputs.cache
+D:\Repositório\challenge-dev\WappaChallengeSolution\.vs\WappaChallengeSolution\lut\0\i\WappaChallenge.Dominio\Debug\netcoreapp2.0\WappaChallenge.Dominio.AssemblyInfo.cs
+D:\Repositório\challenge-dev\WappaChallengeSolution\.vs\WappaChallengeSolution\lut\0\i\WappaChallenge.Dominio\Debug\netcoreapp2.0\WappaChallenge.Dominio.dll
+D:\Repositório\challenge-dev\WappaChallengeSolution\.vs\WappaChallengeSolution\lut\0\i\WappaChallenge.Dominio\Debug\netcoreapp2.0\WappaChallenge.Dominio.pdb

@@ -1,0 +1,9 @@
+D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Repositorio\bin\Debug\netcoreapp2.0\WappaChallenge.Repositorio.deps.json
+D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Repositorio\bin\Debug\netcoreapp2.0\WappaChallenge.Repositorio.dll
+D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Repositorio\bin\Debug\netcoreapp2.0\WappaChallenge.Repositorio.pdb
+D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Repositorio\obj\Debug\netcoreapp2.0\WappaChallenge.Repositorio.csproj.CoreCompileInputs.cache
+D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Repositorio\obj\Debug\netcoreapp2.0\WappaChallenge.Repositorio.AssemblyInfoInputs.cache
+D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Repositorio\obj\Debug\netcoreapp2.0\WappaChallenge.Repositorio.AssemblyInfo.cs
+D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Repositorio\obj\Debug\netcoreapp2.0\WappaChallenge.Repositorio.dll
+D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Repositorio\obj\Debug\netcoreapp2.0\WappaChallenge.Repositorio.pdb
+D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Repositorio\obj\Debug\netcoreapp2.0\WappaChallenge.Repositorio.csprojResolveAssemblyReference.cache

@@ -1,0 +1,16 @@
+D:\Repositório\challenge-dev\WappaChallengeSolution\TDD\WappaChallenge.TDD.TestsEndereco\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\Repositório\challenge-dev\WappaChallengeSolution\TDD\WappaChallenge.TDD.TestsEndereco\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\Repositório\challenge-dev\WappaChallengeSolution\TDD\WappaChallenge.TDD.TestsEndereco\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\Repositório\challenge-dev\WappaChallengeSolution\TDD\WappaChallenge.TDD.TestsEndereco\bin\Debug\netcoreapp2.0\WappaChallenge.TDD.TestsEndereco.deps.json
+D:\Repositório\challenge-dev\WappaChallengeSolution\TDD\WappaChallenge.TDD.TestsEndereco\bin\Debug\netcoreapp2.0\WappaChallenge.TDD.TestsEndereco.runtimeconfig.json
+D:\Repositório\challenge-dev\WappaChallengeSolution\TDD\WappaChallenge.TDD.TestsEndereco\bin\Debug\netcoreapp2.0\WappaChallenge.TDD.TestsEndereco.runtimeconfig.dev.json
+D:\Repositório\challenge-dev\WappaChallengeSolution\TDD\WappaChallenge.TDD.TestsEndereco\bin\Debug\netcoreapp2.0\WappaChallenge.TDD.TestsEndereco.dll
+D:\Repositório\challenge-dev\WappaChallengeSolution\TDD\WappaChallenge.TDD.TestsEndereco\bin\Debug\netcoreapp2.0\WappaChallenge.TDD.TestsEndereco.pdb
+D:\Repositório\challenge-dev\WappaChallengeSolution\TDD\WappaChallenge.TDD.TestsEndereco\bin\Debug\netcoreapp2.0\WappaChallenge.Dominio.dll
+D:\Repositório\challenge-dev\WappaChallengeSolution\TDD\WappaChallenge.TDD.TestsEndereco\bin\Debug\netcoreapp2.0\WappaChallenge.Dominio.pdb
+D:\Repositório\challenge-dev\WappaChallengeSolution\TDD\WappaChallenge.TDD.TestsEndereco\obj\Debug\netcoreapp2.0\WappaChallenge.TDD.TestsEndereco.csprojResolveAssemblyReference.cache
+D:\Repositório\challenge-dev\WappaChallengeSolution\TDD\WappaChallenge.TDD.TestsEndereco\obj\Debug\netcoreapp2.0\WappaChallenge.TDD.TestsEndereco.csproj.CoreCompileInputs.cache
+D:\Repositório\challenge-dev\WappaChallengeSolution\TDD\WappaChallenge.TDD.TestsEndereco\obj\Debug\netcoreapp2.0\WappaChallenge.TDD.TestsEndereco.AssemblyInfoInputs.cache
+D:\Repositório\challenge-dev\WappaChallengeSolution\TDD\WappaChallenge.TDD.TestsEndereco\obj\Debug\netcoreapp2.0\WappaChallenge.TDD.TestsEndereco.AssemblyInfo.cs
+D:\Repositório\challenge-dev\WappaChallengeSolution\TDD\WappaChallenge.TDD.TestsEndereco\obj\Debug\netcoreapp2.0\WappaChallenge.TDD.TestsEndereco.dll
+D:\Repositório\challenge-dev\WappaChallengeSolution\TDD\WappaChallenge.TDD.TestsEndereco\obj\Debug\netcoreapp2.0\WappaChallenge.TDD.TestsEndereco.pdb
