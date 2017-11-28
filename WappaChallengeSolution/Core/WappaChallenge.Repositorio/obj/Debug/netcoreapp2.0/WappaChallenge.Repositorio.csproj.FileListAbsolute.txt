@@ -18,3 +18,7 @@ C:\Users\andrey.alves\Documents\Git\challenge-dev\WappaChallengeSolution\Core\Wa
 C:\Users\andrey.alves\Documents\Git\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Repositorio\obj\Debug\netcoreapp2.0\WappaChallenge.Repositorio.AssemblyInfo.cs
 C:\Users\andrey.alves\Documents\Git\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Repositorio\obj\Debug\netcoreapp2.0\WappaChallenge.Repositorio.dll
 C:\Users\andrey.alves\Documents\Git\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Repositorio\obj\Debug\netcoreapp2.0\WappaChallenge.Repositorio.pdb
+D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Repositorio\bin\Debug\netcoreapp2.0\WappaChallenge.Dominio.dll
+D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Repositorio\bin\Debug\netcoreapp2.0\WappaChallenge.Dominio.pdb
+D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Repositorio\bin\Debug\netcoreapp2.0\WappaChallenge.Util.dll
+D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.Repositorio\bin\Debug\netcoreapp2.0\WappaChallenge.Util.pdb

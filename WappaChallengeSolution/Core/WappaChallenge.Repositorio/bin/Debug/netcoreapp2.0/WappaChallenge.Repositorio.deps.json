@@ -407,8 +407,16 @@
         }
       },
       "WappaChallenge.Dominio/1.0.0": {
+        "dependencies": {
+          "WappaChallenge.Util": "1.0.0"
+        },
         "runtime": {
           "WappaChallenge.Dominio.dll": {}
+        }
+      },
+      "WappaChallenge.Util/1.0.0": {
+        "runtime": {
+          "WappaChallenge.Util.dll": {}
         }
       }
     }
@@ -714,6 +722,11 @@
       "hashPath": "system.xml.xmldocument.4.3.0.nupkg.sha512"
     },
     "WappaChallenge.Dominio/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WappaChallenge.Util/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

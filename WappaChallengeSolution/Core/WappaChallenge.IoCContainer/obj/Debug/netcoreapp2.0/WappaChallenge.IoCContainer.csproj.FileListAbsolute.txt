@@ -19,3 +19,14 @@ C:\Users\andrey.alves\Documents\Git\challenge-dev\WappaChallengeSolution\Core\Wa
 C:\Users\andrey.alves\Documents\Git\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.IoCContainer\obj\Debug\netcoreapp2.0\WappaChallenge.IoCContainer.AssemblyInfo.cs
 C:\Users\andrey.alves\Documents\Git\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.IoCContainer\obj\Debug\netcoreapp2.0\WappaChallenge.IoCContainer.dll
 C:\Users\andrey.alves\Documents\Git\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.IoCContainer\obj\Debug\netcoreapp2.0\WappaChallenge.IoCContainer.pdb
+D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.IoCContainer\bin\Debug\netcoreapp2.0\WappaChallenge.Dominio.dll
+D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.IoCContainer\bin\Debug\netcoreapp2.0\WappaChallenge.Repositorio.dll
+D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.IoCContainer\bin\Debug\netcoreapp2.0\WappaChallenge.Dominio.pdb
+D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.IoCContainer\bin\Debug\netcoreapp2.0\WappaChallenge.Repositorio.pdb
+D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.IoCContainer\obj\Debug\netcoreapp2.0\WappaChallenge.IoCContainer.csprojResolveAssemblyReference.cache
+D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.IoCContainer\bin\Debug\netcoreapp2.0\WappaChallenge.AppServices.dll
+D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.IoCContainer\bin\Debug\netcoreapp2.0\WappaChallenge.DTO.dll
+D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.IoCContainer\bin\Debug\netcoreapp2.0\WappaChallenge.AppServices.pdb
+D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.IoCContainer\bin\Debug\netcoreapp2.0\WappaChallenge.DTO.pdb
+D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.IoCContainer\bin\Debug\netcoreapp2.0\WappaChallenge.Util.dll
+D:\Repositório\challenge-dev\WappaChallengeSolution\Core\WappaChallenge.IoCContainer\bin\Debug\netcoreapp2.0\WappaChallenge.Util.pdb

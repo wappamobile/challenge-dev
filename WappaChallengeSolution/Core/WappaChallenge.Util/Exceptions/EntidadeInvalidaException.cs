@@ -13,6 +13,8 @@ namespace WappaChallenge.Dominio.Exceptions
 
             foreach (ValidationResult erro in erros)
                 mensagem.AppendLine(erro.ErrorMessage);
+
+            throw new EntidadeInvalidaException(mensagem.ToString());
         }
 
         private EntidadeInvalidaException(string mensagem) : base(mensagem) { }

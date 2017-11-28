@@ -2,7 +2,7 @@
 
 namespace WappaChallenge.DTO
 {
-    public class MotoristaDTO
+    public class MotoristaDTO : BaseDTO
     {
         [Required(AllowEmptyStrings = false, ErrorMessage = "O primeiro nome é obrigatório.")]
         public string PrimeiroNome { get; set; }

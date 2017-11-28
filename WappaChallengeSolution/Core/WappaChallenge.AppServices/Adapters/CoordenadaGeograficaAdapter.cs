@@ -9,5 +9,15 @@ namespace WappaChallenge.AppServices.Adapters
         {
             return new CoordenadaGeografica(dto.Latitude, dto.Longitude);
         }
+
+        public static CoordenadaGeograficaDTO ParaDTO(this CoordenadaGeografica entidade)
+        {
+            return new CoordenadaGeograficaDTO
+            {
+                Id = entidade.Id,
+                Latitude = entidade.Latitude,
+                Longitude = entidade.Longitude
+            };
+        }
     }
 }

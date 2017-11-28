@@ -1,11 +1,13 @@
-﻿using WappaChallenge.AppServices.Adapters;
+﻿using System.Collections.Generic;
+using WappaChallenge.AppServices.Adapters;
+using WappaChallenge.AppServices.Facade.Interfaces;
 using WappaChallenge.Dominio.Entidades;
 using WappaChallenge.Dominio.Interfaces.Repositorio;
 using WappaChallenge.DTO;
 
 namespace WappaChallenge.AppServices.Facade
 {
-    public class MotoristaFacade
+    public class MotoristaFacade : IMotoristaFacade
     {
         private readonly IMotoristaRepositorio _motoristaRepositorio;
         private readonly IVeiculoRepositorio _veiculoRepositorio;
@@ -24,18 +26,48 @@ namespace WappaChallenge.AppServices.Facade
         }
 
 
-        public void CadastrarMotorista(MotoristaDTO dto)
+        public MotoristaDTO CadastrarMotorista(MotoristaDTO dto)
+        {
+            Motorista motorista = dto.ParaObjetoDeDominio();
+            var coo = new GoogleMapsAPIFacade().ObterCoordenadasGeograficas(dto.Endereco).Result;
+
+            motorista.Endereco.CoordenadaGeografica = new CoordenadaGeografica(coo.Latitude, coo.Longitude);
+
+            _veiculoRepositorio.Cadastrar(motorista.Veiculo);
+            _coordenadaGeograficaRepositorio.Cadastrar(motorista.Endereco.CoordenadaGeografica);
+            _enderecoRepositorio.Cadastrar(motorista.Endereco);
+            _motoristaRepositorio.Cadastrar(motorista);
+
+            return motorista.ParaDTO();
+        }
+
+        public ICollection<MotoristaDTO> ObterTodosOrdenadoPorPrimeiroNome()
+        {
+            IEnumerable<Motorista> motoristas = this._motoristaRepositorio.ObterTodosOrdenadoPorPrimeiroNome();            
+            return motoristas.ParaListaDeDTO();
+        }
+
+        public ICollection<MotoristaDTO> ObterTodosOrdenadoPorUltimoNome()
+        {
+            IEnumerable<Motorista> motoristas = this._motoristaRepositorio.ObterTodosOrdenadoPorUltimoNome();
+            return motoristas.ParaListaDeDTO();
+        }
+
+        public MotoristaDTO AtualizarMotorista(MotoristaDTO dto)
         {
             Motorista motorista = dto.ParaObjetoDeDominio();
             var coo = new GoogleMapsAPIFacade().ObterCoordenadasGeograficas(dto.Endereco);
 
-            _veiculoRepositorio.Cadastrar(motorista.Veiculo);
-            
+            _veiculoRepositorio.Atualizar(motorista.Veiculo);
+            _enderecoRepositorio.Atualizar(motorista.Endereco);
+            motorista = _motoristaRepositorio.Atualizar(motorista);
 
-            _enderecoRepositorio.Cadastrar(motorista.Endereco);
+            return motorista.ParaDTO();
+        }
 
-
-            _motoristaRepositorio.Cadastrar(motorista);
+        public void ExcluirMotorista(int id)
+        {
+            this._motoristaRepositorio.Excluir(id);
         }
     }
 }

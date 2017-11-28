@@ -46,7 +46,7 @@ namespace WappaChallenge.Repositorio.Databases
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            
         }
     }
 

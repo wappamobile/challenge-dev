@@ -26,7 +26,7 @@ namespace WappaChallenge.Dominio.Entidades
         public string CEP { get; protected set; }
 
         [Required(AllowEmptyStrings = false, ErrorMessage = "As coordenadas geográficas são obrigatórias.")]
-        public CoordenadaGeografica CoordenadaGeografica { get; protected set; }
+        public CoordenadaGeografica CoordenadaGeografica { get; set; }
 
         public Endereco(
             string logradouro,

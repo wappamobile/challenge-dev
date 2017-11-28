@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\WappaChallenge.AppServices\WappaChallenge.AppServices.csproj" />
     <ProjectReference Include="..\WappaChallenge.Dominio\WappaChallenge.Dominio.csproj" />
     <ProjectReference Include="..\WappaChallenge.Repositorio\WappaChallenge.Repositorio.csproj" />
   </ItemGroup>

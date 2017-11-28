@@ -1029,6 +1029,9 @@
         }
       },
       "WappaChallenge.Dominio/1.0.0": {
+        "dependencies": {
+          "WappaChallenge.Util": "1.0.0"
+        },
         "runtime": {
           "WappaChallenge.Dominio.dll": {}
         }
@@ -1040,6 +1043,11 @@
         },
         "runtime": {
           "WappaChallenge.Repositorio.dll": {}
+        }
+      },
+      "WappaChallenge.Util/1.0.0": {
+        "runtime": {
+          "WappaChallenge.Util.dll": {}
         }
       }
     }
@@ -1567,6 +1575,11 @@
       "sha512": ""
     },
     "WappaChallenge.Repositorio/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WappaChallenge.Util/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

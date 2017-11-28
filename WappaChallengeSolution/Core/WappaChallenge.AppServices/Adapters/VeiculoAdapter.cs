@@ -9,5 +9,16 @@ namespace WappaChallenge.AppServices.Adapters
         {
             return new Veiculo(dto.Marca, dto.Modelo, dto.Placa);
         }
+
+        public static VeiculoDTO ParaDTO(this Veiculo entidade)
+        {
+            return new VeiculoDTO
+            {
+                Id = entidade.Id,
+                Marca = entidade.Marca,
+                Modelo = entidade.Modelo,
+                Placa = entidade.Placa
+            };
+        }
     }
 }

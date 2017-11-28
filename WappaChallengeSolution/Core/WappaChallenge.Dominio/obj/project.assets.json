@@ -196,6 +196,16 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "WappaChallenge.Util/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "compile": {
+          "bin/placeholder/WappaChallenge.Util.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WappaChallenge.Util.dll": {}
+        }
       }
     }
   },
@@ -656,15 +666,21 @@
         "netstandard.library.2.0.0.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "WappaChallenge.Util/1.0.0": {
+      "type": "project",
+      "path": "../WappaChallenge.Util/WappaChallenge.Util.csproj",
+      "msbuildProject": "../WappaChallenge.Util/WappaChallenge.Util.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
-      "Microsoft.NETCore.App >= 2.0.0"
+      "Microsoft.NETCore.App >= 2.0.0",
+      "WappaChallenge.Util >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\andrey.alves\\.nuget\\packages\\": {},
+    "C:\\Users\\desen\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -673,17 +689,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\andrey.alves\\Documents\\Git\\challenge-dev\\WappaChallengeSolution\\Core\\WappaChallenge.Dominio\\WappaChallenge.Dominio.csproj",
+      "projectUniqueName": "D:\\Repositório\\challenge-dev\\WappaChallengeSolution\\Core\\WappaChallenge.Dominio\\WappaChallenge.Dominio.csproj",
       "projectName": "WappaChallenge.Dominio",
-      "projectPath": "C:\\Users\\andrey.alves\\Documents\\Git\\challenge-dev\\WappaChallengeSolution\\Core\\WappaChallenge.Dominio\\WappaChallenge.Dominio.csproj",
-      "packagesPath": "C:\\Users\\andrey.alves\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\andrey.alves\\Documents\\Git\\challenge-dev\\WappaChallengeSolution\\Core\\WappaChallenge.Dominio\\obj\\",
+      "projectPath": "D:\\Repositório\\challenge-dev\\WappaChallengeSolution\\Core\\WappaChallenge.Dominio\\WappaChallenge.Dominio.csproj",
+      "packagesPath": "C:\\Users\\desen\\.nuget\\packages\\",
+      "outputPath": "D:\\Repositório\\challenge-dev\\WappaChallengeSolution\\Core\\WappaChallenge.Dominio\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\andrey.alves\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\desen\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -695,7 +711,11 @@
       },
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Repositório\\challenge-dev\\WappaChallengeSolution\\Core\\WappaChallenge.Util\\WappaChallenge.Util.csproj": {
+              "projectPath": "D:\\Repositório\\challenge-dev\\WappaChallengeSolution\\Core\\WappaChallenge.Util\\WappaChallenge.Util.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -710,7 +730,7 @@
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.0.0",
+            "version": "2.0",
             "autoReferenced": true
           }
         },

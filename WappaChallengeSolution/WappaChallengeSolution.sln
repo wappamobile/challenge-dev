@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2008
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TDD", "TDD", "{05C6A6D9-17D1-4AAA-A0D8-5F9CD5793ABC}"
 EndProject
@@ -25,9 +25,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TDD.TestsMotorista", "TDD\W
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TDD.TestsVeiculo", "TDD\WappaChallenge.TDD.TestsVeiculo\TDD.TestsVeiculo.csproj", "{EBD776A7-CC63-443E-97C9-142E9307CC5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WappaChallenge.AppServices", "Core\WappaChallenge.AppServices\WappaChallenge.AppServices.csproj", "{CBF1E522-F749-4527-A4FA-404B5D55692F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WappaChallenge.AppServices", "Core\WappaChallenge.AppServices\WappaChallenge.AppServices.csproj", "{CBF1E522-F749-4527-A4FA-404B5D55692F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WappaChallenge.DTO", "Core\WappaChallenge.DTO\WappaChallenge.DTO.csproj", "{13F8A1BD-CB0D-4EE9-8874-C2CE46E3EB70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WappaChallenge.DTO", "Core\WappaChallenge.DTO\WappaChallenge.DTO.csproj", "{13F8A1BD-CB0D-4EE9-8874-C2CE46E3EB70}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integracao", "Integracao", "{896F15FA-31D0-4626-90C8-401037BC3F7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDD.TestsGoogleMapsAPI", "TDD\TDD.TestsGoogleMapsAPI\TDD.TestsGoogleMapsAPI.csproj", "{AAF304C1-87DC-45F1-A931-87CCF25B6CF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WappaChallenge.WebAPI.Cadastro", "WebServices\WappaChallenge.WebAPI.Cadastro\WappaChallenge.WebAPI.Cadastro.csproj", "{50C40AC1-EE04-441D-9463-5775C5A4D7B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WappaChallenge.Util", "Core\WappaChallenge.Util\WappaChallenge.Util.csproj", "{0AEB2BA5-6345-4BE3-BB40-5B44D7CE2F0B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +79,18 @@ Global
 		{13F8A1BD-CB0D-4EE9-8874-C2CE46E3EB70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13F8A1BD-CB0D-4EE9-8874-C2CE46E3EB70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13F8A1BD-CB0D-4EE9-8874-C2CE46E3EB70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAF304C1-87DC-45F1-A931-87CCF25B6CF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAF304C1-87DC-45F1-A931-87CCF25B6CF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAF304C1-87DC-45F1-A931-87CCF25B6CF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAF304C1-87DC-45F1-A931-87CCF25B6CF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50C40AC1-EE04-441D-9463-5775C5A4D7B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50C40AC1-EE04-441D-9463-5775C5A4D7B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50C40AC1-EE04-441D-9463-5775C5A4D7B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50C40AC1-EE04-441D-9463-5775C5A4D7B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AEB2BA5-6345-4BE3-BB40-5B44D7CE2F0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AEB2BA5-6345-4BE3-BB40-5B44D7CE2F0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AEB2BA5-6345-4BE3-BB40-5B44D7CE2F0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AEB2BA5-6345-4BE3-BB40-5B44D7CE2F0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -86,6 +106,10 @@ Global
 		{EBD776A7-CC63-443E-97C9-142E9307CC5C} = {C97EEE6C-33D6-4C32-8309-9811BCC381C5}
 		{CBF1E522-F749-4527-A4FA-404B5D55692F} = {BB670843-31B8-445C-A5F9-284C3F1C2F5D}
 		{13F8A1BD-CB0D-4EE9-8874-C2CE46E3EB70} = {BB670843-31B8-445C-A5F9-284C3F1C2F5D}
+		{896F15FA-31D0-4626-90C8-401037BC3F7B} = {05C6A6D9-17D1-4AAA-A0D8-5F9CD5793ABC}
+		{AAF304C1-87DC-45F1-A931-87CCF25B6CF8} = {896F15FA-31D0-4626-90C8-401037BC3F7B}
+		{50C40AC1-EE04-441D-9463-5775C5A4D7B3} = {804D84C0-57DD-4565-8FDF-1AF522B74C56}
+		{0AEB2BA5-6345-4BE3-BB40-5B44D7CE2F0B} = {BB670843-31B8-445C-A5F9-284C3F1C2F5D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {68D65FC0-2E11-42F4-881A-76F80E4E786E}

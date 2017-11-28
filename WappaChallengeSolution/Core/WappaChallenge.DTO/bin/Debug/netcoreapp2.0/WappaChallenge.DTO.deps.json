@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v2.0": {
       "WappaChallenge.DTO/1.0.0": {
+        "dependencies": {
+          "WappaChallenge.Util": "1.0.0"
+        },
         "runtime": {
           "WappaChallenge.DTO.dll": {}
+        }
+      },
+      "WappaChallenge.Util/1.0.0": {
+        "runtime": {
+          "WappaChallenge.Util.dll": {}
         }
       }
     }
   },
   "libraries": {
     "WappaChallenge.DTO/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WappaChallenge.Util/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
