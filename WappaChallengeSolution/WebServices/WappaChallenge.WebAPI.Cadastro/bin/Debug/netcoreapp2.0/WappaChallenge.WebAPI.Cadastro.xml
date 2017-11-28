@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WappaChallenge.WebAPI.Cadastro</name>
+    </assembly>
+    <members>
+        <member name="T:WappaChallenge.WebAPI.Cadastro.Controllers.CadastroMotoristaController">
+            <summary>
+            Serviço responsável pela gestão de Motoristas do Wappa Challenge.
+            </summary>
+        </member>
+        <member name="M:WappaChallenge.WebAPI.Cadastro.Controllers.CadastroMotoristaController.#ctor(WappaChallenge.AppServices.Facade.Interfaces.IMotoristaFacade)">
+            <summary>
+            Construtor com Injeção de dependência.
+            </summary>
+            <param name="motoristaFacade"></param>
+        </member>
+        <member name="M:WappaChallenge.WebAPI.Cadastro.Controllers.CadastroMotoristaController.CadastrarMotorista(WappaChallenge.DTO.MotoristaDTO)">
+            <summary>
+            Método responsável pelo cadastro de novos motoristas.
+            </summary>
+            <param name="motorista">Motorista</param>
+            <returns>Dados do motorista cadastrado.</returns>
+        </member>
+        <member name="M:WappaChallenge.WebAPI.Cadastro.Controllers.CadastroMotoristaController.ObterTodosMotoristasOrdenadoPorPrimeiroNome">
+            <summary>
+            Método responsável por devolver uma lista de Motoristas (Ordem ascendente pelo primeiro nome).
+            </summary>
+            <returns>Lista ordernada de Motoristas.</returns>
+        </member>
+        <member name="M:WappaChallenge.WebAPI.Cadastro.Controllers.CadastroMotoristaController.ObterTodosMotoristasOrdenadoPorUltimoNome">
+            <summary>
+            Método responsável por devolver uma lista de Motoristas (Ordem ascendente pelo ultimo nome).
+            </summary>
+            <returns>Lista ordernada de Motoristas.</returns>
+        </member>
+        <member name="M:WappaChallenge.WebAPI.Cadastro.Controllers.CadastroMotoristaController.atualizarMotorista(WappaChallenge.DTO.MotoristaDTO)">
+            <summary>
+            Método responsável por atualizar os dados cadastrais dos motoristas.
+            </summary>
+            <param name="motorista">Motorista</param>
+            <returns>Motorista com os dados atualizados.</returns>
+        </member>
+        <member name="M:WappaChallenge.WebAPI.Cadastro.Controllers.CadastroMotoristaController.excluirMotorista(System.Int32)">
+            <summary>
+            Método responsável pela exclusão de motoristas.
+            </summary>
+            <param name="id">ID de cadastro do motorista.</param>
+            <returns>Mensagem padrão de retorno da API.</returns>
+        </member>
+    </members>
+</doc>
