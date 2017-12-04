@@ -1,0 +1,20 @@
+version: '2'
+services:
+    mysql:
+      image: mysql:5
+      volumes:
+        - ./Wappa.SqlScripts/:/docker-entrypoint-initdb.d
+      environment:
+        - MYSQL_DATABASE=wappa
+        - MYSQL_USER=wappa
+        - MYSQL_PASSWORD=wappa
+        - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+        - MYSQL_ROOT_PASSWORD=root
+      ports:
+        - 3308:3306
+    wappa-web:
+      build: ./
+      links:
+        - mysql:mysql
+      ports:
+        - 8081:80
