@@ -1,0 +1,249 @@
+swagger: '2.0'
+info:
+  version: v1
+  title: Wappa API
+basePath: /
+paths:
+  /api/Carros:
+    get:
+      tags:
+        - Carros
+      operationId: ApiCarrosGet
+      consumes: []
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/GetCarrosResponse'
+  /api/Cidades:
+    get:
+      tags:
+        - Cidades
+      operationId: ApiCidadesGet
+      consumes: []
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/GetCidadesResponse'
+  /api/Motoristas:
+    get:
+      tags:
+        - Motoristas
+      operationId: ApiMotoristasGet
+      consumes: []
+      produces:
+        - application/json
+      parameters:
+        - name: OrdenarPor
+          in: query
+          required: false
+          type: string
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/GetMotoristasResponse'
+    post:
+      tags:
+        - Motoristas
+      operationId: ApiMotoristasPost
+      consumes:
+        - application/json-patch+json
+        - application/json
+        - text/json
+        - application/*+json
+      produces: []
+      parameters:
+        - name: request
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/PostMotoristasRequest'
+      responses:
+        '200':
+          description: Success
+  '/api/Motoristas/{id}':
+    put:
+      tags:
+        - Motoristas
+      operationId: ApiMotoristasByIdPut
+      consumes:
+        - application/json-patch+json
+        - application/json
+        - text/json
+        - application/*+json
+      produces: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: integer
+          format: int32
+        - name: request
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/PostMotoristasRequest'
+      responses:
+        '200':
+          description: Success
+    delete:
+      tags:
+        - Motoristas
+      operationId: ApiMotoristasByIdDelete
+      consumes: []
+      produces: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: integer
+          format: int32
+      responses:
+        '200':
+          description: Success
+definitions:
+  GetCarrosResponse:
+    type: object
+    properties:
+      items:
+        type: array
+        items:
+          $ref: '#/definitions/CarroViewModel'
+      count:
+        format: int32
+        type: integer
+        readOnly: true
+  CarroViewModel:
+    type: object
+    properties:
+      carroId:
+        format: int32
+        type: integer
+        readOnly: true
+      marca:
+        type: string
+        readOnly: true
+      placa:
+        type: string
+        readOnly: true
+  GetCidadesResponse:
+    type: object
+    properties:
+      items:
+        type: array
+        items:
+          $ref: '#/definitions/CidadeViewModel'
+      count:
+        format: int32
+        type: integer
+        readOnly: true
+  CidadeViewModel:
+    type: object
+    properties:
+      cidadeId:
+        format: int32
+        type: integer
+        readOnly: true
+      nome:
+        type: string
+        readOnly: true
+      estado:
+        $ref: '#/definitions/EstadoViewModel'
+        readOnly: true
+  EstadoViewModel:
+    type: object
+    properties:
+      estadoId:
+        format: int32
+        type: integer
+        readOnly: true
+      descricao:
+        type: string
+        readOnly: true
+      sigla:
+        type: string
+        readOnly: true
+  GetMotoristasResponse:
+    type: object
+    properties:
+      items:
+        type: array
+        items:
+          $ref: '#/definitions/MotoristaViewModel'
+      count:
+        format: int32
+        type: integer
+        readOnly: true
+  MotoristaViewModel:
+    type: object
+    properties:
+      motoristaId:
+        format: int32
+        type: integer
+        readOnly: true
+      nome:
+        type: string
+        readOnly: true
+      sobrenome:
+        type: string
+        readOnly: true
+      carro:
+        $ref: '#/definitions/CarroViewModel'
+        readOnly: true
+      logradouro:
+        type: string
+        readOnly: true
+      numero:
+        type: string
+        readOnly: true
+      bairro:
+        type: string
+        readOnly: true
+      cep:
+        type: string
+        readOnly: true
+      cidade:
+        $ref: '#/definitions/CidadeViewModel'
+        readOnly: true
+      latitude:
+        format: double
+        type: number
+        readOnly: true
+      longitude:
+        format: double
+        type: number
+        readOnly: true
+  PostMotoristasRequest:
+    type: object
+    properties:
+      nome:
+        type: string
+      sobrenome:
+        type: string
+      carroId:
+        format: int32
+        type: integer
+      logradouro:
+        type: string
+      numero:
+        type: string
+      bairro:
+        type: string
+      cep:
+        type: string
+      cidadeId:
+        format: int32
+        type: integer
+      latitude:
+        format: double
+        type: number
+      longitude:
+        format: double
+        type: number
+securityDefinitions: {}
