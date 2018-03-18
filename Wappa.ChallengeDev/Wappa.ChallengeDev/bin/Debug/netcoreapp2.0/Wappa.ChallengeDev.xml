@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Wappa.ChallengeDev</name>
+    </assembly>
+    <members>
+        <member name="T:Wappa.ChallengeDev.Controllers.Api.TaxistaController">
+            <summary>
+            Web Api de Taxistas da WAPPA
+            </summary>
+        </member>
+        <member name="M:Wappa.ChallengeDev.Controllers.Api.TaxistaController.Delete(System.Int32)">
+            <summary>
+            Remove o taxista pelo ID
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wappa.ChallengeDev.Controllers.Api.TaxistaController.GetById(System.Int32)">
+            <summary>
+            Busca o taxista pelo ID
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wappa.ChallengeDev.Controllers.Api.TaxistaController.GetAll">
+            <summary>
+            Retorna todos os taxistas cadastrados
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wappa.ChallengeDev.Controllers.Api.TaxistaController.Save(Wappa.Models.Taxista)">
+            <summary>
+            Insere ou atualiza um taxista
+            </summary>
+            <param name="taxista"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

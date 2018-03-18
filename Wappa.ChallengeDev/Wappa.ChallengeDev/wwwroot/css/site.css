@@ -1,0 +1,34 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    z-index: 2;
+    color: #fff;
+    background-color: #EE3423;
+    border-color: #EE3423;
+    cursor: default;
+}
+
+.pagination > li > a, .pagination > li > span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    line-height: 1.4285;
+    text-decoration: none;
+    color: #797979;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-left: -1px;
+}
+
+    .pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus {
+        color: #EE3423;
+        background-color: #eee;
+        border-color: #ddd;
+    }
+
+
+th {
+    cursor: pointer;
+}
