@@ -1,0 +1,5 @@
+1. Executar o arquivo Install.sql para criar as tabelas em um banco do SQL Server.
+2. Ajustar a ConnectionString no arquivo appsettings.json do projeto Wappa.API como for necessário para a conexão ao banco.
+3. Ajustar o valor de KeyAPI do GoogleMaps com uma chave válida para a consulta.
+4. Restaurar os pacotes do projeto.
+5. Executar.
