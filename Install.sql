@@ -1,0 +1,49 @@
+CREATE TABLE Veiculo
+(
+	VeiculoID INT IDENTITY(1,1) NOT NULL,
+	Marca VARCHAR(50) NOT NULL,
+	Modelo VARCHAR(50) NOT NULL,
+	Placa VARCHAR(8) NOT NULL
+)
+GO
+
+ALTER TABLE Veiculo ADD CONSTRAINT PK_Veiculo PRIMARY KEY (VeiculoID)
+GO
+
+CREATE TABLE Endereco
+(
+	EnderecoID INT IDENTITY(1,1) NOT NULL,
+	Logradouro VARCHAR(100) NOT NULL,
+	Numero VARCHAR(10) NOT NULL,
+	Complemento VARCHAR(100),
+	Bairro VARCHAR(50) NOT NULL,
+	Cidade VARCHAR(100) NOT NULL,
+	Estado VARCHAR(2) NOT NULL,
+	Latitude VARCHAR(20),
+	Longitude VARCHAR(20)
+)
+GO
+
+ALTER TABLE Endereco ADD CONSTRAINT PK_Endereco PRIMARY KEY (EnderecoID)
+GO
+
+CREATE TABLE Motorista
+(
+	MotoristaID INT IDENTITY(1,1) NOT NULL,
+	PrimeiroNome VARCHAR(50) NOT NULL,
+	UltimoNome VARCHAR(50) NOT NULL,
+	EnderecoID INT NOT NULL,
+	VeiculoID INT NOT NULL
+)
+GO
+
+ALTER TABLE Motorista ADD CONSTRAINT PK_Motorista PRIMARY KEY (MotoristaID)
+GO
+
+ALTER TABLE Motorista ADD CONSTRAINT FK_Motorista_Endereco FOREIGN KEY (EnderecoID)
+REFERENCES Endereco (EnderecoID)
+GO
+
+ALTER TABLE Motorista ADD CONSTRAINT FK_Motorista_Veiculo FOREIGN KEY (VeiculoID)
+REFERENCES Veiculo (VeiculoID)
+GO
