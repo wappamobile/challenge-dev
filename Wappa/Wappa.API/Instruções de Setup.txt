@@ -1,0 +1,6 @@
+﻿Instruções para execução do projeto:
+1 - Substituir [DBServer] no arquivo appsettings.json pelo nome do servidor SQL Server;
+2 - Substituir [Chave da API do google maps] por uma chave válida do google maps;
+3 - Executar o comando "dotnet ef database update" na pasta do projeto Wappa.DataAccess.
+4 - Executar o projeto
+5 - Documentação da API está disponivel no endereço "/swagger/" (ex:http://localhost:65452/swagger/);
