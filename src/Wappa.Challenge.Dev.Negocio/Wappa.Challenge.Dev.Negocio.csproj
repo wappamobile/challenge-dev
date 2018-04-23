@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Wappa.Challenge.Dev.Data\Wappa.Challenge.Dev.Data.csproj" />
+    <ProjectReference Include="..\Wappa.Challenge.Dev.Models\Wappa.Challenge.Dev.Models.csproj" />
+    <ProjectReference Include="..\Wappa.Challenge.Dev.Services\Wappa.Challenge.Dev.Services.csproj" />
+  </ItemGroup>
+
+</Project>
