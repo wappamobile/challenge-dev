@@ -1,0 +1,8 @@
+Instruções para execução do projeto:
+1 - Substituir [MongoServer] e [MongoPort] no arquivo appsettings.json do projeto Wappa.Challenge.Api e Wappa.Challenge.UnitTest pelos dados do servidor mongo db;
+	Opcionalmente, para disponibilizar um servidor mongo para uso local, pode-se usar o Docker executar os seguintes comandos:
+		docker pull mongo
+		docker run -d --name mongoLocal -p 27017:27017 mongo
+2 - Substituir [Google Api Key] por uma chave válida do google maps;
+3 - Executar o projeto
+4 - A documentação está disponível através do swagger e encontra-se disponivel na url /swagger
