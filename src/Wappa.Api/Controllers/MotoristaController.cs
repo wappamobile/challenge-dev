@@ -22,7 +22,7 @@ namespace Wappa.Api.Controllers
             _service = service;
             _logger = logger;
         }
-
+        
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
         [HttpGet]

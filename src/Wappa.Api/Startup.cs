@@ -46,7 +46,16 @@ namespace Wappa.Api
             
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "API de Gerenciamento de Motoristas", Version = "v1" });
+                c.SwaggerDoc(
+                    "v1", 
+                    new Info { Title = "API de Gerenciamento de Motoristas", 
+                    Version = "v1",
+                    Contact = new Contact
+                    {
+                        Name = "Pedro Fogolin",
+                        Email = "pedro.fogolin@gmail.com"
+                    }
+                });
             });
         }
 

@@ -24,28 +24,6 @@ namespace Wappa.Tests
             _repCoordenadasMock = new Mock<ICoordenadasRepository>();
 
             SetupMocks();
-            
-            // var motoristas = new List<Motorista> 
-            // { 
-            //     new Motorista() { Id = 1, PrimeiroNome = "Arya", UltimoNome = "Stark" }
-            // };
-
-            // _repMotoristaMock.Setup(x => x.GetAll(null)).ReturnsAsync(motoristas.AsQueryable());
-
-            // _repMotoristaMock.Setup(x => x.GetAll("PrimeiroNome")).ReturnsAsync(motoristas.AsQueryable());
-
-            // _repMotoristaMock.Setup(x => x.GetAll("UltimoNome")).ReturnsAsync(motoristas.AsQueryable());
-            
-            // _repMotoristaMock.Setup(x => x.Get(It.IsAny<int>())).ReturnsAsync((int id) => motoristas.Find(s => s.Id == id));
-
-            // _repMotoristaMock.Setup(x => x.Save(It.IsAny<Motorista>()))
-            //     .Callback((Motorista motorista) => motoristas.Add(motorista));
-
-            // _repMotoristaMock.Setup(x => x.Update(It.IsAny<Motorista>()))
-            //     .Callback((Motorista motorista) => motoristas[motoristas.FindIndex(x => x.Id == motorista.Id)] = motorista);
-
-            // _repMotoristaMock.Setup(x => x.Delete(It.IsAny<int>()))
-            //     .Callback((int id) => motoristas.RemoveAt(motoristas.FindIndex(x => x.Id == id)));
 
             var services = new ServiceCollection()
                 .AddTransient<IMotoristaService, MotoristaService>(
@@ -106,7 +84,7 @@ namespace Wappa.Tests
         private void SetupDelete(List<Motorista> motoristas)
         {
             _repMotoristaMock.Setup(x => x.Delete(It.IsAny<int>()))
-                .Callback((int id) => motoristas.RemoveAt(motoristas.FindIndex(x => x.Id == id)));
+                .Callback((int id) => motoristas.Remove(motoristas.FirstOrDefault(q => q.Id == id)));
         }
 
         [Fact]
@@ -147,14 +125,13 @@ namespace Wappa.Tests
         [Fact]
         public void Service_Deve_Excluir_Motorista()
         {
-            const int id = 1;
-            
-            var motorista = _service.Get(id);
-            _service.Delete(motorista.Id);            
-            _repMotoristaMock.Verify(x => x.Get(It.IsAny<int>()), Times.Once);
-            _repMotoristaMock.Verify(x => x.Delete(It.IsAny<int>()), Times.Once);
+            int motoristaId = 1;
 
-            Assert.True(0 == _service.GetAll().Result.Count());
+            _service.Delete(motoristaId);
+            _repMotoristaMock.Verify(x => x.Delete(It.IsAny<int>()), Times.Once);
+            var motoristas = _service.GetAll().Result;
+
+            Assert.True(0 == motoristas.Count());
         }
 
         [Fact]
