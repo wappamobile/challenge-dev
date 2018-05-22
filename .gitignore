@@ -1,0 +1,19 @@
+#visual studio code
+.vscode/
+
+#visual studio full
+.vs/
+*.xproj
+*.xproj.user
+Properties/
+
+#dotnet core
+project.lock.json
+
+#build results
+bin/
+obj/
+
+#node modules
+node_modules/
+*.log
