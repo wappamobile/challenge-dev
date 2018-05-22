@@ -16,12 +16,3 @@ Acesse o diretório "/test/Wappa.Tests" e execute as seguintes linhas de comando
 
 ### Documentação
 Acesse o endereço "http://localhost:5000/swagger" para mais informações.
-
-### Tempo gasto no desenvolvimento
- - Setup do Projeto - 10m
- - Dev Projeto Core - 15m
- - Dev Projeto Infra - 4h15m
- - Dev Projeto Service - 1h30m
- - Dev Projeto API - 3h
- - Documentação + Instruções - 30m
- - Total: 9h40m
