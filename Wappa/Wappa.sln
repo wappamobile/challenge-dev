@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wappa.Core", "Wappa.Core\Wappa.Core.csproj", "{5FD5AFBF-C3DA-46CD-A470-B05514B9FFDD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wappa.API", "Wappa.API\Wappa.API.csproj", "{8DA7AA4D-759E-42CB-A492-5E199D1E4F9B}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{6F7145D3-6A48-40E5-BC7D-88EB27201887}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wappa.Tests", "Wappa.Tests\Wappa.Tests.csproj", "{665A24EC-BC9C-49E9-8F35-A4D5CF9D2A86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wappa.Entities", "Wappa.Entities\Wappa.Entities.csproj", "{E4AED358-58D0-48BC-9447-8EB888E76BA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wappa.Services", "Wappa.Services\Wappa.Services.csproj", "{6C84551F-31B2-40C4-BC5D-9A30C16A9E42}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5FD5AFBF-C3DA-46CD-A470-B05514B9FFDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FD5AFBF-C3DA-46CD-A470-B05514B9FFDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FD5AFBF-C3DA-46CD-A470-B05514B9FFDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FD5AFBF-C3DA-46CD-A470-B05514B9FFDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DA7AA4D-759E-42CB-A492-5E199D1E4F9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DA7AA4D-759E-42CB-A492-5E199D1E4F9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DA7AA4D-759E-42CB-A492-5E199D1E4F9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DA7AA4D-759E-42CB-A492-5E199D1E4F9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F7145D3-6A48-40E5-BC7D-88EB27201887}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F7145D3-6A48-40E5-BC7D-88EB27201887}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F7145D3-6A48-40E5-BC7D-88EB27201887}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F7145D3-6A48-40E5-BC7D-88EB27201887}.Release|Any CPU.Build.0 = Release|Any CPU
+		{665A24EC-BC9C-49E9-8F35-A4D5CF9D2A86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{665A24EC-BC9C-49E9-8F35-A4D5CF9D2A86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{665A24EC-BC9C-49E9-8F35-A4D5CF9D2A86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{665A24EC-BC9C-49E9-8F35-A4D5CF9D2A86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4AED358-58D0-48BC-9447-8EB888E76BA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4AED358-58D0-48BC-9447-8EB888E76BA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4AED358-58D0-48BC-9447-8EB888E76BA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4AED358-58D0-48BC-9447-8EB888E76BA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C84551F-31B2-40C4-BC5D-9A30C16A9E42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C84551F-31B2-40C4-BC5D-9A30C16A9E42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C84551F-31B2-40C4-BC5D-9A30C16A9E42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C84551F-31B2-40C4-BC5D-9A30C16A9E42}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {77F01620-74D0-48AF-ACB6-96DB9885EB35}
+	EndGlobalSection
+EndGlobal

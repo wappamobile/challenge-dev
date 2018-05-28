@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  wappa.api:
+    image: wappa.api
+    build:
+      context: .
+      dockerfile: Wappa.API/Dockerfile

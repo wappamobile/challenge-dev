@@ -1,0 +1,4 @@
+Instruções de setup do projeto:
+1 - Inicializar o Docker;
+3 - Executar o projeto;
+4 - A documentação das API está disponível através do swagger (http://localhost:54521/swagger/)
