@@ -1,0 +1,11 @@
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.Util\bin\Debug\netcoreapp2.0\Wappa.Util.deps.json
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.Util\bin\Debug\netcoreapp2.0\Wappa.Util.dll
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.Util\bin\Debug\netcoreapp2.0\Wappa.Util.pdb
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.Util\obj\Debug\netcoreapp2.0\Wappa.Util.csproj.CoreCompileInputs.cache
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.Util\obj\Debug\netcoreapp2.0\Wappa.Util.AssemblyInfoInputs.cache
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.Util\obj\Debug\netcoreapp2.0\Wappa.Util.AssemblyInfo.cs
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.Util\obj\Debug\netcoreapp2.0\Wappa.Util.dll
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.Util\obj\Debug\netcoreapp2.0\Wappa.Util.pdb
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.Util\obj\Debug\netcoreapp2.0\Wappa.Util.csprojResolveAssemblyReference.cache
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.Util\bin\Debug\netcoreapp2.0\Newtonsoft.Json.dll
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.Util\bin\Debug\netcoreapp2.0\Newtonsoft.Json.xml

@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Comando\IResultadoComando.cs" />
+    <Compile Remove="Manipulador\ManipularMotorista.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Flunt" Version="1.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Wappa.DTO\Wappa.ViewModel.csproj" />
+    <ProjectReference Include="..\Wappa.Util\Wappa.Util.csproj" />
+  </ItemGroup>
+
+</Project>

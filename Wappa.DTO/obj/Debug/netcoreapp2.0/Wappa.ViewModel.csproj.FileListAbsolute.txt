@@ -1,0 +1,9 @@
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.DTO\bin\Debug\netcoreapp2.0\Wappa.ViewModel.deps.json
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.DTO\bin\Debug\netcoreapp2.0\Wappa.ViewModel.dll
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.DTO\bin\Debug\netcoreapp2.0\Wappa.ViewModel.pdb
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.DTO\obj\Debug\netcoreapp2.0\Wappa.ViewModel.csproj.CoreCompileInputs.cache
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.DTO\obj\Debug\netcoreapp2.0\Wappa.ViewModel.AssemblyInfoInputs.cache
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.DTO\obj\Debug\netcoreapp2.0\Wappa.ViewModel.AssemblyInfo.cs
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.DTO\obj\Debug\netcoreapp2.0\Wappa.ViewModel.dll
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.DTO\obj\Debug\netcoreapp2.0\Wappa.ViewModel.pdb
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.DTO\obj\Debug\netcoreapp2.0\Wappa.ViewModel.csprojResolveAssemblyReference.cache

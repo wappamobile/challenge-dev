@@ -1,0 +1,17 @@
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.Infraestrutura\bin\Debug\netcoreapp2.0\Wappa.Infraestrutura.deps.json
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.Infraestrutura\bin\Debug\netcoreapp2.0\Wappa.Infraestrutura.dll
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.Infraestrutura\bin\Debug\netcoreapp2.0\Wappa.Infraestrutura.pdb
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.Infraestrutura\bin\Debug\netcoreapp2.0\Wappa.Dominio.dll
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.Infraestrutura\bin\Debug\netcoreapp2.0\Wappa.ViewModel.dll
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.Infraestrutura\bin\Debug\netcoreapp2.0\Wappa.Dominio.pdb
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.Infraestrutura\bin\Debug\netcoreapp2.0\Wappa.ViewModel.pdb
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.Infraestrutura\obj\Debug\netcoreapp2.0\Wappa.Infraestrutura.csprojResolveAssemblyReference.cache
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.Infraestrutura\obj\Debug\netcoreapp2.0\Wappa.Infraestrutura.csproj.CoreCompileInputs.cache
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.Infraestrutura\obj\Debug\netcoreapp2.0\Wappa.Infraestrutura.AssemblyInfoInputs.cache
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.Infraestrutura\obj\Debug\netcoreapp2.0\Wappa.Infraestrutura.AssemblyInfo.cs
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.Infraestrutura\obj\Debug\netcoreapp2.0\Wappa.Infraestrutura.dll
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.Infraestrutura\obj\Debug\netcoreapp2.0\Wappa.Infraestrutura.pdb
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.Infraestrutura\bin\Debug\netcoreapp2.0\Wappa.Util.dll
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.Infraestrutura\bin\Debug\netcoreapp2.0\Wappa.Util.pdb
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.Infraestrutura\bin\Debug\netcoreapp2.0\Newtonsoft.Json.dll
+C:\Users\Benylton Lucas\source\repos\Wappa.Teste\Wappa.Infraestrutura\bin\Debug\netcoreapp2.0\Newtonsoft.Json.xml
