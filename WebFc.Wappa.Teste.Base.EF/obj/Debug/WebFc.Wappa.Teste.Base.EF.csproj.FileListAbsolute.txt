@@ -1,0 +1,14 @@
+C:\Users\Usuario\documents\visual studio 2017\Projects\WebFc.Wappa.Teste\WebFc.Wappa.Teste.Base.EF\bin\Debug\WebFc.Wappa.Teste.Base.EF.dll.config
+C:\Users\Usuario\documents\visual studio 2017\Projects\WebFc.Wappa.Teste\WebFc.Wappa.Teste.Base.EF\bin\Debug\WebFc.Wappa.Teste.Base.EF.dll
+C:\Users\Usuario\documents\visual studio 2017\Projects\WebFc.Wappa.Teste\WebFc.Wappa.Teste.Base.EF\bin\Debug\WebFc.Wappa.Teste.Base.EF.pdb
+C:\Users\Usuario\documents\visual studio 2017\Projects\WebFc.Wappa.Teste\WebFc.Wappa.Teste.Base.EF\bin\Debug\EntityFramework.dll
+C:\Users\Usuario\documents\visual studio 2017\Projects\WebFc.Wappa.Teste\WebFc.Wappa.Teste.Base.EF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Usuario\documents\visual studio 2017\Projects\WebFc.Wappa.Teste\WebFc.Wappa.Teste.Base.EF\bin\Debug\WebFC.Wappa.Teste.Base.Core.dll
+C:\Users\Usuario\documents\visual studio 2017\Projects\WebFc.Wappa.Teste\WebFc.Wappa.Teste.Base.EF\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Usuario\documents\visual studio 2017\Projects\WebFc.Wappa.Teste\WebFc.Wappa.Teste.Base.EF\bin\Debug\WebFC.Wappa.Teste.Base.Core.pdb
+C:\Users\Usuario\documents\visual studio 2017\Projects\WebFc.Wappa.Teste\WebFc.Wappa.Teste.Base.EF\bin\Debug\EntityFramework.xml
+C:\Users\Usuario\documents\visual studio 2017\Projects\WebFc.Wappa.Teste\WebFc.Wappa.Teste.Base.EF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Usuario\documents\visual studio 2017\Projects\WebFc.Wappa.Teste\WebFc.Wappa.Teste.Base.EF\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Usuario\documents\visual studio 2017\Projects\WebFc.Wappa.Teste\WebFc.Wappa.Teste.Base.EF\obj\Debug\WebFc.Wappa.Teste.Base.EF.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\documents\visual studio 2017\Projects\WebFc.Wappa.Teste\WebFc.Wappa.Teste.Base.EF\obj\Debug\WebFc.Wappa.Teste.Base.EF.dll
+C:\Users\Usuario\documents\visual studio 2017\Projects\WebFc.Wappa.Teste\WebFc.Wappa.Teste.Base.EF\obj\Debug\WebFc.Wappa.Teste.Base.EF.pdb
