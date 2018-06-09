@@ -13,4 +13,8 @@
     <ProjectReference Include="..\Wappa.Api.DomainModel\Wappa.Api.DomainModel.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
 </Project>
