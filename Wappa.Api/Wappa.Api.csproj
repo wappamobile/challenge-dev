@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <UserSecretsId>30cfa5cd-dbf3-4d4d-8f62-3da6a947de53</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Wappa.Api.DataLayer\Wappa.Api.DataLayer.csproj" />
     <ProjectReference Include="..\Wappa.Api.DomainModel\Wappa.Api.DomainModel.csproj" />
+    <ProjectReference Include="..\Wappa.Api.ExternalServices\Wappa.Api.ExternalServices.csproj" />
   </ItemGroup>
 
 </Project>
