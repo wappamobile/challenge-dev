@@ -7,8 +7,8 @@ using Wappa.Api.DomainModel;
 
 namespace Wappa.Api.DataLayer
 {
-    class BackOfficeContext : DbContext
-    {
+	public class BackOfficeContext : DbContext
+	{
 		public virtual DbSet<Address> Addresses { get; set; }
 
 		public virtual DbSet<Car> Cars { get; set; }
@@ -17,8 +17,8 @@ namespace Wappa.Api.DataLayer
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
-			modelBuilder.ApplyConfiguration(new AddressTypeConfiguration());	
-			modelBuilder.ApplyConfiguration(new CarTypeConfiguration());	
+			modelBuilder.ApplyConfiguration(new AddressTypeConfiguration());
+			modelBuilder.ApplyConfiguration(new CarTypeConfiguration());
 			modelBuilder.ApplyConfiguration(new DriverTypeConfiguration());
 		}
 	}
