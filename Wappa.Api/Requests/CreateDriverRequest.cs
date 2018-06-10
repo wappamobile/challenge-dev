@@ -19,6 +19,6 @@ namespace Wappa.Api.Requests
 		public Address Address { get; set; }
 
 		[Required]
-		public List<Car> Car { get; set; }
+		public List<Car> Cars { get; set; }
 	}
 }
