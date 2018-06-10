@@ -41,7 +41,7 @@ namespace Wappa.Api.ExternalServices
 
 			var addresses = DeserializeReceivedGoogleAddresses(content);
 
-			if (HasFoundAnyAddress(addresses)) { throw new AddressNotFoundException($"The following address was not found: {address}"); }
+			if (HasNotFoundAnyAddress(addresses)) { throw new AddressNotFoundException($"The following address was not found: {address}"); }
 
 			return addresses;
 		}
@@ -78,7 +78,7 @@ namespace Wappa.Api.ExternalServices
 			return address;
 		}
 
-		private static bool HasFoundAnyAddress(IList<GoogleAddress> addresses)
+		private static bool HasNotFoundAnyAddress(IList<GoogleAddress> addresses)
 		{
 			return addresses.Count == 0;
 		}
