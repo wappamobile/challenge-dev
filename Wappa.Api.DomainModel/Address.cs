@@ -12,13 +12,15 @@ namespace Wappa.Api.DomainModel
 
 		public String AddressLine { get; set; }
 
+		public String PostalCode { get; set; }
+
 		public String City { get; set; }
 
 		public Driver Driver { get; set; }
 
-		public Decimal Latitude { get; set; }
+		public String Latitude { get; set; }
 
-		public Decimal Longitude { get; set; }
+		public String Longitude { get; set; }
 
 		public String State { get; set; }
 	}
