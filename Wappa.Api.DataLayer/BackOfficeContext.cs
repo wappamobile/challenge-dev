@@ -9,6 +9,8 @@ namespace Wappa.Api.DataLayer
 {
 	public class BackOfficeContext : DbContext
 	{
+		public BackOfficeContext(DbContextOptions options) : base(options) { }
+
 		public virtual DbSet<Address> Addresses { get; set; }
 
 		public virtual DbSet<Car> Cars { get; set; }
