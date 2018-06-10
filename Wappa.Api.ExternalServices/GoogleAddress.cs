@@ -10,7 +10,6 @@ namespace Wappa.Api.ExternalServices
 		[JsonProperty("formatted_address")]
 		public String FormattedAddress { get; set; }
 
-		
 		public Location Location { get; set; }
 
 		[JsonProperty("place_id")]
