@@ -14,6 +14,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Wappa.Api.DataLayer;
 using Wappa.Api.DomainModel;
+using Wappa.Api.ExternalServices;
 using Wappa.Api.Requests;
 
 namespace Wappa.Api
@@ -27,7 +28,6 @@ namespace Wappa.Api
 
 		public IConfiguration Configuration { get; }
 
-		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
 			var databaseConnection = this.Configuration.GetConnectionString("development");
@@ -35,11 +35,14 @@ namespace Wappa.Api
 
 			services.AddAutoMapper(cfg => cfg.AddProfile<MappingProfile>());
 
+			
+
 			services.AddScoped<IUnitOfWork, UnitOfWork>();
+			services.AddScoped<IGoogleGeocoderWrapper, GoogleGeocoderWrapper>();
+
 			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 		}
 
-		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
 		public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 		{
 			if (env.IsDevelopment())
