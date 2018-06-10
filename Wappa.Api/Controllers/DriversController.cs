@@ -7,7 +7,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Wappa.Api.DataLayer;
 using Wappa.Api.DomainModel;
+using Wappa.Api.ExternalServices;
 using Wappa.Api.Requests;
+using Wappa.Api.Responses;
 
 namespace Wappa.Api.Controllers
 {
@@ -15,10 +17,12 @@ namespace Wappa.Api.Controllers
 	[ApiController]
 	public class DriversController : ControllerBase
 	{
+		private IGoogleGeocoderWrapper googleGeocoderWrapper;
 		private IUnitOfWork unitOfWork;
 
-		public DriversController(IUnitOfWork unitOfWork)
+		public DriversController(IGoogleGeocoderWrapper googleGeocoderWrapper, IUnitOfWork unitOfWork)
 		{
+			this.googleGeocoderWrapper = googleGeocoderWrapper;
 			this.unitOfWork = unitOfWork;
 		}
 	
@@ -29,10 +33,22 @@ namespace Wappa.Api.Controllers
 
 			try
 			{
-				var driver = Mapper.Map<Driver>(request);
+				var googlePossibleAddresses = await this.googleGeocoderWrapper.GetAddress(request.Address.ToString());
+
+				if (this.HasMoreThanOnePossibleAddress(googlePossibleAddresses))
+				{
+					return this.StatusCode(StatusCodes.Status409Conflict, googlePossibleAddresses);
+				}
+
+				var driverAddressOnGoogle = googlePossibleAddresses.FirstOrDefault();
+				var driver = CreateDriverFromRequestAndGoogleAddress(request, driverAddressOnGoogle);
+
 				this.unitOfWork.DriversRepository.Add(driver);
 				await this.unitOfWork.SaveChanges();
-				return this.CreatedAtRoute(nameof(Post), driver);
+
+				var response = Mapper.Map<CreatedDriverResponse>(driver);
+
+				return this.Created(nameof(Post), response);
 			}
 			catch (Exception ex)
 			{
@@ -40,5 +56,29 @@ namespace Wappa.Api.Controllers
 			}
 		}
 
+		private Driver CreateDriverFromRequestAndGoogleAddress(CreateDriverRequest request, GoogleAddress driverAddressOnGoogle)
+		{
+			var driver = Mapper.Map<Driver>(request);
+
+			var address = CreateAddress(request, driverAddressOnGoogle);
+			driver.Address = address;
+
+			return driver;
+		}
+
+		private Address CreateAddress(CreateDriverRequest request, GoogleAddress driverAddressOnGoogle)
+		{
+			var address = Mapper.Map<Address>(driverAddressOnGoogle);
+			address.City = request.Address.City;
+			address.PostalCode = request.Address.PostalCode;
+			address.State = request.Address.State;
+
+			return address;
+		}
+
+		private bool HasMoreThanOnePossibleAddress(IList<GoogleAddress> possibleAddressesOnGoogle)
+		{
+			return possibleAddressesOnGoogle.Count > 1;
+		}
 	}
 }
