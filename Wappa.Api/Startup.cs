@@ -34,6 +34,8 @@ namespace Wappa.Api
 			services.AddDbContext<BackOfficeContext>(options => options.UseSqlServer(databaseConnection));
 
 			services.AddAutoMapper(cfg => cfg.AddProfile<MappingProfile>());
+
+			services.AddScoped<IUnitOfWork, UnitOfWork>();
 			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 		}
 
