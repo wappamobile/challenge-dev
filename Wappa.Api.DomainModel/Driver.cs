@@ -11,7 +11,7 @@ namespace Wappa.Api.DomainModel
 
 		public Address Address { get; set; }
 
-		public List<Car> Car { get; set; }
+		public List<Car> Cars { get; set; }
 
 		public String FirstName { get; set; }
 
