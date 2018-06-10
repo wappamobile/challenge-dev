@@ -19,11 +19,16 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Wappa.Api.DomainModel\Wappa.Api.DomainModel.csproj" />
+    <ProjectReference Include="..\Wappa.Api.ExternalServices\Wappa.Api.ExternalServices.csproj" />
     <ProjectReference Include="..\Wappa.Api\Wappa.Api.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ExternalServicesTests\" />
+    <None Update="test-settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties test-settings_1json__JSONSchema="http://json.schemastore.org/appsettings" /></VisualStudio></ProjectExtensions>
 
 </Project>
