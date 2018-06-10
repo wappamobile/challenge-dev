@@ -14,6 +14,7 @@ namespace Wappa.Api.DataLayer.TypeConfigurations
 			builder.ToTable("Addresses");
 
 			builder.HasKey(a => a.Id);
+			builder.HasOne(a => a.Driver).WithOne(d => d.Address).HasForeignKey<Driver>(fk => fk.AddressId);
 
 			builder.Property(a => a.AddressLine);
 			builder.Property(a => a.City);

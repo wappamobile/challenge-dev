@@ -7,6 +7,8 @@ namespace Wappa.Api.DomainModel
     {
 		public int Id { get; set; }
 
+		public virtual int AddressId { get; set; }
+
 		public Address Address { get; set; }
 
 		public List<Car> Car { get; set; }

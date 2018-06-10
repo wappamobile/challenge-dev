@@ -4,9 +4,11 @@ using System.Text;
 
 namespace Wappa.Api.DomainModel
 {
-    public class Address
-    {
+	public class Address
+	{
 		public int Id { get; set; }
+
+		public virtual int DriverId { get; set; }
 
 		public String AddressLine { get; set; }
 
