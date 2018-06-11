@@ -8,7 +8,7 @@ namespace Wappa.Api.DomainModel
 	{
 		public int Id { get; set; }
 
-		public virtual int DriverId { get; set; }
+		public int DriverId { get; set; }
 
 		public String AddressLine { get; set; }
 

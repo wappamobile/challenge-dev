@@ -14,13 +14,15 @@ namespace Wappa.Api.DataLayer.TypeConfigurations
 			builder.ToTable("Addresses");
 
 			builder.HasKey(a => a.Id);
-			builder.HasOne(a => a.Driver).WithOne(d => d.Address).HasForeignKey<Driver>(fk => fk.AddressId);
 
-			builder.Property(a => a.AddressLine);
-			builder.Property(a => a.City);
-			builder.Property(a => a.Latitude);
-			builder.Property(a => a.Longitude);
-			builder.Property(a => a.State);
+			builder.HasOne(a => a.Driver).WithOne(d => d.Address).HasForeignKey<Address>(fk => fk.DriverId);
+
+			builder.Property(a => a.AddressLine).IsRequired();
+			builder.Property(a => a.City).IsRequired();
+			builder.Property(a => a.Latitude).IsRequired();
+			builder.Property(a => a.Longitude).IsRequired();
+			builder.Property(a => a.PostalCode).IsRequired();
+			builder.Property(a => a.State).IsRequired();
 		}
 	}
 }

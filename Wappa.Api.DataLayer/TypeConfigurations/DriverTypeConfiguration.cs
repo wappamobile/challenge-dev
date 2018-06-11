@@ -16,7 +16,7 @@ namespace Wappa.Api.DataLayer.TypeConfigurations
 			builder.HasKey(d => d.Id);
 
 			builder.HasOne(d => d.Address).WithOne(a => a.Driver).HasForeignKey<Address>(fk => fk.DriverId);
-			builder.HasMany(d => d.Car).WithOne(c => c.Driver);
+			builder.HasMany(d => d.Cars).WithOne(c => c.Driver).HasForeignKey(fk => fk.DriverId);
 
 			builder.Property(d => d.FirstName).IsRequired();
 			builder.Property(d => d.LastName).IsRequired();
