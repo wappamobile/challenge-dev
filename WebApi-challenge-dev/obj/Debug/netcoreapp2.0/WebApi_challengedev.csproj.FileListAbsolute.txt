@@ -1,0 +1,10 @@
+C:\Users\thiag\source\repos\WebApi-challenge-dev\WebApi-challenge-dev\obj\Debug\netcoreapp2.0\WebApi_challengedev.csproj.CoreCompileInputs.cache
+C:\Users\thiag\source\repos\WebApi-challenge-dev\WebApi-challenge-dev\obj\Debug\netcoreapp2.0\WebApi_challengedev.AssemblyInfoInputs.cache
+C:\Users\thiag\source\repos\WebApi-challenge-dev\WebApi-challenge-dev\obj\Debug\netcoreapp2.0\WebApi_challengedev.AssemblyInfo.cs
+C:\Users\thiag\source\repos\WebApi-challenge-dev\WebApi-challenge-dev\bin\Debug\netcoreapp2.0\WebApi_challengedev.deps.json
+C:\Users\thiag\source\repos\WebApi-challenge-dev\WebApi-challenge-dev\bin\Debug\netcoreapp2.0\WebApi_challengedev.runtimeconfig.json
+C:\Users\thiag\source\repos\WebApi-challenge-dev\WebApi-challenge-dev\bin\Debug\netcoreapp2.0\WebApi_challengedev.runtimeconfig.dev.json
+C:\Users\thiag\source\repos\WebApi-challenge-dev\WebApi-challenge-dev\bin\Debug\netcoreapp2.0\WebApi_challengedev.dll
+C:\Users\thiag\source\repos\WebApi-challenge-dev\WebApi-challenge-dev\bin\Debug\netcoreapp2.0\WebApi_challengedev.pdb
+C:\Users\thiag\source\repos\WebApi-challenge-dev\WebApi-challenge-dev\obj\Debug\netcoreapp2.0\WebApi_challengedev.dll
+C:\Users\thiag\source\repos\WebApi-challenge-dev\WebApi-challenge-dev\obj\Debug\netcoreapp2.0\WebApi_challengedev.pdb
