@@ -1,0 +1,53 @@
+Iniciando a API
+
+Primeiro devemos criar o Banco de Dados Mongo
+
+	//Criação banco Monogo
+
+	>use DBWappa
+
+	>db.createCollection("Motoristas");
+
+	//dado Inicial da Collection
+	>var Motorista = {"Nome" : "Thiago", "SobreNome" : "Nobre","DadosCarro" : { "Modelo" : "Gol", "Marca" : null, 	"Placa" : null }, "DadosEndereco" : { "Rua" : null, "Cidade" : null, "Estado" : null, "Pais" : null, "Numero" 	: null ,"Lat" : null, "Log" : null }}
+
+	> db.Motoristas.insert(Motorista)
+
+	//Analizando Resultado
+	> db.Motoristas.find()
+	{ "_id" : ObjectId("5b1d7f4d9f18138e4f9046b4"), "Nome" : "Thiago", "SobreNome" : "Nobre", "DadosCarro" : { 	"Modelo" : "Gol", "Marca" : null, "Placa" : null }, "DadosEndereco" : { "Rua" : null, "Cidade" : null, 	"Estado" : null, "Pais" : null, "Numero" : null, "Lat" : null, "Log" : null } }
+
+Depois dar um gitclone em sua maquina local e Start na Solution;
+Quando o serviço subir, ao abri o Browser vocÊ lerá essa mensagem: API WAPPA CRUD: MOTORISTAS
+
+
+	
+Depois Podemos usar as Unit Test da TDD ou Usar o PostMan por Exemplo:
+
+Após suibir a Api, pode-se enviavar comandos via HTTP
+
+este para upadte (ex: "Marca" null => "Marca" :" ninja")
+[POST]
+http://localhost:56973/api/Motoristas/UP?model={ "Nome" : "Thiago", "SobreNome" : "Nobre","DadosCarro" : { "Modelo" : "Gol", "Marca" :" ninja", "Placa" : null }, "DadosEndereco" : { "Rua" : null, "Cidade" : null, "Estado" : null, "Pais" : null, "Numero" : null ,"Lat" : null, "Log" : null }}
+
+este para delete(Deletando os Bernardos)
+[DELETE]
+http://localhost:56973/api/Motoristas/nome?nome=Bernardo
+resultado: DELETE de objeto id:  executado: Sucesso Numero de deletes: 2
+
+Obs: este delete é inteligente, e pode ser feito por nome, ou nome e sobrenome, basta adicionar o campo=value na querystring;
+
+este é para um get full de todos os motoristas listados por ordem de alfabetica em seus nomes
+[GET]
+http://localhost:56973/api/Motoristas/
+
+Obs: para uma nome ou sobremome basta adicionar o campo=value na querystring(ex: http://localhost:56973/api/Motoristas/nome?nome=Bernardo)
+
+este é para criar Motoristas
+
+[POST]
+http://localhost:56973/api/Motoristas/in?model={"Nome" : "Nina",  "Sobrenome":"Mascarenhas","DadosCarro" : { "Modelo" : "Gol", "Marca" : "Ninja", "Placa" : null }, "DadosEndereco" : { "Rua" : "Casa Verde", "Cidade" : "São Bernardo do Campo", "Estado" : "São Paulo", "Pais" : "Brasil", "Numero" : "145" ,"Lat" : 	null, "Log" : null }} 
+
+Neste ponto funciona a Api Geolocation da Google, o metodo criado verifica que os campos "Log" e ou "Lat" são null e então envia os dados de 	endereço que possui e busca as Geoinformações e persite os dados no mongoDB;
+
+
