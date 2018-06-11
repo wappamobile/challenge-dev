@@ -17,6 +17,12 @@ namespace Wappa.Api.Controllers
 	[ApiController]
 	public class DriversController : ControllerBase
 	{
+		private const int DEFAULT_DRIVER_GET_LIMIT = 25;
+		private const int DEFAULT_DRIVER_OFFSET = 0;
+		private const String DEFAULT_SORT_BY = "firstname";
+
+		private static readonly List<String> AVAILABLE_SORT_BY_FILTERS = new List<String> { "firstname", "lastname" };
+
 		private IGoogleGeocoderWrapper googleGeocoderWrapper;
 		private IUnitOfWork unitOfWork;
 
@@ -25,7 +31,25 @@ namespace Wappa.Api.Controllers
 			this.googleGeocoderWrapper = googleGeocoderWrapper;
 			this.unitOfWork = unitOfWork;
 		}
-	
+
+		[HttpGet]
+		public async Task<ActionResult<List<Driver>>> Get([FromQuery] String sortBy = DEFAULT_SORT_BY,
+															[FromQuery] int limit = DEFAULT_DRIVER_GET_LIMIT, [FromQuery] int offset = DEFAULT_DRIVER_OFFSET)
+		{
+			try
+			{
+				if (AVAILABLE_SORT_BY_FILTERS.Contains(sortBy.ToLower()) == false) { return BadRequest(sortBy); }
+
+				var drivers = await this.unitOfWork.DriversRepository.GetAll(sortBy, limit, offset);
+
+				return this.Ok(Mapper.Map<ICollection<DriverResponse>>(drivers));
+			}
+			catch (Exception ex)
+			{
+				return this.StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+			}
+		}
+
 		[HttpPost]
 		public async Task<ActionResult<Driver>> Post([FromBody] CreateDriverRequest request)
 		{
