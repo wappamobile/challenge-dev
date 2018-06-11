@@ -142,5 +142,93 @@ namespace Wappa.Api.Tests.ControllerTests
 			Assert.Equal(StatusCodes.Status409Conflict, result.StatusCode);
 		}
 
+		[Fact]
+		public async Task When_GET_all_Drivers_should_return_a_list_with_OK_status_code()
+		{
+			//Arrange
+			var howManyDriversToCreate = 50;
+			var driverList = new List<Driver>(fixture.CreateMany<Driver>(howManyDriversToCreate));
+
+			unitOfWork.DriversRepository.GetAll(Arg.Any<String>(), Arg.Any<int>(), Arg.Any<int>())
+				.Returns(driverList);
+
+			//Act
+			var response = await controller.Get() as ActionResult<List<Driver>>;
+			var result = response.Result as OkObjectResult;
+
+			//Assert
+			Assert.Equal(StatusCodes.Status200OK, result.StatusCode);
+			Assert.IsType<List<DriverResponse>>(result.Value);
+		}
+
+		[Fact]
+		public async Task When_GET_all_Drivers_and_a_problem_occur_should_return_InternalServerError()
+		{
+			//Arrange
+			unitOfWork.DriversRepository.When(d => d.GetAll(Arg.Any<String>(), Arg.Any<int>(), Arg.Any<int>())).Throw<Exception>();
+
+			//Act
+			var response = await controller.Get();
+			var result = response.Result as ObjectResult;
+
+			//Assert
+			Assert.Equal(StatusCodes.Status500InternalServerError, result.StatusCode);
+		}
+
+		[Fact]
+		public async Task When_GET_all_Drivers_and_SortBy_query_parameter_is_not_FirstName_or_LastName_should_return_BadRequest()
+		{
+			//Arrange -> Act
+			var response = await controller.Get(sortBy: fixture.Create<String>());
+			var result = response.Result as BadRequestObjectResult;
+
+			//Assert
+			Assert.IsType<BadRequestObjectResult>(result);
+		}
+
+		[Fact]
+		public async Task When_GET_all_Drivers_and_SortBy_is_FirstName_or_LastName_should_return_a_list_with_OK_status_code()
+		{
+			//Arrange
+			var options = new String[] { "FirstName", "LastName" };
+			var randomOption = options[new Random().Next(2)];
+
+			var howManyDriversToCreate = 10;
+			var driverList = new List<Driver>(fixture.CreateMany<Driver>(howManyDriversToCreate));
+
+			unitOfWork.DriversRepository.GetAll(Arg.Any<String>(), Arg.Any<int>(), Arg.Any<int>())
+				.Returns(driverList);
+
+			//Act
+			var response = await controller.Get(sortBy: randomOption) as ActionResult<List<Driver>>;
+			var result = response.Result as OkObjectResult;
+
+			//Assert
+			Assert.Equal(StatusCodes.Status200OK, result.StatusCode);
+			Assert.IsType<List<DriverResponse>>(result.Value);
+		}
+
+		[Fact]
+		public async Task When_GET_all_Drivers_should_not_matter_how_SortBy_is_written_and_must_return_a_list_with_OK_status_code()
+		{
+			//Arrange
+			var options = new String[] { "firStnamE", "lAstnAme" };
+			var randomOption = options[new Random().Next(2)];
+
+			var howManyDriversToCreate = 10;
+			var driverList = new List<Driver>(fixture.CreateMany<Driver>(howManyDriversToCreate));
+
+			unitOfWork.DriversRepository.GetAll(Arg.Any<String>(), Arg.Any<int>(), Arg.Any<int>())
+				.Returns(driverList);
+
+			//Act
+			var response = await controller.Get(sortBy: randomOption) as ActionResult<List<Driver>>;
+			var result = response.Result as OkObjectResult;
+
+			//Assert
+			Assert.Equal(StatusCodes.Status200OK, result.StatusCode);
+			Assert.IsType<List<DriverResponse>>(result.Value);
+		}
+
 	}
 }
