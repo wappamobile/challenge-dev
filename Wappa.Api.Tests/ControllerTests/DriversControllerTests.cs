@@ -230,5 +230,46 @@ namespace Wappa.Api.Tests.ControllerTests
 			Assert.IsType<List<DriverResponse>>(result.Value);
 		}
 
+		[Fact]
+		public async Task When_GET_a_Driver_by_Id_should_return_a_DriverResponse()
+		{
+			//Arrange
+			var driver = fixture.Create<Driver>();
+			unitOfWork.DriversRepository.Get(Arg.Any<int>()).Returns(driver);
+
+			//Act
+			var response = await controller.Get(driver.Id) as ActionResult<DriverResponse>;
+			var result = response.Result as OkObjectResult;
+
+			//Assert
+			Assert.Equal(StatusCodes.Status200OK, result.StatusCode);
+			Assert.IsType<DriverResponse>(result.Value);
+		}
+
+		[Fact]
+		public async Task When_GET_a_specific_Driver_and_Id_is_invalid_should_return_a_BadRequest()
+		{
+			//Arrange -> Act
+			var response = await controller.Get(0);
+			var result = response.Result as BadRequestObjectResult;
+
+			//Assert
+			Assert.IsType<BadRequestObjectResult>(result);
+		}
+
+		[Fact]
+		public async Task When_GET_a_specific_Driver_and_a_problem_occur_should_return_a_InternalServerError()
+		{
+			//Arrange
+			unitOfWork.DriversRepository.When(d => d.Get(Arg.Any<int>())).Throw<Exception>();
+
+			//Act
+			var response = await controller.Get(10);
+			var result = response.Result as ObjectResult;
+
+			//Assert
+			Assert.Equal(StatusCodes.Status500InternalServerError, result.StatusCode);
+		}
+
 	}
 }
