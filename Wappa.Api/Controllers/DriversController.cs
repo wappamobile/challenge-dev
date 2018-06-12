@@ -166,10 +166,24 @@ namespace Wappa.Api.Controllers
 		public async Task<ActionResult<DriverResponse>> Put([FromBody] UpdateDriverRequest request)
 		{
 			if (request == null) { return this.BadRequest(request); }
+			if (request.Cars == null || request.Cars.Count() == 0) { return this.BadRequest(request); }
 
 			try
 			{
 				var driver = Mapper.Map<Driver>(request);
+
+				var googlePossibleAddresses = await this.googleGeocoderWrapper.GetAddress(request.Address.ToString());
+
+				if (this.HasMoreThanOnePossibleAddress(googlePossibleAddresses))
+				{
+					return this.StatusCode(StatusCodes.Status409Conflict, googlePossibleAddresses);
+				}
+
+				var driverAddressOnGoogle = googlePossibleAddresses.FirstOrDefault();
+
+				driver.Address = this.CreateUpdatedDriverAddress(request.Address, driverAddressOnGoogle);
+
+
 
 				await this.unitOfWork.DriversRepository.Update(driver);
 				await this.unitOfWork.SaveChanges();
@@ -200,6 +214,18 @@ namespace Wappa.Api.Controllers
 			{
 				return this.StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
 			}
+		}
+
+		private Address CreateUpdatedDriverAddress(Models.Address address, GoogleAddress driverAddressOnGoogle)
+		{
+			var updatedAddress = Mapper.Map<Address>(driverAddressOnGoogle);
+
+			updatedAddress.Id = address.Id;
+			updatedAddress.City = address.City;
+			updatedAddress.PostalCode = address.PostalCode;
+			updatedAddress.State = address.State;
+
+			return updatedAddress;
 		}
 
 		[HttpPut("{id}/cars")]
