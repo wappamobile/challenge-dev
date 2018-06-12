@@ -370,6 +370,21 @@ namespace Wappa.Api.Tests.ControllerTests
 		}
 
 		[Fact]
+		public async Task When_GET_a_Driver_Address_and_it_not_exist_should_return_a_NoContent()
+		{
+			//Arrange
+			var driverId = fixture.Create<int>();
+			unitOfWork.DriversRepository.Get(Arg.Any<int>()).Returns(default(Driver));
+
+			//Act
+			var response = await controller.GetDriverAddress(driverId) as ActionResult<Models.Address>;
+			var result = response.Result as NoContentResult;
+
+			//Assert
+			Assert.Equal(StatusCodes.Status204NoContent, result.StatusCode);
+		}
+
+		[Fact]
 		public async Task When_GET_a_Driver_Address_and_a_problem_occur_should_return_a_InternalServerError()
 		{
 			//Arrange
@@ -393,12 +408,12 @@ namespace Wappa.Api.Tests.ControllerTests
 			unitOfWork.DriversRepository.Get(Arg.Any<int>()).Returns(driver);
 
 			//Act
-			var response = await controller.GetDriverCars(driver.Id) as ActionResult<CarsResponse>;
+			var response = await controller.GetDriverCars(driver.Id) as ActionResult<List<Models.Car>>;
 			var result = response.Result as OkObjectResult;
 
 			//Assert
 			Assert.Equal(StatusCodes.Status200OK, result.StatusCode);
-			Assert.IsType<CarsResponse>(result.Value);
+			Assert.IsType<List<Models.Car>>(result.Value);
 		}
 
 		[Fact]
@@ -410,6 +425,21 @@ namespace Wappa.Api.Tests.ControllerTests
 
 			//Assert
 			Assert.IsType<BadRequestObjectResult>(result);
+		}
+
+		[Fact]
+		public async Task When_GET_a_Driver_Cars_and_it_not_exist_should_return_a_NoContent()
+		{
+			//Arrange
+			var driverId = fixture.Create<int>();
+			unitOfWork.DriversRepository.Get(Arg.Any<int>()).Returns(default(Driver));
+
+			//Act
+			var response = await controller.GetDriverCars(driverId) as ActionResult<List<Models.Car>>;
+			var result = response.Result as NoContentResult;
+
+			//Assert
+			Assert.Equal(StatusCodes.Status204NoContent, result.StatusCode);
 		}
 
 		[Fact]
@@ -433,6 +463,7 @@ namespace Wappa.Api.Tests.ControllerTests
 		{
 			//Arrange
 			var updatedDriver = fixture.Create<UpdateDriverRequest>();
+			MockGoogleGeocoderGetAddressReturn();
 
 			//Act
 			var response = await controller.Put(updatedDriver) as ActionResult<DriverResponse>;
@@ -523,6 +554,7 @@ namespace Wappa.Api.Tests.ControllerTests
 		{
 			//Arrange
 			var updatedDriver = fixture.Create<UpdateDriverRequest>();
+			MockGoogleGeocoderGetAddressReturn();
 
 			//Act
 			var response = await controller.Put(updatedDriver);
@@ -532,10 +564,24 @@ namespace Wappa.Api.Tests.ControllerTests
 		}
 
 		[Fact]
+		public async Task When_PUT_a_Driver_should_call_GetAddress_on_GoogleGeocoderWrapper()
+		{
+			//Arrange
+			var updatedDriver = fixture.Create<UpdateDriverRequest>();
+
+			//Act
+			var response = await controller.Put(updatedDriver);
+
+			//Assert
+			await googleGeocoderWrapper.Received().GetAddress(Arg.Any<String>());
+		}
+
+		[Fact]
 		public async Task When_PUT_a_Driver_Address_should_return_an_updated_Address_with_Ok_status_code()
 		{
 			//Arrange
 			var updatedDriverAddress = fixture.Create<UpdateDriverAddressRequest>();
+			MockGoogleGeocoderGetAddressReturn();
 
 			//Act
 			var response = await controller.PutAddress(updatedDriverAddress) as ActionResult<Models.Address>;
@@ -577,6 +623,7 @@ namespace Wappa.Api.Tests.ControllerTests
 		{
 			//Arrange
 			var updatedDriverAddress = fixture.Create<UpdateDriverAddressRequest>();
+			MockGoogleGeocoderGetAddressReturn();
 
 			//Act
 			var response = await controller.PutAddress(updatedDriverAddress);
@@ -586,18 +633,31 @@ namespace Wappa.Api.Tests.ControllerTests
 		}
 
 		[Fact]
+		public async Task When_PUT_a_Driver_Address_should_call_GetAddress_GoogleGeocoderWrapper()
+		{
+			//Arrange
+			var updatedDriverAddress = fixture.Create<UpdateDriverAddressRequest>();
+
+			//Act
+			var response = await controller.PutAddress(updatedDriverAddress);
+
+			//Assert
+			await googleGeocoderWrapper.Received().GetAddress(Arg.Any<String>());
+		}
+
+		[Fact]
 		public async Task When_PUT_a_Driver_Cars_should_return_an_updated_CarList_with_Ok_status_code()
 		{
 			//Arrange
 			var updatedDriverCars = fixture.CreateMany<UpdateDriverCarRequest>().ToList();
 
 			//Act
-			var response = await controller.PutCar(updatedDriverCars) as ActionResult<CarsResponse>;
+			var response = await controller.PutCar(updatedDriverCars) as ActionResult<List<Models.Car>>;
 			var result = response.Result as OkObjectResult;
 
 			//Assert
 			Assert.Equal(StatusCodes.Status200OK, result.StatusCode);
-			Assert.IsType<CarsResponse>(result.Value);
+			Assert.IsType<List<Models.Car>>(result.Value);
 		}
 
 		[Fact]
@@ -605,6 +665,22 @@ namespace Wappa.Api.Tests.ControllerTests
 		{
 			//Arrange -> Act
 			var response = await controller.PutCar(null);
+			var result = response.Result as BadRequestObjectResult;
+
+			//Assert
+			Assert.IsType<BadRequestObjectResult>(result);
+		}
+
+		[Fact]
+		public async Task When_PUT_a_Driver_Cars_and_request_Cars_is_null_should_return_a_BadRequest()
+		{
+			//Arrange
+			var updatedDriverCars = default(List<UpdateDriverCarRequest>);
+
+			MockGoogleGeocoderGetAddressReturn();
+
+			//Act
+			var response = await controller.PutCar(updatedDriverCars);
 			var result = response.Result as BadRequestObjectResult;
 
 			//Assert
