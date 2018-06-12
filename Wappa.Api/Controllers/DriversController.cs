@@ -141,9 +141,25 @@ namespace Wappa.Api.Controllers
 			return address;
 		}
 
-		private bool HasMoreThanOnePossibleAddress(IList<GoogleAddress> possibleAddressesOnGoogle)
+		[HttpDelete("{id}")]
+		public async Task<ActionResult<DriverResponse>> Delete(int id)
 		{
-			return possibleAddressesOnGoogle.Count > 1;
+			if (id == 0) { return this.BadRequest(id); }
+
+			try
+			{
+				var driver = await this.unitOfWork.DriversRepository.Get(id);
+				if (driver == null) { return this.NotFound(id); }
+
+				await this.unitOfWork.DriversRepository.Delete(driver);
+
+				return this.Ok(Mapper.Map<DriverResponse>(driver));
+			}
+			catch (Exception ex)
+			{
+				return this.StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+			}
 		}
+		
 	}
 }
