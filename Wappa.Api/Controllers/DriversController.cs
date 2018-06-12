@@ -60,25 +60,28 @@ namespace Wappa.Api.Controllers
 		{
 			var driver = Mapper.Map<Driver>(request);
 
-			var address = CreateAddress(request, driverAddressOnGoogle);
+			var address = this.MergeGoogleAddressWithRequestAddress(driverAddressOnGoogle, request.Address);
 			driver.Address = address;
 
 			return driver;
 		}
 
-		private Address CreateAddress(CreateDriverRequest request, GoogleAddress driverAddressOnGoogle)
+		private Address MergeGoogleAddressWithRequestAddress(GoogleAddress driverAddressOnGoogle, Models.Address address)
 		{
-			var address = Mapper.Map<Address>(driverAddressOnGoogle);
-			address.City = request.Address.City;
-			address.PostalCode = request.Address.PostalCode;
-			address.State = request.Address.State;
+			var updatedAddress = Mapper.Map<Address>(driverAddressOnGoogle);
 
-			return address;
+			updatedAddress.Id = address.Id;
+			updatedAddress.City = address.City;
+			updatedAddress.PostalCode = address.PostalCode;
+			updatedAddress.State = address.State;
+
+			return updatedAddress;
 		}
 
 		[HttpGet]
 		public async Task<ActionResult<List<Driver>>> Get([FromQuery] String sortBy = DEFAULT_SORT_BY,
-															[FromQuery] int limit = DEFAULT_DRIVER_GET_LIMIT, [FromQuery] int offset = DEFAULT_DRIVER_OFFSET)
+															[FromQuery] int limit = DEFAULT_DRIVER_GET_LIMIT, 
+															[FromQuery] int offset = DEFAULT_DRIVER_OFFSET)
 		{
 			try
 			{
@@ -164,7 +167,7 @@ namespace Wappa.Api.Controllers
 				var driver = Mapper.Map<Driver>(request);
 
 				var driverAddressOnGoogle = await this.googleGeocoderWrapper.GetAddress(request.Address.ToString());
-				driver.Address = this.CreateUpdatedDriverAddress(request.Address, driverAddressOnGoogle);
+				driver.Address = this.MergeGoogleAddressWithRequestAddress(driverAddressOnGoogle, request.Address);
 
 				await this.unitOfWork.DriversRepository.Update(driver);
 				await this.unitOfWork.SaveChanges();
@@ -187,7 +190,7 @@ namespace Wappa.Api.Controllers
 				var address = Mapper.Map<Models.Address>(request);
 
 				var driverAddressOnGoogle = await this.googleGeocoderWrapper.GetAddress(address.ToString());
-				var updatedAddress = this.CreateUpdatedDriverAddress(address, driverAddressOnGoogle);
+				var updatedAddress = this.MergeGoogleAddressWithRequestAddress(driverAddressOnGoogle, address);
 
 				await this.unitOfWork.AddressRepository.Update(updatedAddress);
 				await this.unitOfWork.SaveChanges();
@@ -198,18 +201,6 @@ namespace Wappa.Api.Controllers
 			{
 				return this.StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
 			}
-		}
-
-		private Address CreateUpdatedDriverAddress(Models.Address address, GoogleAddress driverAddressOnGoogle)
-		{
-			var updatedAddress = Mapper.Map<Address>(driverAddressOnGoogle);
-
-			updatedAddress.Id = address.Id;
-			updatedAddress.City = address.City;
-			updatedAddress.PostalCode = address.PostalCode;
-			updatedAddress.State = address.State;
-
-			return updatedAddress;
 		}
 
 		[HttpPut("{id}/cars")]
