@@ -657,10 +657,12 @@ namespace Wappa.Api.Tests.ControllerTests
 		public async Task When_PUT_a_Driver_Cars_should_return_an_updated_CarList_with_Ok_status_code()
 		{
 			//Arrange
+			var driverId = this.fixture.Create<int>();
+
 			var updatedDriverCars = this.fixture.CreateMany<UpdateDriverCarRequest>().ToList();
 
 			//Act
-			var response = await this.controller.PutCar(updatedDriverCars) as ActionResult<List<Models.Car>>;
+			var response = await this.controller.PutCar(driverId, updatedDriverCars) as ActionResult<List<Models.Car>>;
 			var result = response.Result as OkObjectResult;
 
 			//Assert
@@ -671,8 +673,11 @@ namespace Wappa.Api.Tests.ControllerTests
 		[Fact]
 		public async Task When_PUT_a_Driver_Cars_and_request_is_invalid_should_return_a_BadRequest()
 		{
-			//Arrange -> Act
-			var response = await this.controller.PutCar(null);
+			//Arrange 
+			var driverId = this.fixture.Create<int>();
+
+			//Act
+			var response = await this.controller.PutCar(driverId, null);
 			var result = response.Result as BadRequestObjectResult;
 
 			//Assert
@@ -683,12 +688,14 @@ namespace Wappa.Api.Tests.ControllerTests
 		public async Task When_PUT_a_Driver_Cars_and_request_Cars_is_null_should_return_a_BadRequest()
 		{
 			//Arrange
+			var driverId = this.fixture.Create<int>();
+
 			var updatedDriverCars = default(List<UpdateDriverCarRequest>);
 
 			MockGoogleGeocoderGetAddressReturn();
 
 			//Act
-			var response = await this.controller.PutCar(updatedDriverCars);
+			var response = await this.controller.PutCar(driverId, updatedDriverCars);
 			var result = response.Result as BadRequestObjectResult;
 
 			//Assert
@@ -699,12 +706,14 @@ namespace Wappa.Api.Tests.ControllerTests
 		public async Task When_PUT_a_Driver_Cars_and_a_problem_occur_should_return_InternalServerError()
 		{
 			//Arrange
+			var driverId = this.fixture.Create<int>();
+
 			var updatedDriverCars = this.fixture.CreateMany<UpdateDriverCarRequest>().ToList();
 
-			this.unitOfWork.CarRepository.When(d => d.Update(Arg.Any<List<Car>>())).Throw<Exception>();
+			this.unitOfWork.CarRepository.When(d => d.Update(Arg.Any<int>(), Arg.Any<List<Car>>())).Throw<Exception>();
 
 			//Act
-			var response = await this.controller.PutCar(updatedDriverCars);
+			var response = await this.controller.PutCar(driverId,updatedDriverCars);
 			var result = response.Result as ObjectResult;
 
 			//Assert
@@ -715,10 +724,12 @@ namespace Wappa.Api.Tests.ControllerTests
 		public async Task When_PUT_a_Driver_Cars_should_call_SaveChanges_on_UnitOfWork()
 		{
 			//Arrange
+			var driverId = this.fixture.Create<int>();
+
 			var updatedDriverCars = this.fixture.CreateMany<UpdateDriverCarRequest>().ToList();
 
 			//Act
-			var response = await this.controller.PutCar(updatedDriverCars);
+			var response = await this.controller.PutCar(driverId, updatedDriverCars);
 
 			//Assert
 			await this.unitOfWork.Received().SaveChanges();
