@@ -5,6 +5,6 @@ namespace Wappa.Api.DataLayer.Repositories
 {
 	public interface IAddressRepository
 	{
-		Task Update(Address address);
+		Task Update(int driverId, Address address);
 	}
 }
