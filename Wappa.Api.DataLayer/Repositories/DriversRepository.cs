@@ -63,5 +63,10 @@ namespace Wappa.Api.DataLayer.Repositories
 			return this.context.Drivers.Include(a => a.Address).Include(c => c.Cars)
 				.OrderBy(d => d.FirstName);
 		}
+
+		public async Task Delete(Driver driver)
+		{
+			await Task.FromResult(this.context.Drivers.Remove(driver));
+		}
 	}
 }

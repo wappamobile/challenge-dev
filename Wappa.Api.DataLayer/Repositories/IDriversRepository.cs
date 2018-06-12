@@ -12,5 +12,7 @@ namespace Wappa.Api.DataLayer.Repositories
 		Task<Driver> Get(int id);
 
 		Task<IList<Driver>> GetAll(String sortBy, int limit, int offset);
+
+		Task Delete(Driver driver);
 	}
 }
