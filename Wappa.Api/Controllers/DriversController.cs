@@ -83,7 +83,7 @@ namespace Wappa.Api.Controllers
 			{
 				return this.StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
 			}
-			
+
 		}
 
 		[HttpPost]
@@ -152,6 +152,7 @@ namespace Wappa.Api.Controllers
 				if (driver == null) { return this.NotFound(id); }
 
 				await this.unitOfWork.DriversRepository.Delete(driver);
+				await this.unitOfWork.SaveChanges();
 
 				return this.Ok(Mapper.Map<DriverResponse>(driver));
 			}
@@ -160,6 +161,25 @@ namespace Wappa.Api.Controllers
 				return this.StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
 			}
 		}
-		
+
+		[HttpPut]
+		public async Task<ActionResult<DriverResponse>> Put([FromBody] UpdateDriverRequest request)
+		{
+			if (request == null) { return this.BadRequest(request); }
+
+			try
+			{
+				var driver = Mapper.Map<Driver>(request);
+
+				await this.unitOfWork.DriversRepository.Update(driver);
+				await this.unitOfWork.SaveChanges();
+
+				return this.Ok(Mapper.Map<DriverResponse>(request));
+			}
+			catch (Exception ex)
+			{
+				return this.StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+			}
+		}
 	}
 }
