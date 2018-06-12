@@ -18,7 +18,8 @@ namespace Wappa.Api.DataLayer.Repositories
 		{
 			await Task.Factory.StartNew(() =>
 			{
-				var entity= this.context.Addresses.Include(d => d.Driver).FirstOrDefault(d => d.Id == driverId);
+				var entity = this.context.Addresses.Include(d => d.Driver)
+				.FirstOrDefault(d => d.Id == driverId);
 
 				address.DriverId = entity.DriverId;
 				address.Id = entity.Id;

@@ -6,6 +6,6 @@ namespace Wappa.Api.DataLayer.Repositories
 {
 	public interface ICarRepository
 	{
-		Task Update(List<Car> address);
+		Task Update(int driverId, List<Car> address);
 	}
 }

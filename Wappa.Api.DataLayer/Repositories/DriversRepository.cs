@@ -72,36 +72,32 @@ namespace Wappa.Api.DataLayer.Repositories
 		{
 			await Task.Factory.StartNew(() =>
 			{
-				this.UpdateDriver(driver);
+				var entity = this.context.Drivers.Include(a => a.Address)
+				.Include(c => c.Cars).FirstOrDefault(d => d.Id == driver.Id);
 
-				this.UpdateDriverAddress(driver);
+				driver.Id = entity.Id;
+				driver.Address.Id = entity.Address.Id;
+				driver.Address.DriverId = entity.Id;
 
-				this.UpdateDriverCars(driver);
+				this.DeleteOldDriversCars(entity);
+				this.AddNewDriverCars(entity, driver);
+
+				this.context.Entry(entity).CurrentValues.SetValues(driver);
 			});
 		}
 
-		private void UpdateDriver(Driver driver)
-		{
-			var entity = this.context.Drivers.Find(driver.Id);
-			driver.Id = entity.Id;
-			this.context.Entry(entity).CurrentValues.SetValues(driver);
-		}
-
-		private void UpdateDriverAddress(Driver driver)
-		{
-			var entity = this.context.Addresses.Find(driver.Address.Id);
-			driver.Address.DriverId = entity.DriverId;
-			this.context.Entry(entity).CurrentValues.SetValues(driver.Address);
-		}
-
-		private void UpdateDriverCars(Driver driver)
+		private void AddNewDriverCars(Driver entity, Driver driver)
 		{
 			foreach (var car in driver.Cars)
 			{
-				var entity = this.context.Cars.Find(car.Id);
-				car.DriverId = entity.DriverId;
-				this.context.Entry(entity).CurrentValues.SetValues(car);
+				car.DriverId = entity.Id;
+				this.context.Cars.Add(car);
 			}
+		}
+
+		private void DeleteOldDriversCars(Driver driver)
+		{
+			foreach (var car in driver.Cars) { this.context.Cars.Remove(car); }
 		}
 	}
 }
