@@ -204,7 +204,7 @@ namespace Wappa.Api.Controllers
 		}
 
 		[HttpPut("{id}/cars")]
-		public async Task<ActionResult<List<Models.Car>>> PutCar([FromBody] List<UpdateDriverCarRequest> request)
+		public async Task<ActionResult<List<Models.Car>>> PutCar(int id, [FromBody] List<UpdateDriverCarRequest> request)
 		{
 			if (request == null) { return this.BadRequest(request); }
 			if (request == null || request.Count() == 0) { return this.BadRequest(request); }
@@ -213,7 +213,7 @@ namespace Wappa.Api.Controllers
 			{
 				var cars = Mapper.Map<List<Car>>(request);
 
-				await this.unitOfWork.CarRepository.Update(cars);
+				await this.unitOfWork.CarRepository.Update(id, cars);
 				await this.unitOfWork.SaveChanges();
 
 				return this.Ok(Mapper.Map<List<Models.Car>>(cars));
