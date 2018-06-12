@@ -24,6 +24,11 @@ namespace Wappa.Api.DataLayer.Repositories
 			this.context.Drivers.Add(driver);
 		}
 
+		public async Task<Driver> Get(int id)
+		{
+			return await Task.FromResult(this.context.Drivers.Include(a => a.Address).Include(c => c.Cars).FirstOrDefault(d => d.Id == id));
+		}
+
 		public async Task<IList<Driver>> GetAll(String sortBy, int limit, int offset)
 		{
 			var sortedDrivers = default(IQueryable<Driver>);
