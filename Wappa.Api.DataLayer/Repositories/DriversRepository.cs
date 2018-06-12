@@ -68,5 +68,10 @@ namespace Wappa.Api.DataLayer.Repositories
 		{
 			await Task.FromResult(this.context.Drivers.Remove(driver));
 		}
+
+		public async Task Update(Driver driver)
+		{
+			await Task.FromResult(this.context.Drivers.Update(driver));
+		}
 	}
 }
