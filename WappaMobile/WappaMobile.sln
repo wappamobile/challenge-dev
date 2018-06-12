@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{46DA0A1B-E6BE-4AEB-9F3A-977A469C168F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7064922F-D905-415A-86DE-C813214FE8E7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{B69992B0-1D12-4DCE-859A-14F016C83479}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Driver", "Driver", "{57A0CEE3-06E3-4692-B903-C7A188CF4D8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Driver.API", "Driver.API\Driver.API.csproj", "{13DB0F65-8B59-4E5A-A998-E9ECF73CF17B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46DA0A1B-E6BE-4AEB-9F3A-977A469C168F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46DA0A1B-E6BE-4AEB-9F3A-977A469C168F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46DA0A1B-E6BE-4AEB-9F3A-977A469C168F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46DA0A1B-E6BE-4AEB-9F3A-977A469C168F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13DB0F65-8B59-4E5A-A998-E9ECF73CF17B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13DB0F65-8B59-4E5A-A998-E9ECF73CF17B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13DB0F65-8B59-4E5A-A998-E9ECF73CF17B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13DB0F65-8B59-4E5A-A998-E9ECF73CF17B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B69992B0-1D12-4DCE-859A-14F016C83479} = {7064922F-D905-415A-86DE-C813214FE8E7}
+		{57A0CEE3-06E3-4692-B903-C7A188CF4D8F} = {B69992B0-1D12-4DCE-859A-14F016C83479}
+		{13DB0F65-8B59-4E5A-A998-E9ECF73CF17B} = {57A0CEE3-06E3-4692-B903-C7A188CF4D8F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {451A67A0-A654-4E17-8653-630550D63E1D}
+	EndGlobalSection
+EndGlobal

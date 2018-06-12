@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  driver.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - MongoConnectionString=mongodb://mongo.data
+      - MongoDatabase=DriverDb
+    ports:
+      - "80"
+
+  mongo.data:
+    ports:
+      - "27017"

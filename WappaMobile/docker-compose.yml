@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  driver.api:
+    image: driverapi
+    build:
+      context: .
+      dockerfile: Driver.API/Dockerfile
+    ports:
+      - "5000:80"
+
+  mongo.data:
+    image: mongo
+    ports:
+      - "27017:27017"
