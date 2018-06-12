@@ -126,23 +126,6 @@ namespace Wappa.Api.Tests.ControllerTests
 		}
 
 		[Fact]
-		public async Task When_POST_a_Driver_and_GoogleGeocodeWrapper_returns_more_than_one_address_should_return_Conflict_Status()
-		{
-			//Arrange
-			var numberOfAddressesToMock = 5;
-			MockGoogleGeocoderGetAddressReturn(numberOfAddressesToMock);
-
-			var request = fixture.Create<CreateDriverRequest>();
-
-			//Act
-			var response = await controller.Post(request);
-			var result = response.Result as ObjectResult;
-
-			//Assert
-			Assert.Equal(StatusCodes.Status409Conflict, result.StatusCode);
-		}
-
-		[Fact]
 		public async Task When_DELETE_a_Driver_should_return_a_DriverResponse_with_OK_status_code()
 		{
 			//Arrange

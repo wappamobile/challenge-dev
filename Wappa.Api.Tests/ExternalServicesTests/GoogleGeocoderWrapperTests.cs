@@ -1,9 +1,7 @@
 ﻿using AutoFixture;
 using Microsoft.Extensions.Configuration;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using System.Threading.Tasks;
 using Wappa.Api.ExternalServices;
 using Wappa.Api.ExternalServices.Exceptions;
@@ -12,7 +10,7 @@ using Xunit;
 
 namespace Wappa.Api.Tests.ExternalServicesTests
 {
-    public class GoogleGeocoderWrapperTests
+	public class GoogleGeocoderWrapperTests
     {
 		private static IConfigurationRoot configuration;
 		private static Fixture fixture;
@@ -52,7 +50,7 @@ namespace Wappa.Api.Tests.ExternalServicesTests
 		}
 
 		[Fact]
-		public async Task When_send_an_address_to_GoogleGeocoderWrapper_must_return_a_list_of_GoogleAddress()
+		public async Task When_send_an_address_to_GoogleGeocoderWrapper_must_return_a_GoogleAddress()
 		{
 			//Arrange
 			var googleGeocoderWrapper = new GoogleGeocoderWrapper(configuration);
@@ -67,7 +65,21 @@ namespace Wappa.Api.Tests.ExternalServicesTests
 			var result = await googleGeocoderWrapper.GetAddress(address.ToString());
 
 			//Assert
-			Assert.IsAssignableFrom<IList<GoogleAddress>>(result);
+			Assert.IsAssignableFrom<GoogleAddress>(result);
+		}
+
+		[Fact]
+		public async Task When_send_an_address_to_GoogleGeocoderWrapper_and_found_multiples_Addresses_should_throw_a_AddressNotFoundException()
+		{
+			//Arrange
+			var googleGeocoderWrapper = new GoogleGeocoderWrapper(configuration);
+			var address = new Address
+			{
+				AddressLine = "earth"
+			};
+
+			//Act -> Assert
+			await Assert.ThrowsAsync<AddressNotFoundException>(async () => await googleGeocoderWrapper.GetAddress(address.ToString()));
 		}
 
 		[Fact]

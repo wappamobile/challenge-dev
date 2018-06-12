@@ -1,10 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
 namespace Wappa.Api.ExternalServices
 {
 	public interface IGoogleGeocoderWrapper
 	{
-		Task<IList<GoogleAddress>> GetAddress(string address);
+		Task<GoogleAddress> GetAddress(string address);
 	}
 }

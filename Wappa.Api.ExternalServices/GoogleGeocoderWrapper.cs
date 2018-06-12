@@ -30,20 +30,28 @@ namespace Wappa.Api.ExternalServices
 			this.client = new HttpClient();
 		}
 
-		public async Task<IList<GoogleAddress>> GetAddress(String address)
+		public async Task<GoogleAddress> GetAddress(String addressToSearch)
 		{
-			if (String.IsNullOrEmpty(address.Trim())) { throw new ArgumentNullException(nameof(address)); }
+			if (String.IsNullOrEmpty(addressToSearch.Trim())) { throw new ArgumentNullException(nameof(addressToSearch)); }
 
-			var addressSearchUri = BuildAddressSearchUri(address);
+			var addressSearchUri = BuildAddressSearchUri(addressToSearch);
 
 			var response = await this.client.GetAsync(addressSearchUri);
 			var content = await response.Content.ReadAsStringAsync();
 
 			var addresses = DeserializeReceivedGoogleAddresses(content);
 
-			if (HasNotFoundAnyAddress(addresses)) { throw new AddressNotFoundException($"The following address was not found: {address}"); }
+			if (HasNotFoundAnyAddress(addresses))
+			{
+				throw new AddressNotFoundException($"The following address was not found: {addressToSearch}");
+			}
 
-			return addresses;
+			if (HasNotAbleToFindOnlyOneAddress(addresses))
+			{
+				throw new AddressNotFoundException(addressToSearch, addresses);
+			}
+
+			return addresses.First();
 		}
 
 		private Uri BuildAddressSearchUri(string address)
@@ -81,6 +89,13 @@ namespace Wappa.Api.ExternalServices
 		private static bool HasNotFoundAnyAddress(IList<GoogleAddress> addresses)
 		{
 			return addresses.Count == 0;
+		}
+
+		private bool HasNotAbleToFindOnlyOneAddress(IList<GoogleAddress> addresses)
+		{
+			if (addresses.Count > 1) { return true; }
+
+			return false;
 		}
 	}
 }
