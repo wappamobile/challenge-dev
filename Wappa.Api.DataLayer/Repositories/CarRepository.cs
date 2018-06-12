@@ -22,7 +22,7 @@ namespace Wappa.Api.DataLayer.Repositories
 				foreach (var car in cars)
 				{
 					var entity = this.context.Cars.Include(d => d.Driver)
-					.FirstOrDefault(d => d.Id == driverId);
+									.FirstOrDefault(d => d.Id == driverId);
 
 					car.DriverId = entity.DriverId;
 					car.Id = entity.Id;
