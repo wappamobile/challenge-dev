@@ -53,7 +53,7 @@ namespace Wappa.Api.Controllers
 		[HttpGet("{id}")]
 		public async Task<ActionResult<DriverResponse>> Get(Nullable<int> id)
 		{
-			if (id.HasValue == false || id.Value == 0 ) { return this.BadRequest(id); }
+			if (id.HasValue == false || id.Value == 0) { return this.BadRequest(id); }
 
 			try
 			{
@@ -175,6 +175,26 @@ namespace Wappa.Api.Controllers
 				await this.unitOfWork.SaveChanges();
 
 				return this.Ok(Mapper.Map<DriverResponse>(request));
+			}
+			catch (Exception ex)
+			{
+				return this.StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+			}
+		}
+
+		[HttpPut("{id}/address")]
+		public async Task<ActionResult<Models.Address>> PutAddress(UpdateDriverAddressRequest request)
+		{
+			if (request == null) { return this.BadRequest(request); };
+
+			try
+			{
+				var address = Mapper.Map<Address>(request);
+
+				await this.unitOfWork.AddressRepository.Update(address);
+				await this.unitOfWork.SaveChanges();
+
+				return this.Ok(Mapper.Map<Models.Address>(request));
 			}
 			catch (Exception ex)
 			{
