@@ -17,6 +17,8 @@ namespace Wappa.Api
 			this.CreateMap<CreateDriverRequest, DomainModel.Driver>().ReverseMap();
 			this.CreateMap<CreateDriverRequest, DomainModel.Driver>().ForMember(driver => driver.Address, src => src.Ignore());
 
+			this.CreateMap<UpdateDriverRequest, DomainModel.Driver>().ReverseMap();
+
 			this.CreateMap<CreatedDriverResponse, DomainModel.Driver>().ReverseMap();
 
 			this.CreateMap<Models.Driver, DomainModel.Driver>().ReverseMap();
