@@ -10,7 +10,7 @@ namespace Wappa.Api.DataLayer.Repositories
 {
 	public class DriversRepository : IDriversRepository
 	{
-		private static readonly String LAST_NAME_SORT_FILTER = "lastname" ;
+		private static readonly String LAST_NAME_SORT_FILTER = "lastname";
 
 		private BackOfficeContext context;
 
@@ -71,7 +71,38 @@ namespace Wappa.Api.DataLayer.Repositories
 
 		public async Task Update(Driver driver)
 		{
-			await Task.FromResult(this.context.Drivers.Update(driver));
+			await Task.Factory.StartNew(() =>
+			{
+				this.UpdateDriver(driver);
+
+				this.UpdateDriverAddress(driver);
+
+				this.UpdateDriverCars(driver);
+			});
+		}
+
+		private void UpdateDriver(Driver driver)
+		{
+			var entity = this.context.Drivers.Find(driver.Id);
+			driver.Id = entity.Id;
+			this.context.Entry(entity).CurrentValues.SetValues(driver);
+		}
+
+		private void UpdateDriverAddress(Driver driver)
+		{
+			var entity = this.context.Addresses.Find(driver.Address.Id);
+			driver.Address.DriverId = entity.DriverId;
+			this.context.Entry(entity).CurrentValues.SetValues(driver.Address);
+		}
+
+		private void UpdateDriverCars(Driver driver)
+		{
+			foreach (var car in driver.Cars)
+			{
+				var entity = this.context.Cars.Find(car.Id);
+				car.DriverId = entity.DriverId;
+				this.context.Entry(entity).CurrentValues.SetValues(car);
+			}
 		}
 	}
 }
