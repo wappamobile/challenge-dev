@@ -181,7 +181,7 @@ namespace Wappa.Api.Controllers
 		}
 
 		[HttpPut("{id}/address")]
-		public async Task<ActionResult<Models.Address>> PutAddress([FromBody] UpdateDriverAddressRequest request)
+		public async Task<ActionResult<Models.Address>> PutAddress(int id, [FromBody] UpdateDriverAddressRequest request)
 		{
 			if (request == null) { return this.BadRequest(request); };
 
@@ -192,7 +192,7 @@ namespace Wappa.Api.Controllers
 				var driverAddressOnGoogle = await this.googleGeocoderWrapper.GetAddress(address.ToString());
 				var updatedAddress = this.MergeGoogleAddressWithRequestAddress(driverAddressOnGoogle, address);
 
-				await this.unitOfWork.AddressRepository.Update(updatedAddress);
+				await this.unitOfWork.AddressRepository.Update(id, updatedAddress);
 				await this.unitOfWork.SaveChanges();
 
 				return this.Ok(Mapper.Map<Models.Address>(updatedAddress));
