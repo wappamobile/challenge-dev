@@ -15,6 +15,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Wappa.Api.ExternalServices;
 using Wappa.Api.Responses;
+using System.Threading;
 
 namespace Wappa.Api.Tests.ControllerTests
 {
@@ -69,7 +70,7 @@ namespace Wappa.Api.Tests.ControllerTests
 		}
 
 		[Fact]
-		public async Task When_POST_a_null_Driver_should_return_BadRequest_response_Async()
+		public async Task When_POST_a_null_Driver_should_return_BadRequest()
 		{
 			//Arrange -> Act
 			var response = await controller.Post(null);
@@ -80,7 +81,7 @@ namespace Wappa.Api.Tests.ControllerTests
 		}
 
 		[Fact]
-		public async Task When_POST_a_Driver_and_a_problem_occur_should_return_InternalServerError_response_Async()
+		public async Task When_POST_a_Driver_and_a_problem_occur_should_return_InternalServerError()
 		{
 			//Arrange
 			unitOfWork.DriversRepository.When(d => d.Add(Arg.Any<Driver>())).Throw<Exception>();
@@ -125,7 +126,7 @@ namespace Wappa.Api.Tests.ControllerTests
 		}
 
 		[Fact]
-		public async Task When_POST_a_Driver_and_GoogleGeocodeWrapper_returns_more_than_one_address_shoul_return_Conflict_Status()
+		public async Task When_POST_a_Driver_and_GoogleGeocodeWrapper_returns_more_than_one_address_should_return_Conflict_Status()
 		{
 			//Arrange
 			var numberOfAddressesToMock = 5;
