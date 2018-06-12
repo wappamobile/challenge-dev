@@ -43,7 +43,8 @@ namespace WappaMobile.Driver.API.Controllers
 
             _driverRepository.Add(driverToAdd);
 
-            return CreatedAtAction(nameof(GetDriver), new { id = driverToAdd.Id });
+            //For some reason, CreatedAtAction acts weird when I remove the 'value' parameter. It returns a wrong route to the 'location' header.
+            return CreatedAtAction(nameof(GetDriver), new { id = driverToAdd.Id }, driverToAdd);
         }
 
         [HttpPut("{id}")]
@@ -59,7 +60,8 @@ namespace WappaMobile.Driver.API.Controllers
 
             _driverRepository.Update(driverToUpdate);
 
-            return CreatedAtAction(nameof(GetDriver), new { id = driverToUpdate.Id });
+            //Here CreatedAtAction acts normal with or without the 'value' parameter. But I will keep it here for the sake of consistency.
+            return CreatedAtAction(nameof(GetDriver), new { id = driverToUpdate.Id }, driverToUpdate);
         }
 
         [HttpDelete("{id}")]
