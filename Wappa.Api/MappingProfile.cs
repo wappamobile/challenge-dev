@@ -22,13 +22,17 @@ namespace Wappa.Api
 			this.CreateMap<UpdateDriverAddressRequest, DomainModel.Address>().ReverseMap();
 			this.CreateMap<UpdateDriverAddressRequest, Models.Address>().ReverseMap();
 
+			this.CreateMap<UpdateDriverCarRequest, Models.Car>().ReverseMap();
+			this.CreateMap<UpdateDriverCarRequest, DomainModel.Car>().ReverseMap();
+
+			this.CreateMap<UpdatedCarsResponse, ICollection<DomainModel.Car>>().ReverseMap();
+
 			this.CreateMap<CreatedDriverResponse, DomainModel.Driver>().ReverseMap();
 
 			this.CreateMap<Models.Driver, DomainModel.Driver>().ReverseMap();
 			this.CreateMap<Models.Address, DomainModel.Address>().ReverseMap();
 			this.CreateMap<Models.Car, DomainModel.Car>().ReverseMap();
 
-			//this.CreateMap<GoogleAddress, DomainModel.Address>().ReverseMap();
 			this.CreateMap<GoogleAddress, DomainModel.Address>()
 				.ForMember(address => address.City, src => src.Ignore())
 				.ForMember(address => address.AddressLine, src => src.MapFrom(x => x.FormattedAddress))
