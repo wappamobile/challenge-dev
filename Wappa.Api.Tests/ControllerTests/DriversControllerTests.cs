@@ -455,6 +455,40 @@ namespace Wappa.Api.Tests.ControllerTests
 		}
 
 		[Fact]
+		public async Task When_PUT_a_Driver_and_request_Car_list_is_null_should_return_a_BadRequest()
+		{
+			//Arrange
+			var updatedDriver = fixture.Create<UpdateDriverRequest>();
+			updatedDriver.Cars = null;
+
+			MockGoogleGeocoderGetAddressReturn();
+
+			//Act
+			var response = await controller.Put(updatedDriver);
+			var result = response.Result as BadRequestObjectResult;
+
+			//Assert
+			Assert.IsType<BadRequestObjectResult>(result);
+		}
+
+		[Fact]
+		public async Task When_PUT_a_Driver_and_request_Car_list_has_Zero_elements_should_return_a_BadRequest()
+		{
+			//Arrange
+			var updatedDriver = fixture.Create<UpdateDriverRequest>();
+			updatedDriver.Cars = new List<Models.Car>();
+
+			MockGoogleGeocoderGetAddressReturn();
+
+			//Act
+			var response = await controller.Put(updatedDriver);
+			var result = response.Result as BadRequestObjectResult;
+
+			//Assert
+			Assert.IsType<BadRequestObjectResult>(result);
+		}
+
+		[Fact]
 		public async Task When_PUT_a_Driver_and_a_problem_occur_should_return_InternalServerError()
 		{
 			//Arrange
