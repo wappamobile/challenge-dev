@@ -271,5 +271,47 @@ namespace Wappa.Api.Tests.ControllerTests
 			Assert.Equal(StatusCodes.Status500InternalServerError, result.StatusCode);
 		}
 
+		[Fact]
+		public async Task When_GET_a_Driver_Address_should_return_a_Address_as_response_with_Ok_status_code()
+		{
+			//Arrange
+			var driver = fixture.Create<Driver>();
+			unitOfWork.DriversRepository.Get(Arg.Any<int>()).Returns(driver);
+
+			//Act
+			var response = await controller.GetDriverAddress(driver.Id) as ActionResult<Models.Address>;
+			var result = response.Result as OkObjectResult;
+
+			//Assert
+			Assert.Equal(StatusCodes.Status200OK, result.StatusCode);
+			Assert.IsType<Models.Address>(result.Value);
+		}
+
+		[Fact]
+		public async Task When_GET_a_Driver_Address_and_Id_is_invalid_should_return_a_BadRequest()
+		{
+			//Arrange -> Act
+			var response = await controller.GetDriverAddress(0);
+			var result = response.Result as BadRequestObjectResult;
+
+			//Assert
+			Assert.IsType<BadRequestObjectResult>(result);
+		}
+
+		[Fact]
+		public async Task When_GET_a_Driver_Address_and_a_problem_occur_should_return_a_InternalServerError()
+		{
+			//Arrange
+			unitOfWork.DriversRepository.When(d => d.Get(Arg.Any<int>())).Throw<Exception>();
+			var driverId = fixture.Create<int>();
+
+			//Act
+			var response = await controller.GetDriverAddress(driverId);
+			var result = response.Result as ObjectResult;
+
+			//Assert
+			Assert.Equal(StatusCodes.Status500InternalServerError, result.StatusCode);
+			Assert.IsType<ObjectResult>(result);
+		}
 	}
 }
