@@ -1,0 +1,14 @@
+C:\2 - Thiago\Estudos\TI\C#\testewappa\bin\MCD\Debug\netcoreapp2.1\testewappa.deps.json
+C:\2 - Thiago\Estudos\TI\C#\testewappa\bin\MCD\Debug\netcoreapp2.1\testewappa.runtimeconfig.json
+C:\2 - Thiago\Estudos\TI\C#\testewappa\bin\MCD\Debug\netcoreapp2.1\testewappa.runtimeconfig.dev.json
+C:\2 - Thiago\Estudos\TI\C#\testewappa\bin\MCD\Debug\netcoreapp2.1\testewappa.dll
+C:\2 - Thiago\Estudos\TI\C#\testewappa\bin\MCD\Debug\netcoreapp2.1\testewappa.pdb
+C:\2 - Thiago\Estudos\TI\C#\testewappa\obj\MCD\Debug\netcoreapp2.1\testewappa.csprojAssemblyReference.cache
+C:\2 - Thiago\Estudos\TI\C#\testewappa\obj\MCD\Debug\netcoreapp2.1\testewappa.csproj.CoreCompileInputs.cache
+C:\2 - Thiago\Estudos\TI\C#\testewappa\obj\MCD\Debug\netcoreapp2.1\testewappa.RazorAssemblyInfo.cache
+C:\2 - Thiago\Estudos\TI\C#\testewappa\obj\MCD\Debug\netcoreapp2.1\testewappa.RazorAssemblyInfo.cs
+C:\2 - Thiago\Estudos\TI\C#\testewappa\obj\MCD\Debug\netcoreapp2.1\testewappa.AssemblyInfoInputs.cache
+C:\2 - Thiago\Estudos\TI\C#\testewappa\obj\MCD\Debug\netcoreapp2.1\testewappa.AssemblyInfo.cs
+C:\2 - Thiago\Estudos\TI\C#\testewappa\obj\MCD\Debug\netcoreapp2.1\testewappa.RazorTargetAssemblyInfo.cache
+C:\2 - Thiago\Estudos\TI\C#\testewappa\obj\MCD\Debug\netcoreapp2.1\testewappa.dll
+C:\2 - Thiago\Estudos\TI\C#\testewappa\obj\MCD\Debug\netcoreapp2.1\testewappa.pdb
