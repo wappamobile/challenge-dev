@@ -67,6 +67,25 @@ namespace Wappa.Api.Controllers
 			}
 		}
 
+		[HttpGet("{id}/address")]
+		public async Task<ActionResult<Models.Address>> GetDriverAddress(int id)
+		{
+			if (id == 0) { return this.BadRequest(id); }
+
+			try
+			{
+				var driver = await this.unitOfWork.DriversRepository.Get(id);
+				var address = Mapper.Map<Models.Address>(driver.Address);
+
+				return this.Ok(address);
+			}
+			catch (Exception ex)
+			{
+				return this.StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+			}
+			
+		}
+
 		[HttpPost]
 		public async Task<ActionResult<Driver>> Post([FromBody] CreateDriverRequest request)
 		{
