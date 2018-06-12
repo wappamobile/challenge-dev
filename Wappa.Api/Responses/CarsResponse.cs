@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Wappa.Api.Responses
 {
-    public class UpdatedCarsResponse
+    public class CarsResponse
     {
 		public ICollection<Models.Car> Cars { get; set; }
 	}

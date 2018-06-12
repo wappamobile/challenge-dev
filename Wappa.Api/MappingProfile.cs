@@ -25,7 +25,7 @@ namespace Wappa.Api
 			this.CreateMap<UpdateDriverCarRequest, Models.Car>().ReverseMap();
 			this.CreateMap<UpdateDriverCarRequest, DomainModel.Car>().ReverseMap();
 
-			this.CreateMap<UpdatedCarsResponse, ICollection<DomainModel.Car>>().ReverseMap();
+			this.CreateMap<CarsResponse, ICollection<DomainModel.Car>>().ReverseMap();
 
 			this.CreateMap<CreatedDriverResponse, DomainModel.Driver>().ReverseMap();
 
