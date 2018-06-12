@@ -174,7 +174,7 @@ namespace Wappa.Api.Controllers
 				await this.unitOfWork.DriversRepository.Update(driver);
 				await this.unitOfWork.SaveChanges();
 
-				return this.Ok(Mapper.Map<DriverResponse>(request));
+				return this.Ok(Mapper.Map<DriverResponse>(driver));
 			}
 			catch (Exception ex)
 			{
@@ -183,7 +183,7 @@ namespace Wappa.Api.Controllers
 		}
 
 		[HttpPut("{id}/address")]
-		public async Task<ActionResult<Models.Address>> PutAddress(UpdateDriverAddressRequest request)
+		public async Task<ActionResult<Models.Address>> PutAddress([FromBody] UpdateDriverAddressRequest request)
 		{
 			if (request == null) { return this.BadRequest(request); };
 
@@ -194,7 +194,27 @@ namespace Wappa.Api.Controllers
 				await this.unitOfWork.AddressRepository.Update(address);
 				await this.unitOfWork.SaveChanges();
 
-				return this.Ok(Mapper.Map<Models.Address>(request));
+				return this.Ok(Mapper.Map<Models.Address>(address));
+			}
+			catch (Exception ex)
+			{
+				return this.StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+			}
+		}
+
+		[HttpPut("{id}/cars")]
+		public async Task<ActionResult<UpdatedCarsResponse>> PutCar([FromBody] List<UpdateDriverCarRequest> request)
+		{
+			if (request == null) { return this.BadRequest(request); }
+
+			try
+			{
+				var cars = Mapper.Map<List<Car>>(request);
+
+				await this.unitOfWork.CarRepository.Update(cars);
+				await this.unitOfWork.SaveChanges();
+
+				return this.Ok(Mapper.Map<UpdatedCarsResponse>(cars));
 			}
 			catch (Exception ex)
 			{
