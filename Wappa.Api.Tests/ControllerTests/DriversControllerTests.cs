@@ -147,10 +147,10 @@ namespace Wappa.Api.Tests.ControllerTests
 		{
 			//Arrange
 			var howManyDriversToCreate = 50;
-			var driverList = new List<Driver>(fixture.CreateMany<Driver>(howManyDriversToCreate));
+			var drivers = new List<Driver>(fixture.CreateMany<Driver>(howManyDriversToCreate));
 
 			unitOfWork.DriversRepository.GetAll(Arg.Any<String>(), Arg.Any<int>(), Arg.Any<int>())
-				.Returns(driverList);
+				.Returns(drivers);
 
 			//Act
 			var response = await controller.Get() as ActionResult<List<Driver>>;
@@ -194,10 +194,10 @@ namespace Wappa.Api.Tests.ControllerTests
 			var randomOption = options[new Random().Next(2)];
 
 			var howManyDriversToCreate = 10;
-			var driverList = new List<Driver>(fixture.CreateMany<Driver>(howManyDriversToCreate));
+			var drivers = new List<Driver>(fixture.CreateMany<Driver>(howManyDriversToCreate));
 
 			unitOfWork.DriversRepository.GetAll(Arg.Any<String>(), Arg.Any<int>(), Arg.Any<int>())
-				.Returns(driverList);
+				.Returns(drivers);
 
 			//Act
 			var response = await controller.Get(sortBy: randomOption) as ActionResult<List<Driver>>;
@@ -216,10 +216,10 @@ namespace Wappa.Api.Tests.ControllerTests
 			var randomOption = options[new Random().Next(2)];
 
 			var howManyDriversToCreate = 10;
-			var driverList = new List<Driver>(fixture.CreateMany<Driver>(howManyDriversToCreate));
+			var drivers = new List<Driver>(fixture.CreateMany<Driver>(howManyDriversToCreate));
 
 			unitOfWork.DriversRepository.GetAll(Arg.Any<String>(), Arg.Any<int>(), Arg.Any<int>())
-				.Returns(driverList);
+				.Returns(drivers);
 
 			//Act
 			var response = await controller.Get(sortBy: randomOption) as ActionResult<List<Driver>>;
