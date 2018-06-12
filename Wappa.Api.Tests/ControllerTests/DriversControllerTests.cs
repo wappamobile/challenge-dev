@@ -507,5 +507,59 @@ namespace Wappa.Api.Tests.ControllerTests
 			//Assert
 			await unitOfWork.Received().SaveChanges();
 		}
+
+		[Fact]
+		public async Task When_PUT_a_Driver_Cars_should_return_an_updated_CarList_with_Ok_status_code()
+		{
+			//Arrange
+			var updatedDriverCars = fixture.CreateMany<UpdateDriverCarRequest>().ToList();
+
+			//Act
+			var response = await controller.PutCar(updatedDriverCars) as ActionResult<UpdatedCarsResponse>;
+			var result = response.Result as OkObjectResult;
+
+			//Assert
+			Assert.Equal(StatusCodes.Status200OK, result.StatusCode);
+			Assert.IsType<UpdatedCarsResponse>(result.Value);
+		}
+
+		[Fact]
+		public async Task When_PUT_a_Driver_Cars_and_request_is_invalid_should_return_a_BadRequest()
+		{
+			//Arrange -> Act
+			var response = await controller.PutCar(null);
+			var result = response.Result as BadRequestObjectResult;
+
+			//Assert
+			Assert.IsType<BadRequestObjectResult>(result);
+		}
+
+		[Fact]
+		public async Task When_PUT_a_Driver_Cars_and_a_problem_occur_should_return_InternalServerError()
+		{
+			//Arrange
+			var updatedDriverCars = fixture.CreateMany<UpdateDriverCarRequest>().ToList();
+			unitOfWork.CarRepository.When(d => d.Update(Arg.Any<List<Car>>())).Throw<Exception>();
+
+			//Act
+			var response = await controller.PutCar(updatedDriverCars);
+			var result = response.Result as ObjectResult;
+
+			//Assert
+			Assert.Equal(StatusCodes.Status500InternalServerError, result.StatusCode);
+		}
+
+		[Fact]
+		public async Task When_PUT_a_Driver_Cars_should_call_SaveChange_on_UnitOfWork()
+		{
+			//Arrange
+			var updatedDriverCars = fixture.CreateMany<UpdateDriverCarRequest>().ToList();
+
+			//Act
+			var response = await controller.PutCar(updatedDriverCars);
+
+			//Assert
+			await unitOfWork.Received().SaveChanges();
+		}
 	}
 }
