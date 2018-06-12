@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wappa.Challenge.WebApi", "Wappa.Challenge.WebApi\Wappa.Challenge.WebApi.csproj", "{985FBC54-6299-410E-B269-7A15A8556565}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wappa.Challenge.ApplicationCore", "Wappa.Challenge.ApplicationCore\Wappa.Challenge.ApplicationCore.csproj", "{FB778F6F-3E15-49FB-9872-FC7E2A26DDE9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wappa.Challenge.Infrastructure", "Wappa.Challenge.Infrastructure\Wappa.Challenge.Infrastructure.csproj", "{41AB9625-E46D-4362-A45B-69543F622F58}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wappa.Challenge.Util", "Wappa.Challenge.Util\Wappa.Challenge.Util.csproj", "{135830A2-6D50-4341-A25D-75D0D67BD952}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wappa.Challenge.TestApp", "Wappa.Challenge.TestApp\Wappa.Challenge.TestApp.csproj", "{0910DA25-6FA1-441D-8D45-D7EFA38E381D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{985FBC54-6299-410E-B269-7A15A8556565}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{985FBC54-6299-410E-B269-7A15A8556565}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{985FBC54-6299-410E-B269-7A15A8556565}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{985FBC54-6299-410E-B269-7A15A8556565}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB778F6F-3E15-49FB-9872-FC7E2A26DDE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB778F6F-3E15-49FB-9872-FC7E2A26DDE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB778F6F-3E15-49FB-9872-FC7E2A26DDE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB778F6F-3E15-49FB-9872-FC7E2A26DDE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41AB9625-E46D-4362-A45B-69543F622F58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41AB9625-E46D-4362-A45B-69543F622F58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41AB9625-E46D-4362-A45B-69543F622F58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41AB9625-E46D-4362-A45B-69543F622F58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{135830A2-6D50-4341-A25D-75D0D67BD952}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{135830A2-6D50-4341-A25D-75D0D67BD952}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{135830A2-6D50-4341-A25D-75D0D67BD952}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{135830A2-6D50-4341-A25D-75D0D67BD952}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0910DA25-6FA1-441D-8D45-D7EFA38E381D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0910DA25-6FA1-441D-8D45-D7EFA38E381D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0910DA25-6FA1-441D-8D45-D7EFA38E381D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0910DA25-6FA1-441D-8D45-D7EFA38E381D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6F984144-E681-4273-9A1C-974639E0368C}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://leolima77.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Wappa.Challenge.WebApi\\Wappa.Challenge.WebApi.csproj
+		SccProjectName1 = Wappa.Challenge.WebApi
+		SccLocalPath1 = Wappa.Challenge.WebApi
+		SccProjectUniqueName2 = Wappa.Challenge.ApplicationCore\\Wappa.Challenge.ApplicationCore.csproj
+		SccProjectName2 = Wappa.Challenge.ApplicationCore
+		SccLocalPath2 = Wappa.Challenge.ApplicationCore
+		SccProjectUniqueName3 = Wappa.Challenge.Infrastructure\\Wappa.Challenge.Infrastructure.csproj
+		SccProjectName3 = Wappa.Challenge.Infrastructure
+		SccLocalPath3 = Wappa.Challenge.Infrastructure
+		SccProjectUniqueName4 = Wappa.Challenge.Util\\Wappa.Challenge.Util.csproj
+		SccProjectName4 = Wappa.Challenge.Util
+		SccLocalPath4 = Wappa.Challenge.Util
+		SccProjectUniqueName5 = Wappa.Challenge.TestApp\\Wappa.Challenge.TestApp.csproj
+		SccProjectName5 = Wappa.Challenge.TestApp
+		SccLocalPath5 = Wappa.Challenge.TestApp
+	EndGlobalSection
+EndGlobal

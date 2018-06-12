@@ -1,22 +1,19 @@
 # challenge-dev
 
-## Objetivo
-Objetivo deste teste é avaliar como você irá considerar questões como arquitetura e design de software, modelagem e aplicação de técnicas e conceitos de programação, e não simplesmente resolver o problema proposto, visto que o mesmo não oferece dificuldades reais para implementação.  
-Faça um fork deste projeto e ao concluir envie um pull request com sua implementação. Ao enviar o pull request nos informe quanto tempo você levou para desenvolver a solução.
+Leonardo Lima Sr. Software Enginner
 
-## Escopo
-Precisamos de uma biblioteca para gerenciar o cadastro de motoristas.  
-Front-end não é necessário e não será avaliado, mas precisamos de uma API que permita criar, editar e excluir um motorista.  
-Um cadastro de motorista possui os campos: Nome (primeiro e último), Carro (marca, modelo e placa) e endereço completo. Adicionamente, ao cadastrar um endereço deve ser buscada as coordenadas utilizando a [API do Google Maps](https://developers.google.com/maps/documentation/geocoding) e elas devem ser armazenadas junto com o cadastro.  
-Além do cadastro também será necessário disponibilizar uma listagem dos cadastros em ordem alfabética por nome ou sobrenome.
+Instruções
 
-### Obrigatório
- - .NET Core - C#
- - WebAPI
- - IoC
- - Código limpo
+1. Rodar o script "Script Database.sql" na raiz do projeto em uma instância SQL Server
+2. Alterar a connection string no Projeto "Wappa.Challenge.Util" na pasta Conexao no arquivo SqlServer.cs
+3. Restaurar os pacotes
+4. Rodar o projeto
+5. Documentação disponível em http://localhost:32361/swagger/index.html
 
-### Desejável
- - Documentação da API
- - Testes
- - Instruções de setup para execução do projeto
+Tempo de desenvolvimento 10h entre domingo(10/06) e segunda(11/06)
+1. CRUD de motoristas
+2. Listar por nome ou sobrenome em ordem alfabética
+3. Na inclusão retorna as coordenadas do endereço
+4. CRUD de carros
+5. CRUD de endereços
+6. Log de alterações no banco
