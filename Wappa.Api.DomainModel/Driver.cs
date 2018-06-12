@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Wappa.Api.DomainModel
 {
-    public class Driver
+	public class Driver
     {
 		public int Id { get; set; }
 

@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Wappa.Api.DomainModel
 {
-    public class Car
+	public class Car
     {
 		public int Id { get; set; }
 

@@ -7,8 +7,6 @@ namespace Wappa.Api.Requests
 {
 	public class CreateDriverRequest
     {
-		public int Id { get; set; }
-
 		[Required]
 		public String FirstName { get; set; }
 

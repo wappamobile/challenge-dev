@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Wappa.Api.Models
 {
-    public class Driver
+	public class Driver
     {
 		public int Id { get; set; }
 

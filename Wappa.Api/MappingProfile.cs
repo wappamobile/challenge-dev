@@ -1,16 +1,11 @@
 ﻿using AutoMapper;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Wappa.Api.DomainModel;
 using Wappa.Api.ExternalServices;
 using Wappa.Api.Requests;
 using Wappa.Api.Responses;
 
 namespace Wappa.Api
 {
-    public class MappingProfile : Profile
+	public class MappingProfile : Profile
     {
 		public MappingProfile()
 		{

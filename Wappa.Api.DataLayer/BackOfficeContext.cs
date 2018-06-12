@@ -1,7 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Wappa.Api.DataLayer.TypeConfigurations;
 using Wappa.Api.DomainModel;
 

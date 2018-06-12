@@ -1,10 +1,9 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Wappa.Api.DataLayer.Repositories;
 
 namespace Wappa.Api.DataLayer
 {
-    public class UnitOfWork : IUnitOfWork
+	public class UnitOfWork : IUnitOfWork
 	{
 		private BackOfficeContext context;
 

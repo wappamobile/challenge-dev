@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Wappa.Api.Requests
 {
-    public class UpdateDriverAddressRequest
+	public class UpdateDriverAddressRequest
     {
 		[Required]
 		public int Id { get; set; }
