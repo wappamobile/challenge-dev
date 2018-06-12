@@ -6,9 +6,6 @@ namespace Wappa.Api.Requests
 	public class UpdateDriverAddressRequest
     {
 		[Required]
-		public int Id { get; set; }
-
-		[Required]
 		public String AddressLine { get; set; }
 
 		[Required]

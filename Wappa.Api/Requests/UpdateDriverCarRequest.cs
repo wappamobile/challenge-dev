@@ -6,9 +6,6 @@ namespace Wappa.Api.Requests
 	public class UpdateDriverCarRequest
     {
 		[Required]
-		public int Id { get; set; }
-
-		[Required]
 		public String LicensePlate { get; set; }
 
 		[Required]
