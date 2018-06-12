@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WappaMobile.Driver.API.Infrastructure.Repositories;
 using WappaMobile.Driver.API.Model;
+using WappaMobile.Driver.API.ViewModel;
 
 namespace WappaMobile.Driver.API.Controllers
 {
@@ -31,18 +32,34 @@ namespace WappaMobile.Driver.API.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateDriver([FromBody]DriverRegistry driverToAdd)
+        public IActionResult CreateDriver([FromBody]DriverRequest driver)
         {
+            var driverToAdd = new DriverRegistry
+            {
+                Name = driver.Name,
+                Vehicle = driver.Vehicle,
+                Address = driver.Address
+            };
+
             _driverRepository.Add(driverToAdd);
 
-            return Ok(new { driverToAdd.Id });
+            return CreatedAtAction(nameof(GetDriver), new { id = driverToAdd.Id });
         }
 
         [HttpPut("{id}")]
-        public IActionResult UpdateDriver(string id, [FromBody]DriverRegistry driverToUpdate)
+        public IActionResult UpdateDriver(string id, [FromBody]DriverRequest driver)
         {
+            var driverToUpdate = new DriverRegistry
+            {
+                Id = id,
+                Name = driver.Name,
+                Vehicle = driver.Vehicle,
+                Address = driver.Address
+            };
+
             _driverRepository.Update(driverToUpdate);
-            return NoContent();
+
+            return CreatedAtAction(nameof(GetDriver), new { id = driverToUpdate.Id });
         }
 
         [HttpDelete("{id}")]

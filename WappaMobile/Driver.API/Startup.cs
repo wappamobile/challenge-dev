@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using WappaMobile.Driver.API.Infrastructure;
+using WappaMobile.Driver.API.Infrastructure.Filters;
 using WappaMobile.Driver.API.Infrastructure.Repositories;
 
 namespace WappaMobile.Driver.API
@@ -56,7 +57,9 @@ namespace WappaMobile.Driver.API
     {
         public static IServiceCollection AddCustomMvc(this IServiceCollection services)
         {
-            services.AddMvc();
+            services.AddMvc(options => {
+                options.Filters.Add(typeof(HttpGlobalExceptionFilter));
+            });
 
             return services;
         }

@@ -32,15 +32,20 @@ namespace WappaMobile.Driver.API.Infrastructure.Repositories
 
         public void Add(DriverRegistry driver)
         {
+            driver.LastUpdated = DateTime.UtcNow;
+
             _context.Driver.InsertOne(driver);
         }
 
         public void Update(DriverRegistry driver)
         {
+            driver.LastUpdated = DateTime.UtcNow;
+
             _context.Driver.ReplaceOne(
                 doc => doc.Id == driver.Id,
                 driver,
-                new UpdateOptions { IsUpsert = true });
+                new UpdateOptions { IsUpsert = false }
+            );
         }
 
         public void Delete(string id)

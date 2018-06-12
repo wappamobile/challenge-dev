@@ -11,16 +11,16 @@ namespace WappaMobile.Driver.API.Infrastructure
 {
     public class DriverContextSeed
     {
-        private static DriverContext ctx;
+        private static DriverContext _context;
 
         public static void Seed(IApplicationBuilder applicationBuilder)
         {
             var config = applicationBuilder
                 .ApplicationServices.GetRequiredService<IOptions<DriverSettings>>();
 
-            ctx = new DriverContext(config);
+            _context = new DriverContext(config);
 
-            if (!ctx.Driver.Database.GetCollection<DriverRegistry>(nameof(DriverRegistry)).AsQueryable().Any())
+            if (!_context.Driver.Database.GetCollection<DriverRegistry>(nameof(DriverRegistry)).AsQueryable().Any())
             {
                 //Seed
             }

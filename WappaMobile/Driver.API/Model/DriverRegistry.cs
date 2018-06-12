@@ -1,4 +1,5 @@
-﻿using MongoDB.Bson;
+﻿using System;
+using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
 namespace WappaMobile.Driver.API.Model
@@ -10,10 +11,12 @@ namespace WappaMobile.Driver.API.Model
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
 
-        public DriverName Name { get; set; }
+        public FullName Name { get; set; }
 
-        public DriverVehicle Vehicle { get; set; }
+        public Vehicle Vehicle { get; set; }
 
         public string Address { get; set; }
+
+        public DateTime LastUpdated { get; set; }
     }
 }

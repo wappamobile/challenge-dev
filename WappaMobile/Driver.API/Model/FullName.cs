@@ -1,6 +1,6 @@
 ﻿namespace WappaMobile.Driver.API.Model
 {
-    public class DriverName
+    public class FullName
     {
         public string FirstName { get; set; }
 
