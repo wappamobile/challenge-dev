@@ -577,12 +577,13 @@ namespace Wappa.Api.Tests.ControllerTests
 		public async Task When_PUT_a_Driver_Address_should_return_an_updated_Address_with_Ok_status_code()
 		{
 			//Arrange
+			var driverId = this.fixture.Create<int>();
 			var updatedDriverAddress = this.fixture.Create<UpdateDriverAddressRequest>();
 
 			MockGoogleGeocoderGetAddressReturn();
 
 			//Act
-			var response = await this.controller.PutAddress(updatedDriverAddress) as ActionResult<Models.Address>;
+			var response = await this.controller.PutAddress(driverId, updatedDriverAddress) as ActionResult<Models.Address>;
 			var result = response.Result as OkObjectResult;
 
 			//Assert
@@ -593,8 +594,11 @@ namespace Wappa.Api.Tests.ControllerTests
 		[Fact]
 		public async Task When_PUT_a_Driver_Address_and_request_is_invalid_should_return_a_BadRequest()
 		{
-			//Arrange -> Act
-			var response = await this.controller.PutAddress(null);
+			//Arrange
+			var driverId = this.fixture.Create<int>();
+
+			//Act
+			var response = await this.controller.PutAddress(driverId, null);
 			var result = response.Result as BadRequestObjectResult;
 
 			//Assert
@@ -605,12 +609,13 @@ namespace Wappa.Api.Tests.ControllerTests
 		public async Task When_PUT_a_Driver_Address_and_a_problem_occur_should_return_InternalServerError()
 		{
 			//Arrange
+			var driverId = this.fixture.Create<int>();
 			var updatedDriverAddress = this.fixture.Create<UpdateDriverAddressRequest>();
 
-			this.unitOfWork.AddressRepository.When(d => d.Update(Arg.Any<Address>())).Throw<Exception>();
+			this.unitOfWork.AddressRepository.When(d => d.Update(Arg.Any<int>(), Arg.Any<Address>())).Throw<Exception>();
 
 			//Act
-			var response = await this.controller.PutAddress(updatedDriverAddress);
+			var response = await this.controller.PutAddress(driverId, updatedDriverAddress);
 			var result = response.Result as ObjectResult;
 
 			//Assert
@@ -621,12 +626,13 @@ namespace Wappa.Api.Tests.ControllerTests
 		public async Task When_PUT_a_Driver_Address_should_call_SaveChanges_on_UnitOfWork()
 		{
 			//Arrange
+			var driverId = this.fixture.Create<int>();
 			var updatedDriverAddress = this.fixture.Create<UpdateDriverAddressRequest>();
 
 			MockGoogleGeocoderGetAddressReturn();
 
 			//Act
-			var response = await this.controller.PutAddress(updatedDriverAddress);
+			var response = await this.controller.PutAddress(driverId, updatedDriverAddress);
 
 			//Assert
 			await this.unitOfWork.Received().SaveChanges();
@@ -636,10 +642,12 @@ namespace Wappa.Api.Tests.ControllerTests
 		public async Task When_PUT_a_Driver_Address_should_call_GetAddress_GoogleGeocoderWrapper()
 		{
 			//Arrange
+			var driverId = this.fixture.Create<int>();
+
 			var updatedDriverAddress = this.fixture.Create<UpdateDriverAddressRequest>();
 
 			//Act
-			var response = await this.controller.PutAddress(updatedDriverAddress);
+			var response = await this.controller.PutAddress(driverId, updatedDriverAddress);
 
 			//Assert
 			await googleGeocoderWrapper.Received().GetAddress(Arg.Any<String>());
