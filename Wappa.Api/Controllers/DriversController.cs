@@ -116,6 +116,11 @@ namespace Wappa.Api.Controllers
 			}
 		}
 
+		private bool HasMoreThanOnePossibleAddress(IList<GoogleAddress> possibleAddressesOnGoogle)
+		{
+			return possibleAddressesOnGoogle.Count > 1;
+		}
+
 		private Driver CreateDriverFromRequestAndGoogleAddress(CreateDriverRequest request, GoogleAddress driverAddressOnGoogle)
 		{
 			var driver = Mapper.Map<Driver>(request);
