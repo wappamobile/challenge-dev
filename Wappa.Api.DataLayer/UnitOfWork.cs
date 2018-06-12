@@ -13,6 +13,16 @@ namespace Wappa.Api.DataLayer
 			this.context = context;
 		}
 
+		private IAddressRepository addressRepository;
+		public IAddressRepository AddressRepository
+		{
+			get
+			{
+				if (this.addressRepository == null) { this.addressRepository = new AddressRepository(this.context); }
+				return this.addressRepository;
+			}
+		}
+
 		private IDriversRepository driversRepository;
 		public IDriversRepository DriversRepository
 		{

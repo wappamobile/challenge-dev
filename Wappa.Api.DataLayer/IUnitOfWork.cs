@@ -5,6 +5,8 @@ namespace Wappa.Api.DataLayer
 {
 	public interface IUnitOfWork
 	{
+		IAddressRepository AddressRepository { get; }
+
 		IDriversRepository DriversRepository { get; }
 
 		Task<int> SaveChanges();
