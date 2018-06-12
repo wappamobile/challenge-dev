@@ -558,12 +558,12 @@ namespace Wappa.Api.Tests.ControllerTests
 			var updatedDriverCars = fixture.CreateMany<UpdateDriverCarRequest>().ToList();
 
 			//Act
-			var response = await controller.PutCar(updatedDriverCars) as ActionResult<UpdatedCarsResponse>;
+			var response = await controller.PutCar(updatedDriverCars) as ActionResult<CarsResponse>;
 			var result = response.Result as OkObjectResult;
 
 			//Assert
 			Assert.Equal(StatusCodes.Status200OK, result.StatusCode);
-			Assert.IsType<UpdatedCarsResponse>(result.Value);
+			Assert.IsType<CarsResponse>(result.Value);
 		}
 
 		[Fact]
