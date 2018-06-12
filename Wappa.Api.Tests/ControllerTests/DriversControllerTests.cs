@@ -453,5 +453,59 @@ namespace Wappa.Api.Tests.ControllerTests
 			//Assert
 			await unitOfWork.Received().SaveChanges();
 		}
+
+		[Fact]
+		public async Task When_PUT_a_Driver_Address_should_return_an_updated_Address_with_Ok_status_code()
+		{
+			//Arrange
+			var updatedDriverAddress = fixture.Create<UpdateDriverAddressRequest>();
+
+			//Act
+			var response = await controller.PutAddress(updatedDriverAddress) as ActionResult<Models.Address>;
+			var result = response.Result as OkObjectResult;
+
+			//Assert
+			Assert.Equal(StatusCodes.Status200OK, result.StatusCode);
+			Assert.IsType<Models.Address>(result.Value);
+		}
+
+		[Fact]
+		public async Task When_PUT_a_Driver_Address_and_request_is_invalid_should_return_a_BadRequest()
+		{
+			//Arrange -> Act
+			var response = await controller.PutAddress(null);
+			var result = response.Result as BadRequestObjectResult;
+
+			//Assert
+			Assert.IsType<BadRequestObjectResult>(result);
+		}
+
+		[Fact]
+		public async Task When_PUT_a_Driver_Address_and_a_problem_occur_should_return_InternalServerError()
+		{
+			//Arrange
+			var updatedDriverAddress = fixture.Create<UpdateDriverAddressRequest>();
+			unitOfWork.AddressRepository.When(d => d.Update(Arg.Any<Address>())).Throw<Exception>();
+
+			//Act
+			var response = await controller.PutAddress(updatedDriverAddress);
+			var result = response.Result as ObjectResult;
+
+			//Assert
+			Assert.Equal(StatusCodes.Status500InternalServerError, result.StatusCode);
+		}
+
+		[Fact]
+		public async Task When_PUT_a_Driver_Address_should_call_SaveChange_on_UnitOfWork()
+		{
+			//Arrange
+			var updatedDriverAddress = fixture.Create<UpdateDriverAddressRequest>();
+
+			//Act
+			var response = await controller.PutAddress(updatedDriverAddress);
+
+			//Assert
+			await unitOfWork.Received().SaveChanges();
+		}
 	}
 }
