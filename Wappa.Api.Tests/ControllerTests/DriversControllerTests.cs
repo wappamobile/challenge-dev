@@ -33,7 +33,6 @@ namespace Wappa.Api.Tests.ControllerTests
 
 			AutoMapper.Mapper.Initialize(cfg => cfg.AddProfile<MappingProfile>());
 
-
 			controller = new DriversController(googleGeocoderWrapper, unitOfWork);
 			fixture = new Fixture();
 			RemoveThrowingBehaviorFromFixture();
@@ -140,6 +139,63 @@ namespace Wappa.Api.Tests.ControllerTests
 
 			//Assert
 			Assert.Equal(StatusCodes.Status409Conflict, result.StatusCode);
+		}
+
+		[Fact]
+		public async Task When_DELETE_a_Driver_should_return_a_DriverResponse_with_OK_status_code()
+		{
+			//Arrange
+			var driver = fixture.Create<Driver>();
+			unitOfWork.DriversRepository.Get(Arg.Any<int>()).Returns(driver);
+
+			//Act
+			var response = await controller.Delete(driver.Id) as ActionResult<DriverResponse>;
+			var result = response.Result as OkObjectResult;
+
+			//Assert
+			Assert.Equal(StatusCodes.Status200OK, result.StatusCode);
+			Assert.IsType<DriverResponse>(result.Value);
+		}
+
+		[Fact]
+		public async Task When_DELETE_a_Driver_and_Id_is_invalid_should_return_a_BadRequest()
+		{
+			//Arrange -> Act
+			var response = await controller.Delete(0);
+			var result = response.Result as BadRequestObjectResult;
+
+			//Assert
+			Assert.IsType<BadRequestObjectResult>(result);
+		}
+
+		[Fact]
+		public async Task When_DELETE_a_Driver_and_a_problem_occur_should_return_InternalServerError()
+		{
+			//Arrange
+			var driverId = fixture.Create<int>();
+			unitOfWork.DriversRepository.When(d => d.Get(Arg.Any<int>())).Throw<Exception>();
+
+			//Act
+			var response = await controller.Delete(driverId);
+			var result = response.Result as ObjectResult;
+
+			//Assert
+			Assert.Equal(StatusCodes.Status500InternalServerError, result.StatusCode);
+		}
+
+		[Fact]
+		public async Task When_try_to_DELETE_an_already_deleted_Driver_should_return_NotFound()
+		{
+			//Arrange
+			var driverId = fixture.Create<int>();
+			unitOfWork.DriversRepository.Get(Arg.Any<int>()).Returns(default(Driver));
+
+			//Act
+			var response = await controller.Delete(driverId);
+			var result = response.Result as ObjectResult;
+
+			//Assert
+			Assert.Equal(StatusCodes.Status404NotFound, result.StatusCode);
 		}
 
 		[Fact]
