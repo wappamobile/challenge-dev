@@ -78,7 +78,7 @@ namespace Wappa.Api.Tests.ExternalServicesTests
 			var address = fixture.Create<Address>();
 
 			//Act -> Assert
-			await Assert.ThrowsAsync<AddressNotFoundException>(() => googleGeocoderWrapper.GetAddress(address.ToString()));
+			await Assert.ThrowsAsync<AddressNotFoundException>(async () => await googleGeocoderWrapper.GetAddress(address.ToString()));
 		}
 
 		[Fact]
