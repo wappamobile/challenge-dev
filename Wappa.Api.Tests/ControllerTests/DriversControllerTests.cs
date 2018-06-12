@@ -384,5 +384,74 @@ namespace Wappa.Api.Tests.ControllerTests
 			Assert.Equal(StatusCodes.Status500InternalServerError, result.StatusCode);
 			Assert.IsType<ObjectResult>(result);
 		}
+
+		[Fact]
+		public async Task When_PUT_a_Driver_should_return_an_updated_DriverResponse_with_Ok_status_code()
+		{
+			//Arrange
+			var updatedDriver = fixture.Create<UpdateDriverRequest>();
+
+			//Act
+			var response = await controller.Put(updatedDriver) as ActionResult<DriverResponse>;
+			var result = response.Result as OkObjectResult;
+
+			//Assert
+			Assert.Equal(StatusCodes.Status200OK, result.StatusCode);
+			Assert.IsType<DriverResponse>(result.Value);
+		}
+
+		[Fact]
+		public async Task When_PUT_a_Driver_and_request_is_invalid_should_return_a_BadRequest()
+		{
+			//Arrange -> Act
+			var response = await controller.Put(null);
+			var result = response.Result as BadRequestObjectResult;
+
+			//Assert
+			Assert.IsType<BadRequestObjectResult>(result);
+		}
+
+		[Fact]
+		public async Task When_PUT_a_Driver_and_a_problem_occur_should_return_InternalServerError()
+		{
+			//Arrange
+			var updatedDriver = fixture.Create<UpdateDriverRequest>();
+			unitOfWork.DriversRepository.When(d => d.Update(Arg.Any<Driver>())).Throw<Exception>();
+
+			//Act
+			var response = await controller.Put(updatedDriver);
+			var result = response.Result as ObjectResult;
+
+			//Assert
+			Assert.Equal(StatusCodes.Status500InternalServerError, result.StatusCode);
+		}
+
+		[Fact]
+		public async Task When_try_to_PUT_an_already_deleted_Driver_should_return_InternalServerError()
+		{
+			//Arrange
+			var updatedDriver = fixture.Create<UpdateDriverRequest>();
+			unitOfWork.DriversRepository.Update(Arg.Any<Driver>()).Returns(default(Task));
+
+			//Act
+			var response = await controller.Put(updatedDriver);
+			var result = response.Result as ObjectResult;
+
+			//Assert
+			Assert.Equal(StatusCodes.Status500InternalServerError, result.StatusCode);
+		}
+
+		[Fact]
+		public async Task When_PUT_a_Driver_should_call_SaveChange_on_UnitOfWork()
+		{
+			//Arrange
+			var updatedDriver = fixture.Create<UpdateDriverRequest>();
+
+			//Act
+			var response = await controller.Put(updatedDriver);
+
+			//Assert
+			await unitOfWork.Received().SaveChanges();
+		}
 	}
 }
