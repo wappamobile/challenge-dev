@@ -200,6 +200,20 @@ namespace Wappa.Api.Tests.ControllerTests
 		}
 
 		[Fact]
+		public async Task When_DELETE_a_Driver_should_call_SaveChange_on_UnitOfWork()
+		{
+			//Arrange
+			var driver = fixture.Create<Driver>();
+			unitOfWork.DriversRepository.Get(Arg.Any<int>()).Returns(driver);
+
+			//Act
+			var response = await controller.Delete(driver.Id);
+
+			//Assert
+			await unitOfWork.Received().SaveChanges();
+		}
+
+		[Fact]
 		public async Task When_GET_all_Drivers_should_return_a_list_with_OK_status_code()
 		{
 			//Arrange
