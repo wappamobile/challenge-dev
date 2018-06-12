@@ -25,8 +25,6 @@ namespace Wappa.Api
 			this.CreateMap<UpdateDriverCarRequest, Models.Car>().ReverseMap();
 			this.CreateMap<UpdateDriverCarRequest, DomainModel.Car>().ReverseMap();
 
-			this.CreateMap<CarsResponse, ICollection<DomainModel.Car>>().ReverseMap();
-
 			this.CreateMap<CreatedDriverResponse, DomainModel.Driver>().ReverseMap();
 
 			this.CreateMap<Models.Driver, DomainModel.Driver>().ReverseMap();
@@ -34,7 +32,6 @@ namespace Wappa.Api
 			this.CreateMap<Models.Car, DomainModel.Car>().ReverseMap();
 
 			this.CreateMap<GoogleAddress, DomainModel.Address>()
-				.ForMember(address => address.City, src => src.Ignore())
 				.ForMember(address => address.AddressLine, src => src.MapFrom(x => x.FormattedAddress))
 				.ForMember(address => address.Latitude,	src => src.MapFrom(x => x.Location.Latitude))
 				.ForMember(address => address.Longitude, src => src.MapFrom(x => x.Location.Longitude)).ReverseMap();
