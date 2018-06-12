@@ -23,6 +23,16 @@ namespace Wappa.Api.DataLayer
 			}
 		}
 
+		private ICarRepository carRepository;
+		public ICarRepository CarRepository
+		{
+			get
+			{
+				if (this.carRepository == null) { this.carRepository = new CarRepository(this.context); }
+				return this.carRepository;
+			}
+		}
+
 		private IDriversRepository driversRepository;
 		public IDriversRepository DriversRepository
 		{

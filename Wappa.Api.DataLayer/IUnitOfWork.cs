@@ -7,6 +7,8 @@ namespace Wappa.Api.DataLayer
 	{
 		IAddressRepository AddressRepository { get; }
 
+		ICarRepository CarRepository { get; }
+
 		IDriversRepository DriversRepository { get; }
 
 		Task<int> SaveChanges();
