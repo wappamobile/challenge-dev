@@ -15,21 +15,26 @@ namespace Wappa.Api.DataLayer.Repositories
 			this.context = context;
 		}
 
-		public async Task Update(int driverId, List<Car> cars)
+		public async Task Update(Driver driver, List<Car> cars)
 		{
 			await Task.Factory.StartNew(() =>
 			{
+				this.DeleteOldCars(driver.Cars);
+
 				foreach (var car in cars)
 				{
-					var entity = this.context.Cars.Include(d => d.Driver)
-									.FirstOrDefault(d => d.Id == driverId);
-
-					car.DriverId = entity.DriverId;
-					car.Id = entity.Id;
-
-					this.context.Entry(entity).CurrentValues.SetValues(car);
+					car.DriverId = driver.Id;
+					this.context.Cars.Add(car);
 				}
 			});
+		}
+
+		private void DeleteOldCars(ICollection<Car> cars)
+		{
+			foreach (var car in cars)
+			{
+				this.context.Cars.Remove(car);
+			}
 		}
 	}
 }

@@ -42,6 +42,6 @@ namespace Wappa.Api.DataLayer
 			}
 		}
 
-		public async Task<int> SaveChanges() => await this.context.SaveChangesAsync();
+		public void SaveChanges() => this.context.SaveChanges();
 	}
 }

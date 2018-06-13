@@ -80,17 +80,18 @@ namespace Wappa.Api.DataLayer.Repositories
 				driver.Address.DriverId = entity.Id;
 
 				this.DeleteOldDriversCars(entity);
-				this.AddNewDriverCars(entity, driver);
+				this.AddNewDriverCars(driver, entity);
 
 				this.context.Entry(entity).CurrentValues.SetValues(driver);
 			});
 		}
 
-		private void AddNewDriverCars(Driver entity, Driver driver)
+		private void AddNewDriverCars(Driver driver, Driver entity)
 		{
 			foreach (var car in driver.Cars)
 			{
 				car.DriverId = entity.Id;
+				car.Driver = driver;
 				this.context.Cars.Add(car);
 			}
 		}

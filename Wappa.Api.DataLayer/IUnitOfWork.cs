@@ -11,6 +11,6 @@ namespace Wappa.Api.DataLayer
 
 		IDriversRepository DriversRepository { get; }
 
-		Task<int> SaveChanges();
+		void SaveChanges();
 	}
 }
