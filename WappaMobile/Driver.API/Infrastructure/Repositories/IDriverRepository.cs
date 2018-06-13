@@ -12,10 +12,10 @@ namespace WappaMobile.Driver.API.Infrastructure.Repositories
 
         DriverRegistry Get(string id);
 
-        void Add(DriverRegistry driver);
+        bool Add(DriverRegistry driver);
 
-        void Update(DriverRegistry driver);
+        bool Update(DriverRegistry driver);
 
-        void Delete(string id);
+        bool Delete(string id);
     }
 }

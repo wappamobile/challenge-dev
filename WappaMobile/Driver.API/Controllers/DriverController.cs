@@ -9,6 +9,13 @@ using WappaMobile.Driver.API.ViewModel;
 
 namespace WappaMobile.Driver.API.Controllers
 {
+    public enum SortDriver
+    {
+        Default,
+        FirstName,
+        LastName
+    }
+
     [Route("api/v1/[controller]")]
     public class DriverController : Controller
     {
@@ -20,9 +27,18 @@ namespace WappaMobile.Driver.API.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetDriver()
+        public IActionResult GetDriver([FromQuery]SortDriver sort = SortDriver.Default)
         {
-            return Ok(_driverRepository.Get());
+            return Ok(
+                _driverRepository
+                    .Get()
+                    .OrderBy(driver => {
+                        if (sort == SortDriver.LastName)
+                            return driver.Name.LastName;
+                        else
+                            return driver.Name.FirstName;
+                    }).ToList()
+            );
         }
 
         [HttpGet("{id}")]

@@ -68,6 +68,7 @@ namespace WappaMobile.Driver.API
         {
             services.AddSwaggerGen(options =>
             {
+                options.DescribeAllEnumsAsStrings();
                 options.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info
                 {
                     Title = "WappaMobile - Driver API",

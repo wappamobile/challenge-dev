@@ -30,14 +30,16 @@ namespace WappaMobile.Driver.API.Infrastructure.Repositories
                 .FirstOrDefault();
         }
 
-        public void Add(DriverRegistry driver)
+        public bool Add(DriverRegistry driver)
         {
             driver.LastUpdated = DateTime.UtcNow;
 
             _context.Driver.InsertOne(driver);
+
+            return true;
         }
 
-        public void Update(DriverRegistry driver)
+        public bool Update(DriverRegistry driver)
         {
             driver.LastUpdated = DateTime.UtcNow;
 
@@ -46,13 +48,17 @@ namespace WappaMobile.Driver.API.Infrastructure.Repositories
                 driver,
                 new UpdateOptions { IsUpsert = false }
             );
+
+            return true;
         }
 
-        public void Delete(string id)
+        public bool Delete(string id)
         {
             _context.Driver.DeleteOne(
                 doc => doc.Id == id
             );
+
+            return true;
         }
     }
 }

@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{B6
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Driver", "Driver", "{57A0CEE3-06E3-4692-B903-C7A188CF4D8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Driver.API", "Driver.API\Driver.API.csproj", "{13DB0F65-8B59-4E5A-A998-E9ECF73CF17B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Driver.API", "Driver.API\Driver.API.csproj", "{13DB0F65-8B59-4E5A-A998-E9ECF73CF17B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

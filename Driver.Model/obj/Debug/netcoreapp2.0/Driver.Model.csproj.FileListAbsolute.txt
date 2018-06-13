@@ -1,0 +1,9 @@
+D:\Dev\Repositories\challenge-dev\Driver.Model\bin\Debug\netcoreapp2.0\WappaMobile.Driver.Domain.deps.json
+D:\Dev\Repositories\challenge-dev\Driver.Model\bin\Debug\netcoreapp2.0\WappaMobile.Driver.Domain.dll
+D:\Dev\Repositories\challenge-dev\Driver.Model\obj\Debug\netcoreapp2.0\Driver.Model.csprojAssemblyReference.cache
+D:\Dev\Repositories\challenge-dev\Driver.Model\obj\Debug\netcoreapp2.0\Driver.Model.csproj.CoreCompileInputs.cache
+D:\Dev\Repositories\challenge-dev\Driver.Model\obj\Debug\netcoreapp2.0\Driver.Model.AssemblyInfoInputs.cache
+D:\Dev\Repositories\challenge-dev\Driver.Model\obj\Debug\netcoreapp2.0\Driver.Model.AssemblyInfo.cs
+D:\Dev\Repositories\challenge-dev\Driver.Model\bin\Debug\netcoreapp2.0\WappaMobile.Driver.Domain.pdb
+D:\Dev\Repositories\challenge-dev\Driver.Model\obj\Debug\netcoreapp2.0\WappaMobile.Driver.Domain.dll
+D:\Dev\Repositories\challenge-dev\Driver.Model\obj\Debug\netcoreapp2.0\WappaMobile.Driver.Domain.pdb
