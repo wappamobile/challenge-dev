@@ -110,7 +110,7 @@ namespace Wappa.Api.Tests.ControllerTests
 			var response = await this.controller.Post(request);
 
 			//Assert
-			await this.unitOfWork.Received().SaveChanges();
+			this.unitOfWork.Received().SaveChanges();
 		}
 
 		[Fact]
@@ -199,7 +199,7 @@ namespace Wappa.Api.Tests.ControllerTests
 			var response = await this.controller.Delete(driver.Id);
 
 			//Assert
-			await this.unitOfWork.Received().SaveChanges();
+			this.unitOfWork.Received().SaveChanges();
 		}
 
 		[Fact]
@@ -455,7 +455,10 @@ namespace Wappa.Api.Tests.ControllerTests
 		public async Task When_PUT_a_Driver_should_return_an_updated_DriverResponse_with_Ok_status_code()
 		{
 			//Arrange
+			var driver = this.fixture.Create<Driver>();
 			var updatedDriver = this.fixture.Create<UpdateDriverRequest>();
+
+			this.unitOfWork.DriversRepository.Get(Arg.Any<int>()).Returns(driver);
 
 			MockGoogleGeocoderGetAddressReturn();
 
@@ -519,6 +522,9 @@ namespace Wappa.Api.Tests.ControllerTests
 			//Arrange
 			var updatedDriver = this.fixture.Create<UpdateDriverRequest>();
 
+			var driver = this.fixture.Create<Driver>();
+			this.unitOfWork.DriversRepository.Get(Arg.Any<int>()).Returns(driver);
+
 			this.unitOfWork.DriversRepository.When(d => d.Update(Arg.Any<Driver>())).Throw<Exception>();
 
 			//Act
@@ -530,11 +536,12 @@ namespace Wappa.Api.Tests.ControllerTests
 		}
 
 		[Fact]
-		public async Task When_try_to_PUT_an_already_deleted_Driver_should_return_InternalServerError()
+		public async Task When_try_to_PUT_an_already_deleted_Driver_should_return_NotFound()
 		{
 			//Arrange
 			var updatedDriver = this.fixture.Create<UpdateDriverRequest>();
 
+			this.unitOfWork.DriversRepository.Get(Arg.Any<int>()).Returns(default(Driver));
 			this.unitOfWork.DriversRepository.Update(Arg.Any<Driver>()).Returns(default(Task));
 
 			//Act
@@ -542,14 +549,17 @@ namespace Wappa.Api.Tests.ControllerTests
 			var result = response.Result as ObjectResult;
 
 			//Assert
-			Assert.Equal(StatusCodes.Status500InternalServerError, result.StatusCode);
+			Assert.Equal(StatusCodes.Status404NotFound, result.StatusCode);
 		}
 
 		[Fact]
 		public async Task When_PUT_a_Driver_should_call_SaveChanges_on_UnitOfWork()
 		{
 			//Arrange
+			var driver = this.fixture.Create<Driver>();
 			var updatedDriver = this.fixture.Create<UpdateDriverRequest>();
+
+			this.unitOfWork.DriversRepository.Get(Arg.Any<int>()).Returns(driver);
 
 			MockGoogleGeocoderGetAddressReturn();
 
@@ -557,14 +567,17 @@ namespace Wappa.Api.Tests.ControllerTests
 			var response = await this.controller.Put(updatedDriver);
 
 			//Assert
-			await this.unitOfWork.Received().SaveChanges();
+			this.unitOfWork.Received().SaveChanges();
 		}
 
 		[Fact]
 		public async Task When_PUT_a_Driver_should_call_GetAddress_on_GoogleGeocoderWrapper()
 		{
 			//Arrange
+			var driver = this.fixture.Create<Driver>();
 			var updatedDriver = this.fixture.Create<UpdateDriverRequest>();
+
+			this.unitOfWork.DriversRepository.Get(Arg.Any<int>()).Returns(driver);
 
 			//Act
 			var response = await this.controller.Put(updatedDriver);
@@ -577,13 +590,15 @@ namespace Wappa.Api.Tests.ControllerTests
 		public async Task When_PUT_a_Driver_Address_should_return_an_updated_Address_with_Ok_status_code()
 		{
 			//Arrange
-			var driverId = this.fixture.Create<int>();
+			var driver = this.fixture.Create<Driver>();
 			var updatedDriverAddress = this.fixture.Create<UpdateDriverAddressRequest>();
 
 			MockGoogleGeocoderGetAddressReturn();
 
+			this.unitOfWork.DriversRepository.Get(Arg.Any<int>()).Returns(driver);
+
 			//Act
-			var response = await this.controller.PutAddress(driverId, updatedDriverAddress) as ActionResult<Models.Address>;
+			var response = await this.controller.PutAddress(driver.Id, updatedDriverAddress) as ActionResult<Models.Address>;
 			var result = response.Result as OkObjectResult;
 
 			//Assert
@@ -623,7 +638,7 @@ namespace Wappa.Api.Tests.ControllerTests
 		}
 
 		[Fact]
-		public async Task When_PUT_a_Driver_Address_should_call_SaveChanges_on_UnitOfWork()
+		public async Task When_PUT_a_Driver_Address_for_a_Driver_that_dont_exist_should_return_NotFound()
 		{
 			//Arrange
 			var driverId = this.fixture.Create<int>();
@@ -631,11 +646,33 @@ namespace Wappa.Api.Tests.ControllerTests
 
 			MockGoogleGeocoderGetAddressReturn();
 
+			this.unitOfWork.DriversRepository.Get(Arg.Any<int>()).Returns(default(Driver));
+			this.unitOfWork.AddressRepository.When(d => d.Update(Arg.Any<int>(), Arg.Any<Address>())).Throw<Exception>();
+
 			//Act
 			var response = await this.controller.PutAddress(driverId, updatedDriverAddress);
+			var result = response.Result as NotFoundObjectResult;
 
 			//Assert
-			await this.unitOfWork.Received().SaveChanges();
+			Assert.Equal(StatusCodes.Status404NotFound, result.StatusCode);
+		}
+
+		[Fact]
+		public async Task When_PUT_a_Driver_Address_should_call_SaveChanges_on_UnitOfWork()
+		{
+			//Arrange
+			var driver = this.fixture.Create<Driver>();
+			var updatedDriverAddress = this.fixture.Create<UpdateDriverAddressRequest>();
+
+			MockGoogleGeocoderGetAddressReturn();
+
+			this.unitOfWork.DriversRepository.Get(Arg.Any<int>()).Returns(driver);
+
+			//Act
+			var response = await this.controller.PutAddress(driver.Id, updatedDriverAddress);
+
+			//Assert
+			this.unitOfWork.Received().SaveChanges();
 		}
 
 		[Fact]
@@ -657,12 +694,14 @@ namespace Wappa.Api.Tests.ControllerTests
 		public async Task When_PUT_a_Driver_Cars_should_return_an_updated_CarList_with_Ok_status_code()
 		{
 			//Arrange
-			var driverId = this.fixture.Create<int>();
+			var driver = this.fixture.Create<Driver>();
 
 			var updatedDriverCars = this.fixture.CreateMany<UpdateDriverCarRequest>().ToList();
 
+			this.unitOfWork.DriversRepository.Get(Arg.Any<int>()).Returns(driver);
+
 			//Act
-			var response = await this.controller.PutCar(driverId, updatedDriverCars) as ActionResult<List<Models.Car>>;
+			var response = await this.controller.PutCars(driver.Id, updatedDriverCars) as ActionResult<List<Models.Car>>;
 			var result = response.Result as OkObjectResult;
 
 			//Assert
@@ -677,7 +716,7 @@ namespace Wappa.Api.Tests.ControllerTests
 			var driverId = this.fixture.Create<int>();
 
 			//Act
-			var response = await this.controller.PutCar(driverId, null);
+			var response = await this.controller.PutCars(driverId, null);
 			var result = response.Result as BadRequestObjectResult;
 
 			//Assert
@@ -695,7 +734,7 @@ namespace Wappa.Api.Tests.ControllerTests
 			MockGoogleGeocoderGetAddressReturn();
 
 			//Act
-			var response = await this.controller.PutCar(driverId, updatedDriverCars);
+			var response = await this.controller.PutCars(driverId, updatedDriverCars);
 			var result = response.Result as BadRequestObjectResult;
 
 			//Assert
@@ -706,14 +745,15 @@ namespace Wappa.Api.Tests.ControllerTests
 		public async Task When_PUT_a_Driver_Cars_and_a_problem_occur_should_return_InternalServerError()
 		{
 			//Arrange
-			var driverId = this.fixture.Create<int>();
+			var driver = this.fixture.Create<Driver>();
 
 			var updatedDriverCars = this.fixture.CreateMany<UpdateDriverCarRequest>().ToList();
 
+			this.unitOfWork.DriversRepository.Get(Arg.Any<int>()).Returns(driver);
 			this.unitOfWork.CarRepository.When(d => d.Update(Arg.Any<int>(), Arg.Any<List<Car>>())).Throw<Exception>();
 
 			//Act
-			var response = await this.controller.PutCar(driverId,updatedDriverCars);
+			var response = await this.controller.PutCars(driver.Id, updatedDriverCars);
 			var result = response.Result as ObjectResult;
 
 			//Assert
@@ -721,18 +761,39 @@ namespace Wappa.Api.Tests.ControllerTests
 		}
 
 		[Fact]
-		public async Task When_PUT_a_Driver_Cars_should_call_SaveChanges_on_UnitOfWork()
+		public async Task When_PUT_a_Driver_Cars_for_a_Driver_that_dont_exist_should_return_NotFound()
 		{
 			//Arrange
 			var driverId = this.fixture.Create<int>();
+			var driverCars = this.fixture.CreateMany<UpdateDriverCarRequest>().ToList();
+			MockGoogleGeocoderGetAddressReturn();
+
+			this.unitOfWork.DriversRepository.Get(Arg.Any<int>()).Returns(default(Driver));
+			this.unitOfWork.AddressRepository.When(d => d.Update(Arg.Any<int>(), Arg.Any<Address>())).Throw<Exception>();
+
+			//Act
+			var response = await this.controller.PutCars(driverId, driverCars);
+			var result = response.Result as NotFoundObjectResult;
+
+			//Assert
+			Assert.Equal(StatusCodes.Status404NotFound, result.StatusCode);
+		}
+
+		[Fact]
+		public async Task When_PUT_a_Driver_Cars_should_call_SaveChanges_on_UnitOfWork()
+		{
+			//Arrange
+			var driver = this.fixture.Create<Driver>();
 
 			var updatedDriverCars = this.fixture.CreateMany<UpdateDriverCarRequest>().ToList();
 
+			this.unitOfWork.DriversRepository.Get(Arg.Any<int>()).Returns(driver);
+
 			//Act
-			var response = await this.controller.PutCar(driverId, updatedDriverCars);
+			var response = await this.controller.PutCars(driver.Id, updatedDriverCars);
 
 			//Assert
-			await this.unitOfWork.Received().SaveChanges();
+			this.unitOfWork.Received().SaveChanges();
 		}
 	}
 }
