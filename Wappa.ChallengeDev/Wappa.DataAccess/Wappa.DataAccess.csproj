@@ -3,29 +3,28 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>bin\Debug\</OutputPath>
+	<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Dapper" Version="1.50.4" />
-    <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.0.1" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.0.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="2.0.1" />
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.0.0" />
+    <PackageReference Include="System.ComponentModel.Composition" Version="4.5.0" />
     <PackageReference Include="System.Runtime.Serialization.Json" Version="4.3.0" />
     <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
   </ItemGroup>
-
   <ItemGroup>
-    <ProjectReference Include="..\Wappa.Models\Wappa.Models.csproj" />
+    <ProjectReference Include="..\Wappa.Models\Wappa.Contracts.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="Microsoft.AspNetCore.Http.Abstractions">
       <HintPath>C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.http.abstractions\2.0.1\lib\netstandard2.0\Microsoft.AspNetCore.Http.Abstractions.dll</HintPath>
+      <Private>true</Private>
     </Reference>
-    <Reference Include="Microsoft.EntityFrameworkCore">
-      <HintPath>C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.entityframeworkcore\2.0.1\lib\netstandard2.0\Microsoft.EntityFrameworkCore.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.EntityFrameworkCore.SqlServer">
-      <HintPath>C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.entityframeworkcore.sqlserver\2.0.1\lib\netstandard2.0\Microsoft.EntityFrameworkCore.SqlServer.dll</HintPath>
+    <Reference Include="System.Composition.AttributedModel">
+      <HintPath>..\..\..\..\..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\system.composition.attributedmodel\1.0.31\lib\netstandard1.0\System.Composition.AttributedModel.dll</HintPath>
     </Reference>
   </ItemGroup>
 

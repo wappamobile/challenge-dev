@@ -1,0 +1,9 @@
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.Models\bin\Release\netcoreapp2.0\Wappa.Contracts.deps.json
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.Models\bin\Release\netcoreapp2.0\Wappa.Contracts.dll
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.Models\bin\Release\netcoreapp2.0\Wappa.Contracts.pdb
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.Models\obj\Release\netcoreapp2.0\Wappa.Contracts.csprojResolveAssemblyReference.cache
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.Models\obj\Release\netcoreapp2.0\Wappa.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.Models\obj\Release\netcoreapp2.0\Wappa.Contracts.AssemblyInfoInputs.cache
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.Models\obj\Release\netcoreapp2.0\Wappa.Contracts.AssemblyInfo.cs
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.Models\obj\Release\netcoreapp2.0\Wappa.Contracts.dll
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.Models\obj\Release\netcoreapp2.0\Wappa.Contracts.pdb

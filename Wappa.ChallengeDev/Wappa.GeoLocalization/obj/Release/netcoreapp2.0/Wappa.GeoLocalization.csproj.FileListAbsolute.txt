@@ -1,0 +1,12 @@
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.GeoLocalization\bin\Release\netcoreapp2.0\Wappa.GeoLocalization.deps.json
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.GeoLocalization\bin\Release\netcoreapp2.0\Wappa.GeoLocalization.dll
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.GeoLocalization\bin\Release\netcoreapp2.0\Wappa.GeoLocalization.pdb
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.GeoLocalization\bin\Release\netcoreapp2.0\System.Composition.AttributedModel.dll
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.GeoLocalization\bin\Release\netcoreapp2.0\Wappa.Contracts.dll
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.GeoLocalization\bin\Release\netcoreapp2.0\Wappa.Contracts.pdb
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.GeoLocalization\obj\Release\netcoreapp2.0\Wappa.GeoLocalization.csprojResolveAssemblyReference.cache
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.GeoLocalization\obj\Release\netcoreapp2.0\Wappa.GeoLocalization.csproj.CoreCompileInputs.cache
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.GeoLocalization\obj\Release\netcoreapp2.0\Wappa.GeoLocalization.AssemblyInfoInputs.cache
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.GeoLocalization\obj\Release\netcoreapp2.0\Wappa.GeoLocalization.AssemblyInfo.cs
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.GeoLocalization\obj\Release\netcoreapp2.0\Wappa.GeoLocalization.dll
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.GeoLocalization\obj\Release\netcoreapp2.0\Wappa.GeoLocalization.pdb

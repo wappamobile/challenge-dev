@@ -1,0 +1,15 @@
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.DataAccess\bin\Release\netcoreapp2.0\appSettings.json
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.DataAccess\bin\Release\netcoreapp2.0\Wappa.DataAccess.deps.json
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.DataAccess\bin\Release\netcoreapp2.0\Wappa.DataAccess.dll
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.DataAccess\bin\Release\netcoreapp2.0\Wappa.DataAccess.pdb
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.DataAccess\bin\Release\netcoreapp2.0\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.DataAccess\bin\Release\netcoreapp2.0\System.Composition.AttributedModel.dll
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.DataAccess\bin\Release\netcoreapp2.0\Wappa.Contracts.dll
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.DataAccess\bin\Release\netcoreapp2.0\Wappa.Contracts.pdb
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.DataAccess\bin\Release\netcoreapp2.0\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.DataAccess\obj\Release\netcoreapp2.0\Wappa.DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.DataAccess\obj\Release\netcoreapp2.0\Wappa.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.DataAccess\obj\Release\netcoreapp2.0\Wappa.DataAccess.AssemblyInfoInputs.cache
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.DataAccess\obj\Release\netcoreapp2.0\Wappa.DataAccess.AssemblyInfo.cs
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.DataAccess\obj\Release\netcoreapp2.0\Wappa.DataAccess.dll
+C:\Users\SAMUEL\Documents\GitHub\challenge-dev\Wappa.ChallengeDev\Wappa.DataAccess\obj\Release\netcoreapp2.0\Wappa.DataAccess.pdb

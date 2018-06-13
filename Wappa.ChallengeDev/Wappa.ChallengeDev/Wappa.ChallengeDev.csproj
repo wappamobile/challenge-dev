@@ -6,17 +6,44 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile>bin\Debug\netcoreapp2.0\Wappa.ChallengeDev.xml</DocumentationFile>
+    <NoWarn>1701;1702;1705;1591</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="2.3.0" />
+    <Compile Remove="wwwroot\css\**" />
+    <Compile Remove="wwwroot\lib\**" />
+    <Compile Remove="wwwroot\modules\**" />
+    <Content Remove="wwwroot\css\**" />
+    <Content Remove="wwwroot\lib\**" />
+    <Content Remove="wwwroot\modules\**" />
+    <EmbeddedResource Remove="wwwroot\css\**" />
+    <EmbeddedResource Remove="wwwroot\lib\**" />
+    <EmbeddedResource Remove="wwwroot\modules\**" />
+    <None Remove="wwwroot\css\**" />
+    <None Remove="wwwroot\lib\**" />
+    <None Remove="wwwroot\modules\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Wappa.Application\Wappa.Application.csproj" />
-    <ProjectReference Include="..\Wappa.Models\Wappa.Models.csproj" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="2.3.0" />
+    <PackageReference Include="System.ComponentModel.Composition" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Wappa.DataAccess\Wappa.DataAccess.csproj" />
+    <ProjectReference Include="..\Wappa.GeoLocalization\Wappa.GeoLocalization.csproj" />
+    <ProjectReference Include="..\Wappa.Models\Wappa.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
   </ItemGroup>
 
 </Project>

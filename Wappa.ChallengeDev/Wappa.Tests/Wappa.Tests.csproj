@@ -8,18 +8,16 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.0.2" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.0.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0" />
     <PackageReference Include="Moq" Version="4.8.2" />
-    <PackageReference Include="xunit" Version="2.3.1" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
+    <PackageReference Include="NUnit" Version="3.10.1" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.10.0" />
     <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Wappa.Application\Wappa.Application.csproj" />
     <ProjectReference Include="..\Wappa.ChallengeDev\Wappa.ChallengeDev.csproj" />
-    <ProjectReference Include="..\Wappa.Models\Wappa.Models.csproj" />
+    <ProjectReference Include="..\Wappa.Models\Wappa.Contracts.csproj" />
   </ItemGroup>
 
   <ItemGroup>
