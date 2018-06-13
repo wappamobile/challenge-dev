@@ -8,9 +8,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using MongoDB.Driver;
 using WappaMobile.Driver.API.Infrastructure;
 using WappaMobile.Driver.API.Infrastructure.Filters;
-using WappaMobile.Driver.API.Infrastructure.Repositories;
+using WappaMobile.Driver.Infrastructure;
+using WappaMobile.Driver.Infrastructure.Repositories;
 
 namespace WappaMobile.Driver.API
 {
@@ -31,7 +33,9 @@ namespace WappaMobile.Driver.API
                 .AddSwagger()
                 .Configure<DriverSettings>(Configuration);
 
-            services.AddTransient<IDriverRepository, DriverRepository>();
+            services
+                .AddMongo()
+                .AddTransient<IDriverRepository, DriverRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,8 +52,6 @@ namespace WappaMobile.Driver.API
                 {
                     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Driver.API V1");
                 });
-
-            DriverContextSeed.Seed(app);
         }
     }
 
@@ -75,6 +77,21 @@ namespace WappaMobile.Driver.API
                     Version = "v1"
                 });
             });
+
+            return services;
+        }
+
+        public static IServiceCollection AddMongo(this IServiceCollection services)
+        {
+            services.AddScoped<IMongoDatabase>(provider => {
+                var settings = provider.GetService<IOptions<DriverSettings>>();
+
+                var client = new MongoClient(settings.Value.ConnectionString);
+
+                return client.GetDatabase(settings.Value.Database);
+            });
+
+            services.AddScoped<IDbContext, DbContext>();
 
             return services;
         }

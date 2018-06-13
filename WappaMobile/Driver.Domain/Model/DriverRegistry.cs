@@ -17,6 +17,10 @@ namespace WappaMobile.Driver.API.Model
 
         public string Address { get; set; }
 
+        public Geolocation Geolocation { get; set; }
+
+        public bool FetchGeolocation { get; set; }
+
         public DateTime LastUpdated { get; set; }
     }
 }

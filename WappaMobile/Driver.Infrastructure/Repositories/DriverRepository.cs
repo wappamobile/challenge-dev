@@ -1,20 +1,20 @@
-﻿using Microsoft.Extensions.Options;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WappaMobile.Driver.API.Model;
 using MongoDB.Driver;
+using WappaMobile.Driver.Infrastructure;
 
-namespace WappaMobile.Driver.API.Infrastructure.Repositories
+namespace WappaMobile.Driver.Infrastructure.Repositories
 {
     public class DriverRepository : IDriverRepository
     {
-        private readonly DriverContext _context;
+        private readonly IDbContext _context;
 
-        public DriverRepository(IOptions<DriverSettings> settings)
+        public DriverRepository(IDbContext context)
         {
-            _context = new DriverContext(settings);
+            _context = context;
         }
 
         public List<DriverRegistry> Get()
@@ -33,6 +33,7 @@ namespace WappaMobile.Driver.API.Infrastructure.Repositories
         public bool Add(DriverRegistry driver)
         {
             driver.LastUpdated = DateTime.UtcNow;
+            driver.FetchGeolocation = true;
 
             _context.Driver.InsertOne(driver);
 
@@ -42,6 +43,7 @@ namespace WappaMobile.Driver.API.Infrastructure.Repositories
         public bool Update(DriverRegistry driver)
         {
             driver.LastUpdated = DateTime.UtcNow;
+            driver.FetchGeolocation = true;
 
             _context.Driver.ReplaceOne(
                 doc => doc.Id == driver.Id,

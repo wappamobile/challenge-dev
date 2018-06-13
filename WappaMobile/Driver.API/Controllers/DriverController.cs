@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using WappaMobile.Driver.API.Infrastructure.Repositories;
+using WappaMobile.Driver.Infrastructure.Repositories;
 using WappaMobile.Driver.API.Model;
 using WappaMobile.Driver.API.ViewModel;
 

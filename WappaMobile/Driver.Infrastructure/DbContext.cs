@@ -2,21 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using WappaMobile.Driver.API.Model;
 
-namespace WappaMobile.Driver.API.Infrastructure
+namespace WappaMobile.Driver.Infrastructure
 {
-    public class DriverContext
+    public class DbContext : IDbContext
     {
         private readonly IMongoDatabase _database = null;
 
-        public DriverContext(IOptions<DriverSettings> settings)
+        public DbContext(IMongoDatabase database)
         {
-            var client = new MongoClient(settings.Value.ConnectionString);
-            if (client != null)
-                _database = client.GetDatabase(settings.Value.Database);
+            _database = database;
         }
 
         public IMongoCollection<DriverRegistry> Driver

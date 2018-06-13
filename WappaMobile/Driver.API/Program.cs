@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using WappaMobile.Driver.API.Infrastructure;
+using WappaMobile.Driver.Infrastructure;
 
 namespace WappaMobile.Driver.API
 {
@@ -14,7 +17,24 @@ namespace WappaMobile.Driver.API
     {
         public static void Main(string[] args)
         {
-            BuildWebHost(args).Run();
+            var host = BuildWebHost(args);
+
+            using (var scope = host.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+
+                try
+                {
+                    var context = services.GetRequiredService<IDbContext>();
+                    DriverContextSeed.Seed(context);
+                }
+                catch (Exception ex)
+                {
+                    
+                }
+            }
+
+            host.Run();
         }
 
         public static IWebHost BuildWebHost(string[] args) =>

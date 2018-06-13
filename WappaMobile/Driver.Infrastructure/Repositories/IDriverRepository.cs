@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WappaMobile.Driver.API.Model;
 
-namespace WappaMobile.Driver.API.Infrastructure.Repositories
+namespace WappaMobile.Driver.Infrastructure.Repositories
 {
     public interface IDriverRepository
     {

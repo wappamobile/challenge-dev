@@ -18,4 +18,9 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Driver.Domain\Driver.Domain.csproj" />
+    <ProjectReference Include="..\Driver.Infrastructure\Driver.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

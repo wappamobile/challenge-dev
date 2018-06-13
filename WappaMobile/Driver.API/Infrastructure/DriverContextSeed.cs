@@ -6,23 +6,29 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using WappaMobile.Driver.API.Model;
 using MongoDB.Driver;
+using WappaMobile.Driver.Infrastructure;
 
 namespace WappaMobile.Driver.API.Infrastructure
 {
     public class DriverContextSeed
     {
-        private static DriverContext _context;
+        private static IDbContext _context;
 
-        public static void Seed(IApplicationBuilder applicationBuilder)
+        public static void Seed(IDbContext context)
         {
-            var config = applicationBuilder
-                .ApplicationServices.GetRequiredService<IOptions<DriverSettings>>();
+            _context = context;
 
-            _context = new DriverContext(config);
-
-            if (!_context.Driver.Database.GetCollection<DriverRegistry>(nameof(DriverRegistry)).AsQueryable().Any())
+            if (!_context.Driver.Database.GetCollection<DriverRegistry>("Driver").AsQueryable().Any())
             {
-                //Seed
+                _context.Driver.InsertOne(
+                    new DriverRegistry {
+                        Name = new FullName { FirstName = "Caio", LastName = "Zem" },
+                        Vehicle = new Vehicle { Brand = "GM", Model = "CHEVROLET ONIX HATCH LTZ 1.4 8V FLEXPOWER 5P", LicensePlate = "XXX-9999" },
+                        Address = "R. Gomes de Carvalho",
+                        FetchGeolocation = true,
+                        LastUpdated = DateTime.UtcNow
+                    }
+                );
             }
         }
     }
