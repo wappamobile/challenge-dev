@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Driver.Domain", "Driver.Dom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Driver.Infrastructure", "Driver.Infrastructure\Driver.Infrastructure.csproj", "{2B69382B-3FFE-44E9-B0F6-EA7F5AE823CE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Driver.BackgroundTasks", "Driver.BackgroundTasks\Driver.BackgroundTasks.csproj", "{A18BF708-5B14-43B4-B14A-74970DAED5B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{2B69382B-3FFE-44E9-B0F6-EA7F5AE823CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B69382B-3FFE-44E9-B0F6-EA7F5AE823CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B69382B-3FFE-44E9-B0F6-EA7F5AE823CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A18BF708-5B14-43B4-B14A-74970DAED5B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A18BF708-5B14-43B4-B14A-74970DAED5B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A18BF708-5B14-43B4-B14A-74970DAED5B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A18BF708-5B14-43B4-B14A-74970DAED5B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,6 +55,7 @@ Global
 		{13DB0F65-8B59-4E5A-A998-E9ECF73CF17B} = {57A0CEE3-06E3-4692-B903-C7A188CF4D8F}
 		{57C59C0D-FA6C-4CA2-A4D1-A909095522BF} = {57A0CEE3-06E3-4692-B903-C7A188CF4D8F}
 		{2B69382B-3FFE-44E9-B0F6-EA7F5AE823CE} = {57A0CEE3-06E3-4692-B903-C7A188CF4D8F}
+		{A18BF708-5B14-43B4-B14A-74970DAED5B1} = {57A0CEE3-06E3-4692-B903-C7A188CF4D8F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {451A67A0-A654-4E17-8653-630550D63E1D}

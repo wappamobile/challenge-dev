@@ -54,7 +54,9 @@ namespace WappaMobile.Driver.API.Controllers
             {
                 Name = driver.Name,
                 Vehicle = driver.Vehicle,
-                Address = driver.Address
+                Address = driver.Address,
+                FetchGeolocation = true,
+                LastUpdated = DateTime.UtcNow
             };
 
             _driverRepository.Add(driverToAdd);
@@ -71,7 +73,9 @@ namespace WappaMobile.Driver.API.Controllers
                 Id = id,
                 Name = driver.Name,
                 Vehicle = driver.Vehicle,
-                Address = driver.Address
+                Address = driver.Address,
+                FetchGeolocation = true,
+                LastUpdated = DateTime.UtcNow
             };
 
             _driverRepository.Update(driverToUpdate);

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
@@ -17,7 +18,7 @@ namespace WappaMobile.Driver.API.Model
 
         public string Address { get; set; }
 
-        public Geolocation Geolocation { get; set; }
+        public List<Geolocation> Geolocation { get; set; }
 
         public bool FetchGeolocation { get; set; }
 

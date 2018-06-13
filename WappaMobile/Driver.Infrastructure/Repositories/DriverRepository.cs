@@ -22,6 +22,12 @@ namespace WappaMobile.Driver.Infrastructure.Repositories
             return _context.Driver.Find(_ => true).ToList();
         }
 
+        public List<DriverRegistry> GetPendingGeolocation()
+        {
+            var filter = Builders<DriverRegistry>.Filter.Eq("FetchGeolocation", true);
+            return _context.Driver.Find(filter).ToList();
+        }
+
         public DriverRegistry Get(string id)
         {
             var filter = Builders<DriverRegistry>.Filter.Eq("Id", id);
@@ -32,9 +38,6 @@ namespace WappaMobile.Driver.Infrastructure.Repositories
 
         public bool Add(DriverRegistry driver)
         {
-            driver.LastUpdated = DateTime.UtcNow;
-            driver.FetchGeolocation = true;
-
             _context.Driver.InsertOne(driver);
 
             return true;
@@ -42,9 +45,6 @@ namespace WappaMobile.Driver.Infrastructure.Repositories
 
         public bool Update(DriverRegistry driver)
         {
-            driver.LastUpdated = DateTime.UtcNow;
-            driver.FetchGeolocation = true;
-
             _context.Driver.ReplaceOne(
                 doc => doc.Id == driver.Id,
                 driver,

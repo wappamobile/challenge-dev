@@ -10,6 +10,8 @@ namespace WappaMobile.Driver.Infrastructure.Repositories
     {
         List<DriverRegistry> Get();
 
+        List<DriverRegistry> GetPendingGeolocation();
+
         DriverRegistry Get(string id);
 
         bool Add(DriverRegistry driver);

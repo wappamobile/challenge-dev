@@ -4,11 +4,16 @@ services:
   driver.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - MongoConnectionString=mongodb://mongo.data
-      - MongoDatabase=DriverDb
     ports:
       - "80"
 
   mongo.data:
     ports:
       - "27017"
+
+  driver.backgroundtasks:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
+

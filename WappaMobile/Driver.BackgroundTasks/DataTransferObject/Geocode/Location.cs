@@ -1,10 +1,7 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System;
+using Newtonsoft.Json;
 
-namespace WappaMobile.Driver.API.Services.DataTransferObject.Geocode
+namespace WappaMobile.Driver.BackgroundTasks.DataTransferObject.Geocode
 {
     public class Location
     {
