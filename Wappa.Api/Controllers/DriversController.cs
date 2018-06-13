@@ -35,7 +35,7 @@ namespace Wappa.Api.Controllers
 		[HttpPost]
 		public async Task<ActionResult<Driver>> Post([FromBody] CreateDriverRequest request)
 		{
-			if (request == null) { return this.BadRequest(); }
+			if (request is null) { return this.BadRequest(); }
 
 			try
 			{
@@ -44,7 +44,7 @@ namespace Wappa.Api.Controllers
 				var driver = CreateDriverFromRequestAndGoogleAddress(request, driverAddressOnGoogle);
 
 				this.unitOfWork.DriversRepository.Add(driver);
-				await this.unitOfWork.SaveChanges();
+				this.unitOfWork.SaveChanges();
 
 				var response = Mapper.Map<CreatedDriverResponse>(driver);
 
@@ -123,7 +123,7 @@ namespace Wappa.Api.Controllers
 			try
 			{
 				var driver = await this.unitOfWork.DriversRepository.Get(id);
-				if (driver == null) { return this.NoContent(); }
+				if (driver is null) { return this.NoContent(); }
 
 				var address = Mapper.Map<Models.Address>(driver.Address);
 
@@ -144,7 +144,7 @@ namespace Wappa.Api.Controllers
 			try
 			{
 				var driver = await this.unitOfWork.DriversRepository.Get(id);
-				if (driver == null || driver.Cars.Count == 0) { return this.NoContent(); }
+				if (driver is null || driver.Cars.Count == 0) { return this.NoContent(); }
 
 				var cars = Mapper.Map<List<Models.Car>>(driver.Cars);
 
@@ -159,18 +159,20 @@ namespace Wappa.Api.Controllers
 		[HttpPut]
 		public async Task<ActionResult<DriverResponse>> Put([FromBody] UpdateDriverRequest request)
 		{
-			if (request == null) { return this.BadRequest(request); }
-			if (request.Cars == null || request.Cars.Count() == 0) { return this.BadRequest(request); }
+			if (request is null) { return this.BadRequest(request); }
+			if (request.Cars is null || request.Cars.Count() == 0) { return this.BadRequest(request); }
 
 			try
 			{
 				var driver = Mapper.Map<Driver>(request);
 
+				if (this.DriverExists(driver.Id) == false) { return this.NotFound(new { DriverId = driver.Id }); }
+
 				var driverAddressOnGoogle = await this.googleGeocoderWrapper.GetAddress(request.Address.ToString());
 				driver.Address = this.MergeGoogleAddressWithRequestAddress(driverAddressOnGoogle, request.Address);
 
 				await this.unitOfWork.DriversRepository.Update(driver);
-				await this.unitOfWork.SaveChanges();
+				this.unitOfWork.SaveChanges();
 
 				return this.Ok(Mapper.Map<DriverResponse>(driver));
 			}
@@ -180,10 +182,18 @@ namespace Wappa.Api.Controllers
 			}
 		}
 
+		private bool DriverExists(int driverId)
+		{
+			var driver = this.unitOfWork.DriversRepository.Get(driverId).Result;
+			if (driver is null) { return false; }
+
+			return true;
+		}
+
 		[HttpPut("{id}/address")]
 		public async Task<ActionResult<Models.Address>> PutAddress(int id, [FromBody] UpdateDriverAddressRequest request)
 		{
-			if (request == null) { return this.BadRequest(request); };
+			if (request is null) { return this.BadRequest(request); };
 
 			try
 			{
@@ -192,8 +202,10 @@ namespace Wappa.Api.Controllers
 				var driverAddressOnGoogle = await this.googleGeocoderWrapper.GetAddress(address.ToString());
 				var updatedAddress = this.MergeGoogleAddressWithRequestAddress(driverAddressOnGoogle, address);
 
+				if (this.DriverExists(id) == false) { return this.NotFound(new { DriverId = id }); }
+
 				await this.unitOfWork.AddressRepository.Update(id, updatedAddress);
-				await this.unitOfWork.SaveChanges();
+				this.unitOfWork.SaveChanges();
 
 				return this.Ok(Mapper.Map<Models.Address>(updatedAddress));
 			}
@@ -204,17 +216,20 @@ namespace Wappa.Api.Controllers
 		}
 
 		[HttpPut("{id}/cars")]
-		public async Task<ActionResult<List<Models.Car>>> PutCar(int id, [FromBody] List<UpdateDriverCarRequest> request)
+		public async Task<ActionResult<List<Models.Car>>> PutCars(int id, [FromBody] ICollection<UpdateDriverCarRequest> request)
 		{
-			if (request == null) { return this.BadRequest(request); }
-			if (request == null || request.Count() == 0) { return this.BadRequest(request); }
+			if (request is null) { return this.BadRequest(request); }
+			if (request is null || request.Count() == 0) { return this.BadRequest(request); }
 
 			try
 			{
 				var cars = Mapper.Map<List<Car>>(request);
 
-				await this.unitOfWork.CarRepository.Update(id, cars);
-				await this.unitOfWork.SaveChanges();
+				var driver = await this.unitOfWork.DriversRepository.Get(id);
+				if (driver is null) { return this.NotFound(id); ; }
+
+				await this.unitOfWork.CarRepository.Update(driver, cars);
+				this.unitOfWork.SaveChanges();
 
 				return this.Ok(Mapper.Map<List<Models.Car>>(cars));
 			}
@@ -232,10 +247,10 @@ namespace Wappa.Api.Controllers
 			try
 			{
 				var driver = await this.unitOfWork.DriversRepository.Get(id);
-				if (driver == null) { return this.NotFound(id); }
+				if (driver is null) { return this.NotFound(id); }
 
 				await this.unitOfWork.DriversRepository.Delete(driver);
-				await this.unitOfWork.SaveChanges();
+				this.unitOfWork.SaveChanges();
 
 				return this.Ok(Mapper.Map<DriverResponse>(driver));
 			}
