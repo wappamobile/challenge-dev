@@ -22,11 +22,11 @@ namespace Wappa.Api
 		public void ConfigureServices(IServiceCollection services)
 		{
 			var databaseConnection = this.Configuration.GetConnectionString("development");
-			services.AddDbContext<BackOfficeContext>(options => options.UseSqlServer(databaseConnection));
+			services.AddDbContext<BackOfficeContext>(options => options.UseSqlServer(databaseConnection, sql => sql.MigrationsAssembly("Wappa.Api")));
 
 			services.AddAutoMapper(cfg => cfg.AddProfile<MappingProfile>());
 
-			
+			services.AddCors();
 
 			services.AddScoped<IUnitOfWork, UnitOfWork>();
 			services.AddScoped<IGoogleGeocoderWrapper, GoogleGeocoderWrapper>();
@@ -46,6 +46,7 @@ namespace Wappa.Api
 			}
 
 			app.UseHttpsRedirection();
+			app.UseCors(options => options.AllowAnyOrigin());
 			app.UseMvc();
 		}
 	}

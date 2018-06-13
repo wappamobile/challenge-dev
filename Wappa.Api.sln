@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wappa.Api", "Wappa.Api\Wappa.Api.csproj", "{B7AA31FA-6E4D-483E-B8EA-9D3058423EAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wappa.Api", "Wappa.Api\Wappa.Api.csproj", "{B7AA31FA-6E4D-483E-B8EA-9D3058423EAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wappa.Api.DataLayer", "Wappa.Api.DataLayer\Wappa.Api.DataLayer.csproj", "{C1E8D468-1200-48C6-8E6D-636BE7688B5D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wappa.Api.DataLayer", "Wappa.Api.DataLayer\Wappa.Api.DataLayer.csproj", "{C1E8D468-1200-48C6-8E6D-636BE7688B5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wappa.Api.DomainModel", "Wappa.Api.DomainModel\Wappa.Api.DomainModel.csproj", "{221016E4-9F2E-4C26-A6C1-38914EB72343}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wappa.Api.DomainModel", "Wappa.Api.DomainModel\Wappa.Api.DomainModel.csproj", "{221016E4-9F2E-4C26-A6C1-38914EB72343}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wappa.Api.ExternalServices", "Wappa.Api.ExternalServices\Wappa.Api.ExternalServices.csproj", "{70016A72-7A0C-4F1B-90F4-BDF9CA82A0CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wappa.Api.ExternalServices", "Wappa.Api.ExternalServices\Wappa.Api.ExternalServices.csproj", "{70016A72-7A0C-4F1B-90F4-BDF9CA82A0CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wappa.Api.Tests", "Wappa.Api.Tests\Wappa.Api.Tests.csproj", "{507C4C33-3711-4D56-8ABB-364F42214070}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wappa.Api.Tests", "Wappa.Api.Tests\Wappa.Api.Tests.csproj", "{507C4C33-3711-4D56-8ABB-364F42214070}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{B7AA31FA-6E4D-483E-B8EA-9D3058423EAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -86,5 +83,11 @@ Global
 		{507C4C33-3711-4D56-8ABB-364F42214070}.Release|x64.Build.0 = Release|Any CPU
 		{507C4C33-3711-4D56-8ABB-364F42214070}.Release|x86.ActiveCfg = Release|Any CPU
 		{507C4C33-3711-4D56-8ABB-364F42214070}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7BE1E07C-E9A4-4EF9-9AAA-AF44FD602CE4}
 	EndGlobalSection
 EndGlobal
