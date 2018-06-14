@@ -1,0 +1,9 @@
+C:\Users\Jorge\Desktop\Wappa.API\Teste.Wappa\Teste.Entidades\bin\Debug\netcoreapp2.0\Teste.Entidades.deps.json
+C:\Users\Jorge\Desktop\Wappa.API\Teste.Wappa\Teste.Entidades\bin\Debug\netcoreapp2.0\Teste.Entidades.dll
+C:\Users\Jorge\Desktop\Wappa.API\Teste.Wappa\Teste.Entidades\bin\Debug\netcoreapp2.0\Teste.Entidades.pdb
+C:\Users\Jorge\Desktop\Wappa.API\Teste.Wappa\Teste.Entidades\obj\Debug\netcoreapp2.0\Teste.Entidades.csprojResolveAssemblyReference.cache
+C:\Users\Jorge\Desktop\Wappa.API\Teste.Wappa\Teste.Entidades\obj\Debug\netcoreapp2.0\Teste.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Jorge\Desktop\Wappa.API\Teste.Wappa\Teste.Entidades\obj\Debug\netcoreapp2.0\Teste.Entidades.AssemblyInfoInputs.cache
+C:\Users\Jorge\Desktop\Wappa.API\Teste.Wappa\Teste.Entidades\obj\Debug\netcoreapp2.0\Teste.Entidades.AssemblyInfo.cs
+C:\Users\Jorge\Desktop\Wappa.API\Teste.Wappa\Teste.Entidades\obj\Debug\netcoreapp2.0\Teste.Entidades.dll
+C:\Users\Jorge\Desktop\Wappa.API\Teste.Wappa\Teste.Entidades\obj\Debug\netcoreapp2.0\Teste.Entidades.pdb

@@ -1,0 +1,9 @@
+C:\Users\Jorge\Desktop\wappa_challenge_dev\Teste.Wappa\Teste.SqlServer\bin\Debug\Teste.SqlServer.dacpac
+C:\Users\Jorge\Desktop\wappa_challenge_dev\Teste.Wappa\Teste.SqlServer\bin\Debug\Teste.SqlServer.dll
+C:\Users\Jorge\Desktop\wappa_challenge_dev\Teste.Wappa\Teste.SqlServer\bin\Debug\Teste.SqlServer.pdb
+C:\Users\Jorge\Desktop\wappa_challenge_dev\Teste.Wappa\Teste.SqlServer\obj\Debug\Model.xml
+C:\Users\Jorge\Desktop\wappa_challenge_dev\Teste.Wappa\Teste.SqlServer\obj\Debug\refactor.xml
+C:\Users\Jorge\Desktop\wappa_challenge_dev\Teste.Wappa\Teste.SqlServer\obj\Debug\postdeploy.sql
+C:\Users\Jorge\Desktop\wappa_challenge_dev\Teste.Wappa\Teste.SqlServer\obj\Debug\predeploy.sql
+C:\Users\Jorge\Desktop\wappa_challenge_dev\Teste.Wappa\Teste.SqlServer\obj\Debug\Teste.SqlServer.dll
+C:\Users\Jorge\Desktop\wappa_challenge_dev\Teste.Wappa\Teste.SqlServer\obj\Debug\Teste.SqlServer.pdb

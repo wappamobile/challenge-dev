@@ -1,0 +1,32 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:52051/",
+      "sslPort": 0
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "api/motorista",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "Teste.API": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "api/motorista",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "http://localhost:52052/"
+    },
+    "Database": {
+      "ConnectionString": "Server=den1.mssql6.gear.host;Database=takatest;User Id=takatest;Password=Yv8K_CcC9?1l;"
+    }
+  }
+}
