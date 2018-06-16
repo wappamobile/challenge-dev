@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   driver.api:
-    image: driverapi
+    image: ${DOCKER_REGISTRY}driverapi
     build:
       context: .
       dockerfile: Driver.API/Dockerfile

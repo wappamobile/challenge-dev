@@ -4,6 +4,7 @@ EXPOSE 80
 
 FROM microsoft/aspnetcore-build:2.0 AS build
 WORKDIR /src
+COPY WappaMobile.sln ./
 COPY Driver.BackgroundTasks/Driver.BackgroundTasks.csproj Driver.BackgroundTasks/
 RUN dotnet restore Driver.BackgroundTasks/Driver.BackgroundTasks.csproj
 COPY . .
@@ -16,4 +17,4 @@ RUN dotnet publish Driver.BackgroundTasks.csproj -c Release -o /app
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "Driver.BackgroundTasks.dll"]
+ENTRYPOINT ["dotnet", "WappaMobile.Driver.BackgroundTasks.dll"]
