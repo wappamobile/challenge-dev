@@ -96,8 +96,6 @@ namespace WebApi
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json",
                     "Wappa - API");
-                c.RoutePrefix = string.Empty;
-
             });
 
             app.UseMvc();
