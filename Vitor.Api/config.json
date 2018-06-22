@@ -1,0 +1,5 @@
+﻿{
+  "ConnectionStrings": {
+    "DataAccessPostgreSqlProvider": "User ID=vitorwebapi;Password=password;Host=jdbc:postgresql://database/customer;Port=5432;Database=customer;Pooling=true;"
+  }
+}

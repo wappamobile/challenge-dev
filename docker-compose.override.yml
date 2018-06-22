@@ -1,0 +1,20 @@
+version: '2'
+services:
+  database:
+    image: postgres:9.6.6-alpine
+    restart: always
+    volumes:
+      - ./migration/docker-init:/docker-entrypoint-initdb.d/
+    environment:
+       POSTGRES_DB: customer
+       POSTGRES_USER: vitorwebapi
+       POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+  migration:
+    build: ./migration
+    command: -wait tcp://database:5432 -- flyway -url=jdbc:postgresql://database/customer -schemas=motorista -user=vitorwebapi -password=password migrate
+    links:
+      - database:database
+    volumes:
+      - ./migration/sql:/flyway/sql
