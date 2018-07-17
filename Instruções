@@ -7,3 +7,4 @@ Info Geral
 - Documentação da API usando swagger.
 - Nesse teste para efeito de demosntração, utilizei alguns padrões, modelos, princípios e designer patterns, como: DDD, SOLID, IoC, Dependency Injection, Repository, Microservices, RestFul, UnitTest.
 - Executar primeiro o script DDL.sql e depois o DML.sql (Scripts para SQL Server).
+- Foi utilizada a API do google: Geocoding API.
