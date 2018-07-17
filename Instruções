@@ -1,0 +1,9 @@
+Info Geral
+- Web Api desenvolvida usando IIS Express.
+- Toda solução feita em .net core 2.
+- Ajustar o arquivo appsettings.json para a string de conexão com o banco de dados e a chave da API do Google Maps nos Projetos:
+  - DriverRegistration.API.
+  - DriverRegistration.UnitTest.
+- Documentação da API usando swagger.
+- Nesse teste para efeito de demosntração, utilizei alguns padrões, modelos, princípios e designer patterns, como: DDD, SOLID, IoC, Dependency Injection, Repository, Microservices, RestFul, UnitTest.
+- Executar primeiro o script DDL.sql e depois o DML.sql (Scripts para SQL Server).
