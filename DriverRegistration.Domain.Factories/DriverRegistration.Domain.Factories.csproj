@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DriverRegistration.Domain.Entities\DriverRegistration.Domain.Entities.csproj" />
+    <ProjectReference Include="..\DriverRegistration.Domain.Interfaces\DriverRegistration.Domain.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>

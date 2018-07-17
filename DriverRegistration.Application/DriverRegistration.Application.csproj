@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DriverRegistration.Domain.Interfaces\DriverRegistration.Domain.Interfaces.csproj" />
+    <ProjectReference Include="..\DriverRegistration.Domain.Services\DriverRegistration.Domain.Services.csproj" />
+    <ProjectReference Include="..\DriverRegistration.ExternalServices.GoogleAPI\DriverRegistration.ExternalServices.GoogleAPI.csproj" />
+    <ProjectReference Include="..\DriverRegistration.InfraStructure.Repository\DriverRegistration.InfraStructure.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

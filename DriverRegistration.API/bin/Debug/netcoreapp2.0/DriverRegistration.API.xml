@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DriverRegistration.API</name>
+    </assembly>
+    <members>
+        <member name="M:DriverRegistration.API.Controllers.AddressController.Get(System.Int32)">
+            <summary>
+            Carrega um determinado Endereço.
+            </summary>
+            <param name="id">Id do Endereço.</param>
+            <returns>Retorna um Objeto Endereço.</returns>
+        </member>
+        <member name="M:DriverRegistration.API.Controllers.AddressController.Post(DriverRegistration.Application.DTOs.Address.AddressPostRequest)">
+            <summary>
+            Realiza a inclusão de um novo Endereço.
+            </summary>
+            <param name="request">Objeto Endereço a ser incluído.</param>
+            <returns>Retorna o próprio objeto Endereço com ID.</returns>
+        </member>
+        <member name="M:DriverRegistration.API.Controllers.AddressController.Put(System.Int32,DriverRegistration.Application.DTOs.Address.AddressPutRequest)">
+            <summary>
+            Atualiza um determinado Endereço.
+            </summary>
+            <param name="id">Id do Endereço a ser atualizado.</param>
+            <param name="request">Objeto Endereço a ser atualizado.</param>
+            <returns>retorna Verdadeiro ou falso.</returns>
+        </member>
+        <member name="M:DriverRegistration.API.Controllers.AddressController.Delete(System.Int32)">
+            <summary>
+            Exclusão de um determinado Endereço.
+            </summary>
+            <param name="id">Id do Endereço a ser excluído.</param>
+            <returns>retorna Verdadeiro ou falso.</returns>
+        </member>
+        <member name="M:DriverRegistration.API.Controllers.CarController.Get(System.Int32)">
+            <summary>
+            Carrega um determinado Carro.
+            </summary>
+            <param name="id">Id do Carro</param>
+            <returns>Retorna um objeto Carro</returns>
+        </member>
+        <member name="M:DriverRegistration.API.Controllers.CarController.Post(DriverRegistration.Application.DTOs.Car.CarPostRequest)">
+            <summary>
+            Realiza a inclusão de um novo Carro.
+            </summary>
+            <param name="request">Objeto Carro a ser incluído.</param>
+            <returns>Retorna o próprio Objeto Carro com ID</returns>
+        </member>
+        <member name="M:DriverRegistration.API.Controllers.CarController.Put(System.Int32,DriverRegistration.Application.DTOs.Car.CarPutRequest)">
+            <summary>
+            Atualiza um determinado Carro.
+            </summary>
+            <param name="id">Id do carro a ser atualizado.</param>
+            <param name="request">Objeto carro a ser atualizaado.</param>
+            <returns>retorna Verdadeiro ou falso</returns>
+        </member>
+        <member name="M:DriverRegistration.API.Controllers.CarController.Delete(System.Int32)">
+            <summary>
+            Exclusão de um determinado Carro.
+            </summary>
+            <param name="id">Id do Carro a ser excluído.</param>
+            <returns>retorna Verdadeiro ou falso</returns>
+        </member>
+        <member name="M:DriverRegistration.API.Controllers.DriverController.Get(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Lista os Motoristas cadastrados ordenadamente.
+            </summary>
+            <param name="rowindex">Linha inicial da paginação.</param>
+            <param name="rowget">Quantidade de linhas que serão retornadas.</param>
+            <param name="direction">Ordenação: 0 - Pelo Primeiro Nome, 1 - Pelo Sobrenome</param>
+            <returns>Retorna uma lista de Motoristas.</returns>
+        </member>
+        <member name="M:DriverRegistration.API.Controllers.DriverController.Get(System.Int32)">
+            <summary>
+            Carrega um determinado Motorista.
+            </summary>
+            <param name="id">Id do Motorista.</param>
+            <returns>Retorna um objeto Motorista.</returns>
+        </member>
+        <member name="M:DriverRegistration.API.Controllers.DriverController.Post(DriverRegistration.Application.DTOs.Driver.DriverPostRequest)">
+            <summary>
+            Realiza a inclusão de um novo Motorista.
+            </summary>
+            <param name="request">Objeto Motorista a ser incluído.</param>
+            <returns>Retorna o próprio objeto Motorista com o Id Preenchido.</returns>
+        </member>
+        <member name="M:DriverRegistration.API.Controllers.DriverController.Put(System.Int32,DriverRegistration.Application.DTOs.Driver.DriverPutRequest)">
+            <summary>
+            Atualiza um determinado Motorista.
+            </summary>
+            <param name="id">Id do motorista a ser atualizado.</param>
+            <param name="request">Objeto motorista a ser atualizaado.</param>
+            <returns>retorna Verdadeiro ou falso</returns>
+            <returns></returns>
+        </member>
+        <member name="M:DriverRegistration.API.Controllers.DriverController.Delete(System.Int32)">
+            <summary>
+            Exclusão de um determinado Motorista.
+            </summary>
+            <param name="id">Id do Motorista a ser excluído.</param>
+            <returns>retorna Verdadeiro ou falso</returns>
+        </member>
+    </members>
+</doc>

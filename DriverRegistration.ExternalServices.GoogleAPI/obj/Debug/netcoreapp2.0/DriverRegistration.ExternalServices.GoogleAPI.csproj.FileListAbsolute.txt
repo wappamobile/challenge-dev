@@ -1,0 +1,12 @@
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.ExternalServices.GoogleAPI\bin\Debug\netcoreapp2.0\DriverRegistration.ExternalServices.GoogleAPI.deps.json
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.ExternalServices.GoogleAPI\bin\Debug\netcoreapp2.0\DriverRegistration.ExternalServices.GoogleAPI.dll
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.ExternalServices.GoogleAPI\bin\Debug\netcoreapp2.0\DriverRegistration.ExternalServices.GoogleAPI.pdb
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.ExternalServices.GoogleAPI\obj\Debug\netcoreapp2.0\DriverRegistration.ExternalServices.GoogleAPI.csprojResolveAssemblyReference.cache
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.ExternalServices.GoogleAPI\obj\Debug\netcoreapp2.0\DriverRegistration.ExternalServices.GoogleAPI.csproj.CoreCompileInputs.cache
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.ExternalServices.GoogleAPI\obj\Debug\netcoreapp2.0\DriverRegistration.ExternalServices.GoogleAPI.AssemblyInfoInputs.cache
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.ExternalServices.GoogleAPI\obj\Debug\netcoreapp2.0\DriverRegistration.ExternalServices.GoogleAPI.AssemblyInfo.cs
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.ExternalServices.GoogleAPI\obj\Debug\netcoreapp2.0\DriverRegistration.ExternalServices.GoogleAPI.dll
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.ExternalServices.GoogleAPI\obj\Debug\netcoreapp2.0\DriverRegistration.ExternalServices.GoogleAPI.pdb
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.ExternalServices.GoogleAPI\bin\Debug\netcoreapp2.0\DriverRegistration.Domain.Interfaces.dll
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.ExternalServices.GoogleAPI\bin\Debug\netcoreapp2.0\DriverRegistration.Domain.Interfaces.pdb
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.ExternalServices.GoogleAPI\obj\Debug\netcoreapp2.0\DriverRegistration.ExternalServices.GoogleAPI.csproj.CopyComplete

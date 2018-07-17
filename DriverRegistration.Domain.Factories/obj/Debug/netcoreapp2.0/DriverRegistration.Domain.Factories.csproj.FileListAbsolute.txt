@@ -1,0 +1,14 @@
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Factories\bin\Debug\netcoreapp2.0\DriverRegistration.Domain.Factories.deps.json
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Factories\bin\Debug\netcoreapp2.0\DriverRegistration.Domain.Factories.dll
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Factories\bin\Debug\netcoreapp2.0\DriverRegistration.Domain.Factories.pdb
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Factories\bin\Debug\netcoreapp2.0\DriverRegistration.Domain.Entities.dll
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Factories\bin\Debug\netcoreapp2.0\DriverRegistration.Domain.Interfaces.dll
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Factories\bin\Debug\netcoreapp2.0\DriverRegistration.Domain.Entities.pdb
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Factories\bin\Debug\netcoreapp2.0\DriverRegistration.Domain.Interfaces.pdb
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Factories\obj\Debug\netcoreapp2.0\DriverRegistration.Domain.Factories.csprojResolveAssemblyReference.cache
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Factories\obj\Debug\netcoreapp2.0\DriverRegistration.Domain.Factories.csproj.CoreCompileInputs.cache
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Factories\obj\Debug\netcoreapp2.0\DriverRegistration.Domain.Factories.AssemblyInfoInputs.cache
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Factories\obj\Debug\netcoreapp2.0\DriverRegistration.Domain.Factories.AssemblyInfo.cs
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Factories\obj\Debug\netcoreapp2.0\DriverRegistration.Domain.Factories.csproj.CopyComplete
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Factories\obj\Debug\netcoreapp2.0\DriverRegistration.Domain.Factories.dll
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Factories\obj\Debug\netcoreapp2.0\DriverRegistration.Domain.Factories.pdb

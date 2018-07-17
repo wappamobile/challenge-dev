@@ -1,0 +1,9 @@
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Interfaces\bin\Debug\netcoreapp2.0\DriverRegistration.Domain.Interfaces.deps.json
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Interfaces\bin\Debug\netcoreapp2.0\DriverRegistration.Domain.Interfaces.dll
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Interfaces\bin\Debug\netcoreapp2.0\DriverRegistration.Domain.Interfaces.pdb
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Interfaces\obj\Debug\netcoreapp2.0\DriverRegistration.Domain.Interfaces.csprojResolveAssemblyReference.cache
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Interfaces\obj\Debug\netcoreapp2.0\DriverRegistration.Domain.Interfaces.csproj.CoreCompileInputs.cache
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Interfaces\obj\Debug\netcoreapp2.0\DriverRegistration.Domain.Interfaces.AssemblyInfoInputs.cache
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Interfaces\obj\Debug\netcoreapp2.0\DriverRegistration.Domain.Interfaces.AssemblyInfo.cs
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Interfaces\obj\Debug\netcoreapp2.0\DriverRegistration.Domain.Interfaces.dll
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Interfaces\obj\Debug\netcoreapp2.0\DriverRegistration.Domain.Interfaces.pdb

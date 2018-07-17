@@ -1,0 +1,16 @@
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Services\bin\Debug\netcoreapp2.0\DriverRegistration.Domain.Services.deps.json
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Services\bin\Debug\netcoreapp2.0\DriverRegistration.Domain.Services.dll
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Services\bin\Debug\netcoreapp2.0\DriverRegistration.Domain.Services.pdb
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Services\bin\Debug\netcoreapp2.0\DriverRegistration.Domain.Entities.dll
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Services\bin\Debug\netcoreapp2.0\DriverRegistration.Domain.Factories.dll
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Services\bin\Debug\netcoreapp2.0\DriverRegistration.Domain.Interfaces.dll
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Services\bin\Debug\netcoreapp2.0\DriverRegistration.Domain.Entities.pdb
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Services\bin\Debug\netcoreapp2.0\DriverRegistration.Domain.Factories.pdb
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Services\bin\Debug\netcoreapp2.0\DriverRegistration.Domain.Interfaces.pdb
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Services\obj\Debug\netcoreapp2.0\DriverRegistration.Domain.Services.csprojResolveAssemblyReference.cache
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Services\obj\Debug\netcoreapp2.0\DriverRegistration.Domain.Services.csproj.CoreCompileInputs.cache
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Services\obj\Debug\netcoreapp2.0\DriverRegistration.Domain.Services.AssemblyInfoInputs.cache
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Services\obj\Debug\netcoreapp2.0\DriverRegistration.Domain.Services.AssemblyInfo.cs
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Services\obj\Debug\netcoreapp2.0\DriverRegistration.Domain.Services.csproj.CopyComplete
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Services\obj\Debug\netcoreapp2.0\DriverRegistration.Domain.Services.dll
+D:\Testes\Wappa\DriverRegistration\DriverRegistration.Domain.Services\obj\Debug\netcoreapp2.0\DriverRegistration.Domain.Services.pdb
