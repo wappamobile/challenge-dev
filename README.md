@@ -1,22 +1,39 @@
-# challenge-dev
+# Challenge Dev - Adilson Feitoza
 
-## Objetivo
-Objetivo deste teste é avaliar como você irá considerar questões como arquitetura e design de software, modelagem e aplicação de técnicas e conceitos de programação, e não simplesmente resolver o problema proposto, visto que o mesmo não oferece dificuldades reais para implementação.  
-Faça um fork deste projeto e ao concluir envie um pull request com sua implementação. Ao enviar o pull request nos informe quanto tempo você levou para desenvolver a solução.
+## Depend�ncias
 
-## Escopo
-Precisamos de uma biblioteca para gerenciar o cadastro de motoristas.  
-Front-end não é necessário e não será avaliado, mas precisamos de uma API que permita criar, editar e excluir um motorista.  
-Um cadastro de motorista possui os campos: Nome (primeiro e último), Carro (marca, modelo e placa) e endereço completo. Adicionamente, ao cadastrar um endereço deve ser buscada as coordenadas utilizando a [API do Google Maps](https://developers.google.com/maps/documentation/geocoding) e elas devem ser armazenadas junto com o cadastro.  
-Além do cadastro também será necessário disponibilizar uma listagem dos cadastros em ordem alfabética por nome ou sobrenome.
+Para rodar corretamente o projeto os recursos listados abaixo precisam estar instalados em sua m�quina:
 
-### Obrigatório
- - .NET Core - C#
- - WebAPI
- - IoC
- - Código limpo
+- [Visual Studio Code](https://code.visualstudio.com/download) ou [Visual Studio](https://visualstudio.microsoft.com/pt-br/downloads/)
 
-### Desejável
- - Documentação da API
- - Testes
- - Instruções de setup para execução do projeto
+## Rodando o projeto
+
+Executando projeto com `VS Code`
+
+```bash
+# acessa a pasta da API  
+$ cd .\challenge.dev\
+
+# faz o buld do projeto
+$  dotnet build
+
+# executa o projeto  
+$ dotnet run
+```
+
+Executando projeto com `Visual Studio`
+**Crtl + F5, F5**
+
+O projeto � iniciado na porta `:4000` 
+Para visualizar a documenta��o acesse: [http://localhost:4000/index.html](http://localhost:4000/index.html)
+
+
+## Rodando testes unit�rios
+
+Executando testes com `VS Code`
+```bash
+$ dotnet test .\Challenge.Dev.Tests\ 
+```
+
+Executando testes com `Visual Studio`
+**Crtl + R, Crtl + A**

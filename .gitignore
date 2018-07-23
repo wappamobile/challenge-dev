@@ -1,0 +1,6 @@
+.vs
+.vscode
+Challenge.Dev/bin/Debug/
+Challenge.Dev/obj/
+Challenge.Dev.Tests/bin/Debug/
+Challenge.Dev.Tests/obj/
