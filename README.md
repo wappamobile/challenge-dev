@@ -1,5 +1,49 @@
 # challenge-dev
 
+## Como executar?
+
+### Via Docker com a imagem remota (Recomendado)
+1 - Abra o Terminal:
+``` 
+docker run --env GEOCODING_API_KEY={Sua chave de acesso da GeocodingAPI do Google} -p 3000:80 -it danilooliveira28/challenge-dev:latest
+```
+
+2 - http://localhost:3000/swagger/index.html
+
+
+### Via Docker com a imagem construida localmente (Não Recomendado - Alto volume de download)
+1 - Abra o Terminal
+
+2 - Vá até a raiz do projeto:
+```
+docker image build .
+docker run --env GEOCODING_API_KEY={Sua chave de acesso da GeocodingAPI do Google} -p 3000:80 -it {id da imagem gerada}
+```
+
+3 - http://localhost:3000/swagger/index.html
+
+
+### Via .NET Core SDK 2.1 (Não Recomendado - Complexidade de ambiente)
+1 - Popular a variavel de ambiete GEOCODING_API_KEY com a sua chave de acesso da GeocodingAPI do Google
+
+2 - Abra o Terminal
+
+3 - Vá até a raiz do projeto:
+```
+cd ChallengeDev
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+cd ..
+dotnet publish -c Release -o out
+cd ChallengeDev
+cp ChallengeDev.db out/ChallengeDev.db
+cd out
+dotnet ChallengeDev.dll
+```
+
+4 - http://localhost:5000/swagger/index.html
+
+
 ## Objetivo
 Objetivo deste teste é avaliar como você irá considerar questões como arquitetura e design de software, modelagem e aplicação de técnicas e conceitos de programação, e não simplesmente resolver o problema proposto, visto que o mesmo não oferece dificuldades reais para implementação.  
 Faça um fork deste projeto e ao concluir envie um pull request com sua implementação. Ao enviar o pull request nos informe quanto tempo você levou para desenvolver a solução.
