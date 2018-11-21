@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Wappa.Api</name>
+    </assembly>
+    <members>
+        <member name="T:Wappa.Api.Controllers.AddressController">
+            <summary>
+            Controla os endereços do motorista
+            </summary>
+        </member>
+        <member name="M:Wappa.Api.Controllers.AddressController.#ctor(MediatR.IMediator)">
+            <summary>
+            Construtor
+            </summary>
+            <param name="mediator"></param>
+        </member>
+        <member name="M:Wappa.Api.Controllers.AddressController.PostAsync(System.Int32,Wappa.Application.CommandRequests.CreateAddressRequest)">
+            <summary>
+            Adiciona um novo endereço para o motorista
+            </summary>
+            <param name="driverId">Código do motorista</param>
+            <param name="command">Dados do endereço</param>
+            <returns>Retorna o motorista</returns>
+        </member>
+        <member name="M:Wappa.Api.Controllers.AddressController.PutAsync(System.Int32,System.Int32,Wappa.Application.CommandRequests.ChangeAddressRequest)">
+            <summary>
+            Muda o endereço do motorista
+            </summary>
+            <param name="driverId">Código do motorista</param>
+            <param name="item">Código do item</param>
+            <param name="command">Dados do endereço</param>
+            <returns>HTTP status</returns>
+        </member>
+        <member name="M:Wappa.Api.Controllers.AddressController.DeleteAsync(System.Int32,System.Int32)">
+            <summary>
+            Remove endereço do motorista
+            </summary>
+            <param name="driverId">Código do motorista</param>
+            <param name="item">Código do item</param>
+            <returns>HTTP status</returns>
+        </member>
+        <member name="M:Wappa.Api.Controllers.AddressController.GetAddressAsync(System.Int32)">
+            <summary>
+            Seleciona os endereços do motorista
+            </summary>
+            <param name="driverId">Código do motorista</param>
+            <returns>Lista com os endereços</returns>
+        </member>
+        <member name="T:Wappa.Api.Controllers.CustomController">
+            <summary>
+            Classe Base para Controllers
+            </summary>
+        </member>
+        <member name="M:Wappa.Api.Controllers.CustomController.#ctor(MediatR.IMediator)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="mediator"></param>
+        </member>
+        <member name="P:Wappa.Api.Controllers.CustomController.Mediator">
+            <summary>
+            Propriedade para o Mediador
+            </summary>
+        </member>
+        <member name="M:Wappa.Api.Controllers.CustomController.SendAsync(MediatR.IRequest{Wappa.Domain.Messages.Response})">
+            <summary>
+            Executa o commando atribuído ao handler
+            </summary>
+            <param name="command">Commando de requisição</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wappa.Api.Controllers.CustomController.SendRouteAsync``1(MediatR.IRequest{Wappa.Domain.Messages.Response},System.String,System.Func{``0,System.Object})">
+            <summary>
+            Executa o commando atribuído ao hendler e retorna uma rota
+            </summary>
+            <typeparam name="T">Tipo</typeparam>
+            <param name="command">Commando de requisição</param>
+            <param name="routeName">Nome da Rota</param>
+            <param name="routeValue">Valores da rota</param>
+            <returns></returns>
+        </member>
+        <member name="T:Wappa.Api.Controllers.DriverController">
+            <summary>
+            Controla os motoristas
+            </summary>
+        </member>
+        <member name="M:Wappa.Api.Controllers.DriverController.#ctor(MediatR.IMediator)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="mediator"></param>
+        </member>
+        <member name="M:Wappa.Api.Controllers.DriverController.PostAsync(Wappa.Application.CommandRequests.CreateDriverRequest)">
+            <summary>
+            Adiciona um novo Motorista
+            </summary>
+            <param name="command">Dados do motorista</param>
+            <returns>Motorista inserido</returns>
+        </member>
+        <member name="M:Wappa.Api.Controllers.DriverController.PutAsync(System.Int32,Wappa.Application.CommandRequests.ChangeDriverRequest)">
+            <summary>
+            Altera informações do Motorista
+            </summary>
+            <param name="id">Código do Motorista</param>
+            <param name="command">Dados do motorista</param>
+            <returns>HTTP Status</returns>
+        </member>
+        <member name="M:Wappa.Api.Controllers.DriverController.DeleteAsync(System.Int32)">
+            <summary>
+            Remove o motorista
+            </summary>
+            <param name="id">Código do motorista</param>
+            <returns>HTTP Status</returns>
+        </member>
+        <member name="M:Wappa.Api.Controllers.DriverController.GetByIdAsync(System.Int32)">
+            <summary>
+            Seleciona o motorista pelo código
+            </summary>
+            <param name="id">Código do motorista</param>
+            <returns>Motorista</returns>
+        </member>
+        <member name="M:Wappa.Api.Controllers.DriverController.GetByDocumentAsync(System.String)">
+            <summary>
+            Seleciona motorista pelo CPF
+            </summary>
+            <param name="document">CPF do motorista</param>
+            <returns>Motorista</returns>
+        </member>
+        <member name="M:Wappa.Api.Controllers.DriverController.GetBySearchAsync(System.Nullable{System.Int32},System.String,System.String,System.String)">
+            <summary>
+            Seleciona motoristas por pesquisa
+            </summary>
+            <param name="id">Código do motorista</param>
+            <param name="document">Documento do motorista</param>
+            <param name="firstName">Primeiro nome</param>
+            <param name="lastName">Último nome</param>
+            <returns></returns>
+        </member>
+        <member name="T:Wappa.Api.Controllers.VehicleController">
+            <summary>
+            Controlador do veículo
+            </summary>
+        </member>
+        <member name="M:Wappa.Api.Controllers.VehicleController.#ctor(MediatR.IMediator)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="mediator"></param>
+        </member>
+        <member name="M:Wappa.Api.Controllers.VehicleController.PostAsync(System.Int32,Wappa.Application.CommandRequests.CreateVehicleRequest)">
+            <summary>
+            Adiciona um novo veículo ao Motorista
+            </summary>
+            <param name="driverId">Código do Motorista</param>
+            <param name="command">Dados do veículo</param>
+            <returns>Retorna o veículo</returns>
+        </member>
+        <member name="M:Wappa.Api.Controllers.VehicleController.PutAsync(System.Int32,System.Int32,Wappa.Application.CommandRequests.ChangeVehicleRequest)">
+            <summary>
+            Altera dados do veículo do motorista
+            </summary>
+            <param name="driverId">Código do motorista</param>
+            <param name="item">Código do veículo</param>
+            <param name="command">Dados de alteração</param>
+            <returns>HTTP STATUS</returns>
+        </member>
+        <member name="M:Wappa.Api.Controllers.VehicleController.DeleteAsync(System.Int32,System.Int32)">
+            <summary>
+            Remove o veículo do motorista
+            </summary>
+            <param name="driverId">Código do motorista</param>
+            <param name="item">Código do veículo</param>
+            <returns>HTTP STATUS</returns>
+        </member>
+        <member name="M:Wappa.Api.Controllers.VehicleController.GetVehicleAsync(System.Int32)">
+            <summary>
+            Selecione os veículos do motorista
+            </summary>
+            <param name="driverId">Código do motorista</param>
+            <returns>Lista de veículos</returns>
+        </member>
+        <member name="T:Wappa.Api.Program">
+            <summary>
+             Programa principal
+            </summary>
+        </member>
+        <member name="M:Wappa.Api.Program.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Wappa.Api.Program.Main(System.String[])">
+            <summary>
+            Método principal
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Wappa.Api.Program.CreateWebHostBuilder(System.String[])">
+            <summary>
+            Construtor do WebHost
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Wappa.Api.Startup">
+            <summary>
+            Classe de inicialização
+            </summary>
+        </member>
+        <member name="M:Wappa.Api.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:Wappa.Api.Startup.Configuration">
+            <summary>
+            Configuração
+            </summary>
+        </member>
+        <member name="M:Wappa.Api.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Wappa.Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>
