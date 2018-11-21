@@ -2,7 +2,7 @@
 
 ## Como executar?
 
-### Via Docker com a imagem remota (Recomendado)
+### Via Docker com a imagem remota (Recomendado - Testes incluidos no build)
 1 - Abra o Terminal:
 ``` 
 docker run --env GEOCODING_API_KEY={Sua chave de acesso da GeocodingAPI do Google} -p 3000:80 -it danilooliveira28/challenge-dev:latest
@@ -11,7 +11,7 @@ docker run --env GEOCODING_API_KEY={Sua chave de acesso da GeocodingAPI do Googl
 2 - http://localhost:3000/swagger/index.html
 
 
-### Via Docker com a imagem construida localmente (Não Recomendado - Alto volume de download)
+### Via Docker com a imagem construida localmente (Não Recomendado - Alto volume de download - Testes incluidos no build)
 1 - Abra o Terminal
 
 2 - Vá até a raiz do projeto:
@@ -23,7 +23,19 @@ docker run --env GEOCODING_API_KEY={Sua chave de acesso da GeocodingAPI do Googl
 3 - http://localhost:3000/swagger/index.html
 
 
-### Via .NET Core SDK 2.1 (Não Recomendado - Complexidade de ambiente)
+### Via .NET Core SDK 2.1 (Não Recomendado - Complexidade de ambiente - Testes executados a parte)
+Testes:
+
+1 - Abra o Terminal
+
+2 - Vá até a raiz do projeto:
+```
+cd Domain.Test
+dotnet test
+```
+
+Execução:
+
 1 - Popular a variavel de ambiete GEOCODING_API_KEY com a sua chave de acesso da GeocodingAPI do Google
 
 2 - Abra o Terminal
