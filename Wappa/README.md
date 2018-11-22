@@ -11,7 +11,7 @@ E o armazenamento de dados ficou a cargo do SQL Server.
  - Fazer uso do Swagger ou Postman para testar as API's
 
 ### Dados do Projeto
- - 20hrs em 2 dias.
+ - 20hrs em 2 dias. (Sofri muito com o notebook)
 
 ### Observações
  - Não fiz uso de ORM como Entity Framework ou Dapper Contrib para demostrar os conhecimentos de T-SQL
