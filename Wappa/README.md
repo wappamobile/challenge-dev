@@ -17,4 +17,4 @@ E o armazenamento de dados ficou a cargo do SQL Server.
  - Não fiz uso de ORM como Entity Framework ou Dapper Contrib para demostrar os conhecimentos de T-SQL
 As procedures foram criadas para ter performance principalmente a pc_SelectDriver com SQL dinâmico para fazer melhor uso dos planos de execução.
 
- - Não fiz uso de Dapper meu processador não suporta virtualização
+ - Não fiz uso de Docker meu processador não suporta virtualização
