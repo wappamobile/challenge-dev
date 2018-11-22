@@ -6,10 +6,9 @@ E o armazenamento de dados ficou a cargo do SQL Server.
 
 ## Instruções
  - Executar o script challenge-dev\Wappa\Wappa.sql em uma instância do SQL Server
- - Configurar a connection sring em challenge-dev/Wappa/src/Wappa.Api/appsettings.Development.json
+ - Configurar a connectionString em challenge-dev/Wappa/src/Wappa.Api/appsettings.Development.json
  - Compilar e Executar a solution challenge-dev/Wappa/Wappa.sln
  - Fazer uso do Swagger ou Postman para testar as API's
-
 
 ### Dados do Projeto
  - 20hrs em 2 dias.
