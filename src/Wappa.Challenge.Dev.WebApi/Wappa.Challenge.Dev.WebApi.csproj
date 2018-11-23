@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Wappa.Challenge.Dev.Data.Impl\Wappa.Challenge.Dev.Data.Impl.csproj" />
+    <ProjectReference Include="..\Wappa.Challenge.Dev.GoogleMaps.Services.Impl\Wappa.Challenge.Dev.GoogleMaps.Services.Impl.csproj" />
+    <ProjectReference Include="..\Wappa.Challenge.Dev.Models\Wappa.Challenge.Dev.Models.csproj" />
+    <ProjectReference Include="..\Wappa.Challenge.Dev.Negocio\Wappa.Challenge.Dev.Negocio.csproj" />
+    <ProjectReference Include="..\Wappa.Challenge.Dev.Services\Wappa.Challenge.Dev.Services.csproj" />
+    <ProjectReference Include="..\Wappa.Challenge.Dev\Wappa.Challenge.Dev.csproj" />
+  </ItemGroup>
+
+</Project>
