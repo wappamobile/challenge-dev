@@ -3,6 +3,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Driver.Api.ViewModels
 {
+    /// <summary>
+    /// Estrutura de expecifica para envio de post/put do endereço nas chamadas de incluir/alterar motorista
+    /// </summary>
     public class PostAddressViewModel
     {
         /// <summary>

@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 
 namespace Driver.Api.Controllers
 {
+    /// <summary>
+    /// Apis de manutenção de motorista
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     [Produces("application/json")]
@@ -18,6 +21,11 @@ namespace Driver.Api.Controllers
         private readonly IDriverRepository _driverRepository;
         private readonly IGoogleApiService _googleApiService;
 
+        /// <summary>
+        /// Nova instancia do controller
+        /// </summary>
+        /// <param name="driverRepository"></param>
+        /// <param name="googleApiService"></param>
         public DriverController(IDriverRepository driverRepository, IGoogleApiService googleApiService)
         {
             _driverRepository = driverRepository;

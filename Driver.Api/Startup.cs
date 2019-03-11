@@ -12,15 +12,29 @@ using System.Reflection;
 
 namespace Driver.Api
 {
+    /// <summary>
+    /// Startup de configurações da api
+    /// </summary>
     public class Startup
     {
+        /// <summary>
+        /// Nova instancia de startup
+        /// </summary>
+        /// <param name="configuration"></param>
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
+        /// <summary>
+        /// Configurações
+        /// </summary>
         public IConfiguration Configuration { get; }
 
+        /// <summary>
+        /// Configura o serviço
+        /// </summary>
+        /// <param name="services"></param>
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
@@ -68,6 +82,11 @@ namespace Driver.Api
             ApplicationStartup.ConfigureServices(services, Configuration);
         }
 
+        /// <summary>
+        /// Utiliza as configurações de serviço para fazer configurações concretas
+        /// </summary>
+        /// <param name="app"></param>
+        /// <param name="env"></param>
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             app.UseCors("AllowAllOrigins");

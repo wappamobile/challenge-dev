@@ -10,14 +10,24 @@ using System.Threading.Tasks;
 
 namespace Driver.Application.Services
 {
+    /// <summary>
+    /// Serviço de busca na api de mapas do Google
+    /// </summary>
     public class GoogleApiService : IGoogleApiService
     {
         private readonly static Uri BaseUri = new Uri("https://maps.googleapis.com/maps/api/geocode/json");
 
+        /// <summary>
+        /// Método responsável por buscar um endereço baseado na entidade informada
+        /// </summary>
+        /// <param name="addressEntity"></param>
+        /// <returns></returns>
         public async Task<GoogleMapsResult> SearchAsync(AddressEntity addressEntity)
         {
-            UriBuilder builder = new UriBuilder(BaseUri);
-            builder.Query = UriUtil.ToQueryString(("address", BuildAddressQuery(addressEntity)), ("key", AppSettings.GoogleApiKey));
+            UriBuilder builder = new UriBuilder(BaseUri)
+            {
+                Query = UriUtil.ToQueryString(("address", BuildAddressQuery(addressEntity)), ("key", AppSettings.GoogleApiKey))
+            };
 
             using (HttpClient client = new HttpClient())
             {
@@ -35,6 +45,11 @@ namespace Driver.Application.Services
             }
         }
 
+        /// <summary>
+        /// Método responsável por montar o endereço com as informações que tiver
+        /// </summary>
+        /// <param name="addressEntity"></param>
+        /// <returns></returns>
         public static string BuildAddressQuery(AddressEntity addressEntity)
         {
             StringBuilder builder = new StringBuilder();

@@ -42,7 +42,7 @@ namespace Driver.Application.Data.Repositories
         {
             using (var cmd = CreateCommand())
             {
-                cmd.CommandText = "SELECT DriverId, FirstName, LastName, CarModel, CarBrand, CarLicensePlate, AddressNumber, Address, AddressDistrict, AddressCity, AddressState, AddressLatitude, AddressLongitude, CreatedDate, UpdatedDate, AddressZipCode FROM Driver WITH(NOLOCK) WHERE Enabled = 1";
+                cmd.CommandText = "SELECT DriverId, FirstName, LastName, CarModel, CarBrand, CarLicensePlate, AddressNumber, Address, AddressDistrict, AddressCity, AddressState, AddressLatitude, AddressLongitude, CreatedDate, UpdatedDate, AddressZipCode FROM Driver WITH(NOLOCK) WHERE Enabled = 1 ORDER BY FirstName, LastName";
 
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
