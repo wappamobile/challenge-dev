@@ -1,26 +1,27 @@
-# Vis„o Geral
+# Vis√£o Geral
 Api para gerenciamento de cadastro de motoristas.
 
-Essa aplicaÁ„o foi desenvolvida com propÛsito exclusivo de estudo. Ela utiliza .NET CORE 2.1, .NET Standard e .NET Framework 4.7 e os dados s„o armazenados em memÛria. Ou seja, s„o vol·teis e n„o ir„o persistir apÛs o aplicativo ser parado ou reiniciado no servidor.
+Essa aplica√ß√£o foi desenvolvida com prop√≥sito exclusivo de estudo. Ela utiliza .NET CORE 2.1, .NET Standard e .NET Framework 4.7 e os dados s√£o armazenados em mem√≥ria. Ou seja, s√£o vol√°teis e n√£o ir√£o persistir ap√≥s o aplicativo ser parado ou reiniciado no servidor.
 
-A arquitetura tem como base o estilo proposto pelo Domain-Driven Design tendo bastante foco no DomainModel, Entidade, Objeto de Valor e Linguagem UbÌqua.
+A arquitetura tem como base o estilo proposto pelo Domain-Driven Design tendo bastante foco no DomainModel, Entidade, Objeto de Valor e Linguagem Ub√≠qua.
 
-Diversos design patterns foram utilizados em v·rios trechos dos cÛdigos, no entanto sem exageros. … f·cil perceber princÌpios SOLID principalmente no DomainModel e Infrastructure.
+Diversos design patterns foram utilizados em v√°rios trechos dos c√≥digos, no entanto sem exageros. √â f√°cil perceber princ√≠pios SOLID principalmente no DomainModel e Infrastructure.
 
-Todo o codigo em sÌ, preza pela simplicidade e legibilidade e se orienta por mÈtricas de baixo acoplamento e complexidade ciclom·tica.
+Todo o codigo em s√≠, preza pela simplicidade e legibilidade e se orienta por m√©tricas de baixo acoplamento e complexidade ciclom√°tica.
 
 # Get Start
 
-1. Clone o cÛdigo para seu computador.
+1. Clone o c√≥digo para seu computador.
 2. Abra a Solution usando Visual Studio 2017+
 3. No menu do Visual Studio, clique em Build / Clean Solution.
-4. Defina o projeto WappaMobile.ChallengeDev.WebApi como Startup (clique sobre o projeto com o bot„o direito em seguida escolha Set as Startup Project)
-5. No projeto WappaMobile.ChallengeDev.GoogleMaps, altere o valor da constant API_KEY da classe Settings informando a sua Chave de Api fornecida pelo Google.6. Execute a Solution apertando F5.
+4. Defina o projeto WappaMobile.ChallengeDev.WebApi como Startup (clique sobre o projeto com o bot√£o direito em seguida escolha Set as Startup Project)
+5. No projeto WappaMobile.ChallengeDev.GoogleMaps, altere o valor da constant API_KEY da classe Settings informando a sua Chave de Api fornecida pelo Google.
+6. Execute a Solution apertando F5.
 
 # End Points
 
 ### POST /api/motoristas
-Inclus„o de motoristas no banco de dados.
+Inclus√£o de motoristas no banco de dados.
 
 Body (application/json)
 ```javascript
@@ -55,7 +56,7 @@ Body (application/json)
 ```
 
 ### PUT /api/motoristas/{id}
-AtualizaÁ„o dos dados de um motorista existente atravÈs do seu ID.
+Atualiza√ß√£o dos dados de um motorista existente atrav√©s do seu ID.
 
 Body (application/json)
 ```javascripty
@@ -98,16 +99,16 @@ Listagem de todos os motoristas de forma ordenada.
 <table>
 <tr>
 <th>Parametro</th>
-<th>DescriÁ„o</th>
+<th>Descri√ß√£o</th>
 <th>Valores esperados</th>
 </tr>
 
 <tr>
 <td>orderby</td>
-<td>Define qual o campo ser· utilizado como referÍncia para a ordenaÁ„o.</td>
+<td>Define qual o campo ser√° utilizado como refer√™ncia para a ordena√ß√£o.</td>
 <td>nome / sobrenome</td>
 </tr>
 </table>
 
 ### DELETE /api/motoristas/{id}
-Exclus„o de um motorista atravÈs de seu ID.
+Exclus√£o de um motorista atrav√©s de seu ID.
