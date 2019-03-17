@@ -7,12 +7,3 @@ C:\Users\paul_\Documents\Visual Studio 2017\Projects\WappaMobile.ChallengeDev\sr
 C:\Users\paul_\Documents\Visual Studio 2017\Projects\WappaMobile.ChallengeDev\src\WappaMobile.ChallengeDev\WappaMobile.ChallengeDev\obj\Debug\netstandard2.0\WappaMobile.ChallengeDev.AssemblyInfo.cs
 C:\Users\paul_\Documents\Visual Studio 2017\Projects\WappaMobile.ChallengeDev\src\WappaMobile.ChallengeDev\WappaMobile.ChallengeDev\obj\Debug\netstandard2.0\WappaMobile.ChallengeDev.dll
 C:\Users\paul_\Documents\Visual Studio 2017\Projects\WappaMobile.ChallengeDev\src\WappaMobile.ChallengeDev\WappaMobile.ChallengeDev\obj\Debug\netstandard2.0\WappaMobile.ChallengeDev.pdb
-C:\Users\paul_\Documents\Visual Studio 2017\Projects\challenge-dev\src\crosscutting\challengedev\bin\Debug\netstandard2.0\WappaMobile.ChallengeDev.deps.json
-C:\Users\paul_\Documents\Visual Studio 2017\Projects\challenge-dev\src\crosscutting\challengedev\bin\Debug\netstandard2.0\WappaMobile.ChallengeDev.dll
-C:\Users\paul_\Documents\Visual Studio 2017\Projects\challenge-dev\src\crosscutting\challengedev\bin\Debug\netstandard2.0\WappaMobile.ChallengeDev.pdb
-C:\Users\paul_\Documents\Visual Studio 2017\Projects\challenge-dev\src\crosscutting\challengedev\obj\Debug\netstandard2.0\WappaMobile.ChallengeDev.csprojAssemblyReference.cache
-C:\Users\paul_\Documents\Visual Studio 2017\Projects\challenge-dev\src\crosscutting\challengedev\obj\Debug\netstandard2.0\WappaMobile.ChallengeDev.csproj.CoreCompileInputs.cache
-C:\Users\paul_\Documents\Visual Studio 2017\Projects\challenge-dev\src\crosscutting\challengedev\obj\Debug\netstandard2.0\WappaMobile.ChallengeDev.AssemblyInfoInputs.cache
-C:\Users\paul_\Documents\Visual Studio 2017\Projects\challenge-dev\src\crosscutting\challengedev\obj\Debug\netstandard2.0\WappaMobile.ChallengeDev.AssemblyInfo.cs
-C:\Users\paul_\Documents\Visual Studio 2017\Projects\challenge-dev\src\crosscutting\challengedev\obj\Debug\netstandard2.0\WappaMobile.ChallengeDev.dll
-C:\Users\paul_\Documents\Visual Studio 2017\Projects\challenge-dev\src\crosscutting\challengedev\obj\Debug\netstandard2.0\WappaMobile.ChallengeDev.pdb

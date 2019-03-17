@@ -14,17 +14,3 @@ C:\Users\paul_\Documents\Visual Studio 2017\Projects\WappaMobile.ChallengeDev\sr
 C:\Users\paul_\Documents\Visual Studio 2017\Projects\WappaMobile.ChallengeDev\src\WappaMobile.ChallengeDev\WappaMobile.ChallengeDev.GoogleMaps\obj\Debug\netstandard2.0\WappaMobile.ChallengeDev.GoogleMaps.pdb
 C:\Users\paul_\Documents\Visual Studio 2017\Projects\WappaMobile.ChallengeDev\src\WappaMobile.ChallengeDev\ChallengeDev.GoogleMaps\obj\Debug\netstandard2.0\WappaMobile.ChallengeDev.GoogleMaps.dll
 C:\Users\paul_\Documents\Visual Studio 2017\Projects\WappaMobile.ChallengeDev\src\WappaMobile.ChallengeDev\ChallengeDev.GoogleMaps\obj\Debug\netstandard2.0\WappaMobile.ChallengeDev.GoogleMaps.pdb
-C:\Users\paul_\Documents\Visual Studio 2017\Projects\challenge-dev\src\core\infrastructure\services\googlemaps\bin\Debug\netstandard2.0\WappaMobile.ChallengeDev.GoogleMaps.deps.json
-C:\Users\paul_\Documents\Visual Studio 2017\Projects\challenge-dev\src\core\infrastructure\services\googlemaps\bin\Debug\netstandard2.0\WappaMobile.ChallengeDev.GoogleMaps.dll
-C:\Users\paul_\Documents\Visual Studio 2017\Projects\challenge-dev\src\core\infrastructure\services\googlemaps\bin\Debug\netstandard2.0\WappaMobile.ChallengeDev.GoogleMaps.pdb
-C:\Users\paul_\Documents\Visual Studio 2017\Projects\challenge-dev\src\core\infrastructure\services\googlemaps\bin\Debug\netstandard2.0\WappaMobile.ChallengeDev.dll
-C:\Users\paul_\Documents\Visual Studio 2017\Projects\challenge-dev\src\core\infrastructure\services\googlemaps\bin\Debug\netstandard2.0\WappaMobile.ChallengeDev.Models.dll
-C:\Users\paul_\Documents\Visual Studio 2017\Projects\challenge-dev\src\core\infrastructure\services\googlemaps\bin\Debug\netstandard2.0\WappaMobile.ChallengeDev.pdb
-C:\Users\paul_\Documents\Visual Studio 2017\Projects\challenge-dev\src\core\infrastructure\services\googlemaps\bin\Debug\netstandard2.0\WappaMobile.ChallengeDev.Models.pdb
-C:\Users\paul_\Documents\Visual Studio 2017\Projects\challenge-dev\src\core\infrastructure\services\googlemaps\obj\Debug\netstandard2.0\WappaMobile.ChallengeDev.GoogleMaps.csprojAssemblyReference.cache
-C:\Users\paul_\Documents\Visual Studio 2017\Projects\challenge-dev\src\core\infrastructure\services\googlemaps\obj\Debug\netstandard2.0\WappaMobile.ChallengeDev.GoogleMaps.csproj.CoreCompileInputs.cache
-C:\Users\paul_\Documents\Visual Studio 2017\Projects\challenge-dev\src\core\infrastructure\services\googlemaps\obj\Debug\netstandard2.0\WappaMobile.ChallengeDev.GoogleMaps.AssemblyInfoInputs.cache
-C:\Users\paul_\Documents\Visual Studio 2017\Projects\challenge-dev\src\core\infrastructure\services\googlemaps\obj\Debug\netstandard2.0\WappaMobile.ChallengeDev.GoogleMaps.AssemblyInfo.cs
-C:\Users\paul_\Documents\Visual Studio 2017\Projects\challenge-dev\src\core\infrastructure\services\googlemaps\obj\Debug\netstandard2.0\WappaMobile.ChallengeDev.GoogleMaps.csproj.CopyComplete
-C:\Users\paul_\Documents\Visual Studio 2017\Projects\challenge-dev\src\core\infrastructure\services\googlemaps\obj\Debug\netstandard2.0\WappaMobile.ChallengeDev.GoogleMaps.dll
-C:\Users\paul_\Documents\Visual Studio 2017\Projects\challenge-dev\src\core\infrastructure\services\googlemaps\obj\Debug\netstandard2.0\WappaMobile.ChallengeDev.GoogleMaps.pdb

@@ -15,7 +15,7 @@ Todo o codigo em sí, preza pela simplicidade e legibilidade e se orienta por mét
 2. Abra a Solution usando Visual Studio 2017+
 3. No menu do Visual Studio, clique em Build / Clean Solution.
 4. Defina o projeto WappaMobile.ChallengeDev.WebApi como Startup (clique sobre o projeto com o botão direito em seguida escolha Set as Startup Project)
-5. Execute a Solution apertando F5.
+5. No projeto WappaMobile.ChallengeDev.GoogleMaps, altere o valor da constant API_KEY da classe Settings informando a sua Chave de Api fornecida pelo Google.6. Execute a Solution apertando F5.
 
 # End Points
 
