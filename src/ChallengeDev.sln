@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0. CrossCutting", "0. CrossCutting", "{1AF79D0B-7705-4018-A57A-464DBC460E3D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Core", "1. Core", "{637A8D1C-AB54-41F7-8309-C14B711374BB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.1 Domain", "1.1 Domain", "{A6CB96A6-1566-4793-AB0B-5C809D7DAFD0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.2 Infrastructure", "1.2 Infrastructure", "{326E280B-FF33-45E4-820B-FA2B56108985}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Interfaces", "2. Interfaces", "{E2CAEEA2-FE78-480E-809C-E0C50E9B8BC3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WappaMobile.ChallengeDev.Models", "core\domain\models\WappaMobile.ChallengeDev.Models.csproj", "{9B4F0571-C38A-498A-994B-F39D0A450114}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WappaMobile.ChallengeDev", "crosscutting\challengedev\WappaMobile.ChallengeDev.csproj", "{86E48EFA-51D2-4CAF-B45C-C615DFA4D408}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WappaMobile.ChallengeDev.Models.Test", "core\domain\models.test\WappaMobile.ChallengeDev.Models.Test.csproj", "{805F503D-676E-4DE2-ABC0-FA42A252F431}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WappaMobile.ChallengeDev.InMemory", "core\infrastructure\persistence\inmemory\WappaMobile.ChallengeDev.InMemory.csproj", "{CC331525-53DC-4A16-B83E-31171C6DD4EE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WappaMobile.ChallengeDev.WebApi", "interfaces\webapi\WappaMobile.ChallengeDev.WebApi.csproj", "{94DD4CF1-9928-4E69-8AEB-C633263D196C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WappaMobile.ChallengeDev.GoogleMaps", "core\infrastructure\services\googlemaps\WappaMobile.ChallengeDev.GoogleMaps.csproj", "{B9AD0C44-3E99-4609-A3D1-92987FA9D43F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.2.1 Services", "1.2.1 Services", "{D1A687A4-1913-47E9-A8E1-D53F530FEAC7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.2.2 Persistence", "1.2.2 Persistence", "{E37AEB14-A4E8-42CD-83CD-6A2144D0ACD0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B4F0571-C38A-498A-994B-F39D0A450114}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B4F0571-C38A-498A-994B-F39D0A450114}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B4F0571-C38A-498A-994B-F39D0A450114}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B4F0571-C38A-498A-994B-F39D0A450114}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86E48EFA-51D2-4CAF-B45C-C615DFA4D408}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86E48EFA-51D2-4CAF-B45C-C615DFA4D408}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86E48EFA-51D2-4CAF-B45C-C615DFA4D408}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86E48EFA-51D2-4CAF-B45C-C615DFA4D408}.Release|Any CPU.Build.0 = Release|Any CPU
+		{805F503D-676E-4DE2-ABC0-FA42A252F431}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{805F503D-676E-4DE2-ABC0-FA42A252F431}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{805F503D-676E-4DE2-ABC0-FA42A252F431}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{805F503D-676E-4DE2-ABC0-FA42A252F431}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC331525-53DC-4A16-B83E-31171C6DD4EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC331525-53DC-4A16-B83E-31171C6DD4EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC331525-53DC-4A16-B83E-31171C6DD4EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC331525-53DC-4A16-B83E-31171C6DD4EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94DD4CF1-9928-4E69-8AEB-C633263D196C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94DD4CF1-9928-4E69-8AEB-C633263D196C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94DD4CF1-9928-4E69-8AEB-C633263D196C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94DD4CF1-9928-4E69-8AEB-C633263D196C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9AD0C44-3E99-4609-A3D1-92987FA9D43F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9AD0C44-3E99-4609-A3D1-92987FA9D43F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9AD0C44-3E99-4609-A3D1-92987FA9D43F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9AD0C44-3E99-4609-A3D1-92987FA9D43F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A6CB96A6-1566-4793-AB0B-5C809D7DAFD0} = {637A8D1C-AB54-41F7-8309-C14B711374BB}
+		{326E280B-FF33-45E4-820B-FA2B56108985} = {637A8D1C-AB54-41F7-8309-C14B711374BB}
+		{9B4F0571-C38A-498A-994B-F39D0A450114} = {A6CB96A6-1566-4793-AB0B-5C809D7DAFD0}
+		{86E48EFA-51D2-4CAF-B45C-C615DFA4D408} = {1AF79D0B-7705-4018-A57A-464DBC460E3D}
+		{805F503D-676E-4DE2-ABC0-FA42A252F431} = {A6CB96A6-1566-4793-AB0B-5C809D7DAFD0}
+		{CC331525-53DC-4A16-B83E-31171C6DD4EE} = {E37AEB14-A4E8-42CD-83CD-6A2144D0ACD0}
+		{94DD4CF1-9928-4E69-8AEB-C633263D196C} = {E2CAEEA2-FE78-480E-809C-E0C50E9B8BC3}
+		{B9AD0C44-3E99-4609-A3D1-92987FA9D43F} = {D1A687A4-1913-47E9-A8E1-D53F530FEAC7}
+		{D1A687A4-1913-47E9-A8E1-D53F530FEAC7} = {326E280B-FF33-45E4-820B-FA2B56108985}
+		{E37AEB14-A4E8-42CD-83CD-6A2144D0ACD0} = {326E280B-FF33-45E4-820B-FA2B56108985}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2D6A5F71-7706-4B52-B57C-FF12F409CECC}
+	EndGlobalSection
+EndGlobal

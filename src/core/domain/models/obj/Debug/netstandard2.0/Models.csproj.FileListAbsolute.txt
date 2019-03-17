@@ -1,0 +1,12 @@
+C:\Users\paul_\Documents\Visual Studio 2017\Projects\WappaMobile.ChallengeDev\src\WappaMobile.ChallengeDev\ChallengeDev.Models\bin\Debug\netstandard2.0\Models.deps.json
+C:\Users\paul_\Documents\Visual Studio 2017\Projects\WappaMobile.ChallengeDev\src\WappaMobile.ChallengeDev\ChallengeDev.Models\bin\Debug\netstandard2.0\Models.dll
+C:\Users\paul_\Documents\Visual Studio 2017\Projects\WappaMobile.ChallengeDev\src\WappaMobile.ChallengeDev\ChallengeDev.Models\bin\Debug\netstandard2.0\Models.pdb
+C:\Users\paul_\Documents\Visual Studio 2017\Projects\WappaMobile.ChallengeDev\src\WappaMobile.ChallengeDev\ChallengeDev.Models\bin\Debug\netstandard2.0\ChallengeDev.dll
+C:\Users\paul_\Documents\Visual Studio 2017\Projects\WappaMobile.ChallengeDev\src\WappaMobile.ChallengeDev\ChallengeDev.Models\bin\Debug\netstandard2.0\ChallengeDev.pdb
+C:\Users\paul_\Documents\Visual Studio 2017\Projects\WappaMobile.ChallengeDev\src\WappaMobile.ChallengeDev\ChallengeDev.Models\obj\Debug\netstandard2.0\Models.csprojAssemblyReference.cache
+C:\Users\paul_\Documents\Visual Studio 2017\Projects\WappaMobile.ChallengeDev\src\WappaMobile.ChallengeDev\ChallengeDev.Models\obj\Debug\netstandard2.0\Models.csproj.CoreCompileInputs.cache
+C:\Users\paul_\Documents\Visual Studio 2017\Projects\WappaMobile.ChallengeDev\src\WappaMobile.ChallengeDev\ChallengeDev.Models\obj\Debug\netstandard2.0\Models.AssemblyInfoInputs.cache
+C:\Users\paul_\Documents\Visual Studio 2017\Projects\WappaMobile.ChallengeDev\src\WappaMobile.ChallengeDev\ChallengeDev.Models\obj\Debug\netstandard2.0\Models.AssemblyInfo.cs
+C:\Users\paul_\Documents\Visual Studio 2017\Projects\WappaMobile.ChallengeDev\src\WappaMobile.ChallengeDev\ChallengeDev.Models\obj\Debug\netstandard2.0\Models.csproj.CopyComplete
+C:\Users\paul_\Documents\Visual Studio 2017\Projects\WappaMobile.ChallengeDev\src\WappaMobile.ChallengeDev\ChallengeDev.Models\obj\Debug\netstandard2.0\Models.dll
+C:\Users\paul_\Documents\Visual Studio 2017\Projects\WappaMobile.ChallengeDev\src\WappaMobile.ChallengeDev\ChallengeDev.Models\obj\Debug\netstandard2.0\Models.pdb

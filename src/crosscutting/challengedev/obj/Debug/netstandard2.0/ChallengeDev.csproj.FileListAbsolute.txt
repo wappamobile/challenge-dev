@@ -1,0 +1,9 @@
+C:\Users\paul_\Documents\Visual Studio 2017\Projects\WappaMobile.ChallengeDev\src\WappaMobile.ChallengeDev\ChallengeDev\bin\Debug\netstandard2.0\ChallengeDev.deps.json
+C:\Users\paul_\Documents\Visual Studio 2017\Projects\WappaMobile.ChallengeDev\src\WappaMobile.ChallengeDev\ChallengeDev\bin\Debug\netstandard2.0\ChallengeDev.dll
+C:\Users\paul_\Documents\Visual Studio 2017\Projects\WappaMobile.ChallengeDev\src\WappaMobile.ChallengeDev\ChallengeDev\bin\Debug\netstandard2.0\ChallengeDev.pdb
+C:\Users\paul_\Documents\Visual Studio 2017\Projects\WappaMobile.ChallengeDev\src\WappaMobile.ChallengeDev\ChallengeDev\obj\Debug\netstandard2.0\ChallengeDev.csprojAssemblyReference.cache
+C:\Users\paul_\Documents\Visual Studio 2017\Projects\WappaMobile.ChallengeDev\src\WappaMobile.ChallengeDev\ChallengeDev\obj\Debug\netstandard2.0\ChallengeDev.csproj.CoreCompileInputs.cache
+C:\Users\paul_\Documents\Visual Studio 2017\Projects\WappaMobile.ChallengeDev\src\WappaMobile.ChallengeDev\ChallengeDev\obj\Debug\netstandard2.0\ChallengeDev.AssemblyInfoInputs.cache
+C:\Users\paul_\Documents\Visual Studio 2017\Projects\WappaMobile.ChallengeDev\src\WappaMobile.ChallengeDev\ChallengeDev\obj\Debug\netstandard2.0\ChallengeDev.AssemblyInfo.cs
+C:\Users\paul_\Documents\Visual Studio 2017\Projects\WappaMobile.ChallengeDev\src\WappaMobile.ChallengeDev\ChallengeDev\obj\Debug\netstandard2.0\ChallengeDev.dll
+C:\Users\paul_\Documents\Visual Studio 2017\Projects\WappaMobile.ChallengeDev\src\WappaMobile.ChallengeDev\ChallengeDev\obj\Debug\netstandard2.0\ChallengeDev.pdb

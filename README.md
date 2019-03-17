@@ -1,22 +1,113 @@
-# challenge-dev
+# Vis„o Geral
+Api para gerenciamento de cadastro de motoristas.
 
-## Objetivo
-Objetivo deste teste √© avaliar como voc√™ ir√° considerar quest√µes como arquitetura e design de software, modelagem e aplica√ß√£o de t√©cnicas e conceitos de programa√ß√£o, e n√£o simplesmente resolver o problema proposto, visto que o mesmo n√£o oferece dificuldades reais para implementa√ß√£o.  
-Fa√ßa um fork deste projeto e ao concluir envie um pull request com sua implementa√ß√£o. Ao enviar o pull request nos informe quanto tempo voc√™ levou para desenvolver a solu√ß√£o.
+Essa aplicaÁ„o foi desenvolvida com propÛsito exclusivo de estudo. Ela utiliza .NET CORE 2.1, .NET Standard e .NET Framework 4.7 e os dados s„o armazenados em memÛria. Ou seja, s„o vol·teis e n„o ir„o persistir apÛs o aplicativo ser parado ou reiniciado no servidor.
 
-## Escopo
-Precisamos de uma biblioteca para gerenciar o cadastro de motoristas.  
-Front-end n√£o √© necess√°rio e n√£o ser√° avaliado, mas precisamos de uma API que permita criar, editar e excluir um motorista.  
-Um cadastro de motorista possui os campos: Nome (primeiro e √∫ltimo), Carro (marca, modelo e placa) e endere√ßo completo. Adicionamente, ao cadastrar um endere√ßo deve ser buscada as coordenadas utilizando a [API do Google Maps](https://developers.google.com/maps/documentation/geocoding) e elas devem ser armazenadas junto com o cadastro.  
-Al√©m do cadastro tamb√©m ser√° necess√°rio disponibilizar uma listagem dos cadastros em ordem alfab√©tica por nome ou sobrenome.
+A arquitetura tem como base o estilo proposto pelo Domain-Driven Design tendo bastante foco no DomainModel, Entidade, Objeto de Valor e Linguagem UbÌqua.
 
-### Obrigat√≥rio
- - .NET Core - C#
- - WebAPI
- - IoC
- - C√≥digo limpo
+Diversos design patterns foram utilizados em v·rios trechos dos cÛdigos, no entanto sem exageros. … f·cil perceber princÌpios SOLID principalmente no DomainModel e Infrastructure.
 
-### Desej√°vel
- - Documenta√ß√£o da API
- - Testes
- - Instru√ß√µes de setup para execu√ß√£o do projeto
+Todo o codigo em sÌ, preza pela simplicidade e legibilidade e se orienta por mÈtricas de baixo acoplamento e complexidade ciclom·tica.
+
+# Get Start
+
+1. Clone o cÛdigo para seu computador.
+2. Abra a Solution usando Visual Studio 2017+
+3. No menu do Visual Studio, clique em Build / Clean Solution.
+4. Defina o projeto WappaMobile.ChallengeDev.WebApi como Startup (clique sobre o projeto com o bot„o direito em seguida escolha Set as Startup Project)
+5. Execute a Solution apertando F5.
+
+# End Points
+
+### POST /api/motoristas
+Inclus„o de motoristas no banco de dados.
+
+Body (application/json)
+```javascript
+{
+	nome:
+	{
+		primeiro:"",
+		ultimo:""
+	},
+	carro:
+	{
+		marca:"",
+		modelo:"",
+		placa:
+		{
+			letras:"AAA",
+			numeros:"0000"
+		}
+	},
+	endereco:
+	{
+		tipo:"Rua",
+		logradouro:"",
+		numero:"",
+		bairro:"",
+		cidade:"",
+		estado:"",
+		uf:"",
+		cep:""
+	}
+}
+```
+
+### PUT /api/motoristas/{id}
+AtualizaÁ„o dos dados de um motorista existente atravÈs do seu ID.
+
+Body (application/json)
+```javascripty
+{
+	nome:
+	{
+		primeiro:"",
+		ultimo:""
+	},
+	carro:
+	{
+		marca:"",
+		modelo:"",
+		placa:
+		{
+			letras:"AAA",
+			numeros:"0000"
+		}
+	},
+	endereco:
+	{
+		tipo:"Rua",
+		logradouro:"",
+		numero:"",
+		bairro:"",
+		cidade:"",
+		estado:"",
+		uf:"",
+		cep:"
+	}
+}
+```
+
+### GET /api/motoristas
+Listagem de todos os motoristas cadastrados.
+
+### GET /api/motoristas?orderby={campo}
+Listagem de todos os motoristas de forma ordenada.
+
+<table>
+<tr>
+<th>Parametro</th>
+<th>DescriÁ„o</th>
+<th>Valores esperados</th>
+</tr>
+
+<tr>
+<td>orderby</td>
+<td>Define qual o campo ser· utilizado como referÍncia para a ordenaÁ„o.</td>
+<td>nome / sobrenome</td>
+</tr>
+</table>
+
+### DELETE /api/motoristas/{id}
+Exclus„o de um motorista atravÈs de seu ID.
