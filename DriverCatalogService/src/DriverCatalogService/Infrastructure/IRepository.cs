@@ -12,5 +12,6 @@ namespace DriverCatalogService.Infrastructure
         bool Exists(string driverFirstName, string driverLastName);
         bool ContainsAnother(string driverId, string driverFirstName, string driverLastName);
         void Delete(string driverId);
+        Driver[] List(string sortByField, string sortOrder);
     }
 }

@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
+using Xunit;
+
+[assembly: CollectionBehavior(CollectionBehavior.CollectionPerAssembly)]
 
 namespace DriverCatalogService.Tests
 {

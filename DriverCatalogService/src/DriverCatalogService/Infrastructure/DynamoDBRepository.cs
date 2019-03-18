@@ -102,17 +102,22 @@ namespace DriverCatalogService.Infrastructure
             var doc = table.GetItemAsync(driverId).Result;
             if (doc != null)
             {
-                return new Driver
-                {
-                    Id = doc[nameof(Driver.Id)],
-                    FirstName = doc[nameof(Driver.FirstName)],
-                    LastName = doc[nameof(Driver.LastName)],
-                    CreatedAt = DateTime.Parse(doc[nameof(Driver.CreatedAt)]),
-                    ModifiedAt = !Equals(doc[nameof(Driver.ModifiedAt)], DynamoDBNull.Null)? DateTime.Parse(doc[nameof(Driver.ModifiedAt)]) : (DateTime?) null
-                };
+                return InstantiateDriver(doc);
             }
 
             return null;
+        }
+
+        private static Driver InstantiateDriver(Document doc)
+        {
+            return new Driver
+            {
+                Id = doc[nameof(Driver.Id)],
+                FirstName = doc[nameof(Driver.FirstName)],
+                LastName = doc[nameof(Driver.LastName)],
+                CreatedAt = DateTime.Parse(doc[nameof(Driver.CreatedAt)]),
+                ModifiedAt = !Equals(doc[nameof(Driver.ModifiedAt)], DynamoDBNull.Null)? DateTime.Parse(doc[nameof(Driver.ModifiedAt)]) : (DateTime?) null
+            };
         }
 
         public bool Exists(string driverFirstName, string driverLastName)
@@ -141,6 +146,17 @@ namespace DriverCatalogService.Infrastructure
         public void Delete(string driverId)
         {
             _ddbContext.DeleteAsync<Driver>(driverId).Wait();
+        }
+
+        public Driver[] List(string sortByField, string sortOrder)
+        {
+            var table = _ddbContext.GetTargetTable<Driver>();
+            var search = table.Scan(new ScanFilter());
+
+            var docs = search.GetNextSetAsync().Result;
+            docs = sortOrder == "asc" ? docs.OrderBy(d => d[sortByField].AsString()).ToList() : docs.OrderByDescending(d => d[sortByField].AsString()).ToList();
+
+            return docs.Select(InstantiateDriver).ToArray();
         }
     }
 }

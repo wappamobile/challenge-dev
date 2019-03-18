@@ -15,7 +15,7 @@ namespace DriverCatalogService.Tests
 
         public DriverCatalogControllerCRUDScenarios()
         {
-            TestEntryPoint.RepositoryTableName = "DriverCatalog-" + DateTime.Now.Ticks;
+            TestEntryPoint.RepositoryTableName = "DriverCatalog-CRUDTests-" + DateTime.Now.Ticks;
         }
 
         [Fact]

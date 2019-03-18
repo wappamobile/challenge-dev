@@ -11,6 +11,8 @@
   <ItemGroup>
     <None Remove="SampleRequests\DriverCatalogController-Delete.json" />
     <None Remove="SampleRequests\DriverCatalogController-Get.json" />
+    <None Remove="SampleRequests\DriverCatalogController-ListByFirstName.json" />
+    <None Remove="SampleRequests\DriverCatalogController-ListByLastName.json" />
     <None Remove="SampleRequests\DriverCatalogController-Post.json" />
     <None Remove="SampleRequests\DriverCatalogController-Put.json" />
   </ItemGroup>
@@ -20,6 +22,8 @@
     </Content>
     <Content Include="SampleRequests\DriverCatalogController-Delete.json" />
     <Content Include="SampleRequests\DriverCatalogController-Get.json" />
+    <Content Include="SampleRequests\DriverCatalogController-ListByFirstName.json" />
+    <Content Include="SampleRequests\DriverCatalogController-ListByLastName.json" />
     <Content Include="SampleRequests\DriverCatalogController-Post.json" />
     <Content Include="SampleRequests\DriverCatalogController-Put.json" />
   </ItemGroup>
