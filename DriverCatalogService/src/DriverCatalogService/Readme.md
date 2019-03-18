@@ -1,74 +1,59 @@
-# ASP.NET Core Web API Serverless Application
+# Desafio de código
+Esta é a implementação do projeto de testes proposto pela Wappa. Dentro do escopo descrito na [apresentação do desafio](https://github.com/wappamobile/challenge-dev), procurei implementar uma aplicação *serverless* utilizando os seguintes recursos e componentes:
 
-This project shows how to run an ASP.NET Core Web API project as an AWS Lambda exposed through Amazon API Gateway. The NuGet package [Amazon.Lambda.AspNetCoreServer](https://www.nuget.org/packages/Amazon.Lambda.AspNetCoreServer) contains a Lambda function that is used to translate requests from API Gateway into the ASP.NET Core framework and then the responses from ASP.NET Core back to API Gateway.
+ * **ASP.Net Core WebAPI** como plataforma de desenvolvimento dos serviços solicitados;
+ * **AWS Lambda** como ambiente de execução da aplicação *serverless* implementada em WebAPI;
+ * **AWS API Gateway** como porta de entrada REST dos serviços executados pelo Lambda;
+ * **AWS CloudFormation** para o *deploy* por via declarativa dos recursos de nuvem requeridos pela aplicação;
+ * **DynamoDB** como repositório NoSQL de informações;
+ * **xUnit** para a composição dos testes de integração utilizados em todo o ciclo de desenvolvimento;
+ * **RestSharp** para a chamada de funcionalidades do Google Maps API.
 
-The project starts with two Web API controllers. The first is the example ValuesController that is created by default for new ASP.NET Core Web API projects. The second is S3ProxyController which uses the AWS SDK for .NET to proxy requests for an Amazon S3 bucket.
+## Organização do projeto
+
+A solução é dividida em dois projetos de C#: **DriverCatalogService** um contém a WebAPI requerida, e **DriverCatalogService.Tests** contém os testes de integração.
+
+### DriverCatalogService
+A estrutura deste projeto contém:
+* _Controllers_: inclui os controllers que implementam as funcionalidades de catálogo de motoristas (DriverCatalogController) e listagem do catálogo (DriverCatalogQueryController).
+* _Infrastructure_: inclui as definições/interfaces dos serviços consumidos pela aplicação, como o repositório de dados (IRepository/DynamoDBRepository) e a API de geolocalização (IGeoLocator/GoogleGeoLocator).
+* _Models_: inclui as definições de estruturas de dados de Motorista (Driver), Endereço (Address), Carro (Car), entre outras.
+* _Classes de bootstrapping_: código de inicialização, incluindo definições de IOC e carga de configuração são localizados nas classes Startup, LocalEntryPoint e LambdaEntryPoint.
+* _Scripts do CloudFormation_: para automatização do provisionamento de recursos da AWS, todos os requisitos de nuvem da aplicação são declarados no arquivo serverless.template.
 
 
-### Configuring AWS SDK for .NET ###
+## Requisitos para desenvolvimento
 
-To integrate the AWS SDK for .NET with the dependency injection system built into ASP.NET Core the NuGet package [AWSSDK.Extensions.NETCore.Setup](https://www.nuget.org/packages/AWSSDK.Extensions.NETCore.Setup/) is referenced. In the Startup.cs file the Amazon S3 client is added to the dependency injection framework. The S3ProxyController will get its S3 service client from there.
+É necessário instalar as ferramentas [Amazon.Lambda.Tools](https://github.com/aws/aws-extensions-for-dotnet-cli#aws-lambda-amazonlambdatools) e [AWS Toolkit for Visual Studio](https://aws.amazon.com/pt/visualstudio/). O primeiro extende as capacidades da CLI do .Net Core, e o segundo adiciona funcionalidades de gerenciamento do *stack* AWS ao VisualStudio.
 
-```csharp
-public void ConfigureServices(IServiceCollection services)
-{
-    services.AddMvc();
-
-    // Add S3 to the ASP.NET Core dependency injection framework.
-    services.AddAWSService<Amazon.S3.IAmazonS3>();
-}
-```
-
-### Configuring for Application Load Balancer ###
-
-To configure this project to handle requests from an Application Load Balancer instead of API Gateway change
-the base class of `LambdaEntryPoint` from `Amazon.Lambda.AspNetCoreServer.APIGatewayProxyFunction` to 
-`Amazon.Lambda.AspNetCoreServer.ApplicationLoadBalancerFunction`.
-
-### Project Files ###
-
-* serverless.template - an AWS CloudFormation Serverless Application Model template file for declaring your Serverless functions and other AWS resources
-* aws-lambda-tools-defaults.json - default argument settings for use with Visual Studio and command line deployment tools for AWS
-* LambdaEntryPoint.cs - class that derives from **Amazon.Lambda.AspNetCoreServer.APIGatewayProxyFunction**. The code in 
-this file bootstraps the ASP.NET Core hosting framework. The Lambda function is defined in the base class.
-Change the base class to **Amazon.Lambda.AspNetCoreServer.ApplicationLoadBalancerFunction** when using an 
-Application Load Balancer.
-* LocalEntryPoint.cs - for local development this contains the executable Main function which bootstraps the ASP.NET Core hosting framework with Kestrel, as for typical ASP.NET Core applications.
-* Startup.cs - usual ASP.NET Core Startup class used to configure the services ASP.NET Core will use.
-* web.config - used for local development.
-* Controllers\S3ProxyController - Web API controller for proxying an S3 bucket
-* Controllers\ValuesController - example Web API controller
-
-You may also have a test project depending on the options selected.
-
-## Here are some steps to follow from Visual Studio:
-
-To deploy your Serverless application, right click the project in Solution Explorer and select *Publish to AWS Lambda*.
-
-To view your deployed application open the Stack View window by double-clicking the stack name shown beneath the AWS CloudFormation node in the AWS Explorer tree. The Stack View also displays the root URL to your published application.
-
-## Here are some steps to follow to get started from the command line:
-
-Once you have edited your template and code you can deploy your application using the [Amazon.Lambda.Tools Global Tool](https://github.com/aws/aws-extensions-for-dotnet-cli#aws-lambda-amazonlambdatools) from the command line.
-
-Install Amazon.Lambda.Tools Global Tools if not already installed.
+Para instalar o AWS Lambda Tools, basta utilizar o seguinte comando Powershell:
 ```
     dotnet tool install -g Amazon.Lambda.Tools
 ```
 
-If already installed check if new version is available.
-```
-    dotnet tool update -g Amazon.Lambda.Tools
-```
+Uma vez instaladas as ferramentas, já é possível executar os testes integrados. Uma forma prática é iniciar os testes a partir de linha de comando:
 
-Execute unit tests
 ```
     cd "DriverCatalogService/test/DriverCatalogService.Tests"
     dotnet test
 ```
 
-Deploy application
-```
-    cd "DriverCatalogService/src/DriverCatalogService"
-    dotnet lambda deploy-serverless
-```
+
+## Publicação no ambiente AWS
+
+Basta acionar o botão *Publish to AWS* no menu de contexto do Solution Explorer, diretamente no projeto **DriverCatalogService**. Será aberta uma janela "Stacj View" com o andamento da publicação.
+
+Após o *deploy* bem-sucedido, o API Gateway terá publicado um *endpoint* de produção a partir do qual podem ser acionadas as chamadas de API.
+
+
+## Perguntas que talvez sejam feitas
+No início do desenvolvimento, e também durante o projeto, algumas decisões importantes foram tomadas. Aqui está a razão por trás de algumas delas:
+
+#### Por que AWS?
+É o provedor de serviços com o qual eu tenho maior familiaridade. Tenho experiências recentes bem sucedidas com Lambda e CloudFormation, e quis re-aplicar esse conhecimento.
+
+#### Por que serverless?
+O desafio pareceu ser uma boa prova de conceito para a construção e deploy de serviços serverless.
+
+#### Por que nomear identificadores em inglês?
+Na minha opinião, a língua inglesa facilita a tarefa de "dar nomes" a partir de verbos e prefixos consolidados, como "Get", "Find", "enumeration", "index" etc. Escrevendo em português podem ser gerados nomes esdrúxulos como "GetMotorista", "FindEndereco", "carroCollection" etc, que me soam estranhos.

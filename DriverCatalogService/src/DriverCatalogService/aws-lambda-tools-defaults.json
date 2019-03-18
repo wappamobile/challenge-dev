@@ -6,12 +6,13 @@
         "dotnet lambda help",
         "All the command line options for the Lambda command can be specified in this file."
     ],
-    "profile": "default",
-    "region": "us-east-1",
-    "configuration": "Release",
-    "framework": "netcoreapp2.1",
-    "s3-prefix": "DriverCatalogService/",
-    "template": "serverless.template",
-    "template-parameters" : "ShouldCreateTable=true;TableName=",
-    "stack-name": "DriverCatalog"
+    "profile"     : "default",
+    "region"      : "us-east-1",
+    "configuration" : "Release",
+    "framework"     : "netcoreapp2.1",
+    "s3-prefix"     : "DriverCatalogService/",
+    "template"      : "serverless.template",
+    "template-parameters" : "\"ShouldCreateTable\"=\"true\";\"TableName\"=\"DriverCatalog\";\"ReadCapacity\"=\"3\";\"WriteCapacity\"=\"3\";\"GoogleAPIKey\"=\"AIzaSyAWThmZZ9eeM19WyTrx28kaWlRhgOjEVbA\"",
+    "stack-name"          : "DriverCatalog",
+    "s3-bucket"           : "teste-drivercatalog-20190317"
 }
