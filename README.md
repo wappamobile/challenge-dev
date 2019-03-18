@@ -10,3 +10,5 @@ Rodar o codigo:
 Rodar os testes:
 Abrir o Test Explorer
 Clicar no botao Run All
+
+Total de horas para o desenvolvimento: 14 horas.
