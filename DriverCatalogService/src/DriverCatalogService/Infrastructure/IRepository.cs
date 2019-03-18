@@ -8,8 +8,9 @@ namespace DriverCatalogService.Infrastructure
         Task SetupTable();
         void DropTable();
         void Save(Driver driver);
-        Driver Load(string id);
+        Driver Load(string driverId);
         bool Exists(string driverFirstName, string driverLastName);
         bool ContainsAnother(string driverId, string driverFirstName, string driverLastName);
+        void Delete(string driverId);
     }
 }

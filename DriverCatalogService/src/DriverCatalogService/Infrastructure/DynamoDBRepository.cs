@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -81,35 +82,65 @@ namespace DriverCatalogService.Infrastructure
 
         public void Save(Driver driver)
         {
-            _ddbContext.SaveAsync<Driver>(driver).Wait();
+            var table = _ddbContext.GetTargetTable<Driver>();
+
+            var doc = _ddbContext.ToDocument(driver);
+            if (driver.ModifiedAt == null)
+            {
+                doc[nameof(Driver.ModifiedAt)] = DynamoDBNull.Null;
+                table.PutItemAsync(doc).Wait();
+            }
+            else
+            {
+                table.UpdateItemAsync(doc).Wait();
+            }
         }
 
-        public Driver Load(string id)
+        public Driver Load(string driverId)
         {
-            return _ddbContext.LoadAsync<Driver>(id).Result;
+            var table = _ddbContext.GetTargetTable<Driver>();
+            var doc = table.GetItemAsync(driverId).Result;
+            if (doc != null)
+            {
+                return new Driver
+                {
+                    Id = doc[nameof(Driver.Id)],
+                    FirstName = doc[nameof(Driver.FirstName)],
+                    LastName = doc[nameof(Driver.LastName)],
+                    CreatedAt = DateTime.Parse(doc[nameof(Driver.CreatedAt)]),
+                    ModifiedAt = !Equals(doc[nameof(Driver.ModifiedAt)], DynamoDBNull.Null)? DateTime.Parse(doc[nameof(Driver.ModifiedAt)]) : (DateTime?) null
+                };
+            }
+
+            return null;
         }
 
         public bool Exists(string driverFirstName, string driverLastName)
         {
-            var op = _ddbContext.ScanAsync<Driver>(new[]
-            {
-                new ScanCondition(nameof(Driver.FirstName), ScanOperator.Equal, driverFirstName ?? string.Empty),
-                new ScanCondition(nameof(Driver.LastName), ScanOperator.Equal, driverLastName ?? string.Empty)
-            });
+            var table = _ddbContext.GetTargetTable<Driver>();
+            var filter = new ScanFilter();
+            filter.AddCondition(nameof(Driver.FirstName), ScanOperator.Equal, driverFirstName);
+            filter.AddCondition(nameof(Driver.LastName), ScanOperator.Equal, driverLastName);
 
-            return op.GetNextSetAsync().Result.Any();
+            var search = table.Scan(filter);
+            return search.GetNextSetAsync().Result.Any();
         }
 
         public bool ContainsAnother(string driverId, string driverFirstName, string driverLastName)
         {
-            var op = _ddbContext.ScanAsync<Driver>(new[]
-            {
-                new ScanCondition(nameof(Driver.FirstName), ScanOperator.Equal, driverFirstName ?? string.Empty),
-                new ScanCondition(nameof(Driver.LastName), ScanOperator.Equal, driverLastName ?? string.Empty)
-            });
+            var table = _ddbContext.GetTargetTable<Driver>();
+            var filter = new ScanFilter();
+            filter.AddCondition(nameof(Driver.FirstName), ScanOperator.Equal, driverFirstName);
+            filter.AddCondition(nameof(Driver.LastName), ScanOperator.Equal, driverLastName);
+            filter.AddCondition(nameof(Driver.Id), ScanOperator.NotEqual, driverId);
 
-            var driver = op.GetNextSetAsync().Result.FirstOrDefault();
-            return driverId == driver?.Id;
+            var search = table.Scan(filter);
+            return search.GetNextSetAsync().Result.Any();
+        }
+
+        public void Delete(string driverId)
+        {
+            _ddbContext.DeleteAsync<Driver>(driverId).Wait();
         }
     }
 }

@@ -82,7 +82,7 @@ namespace DriverCatalogService.Controllers
             var target = _repository.Load(driver.Id);
             if (target == null)
             {
-                Response.StatusCode = (int) HttpStatusCode.BadRequest;
+                Response.StatusCode = (int) HttpStatusCode.NotFound;
                 return new ErrorResponse { Errors = new []{ new Error { Problem = "Not found", Where = nameof(Driver)} }};
             }
 
@@ -90,7 +90,25 @@ namespace DriverCatalogService.Controllers
             target.LastName = driver.LastName;
             target.ModifiedAt = DateTime.UtcNow;
 
-            _repository.Save(driver);
+            _repository.Save(target);
+
+            Response.StatusCode = (int) HttpStatusCode.NoContent;
+            return null;
+        }
+        
+        // PUT api/driver
+        [HttpDelete("{id}")]
+        [LambdaSerializer(typeof(JsonSerializer))]
+        public object Delete(string id)
+        {
+            var target = _repository.Load(id);
+            if (target == null)
+            {
+                Response.StatusCode = (int) HttpStatusCode.NotFound;
+                return new ErrorResponse { Errors = new []{ new Error { Problem = "Not found", Where = nameof(Driver)} }};
+            }
+
+            _repository.Delete(id);
 
             Response.StatusCode = (int) HttpStatusCode.NoContent;
             return null;
