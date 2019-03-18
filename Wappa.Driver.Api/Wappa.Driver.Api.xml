@@ -1,0 +1,359 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Wappa.Driver.Api</name>
+    </assembly>
+    <members>
+        <member name="F:Wappa.Driver.Api.Consts.ErrorMessage.GeneralErrorMessage">
+            <summary>
+            Mensagem genérica de errro
+            </summary>
+        </member>
+        <member name="F:Wappa.Driver.Api.Consts.ErrorMessage.FieldRequired">
+            <summary>
+            Campo obrigatório
+            </summary>
+        </member>
+        <member name="F:Wappa.Driver.Api.Consts.ErrorMessage.DriverNotFound">
+            <summary>
+            Motorista não encontrado
+            </summary>
+        </member>
+        <member name="F:Wappa.Driver.Api.Consts.ErrorMessage.AddressNotFound">
+            <summary>
+            Endereço não encontrado
+            </summary>
+        </member>
+        <member name="T:Wappa.Driver.Api.Controllers.DriverController">
+            <summary>
+            Controller para gerenciar cadastro de motorista
+            </summary>
+        </member>
+        <member name="M:Wappa.Driver.Api.Controllers.DriverController.ValidateDriver(Wappa.Driver.Api.Dtos.DriverDto,System.Boolean)">
+            <summary>
+            Valida os dados do motorista
+            </summary>
+            <param name="driver">Dados do motorista</param>
+            <param name="insert">Indica se a validação é para insert ou update</param>
+            <returns></returns>
+        </member>
+        <member name="T:Wappa.Driver.Api.Data.Models.Driver">
+            <summary>
+            Model do motorista
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Data.Models.Driver.DriverID">
+            <summary>
+            Id do motorista
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Data.Models.Driver.FirstName">
+            <summary>
+            Nome do motorista
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Data.Models.Driver.LastName">
+            <summary>
+            Sobrenome do motorista
+            </summary>
+        </member>
+        <member name="T:Wappa.Driver.Api.Data.Models.DriverAddress">
+            <summary>
+            Model do endereco do motorista
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Data.Models.DriverAddress.AddressId">
+            <summary>
+            Id do endereco
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Data.Models.DriverAddress.DriverId">
+            <summary>
+            Id do motorista
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Data.Models.DriverAddress.Address">
+            <summary>
+            Endereco
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Data.Models.DriverAddress.Number">
+            <summary>
+            Numero
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Data.Models.DriverAddress.Neighborhood">
+            <summary>
+            Bairro
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Data.Models.DriverAddress.City">
+            <summary>
+            Cidade
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Data.Models.DriverAddress.State">
+            <summary>
+            Estado
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Data.Models.DriverAddress.Country">
+            <summary>
+            Pais
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Data.Models.DriverAddress.Latitude">
+            <summary>
+            Latitude
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Data.Models.DriverAddress.Longitude">
+            <summary>
+            Longitude
+            </summary>
+        </member>
+        <member name="T:Wappa.Driver.Api.Data.Models.DriverCar">
+            <summary>
+            Model do carro
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Data.Models.DriverCar.CarId">
+            <summary>
+            Id do carro
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Data.Models.DriverCar.DriverId">
+            <summary>
+            Id do motorista
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Data.Models.DriverCar.Make">
+            <summary>
+            Marca do carro
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Data.Models.DriverCar.Model">
+            <summary>
+            Modelo do caroo
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Data.Models.DriverCar.Plate">
+            <summary>
+            Placa do carro
+            </summary>
+        </member>
+        <member name="T:Wappa.Driver.Api.Dtos.DriverAddressDto">
+            <summary>
+            Dto do endereco do motorista
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Dtos.DriverAddressDto.AddressId">
+            <summary>
+            Id do endereco
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Dtos.DriverAddressDto.DriverId">
+            <summary>
+            Id do motorista
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Dtos.DriverAddressDto.Address">
+            <summary>
+            Endereco
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Dtos.DriverAddressDto.Number">
+            <summary>
+            Numero
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Dtos.DriverAddressDto.Neighborhood">
+            <summary>
+            Bairro
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Dtos.DriverAddressDto.City">
+            <summary>
+            Cidade
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Dtos.DriverAddressDto.State">
+            <summary>
+            Estado
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Dtos.DriverAddressDto.Country">
+            <summary>
+            Pais
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Dtos.DriverAddressDto.Latitude">
+            <summary>
+            Latitude
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Dtos.DriverAddressDto.Longitude">
+            <summary>
+            Longitude
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Dtos.DriverCarDto.CarId">
+            <summary>
+            Id do carro
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Dtos.DriverCarDto.DriverId">
+            <summary>
+            Id do motorista
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Dtos.DriverCarDto.Make">
+            <summary>
+            Marca do carro
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Dtos.DriverCarDto.Model">
+            <summary>
+            Modelo do caroo
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Dtos.DriverCarDto.Plate">
+            <summary>
+            Placa do carro
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Dtos.DriverDto.DriverId">
+            <summary>
+            Id do motorista
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Dtos.DriverDto.FirstName">
+            <summary>
+            Nome do motorista
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Dtos.DriverDto.LastName">
+            <summary>
+            Sobrenome do motorista
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Dtos.DriverDto.DriverCarDto">
+            <summary>
+            Dados do carro do motorista
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Dtos.DriverDto.DriverAddressDto">
+            <summary>
+            Dados do endereço do motorista
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Dtos.MapDto.Latitude">
+            <summary>
+            Latitude
+            </summary>
+        </member>
+        <member name="P:Wappa.Driver.Api.Dtos.MapDto.Longitude">
+            <summary>
+            Longitude
+            </summary>
+        </member>
+        <member name="T:Wappa.Driver.Api.Repositories.Implementations.DriverRepository">
+            <summary>
+            Implementação da interface IDriverRepository
+            </summary>
+        </member>
+        <member name="M:Wappa.Driver.Api.Repositories.Implementations.DriverRepository.Delete(System.Int32)">
+            <summary>
+            Exclui um objeto
+            </summary>
+            <param name="id">Id do objeto a ser excluído</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wappa.Driver.Api.Repositories.Implementations.DriverRepository.Exists(System.Int32)">
+            <summary>
+            Verifica se o motorista existe
+            </summary>
+            <param name="id">Id do motorista</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wappa.Driver.Api.Repositories.Implementations.DriverRepository.GetDrivers">
+            <summary>
+            Retorna a lista de motoristas
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wappa.Driver.Api.Repositories.Implementations.DriverRepository.Insert(Wappa.Driver.Api.Dtos.DriverDto)">
+            <summary>
+            Insere um objeto
+            </summary>
+            <param name="obj">Objeto a se incluído</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wappa.Driver.Api.Repositories.Implementations.DriverRepository.Update(Wappa.Driver.Api.Dtos.DriverDto)">
+            <summary>
+            Atualiza um objeto
+            </summary>
+            <param name="obj">Objeto a ser atualizado</param>
+            <returns></returns>
+        </member>
+        <member name="T:Wappa.Driver.Api.Repositories.Interfaces.ICrudRepository`1">
+            <summary>
+            Interface base para CRUD
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Wappa.Driver.Api.Repositories.Interfaces.ICrudRepository`1.Insert(`0)">
+            <summary>
+            Insere um objeto
+            </summary>
+            <param name="obj">Objeto a se incluído</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wappa.Driver.Api.Repositories.Interfaces.ICrudRepository`1.Update(`0)">
+            <summary>
+            Atualiza um objeto
+            </summary>
+            <param name="obj">Objeto a ser atualiizdo</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wappa.Driver.Api.Repositories.Interfaces.ICrudRepository`1.Delete(System.Int32)">
+            <summary>
+            Exclui um objeto
+            </summary>
+            <param name="id">Id do objeto a ser excluído</param>
+            <returns></returns>
+        </member>
+        <member name="T:Wappa.Driver.Api.Repositories.Interfaces.IDriverRepository`1">
+            <summary>
+            Interface crud do motorista
+            </summary>
+        </member>
+        <member name="M:Wappa.Driver.Api.Repositories.Interfaces.IDriverRepository`1.GetDrivers">
+            <summary>
+            Retorna a lista de motoristas
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wappa.Driver.Api.Repositories.Interfaces.IDriverRepository`1.Exists(System.Int32)">
+            <summary>
+            Verifica se o motorista existe
+            </summary>
+            <param name="id">Id do motorista</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wappa.Driver.Api.Services.Implementations.MapsService.GetGeometry(Wappa.Driver.Api.Dtos.DriverAddressDto)">
+            <summary>
+            Retorna a latitude e longitude de um endereço
+            </summary>
+            <param name="address">Endereço do motorista</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wappa.Driver.Api.Services.Interfaces.IMapsService.GetGeometry(Wappa.Driver.Api.Dtos.DriverAddressDto)">
+            <summary>
+            Retorna a latitude e longitude de um endereço
+            </summary>
+            <param name="address">Endereço do motorista</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
