@@ -1,11 +1,11 @@
 ﻿{
   "resource": "/{proxy+}",
-  "path": "/api/values",
-  "httpMethod": "GET",
+  "path": "/api/driver/{0}",
+  "httpMethod": "DELETE",
   "headers": null,
   "queryStringParameters": null,
   "pathParameters": {
-    "proxy": "api/values"
+    "proxy": "api/driver/{0}"
   },
   "stageVariables": null,
   "requestContext": {

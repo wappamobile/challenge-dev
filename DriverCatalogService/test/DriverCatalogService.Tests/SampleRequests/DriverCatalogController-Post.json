@@ -1,7 +1,7 @@
 ﻿{
   "resource": "/{proxy+}",
   "path": "/api/driver",
-  "httpMethod": "PUT",
+  "httpMethod": "POST",
   "headers": { "Content-Type": "application/json" },
   "queryStringParameters": null,
   "pathParameters": {
@@ -27,7 +27,7 @@
       "user": "AAAAAAAAAAAA"
     },
     "resourcePath": "/{proxy+}",
-    "httpMethod": "PUT",
+    "httpMethod": "POST",
     "apiId": "t2yh6sjnmk"
   },
   "body": null

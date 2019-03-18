@@ -1,11 +1,11 @@
 ﻿{
   "resource": "/{proxy+}",
-  "path": "/api/driver",
-  "httpMethod": "PUT",
-  "headers": { "Content-Type": "application/json" },
+  "path": "/api/driver/{0}",
+  "httpMethod": "GET",
+  "headers": null,
   "queryStringParameters": null,
   "pathParameters": {
-    "proxy": "api/driver"
+    "proxy": "api/driver/{0}"
   },
   "stageVariables": null,
   "requestContext": {
@@ -27,7 +27,7 @@
       "user": "AAAAAAAAAAAA"
     },
     "resourcePath": "/{proxy+}",
-    "httpMethod": "PUT",
+    "httpMethod": "GET",
     "apiId": "t2yh6sjnmk"
   },
   "body": null
