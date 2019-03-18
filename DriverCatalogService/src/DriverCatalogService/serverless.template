@@ -25,6 +25,11 @@
 			"Description" : "Write capacity for the DynamoDB table.",
 			"Default" : "3",
 			"MinValue" : 1
+		},  
+		"GoogleAPIKey" : {
+			"Type" : "String",
+			"Description" : "API key for Geocoding features.",
+			"MinLength" : "0"
 		}
 	},
 
@@ -48,7 +53,8 @@
 				"Environment" : {
 					"Variables" : {
 						"Repository__TableName": { "Ref" : "TableName" },
-						"AWS__Region": { "Ref" : "AWS::Region" }
+						"AWS__Region": { "Ref" : "AWS::Region" },
+						"Google__APIKey": { "Ref" : "GoogleAPIKey" }
 					}
 				},
 				"Events": {

@@ -12,5 +12,6 @@
     <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.3.6" />
     <PackageReference Include="Amazon.Lambda.AspNetCoreServer" Version="3.0.3" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.4" />
+    <PackageReference Include="RestSharp" Version="106.6.9" />
   </ItemGroup>
 </Project>

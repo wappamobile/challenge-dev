@@ -32,6 +32,7 @@ namespace DriverCatalogService
         {
             // Adds the DynamoDB repo proxy class to the ASP.NET Core dependency injection framework.
             services.Add(new ServiceDescriptor(typeof(IRepository), typeof(DynamoDBRepository), ServiceLifetime.Singleton));
+            services.Add(new ServiceDescriptor(typeof(IGeoLocator), typeof(GoogleGeoLocator), ServiceLifetime.Singleton));
             services.Add(new ServiceDescriptor(typeof(DriverValidator), typeof(DriverValidator), ServiceLifetime.Singleton));
         }
 

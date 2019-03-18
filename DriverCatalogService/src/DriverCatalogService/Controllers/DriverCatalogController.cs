@@ -17,11 +17,13 @@ namespace DriverCatalogService.Controllers
     {
         private readonly IRepository _repository;
         private readonly DriverValidator _validator;
+        private readonly IGeoLocator _geoLocator;
 
-        public DriverCatalogController(IRepository repository, DriverValidator validator)
+        public DriverCatalogController(IRepository repository, DriverValidator validator, IGeoLocator geoLocator)
         {
             _repository = repository;
             _validator = validator;
+            _geoLocator = geoLocator;
         }
 
         // POST api/driver
@@ -38,6 +40,11 @@ namespace DriverCatalogService.Controllers
 
             driver.Id = Guid.NewGuid().ToString();
             driver.CreatedAt = DateTime.UtcNow;
+
+            if (!string.IsNullOrEmpty(driver.Address?.FullAddress))
+            {
+                driver.Address = _geoLocator.LocateAddress(driver.Address.FullAddress);
+            }
 
             _repository.Save(driver);
 

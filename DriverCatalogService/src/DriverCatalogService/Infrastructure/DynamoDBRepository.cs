@@ -111,19 +111,46 @@ namespace DriverCatalogService.Infrastructure
 
         private static Driver InstantiateDriver(Document doc)
         {
-            var nameDoc = doc[nameof(Driver.Name)].AsDocument();
-
-            return new Driver
+            var res = new Driver
             {
                 Id = doc[nameof(Driver.Id)],
-                Name = new Name
-                {
-                    FirstName = nameDoc[nameof(Name.FirstName)],
-                    LastName = nameDoc[nameof(Name.LastName)]
-                },
                 CreatedAt = DateTime.Parse(doc[nameof(Driver.CreatedAt)]),
                 ModifiedAt = !Equals(doc[nameof(Driver.ModifiedAt)], DynamoDBNull.Null) ? DateTime.Parse(doc[nameof(Driver.ModifiedAt)]) : (DateTime?) null
             };
+
+            if (doc.ContainsKey(nameof(Driver.Name)))
+            {
+                var nameDoc = doc[nameof(Driver.Name)].AsDocument();
+                res.Name = new Name
+                {
+                    FirstName = nameDoc[nameof(Name.FirstName)],
+                    LastName = nameDoc[nameof(Name.LastName)]
+                };
+            }
+
+            if (doc.ContainsKey(nameof(Driver.Address)))
+            {
+                var addressDoc = doc[nameof(Driver.Address)].AsDocument();
+                res.Address = new Address
+                {
+                    FullAddress = addressDoc[nameof(Address.FullAddress)].AsString(),
+                    Longitude = addressDoc.ContainsKey(nameof(Address.Longitude))? addressDoc[nameof(Address.Longitude)].AsString() : null,
+                    Latitude = addressDoc.ContainsKey(nameof(Address.Latitude))? addressDoc[nameof(Address.Latitude)].AsString() : null
+                };
+            }
+
+            if (doc.ContainsKey(nameof(Driver.Car)))
+            {
+                var carDoc = doc[nameof(Driver.Car)].AsDocument();
+                res.Car = new Car
+                {
+                    Maker = carDoc[nameof(Car.Maker)],
+                    Model = carDoc[nameof(Car.Model)],
+                    LicensePlate = carDoc[nameof(Car.LicensePlate)]
+                };
+            }
+
+            return res;
         }
 
         public bool Exists(Name driverName)
