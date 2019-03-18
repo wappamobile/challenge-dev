@@ -4,21 +4,33 @@
 	"Description" : "An AWS Serverless Application that uses the ASP.NET Core framework running in Amazon Lambda.",
 
 	"Parameters" : {
-		"ShouldCreateBucket" : {
-			"Type" : "String",        
-			"AllowedValues" : ["true", "false"],
-			"Description" : "If true then the S3 bucket that will be proxied will be created with the CloudFormation stack."
-		},  
-		"BucketName" : {
+		"ShouldCreateTable" : {
 			"Type" : "String",
-			"Description" : "Name of S3 bucket that will be proxied. If left blank a name will be generated.",
+			"AllowedValues" : ["true", "false"],
+			"Description" : "If true then the DynamoDB table will be created with the CloudFormation stack."
+		},  
+		"TableName" : {
+			"Type" : "String",
+			"Description" : "Name of DynamoDB table used to store the driver catalog. If left blank a new table will be created.",
 			"MinLength" : "0"
+		},
+		"ReadCapacity" : {
+			"Type" : "Number",
+			"Description" : "Read capacity for the DynamoDB table.",
+			"Default" : "3",
+			"MinValue" : 1
+		},
+		"WriteCapacity" : {
+			"Type" : "Number",
+			"Description" : "Write capacity for the DynamoDB table.",
+			"Default" : "3",
+			"MinValue" : 1
 		}
 	},
 
 	"Conditions" : {
-		"CreateS3Bucket" : {"Fn::Equals" : [{"Ref" : "ShouldCreateBucket"}, "true"]},
-		"BucketNameGenerated" : {"Fn::Equals" : [{"Ref" : "BucketName"}, ""]}
+		"CreateTable" : {"Fn::Equals" : [{"Ref" : "ShouldCreateTable"}, "true"]},
+		"TableNameGenerated" : {"Fn::Equals" : [{"Ref" : "TableName"}, ""]}
 	},
 
 	"Resources" : {
@@ -35,7 +47,8 @@
 				"Policies": [ "AWSLambdaFullAccess" ],
 				"Environment" : {
 					"Variables" : {
-						"AppS3Bucket" : { "Fn::If" : ["CreateS3Bucket", {"Ref":"Bucket"}, { "Ref" : "BucketName" } ] }
+						"Repository__TableName": { "Ref" : "TableName" },
+						"AWS__Region": { "Ref" : "AWS::Region" }
 					}
 				},
 				"Events": {
@@ -57,11 +70,21 @@
 			}
 		},
 
-		"Bucket" : {
-			"Type" : "AWS::S3::Bucket",
-			"Condition" : "CreateS3Bucket",
+		"BlogTable" : {
+			"Type" : "AWS::DynamoDB::Table",
+			"Condition" : "CreateTable",
 			"Properties" : {
-				"BucketName" : { "Fn::If" : ["BucketNameGenerated", {"Ref" : "AWS::NoValue" }, { "Ref" : "BucketName" } ] }
+				"TableName" : { "Fn::If" : ["TableNameGenerated", {"Ref" : "AWS::NoValue" }, { "Ref" : "TableName" } ] },
+				"AttributeDefinitions" : [
+					{"AttributeName" : "Id", "AttributeType" : "S"}
+				],
+				"KeySchema": [
+					{"AttributeName" : "Id", "KeyType" : "HASH"}
+				],
+				"ProvisionedThroughput" : {
+					"ReadCapacityUnits" : { "Ref" : "ReadCapacity" },
+					"WriteCapacityUnits" : { "Ref" : "WriteCapacity" }
+				}
 			}
 		}
 	},
@@ -71,8 +94,8 @@
 			"Description" : "API endpoint URL for Prod environment",
 			"Value" : { "Fn::Sub" : "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/" }
 		},
-		"S3ProxyBucket" : {
-			"Value" : { "Fn::If" : ["CreateS3Bucket", {"Ref":"Bucket"}, { "Ref" : "BucketName" } ] }
+		"DriverCatalogTable" : {
+			"Value" : { "Fn::If" : ["CreateTable", {"Ref":"BlogTable"}, { "Ref" : "TableName" } ] }
 		}
 	}
 }
