@@ -25,7 +25,7 @@ namespace DriverCatalogService.Controllers
         [LambdaSerializer(typeof(JsonSerializer))]
         public Driver[] Get([FromQuery] string sort_by)
         {
-            var match = Regex.Match(sort_by, $"(asc|desc)\\(({nameof(Driver.FirstName)}|{nameof(Driver.LastName)})\\)");
+            var match = Regex.Match(sort_by, $"(asc|desc)\\(({nameof(Driver.Name.FirstName)}|{nameof(Driver.Name.LastName)})\\)");
             if (!match.Success)
             {
                 Response.StatusCode = (int) HttpStatusCode.BadRequest;

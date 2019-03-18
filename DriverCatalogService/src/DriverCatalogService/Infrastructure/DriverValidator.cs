@@ -17,7 +17,7 @@ namespace DriverCatalogService.Infrastructure
         {
             var res = ValidateFields(driver);
 
-            if (!res.Any() && _repository.Exists(driver.FirstName, driver.LastName))
+            if (!res.Any() && _repository.Exists(driver.Name))
             {
                 res.Add(new Error { Problem = "Already exists", Where = nameof(Driver)});
             }
@@ -29,14 +29,14 @@ namespace DriverCatalogService.Infrastructure
         {
             var res = new List<Error>();
 
-            if (string.IsNullOrEmpty(driver.FirstName))
+            if (string.IsNullOrEmpty(driver.Name.FirstName))
             {
-                res.Add(new Error {Problem = "Cannot be empty", Where = nameof(Driver.FirstName)});
+                res.Add(new Error {Problem = "Cannot be empty", Where = $"{nameof(Driver.Name)}.{nameof(Driver.Name.FirstName)}"});
             }
 
-            if (string.IsNullOrEmpty(driver.LastName))
+            if (string.IsNullOrEmpty(driver.Name.LastName))
             {
-                res.Add(new Error {Problem = "Cannot be empty", Where = nameof(Driver.LastName)});
+                res.Add(new Error {Problem = "Cannot be empty", Where = $"{nameof(Driver.Name)}.{nameof(Driver.Name.LastName)}"});
             }
 
             return res;
@@ -46,7 +46,7 @@ namespace DriverCatalogService.Infrastructure
         {
             var res = ValidateFields(driver);
 
-            if (!res.Any() && _repository.ContainsAnother(driver.Id, driver.FirstName, driver.LastName))
+            if (!res.Any() && _repository.ContainsAnother(driver.Id, driver.Name))
             {
                 res.Add(new Error { Problem = "Name taken", Where = nameof(Driver)});
             }

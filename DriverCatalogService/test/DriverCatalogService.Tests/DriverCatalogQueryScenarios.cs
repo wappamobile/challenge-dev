@@ -24,8 +24,8 @@ namespace DriverCatalogService.Tests
             // ARRANGE
             _lambdaFunction = new TestEntryPoint();
 
-            await CreateDriver(new Driver { FirstName = "Humberto", LastName = "Bulhões" });
-            await CreateDriver(new Driver { FirstName = "José", LastName = "Alves" });
+            await CreateDriver(new Driver {Name = new Name {FirstName = "Humberto", LastName = "Bulhões"}});
+            await CreateDriver(new Driver {Name = new Name {FirstName = "José", LastName = "Alves"}});
 
             // ACT
             var requestStr = File.ReadAllText("./SampleRequests/DriverCatalogController-ListByFirstName.json");
@@ -38,8 +38,8 @@ namespace DriverCatalogService.Tests
 
             var driverList = JsonConvert.DeserializeObject<Driver[]>(response.Body);
             Assert.NotEmpty(driverList);
-            Assert.Equal("Humberto", driverList[0].FirstName);
-            Assert.Equal("José", driverList[1].FirstName);
+            Assert.Equal("Humberto", driverList[0].Name.FirstName);
+            Assert.Equal("José", driverList[1].Name.FirstName);
         }
 
         [Fact]
@@ -48,8 +48,8 @@ namespace DriverCatalogService.Tests
             // ARRANGE
             _lambdaFunction = new TestEntryPoint();
 
-            await CreateDriver(new Driver { FirstName = "Humberto", LastName = "Bulhões" });
-            await CreateDriver(new Driver { FirstName = "José", LastName = "Alves" });
+            await CreateDriver(new Driver {Name = new Name {FirstName = "Humberto", LastName = "Bulhões"}});
+            await CreateDriver(new Driver {Name = new Name {FirstName = "José", LastName = "Alves"}});
 
             // ACT
             var requestStr = File.ReadAllText("./SampleRequests/DriverCatalogController-ListByLastName.json");
@@ -62,8 +62,8 @@ namespace DriverCatalogService.Tests
 
             var driverList = JsonConvert.DeserializeObject<Driver[]>(response.Body);
             Assert.NotEmpty(driverList);
-            Assert.Equal("Alves", driverList[0].LastName);
-            Assert.Equal("Bulhões", driverList[1].LastName);
+            Assert.Equal("Alves", driverList[0].Name.LastName);
+            Assert.Equal("Bulhões", driverList[1].Name.LastName);
         }
 
         private async Task CreateDriver(Driver newDriver)

@@ -22,7 +22,7 @@ namespace DriverCatalogService.Tests
         public async Task Creating_a_driver_with_valid_data()
         {
             // ARRANGE
-            var newDriver = new Driver { FirstName = "Humberto", LastName = "Bulhões" };
+            var newDriver = new Driver {Name = new Name {FirstName = "Humberto", LastName = "Bulhões"}};
             _lambdaFunction = new TestEntryPoint();
 
             var requestStr = File.ReadAllText("./SampleRequests/DriverCatalogController-Post.json");
@@ -49,15 +49,15 @@ namespace DriverCatalogService.Tests
 
             Assert.Equal(200, response.StatusCode);
             var returnedDriver = JsonConvert.DeserializeObject<Driver>(response.Body);
-            Assert.Equal(newDriver.FirstName, returnedDriver.FirstName);
-            Assert.Equal(newDriver.LastName, returnedDriver.LastName);
+            Assert.Equal(newDriver.Name.FirstName, returnedDriver.Name.FirstName);
+            Assert.Equal(newDriver.Name.LastName, returnedDriver.Name.LastName);
         }
         
         [Fact]
         public async Task Trying_to_create_a_driver_with_invalid_data()
         {
             // ARRANGE
-            var newDriver = new Driver { FirstName = "", LastName = null };
+            var newDriver = new Driver {Name = new Name {FirstName = "", LastName = null}};
             _lambdaFunction = new TestEntryPoint();
 
             var requestStr = File.ReadAllText("./SampleRequests/DriverCatalogController-Post.json");
@@ -72,15 +72,15 @@ namespace DriverCatalogService.Tests
             Assert.Equal(400, response.StatusCode);
 
             var errorResponse = JsonConvert.DeserializeObject<ErrorResponse>(response.Body);
-            Assert.Contains(errorResponse.Errors, e => e.Where == nameof(Driver.FirstName) && e.Problem == "Cannot be empty");
-            Assert.Contains(errorResponse.Errors, e => e.Where == nameof(Driver.LastName) && e.Problem == "Cannot be empty");
+            Assert.Contains(errorResponse.Errors, e => e.Where == $"{nameof(Driver.Name)}.{nameof(Driver.Name.FirstName)}" && e.Problem == "Cannot be empty");
+            Assert.Contains(errorResponse.Errors, e => e.Where == $"{nameof(Driver.Name)}.{nameof(Driver.Name.LastName)}" && e.Problem == "Cannot be empty");
         }
         
         [Fact]
         public async Task Trying_to_create_a_driver_that_already_exists()
         {
             // ARRANGE
-            var newDriver = new Driver { FirstName = "Humberto", LastName = "Bulhões" };
+            var newDriver = new Driver { Name = new Name{ FirstName = "Humberto", LastName = "Bulhões" }};
             _lambdaFunction = new TestEntryPoint();
 
             var requestStr = File.ReadAllText("./SampleRequests/DriverCatalogController-Post.json");
@@ -106,7 +106,7 @@ namespace DriverCatalogService.Tests
         public async Task Updating_a_driver_with_valid_data()
         {
             // ARRANGE
-            var newDriver = new Driver { FirstName = "Humberto", LastName = "Bulhoes" };
+            var newDriver = new Driver {Name = new Name {FirstName = "Humberto", LastName = "Bulhoes"}};
             _lambdaFunction = new TestEntryPoint();
 
             var requestStr = File.ReadAllText("./SampleRequests/DriverCatalogController-Post.json");
@@ -120,8 +120,11 @@ namespace DriverCatalogService.Tests
             var updatedDriver = new Driver
             {
                 Id = response.Body,
-                FirstName = newDriver.FirstName,
-                LastName = "Bulhões"
+                Name = new Name
+                {
+                    FirstName = newDriver.Name.FirstName,
+                    LastName = "Bulhões"
+                }
             };
 
             requestStr = File.ReadAllText("./SampleRequests/DriverCatalogController-Put.json");
@@ -143,8 +146,8 @@ namespace DriverCatalogService.Tests
 
             Assert.Equal(200, response.StatusCode);
             var returnedDriver = JsonConvert.DeserializeObject<Driver>(response.Body);
-            Assert.Equal(updatedDriver.FirstName, returnedDriver.FirstName);
-            Assert.Equal(updatedDriver.LastName, returnedDriver.LastName);
+            Assert.Equal(updatedDriver.Name.FirstName, returnedDriver.Name.FirstName);
+            Assert.Equal(updatedDriver.Name.LastName, returnedDriver.Name.LastName);
             Assert.True(returnedDriver.ModifiedAt > returnedDriver.CreatedAt);
         }
 
@@ -152,7 +155,7 @@ namespace DriverCatalogService.Tests
         public async Task Trying_to_update_of_a_driver_with_invalid_data()
         {
             // ARRANGE
-            var newDriver = new Driver { FirstName = "Humberto", LastName = "Bulhoes" };
+            var newDriver = new Driver { Name = new Name { FirstName = "Humberto", LastName = "Bulhoes" }};
             _lambdaFunction = new TestEntryPoint();
 
             var requestStr = File.ReadAllText("./SampleRequests/DriverCatalogController-Post.json");
@@ -166,8 +169,11 @@ namespace DriverCatalogService.Tests
             var updatedDriver = new Driver
             {
                 Id = response.Body,
-                FirstName = newDriver.FirstName,
-                LastName = null
+                Name = new Name
+                {
+                    FirstName = newDriver.Name.FirstName,
+                    LastName = null
+                }
             };
 
             requestStr = File.ReadAllText("./SampleRequests/DriverCatalogController-Put.json");
@@ -181,14 +187,14 @@ namespace DriverCatalogService.Tests
             Assert.Equal(400, response.StatusCode);
 
             var errorResponse = JsonConvert.DeserializeObject<ErrorResponse>(response.Body);
-            Assert.Contains(errorResponse.Errors, e => e.Where == nameof(Driver.LastName) && e.Problem == "Cannot be empty");
+            Assert.Contains(errorResponse.Errors, e => e.Where == $"{nameof(Driver.Name)}.{nameof(Driver.Name.LastName)}" && e.Problem == "Cannot be empty");
         }
 
         [Fact]
         public async Task Trying_to_update_a_driver_that_does_not_exist()
         {
             // ARRANGE
-            var recordToUpdate = new Driver { Id = new Guid().ToString(), FirstName = "Humberto", LastName = "Bulhoes" };
+            var recordToUpdate = new Driver {Id = new Guid().ToString(), Name = new Name {FirstName = "Humberto", LastName = "Bulhoes"}};
             _lambdaFunction = new TestEntryPoint();
 
             var requestStr = File.ReadAllText("./SampleRequests/DriverCatalogController-Put.json");
@@ -210,7 +216,7 @@ namespace DriverCatalogService.Tests
         public async Task Deleting_a_driver()
         {
             // ARRANGE
-            var newDriver = new Driver { FirstName = "Humberto", LastName = "Bulhoes" };
+            var newDriver = new Driver { Name = new Name { FirstName = "Humberto", LastName = "Bulhoes" }};
             _lambdaFunction = new TestEntryPoint();
 
             var requestStr = File.ReadAllText("./SampleRequests/DriverCatalogController-Post.json");

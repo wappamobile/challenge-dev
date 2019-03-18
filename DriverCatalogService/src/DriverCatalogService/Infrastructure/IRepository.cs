@@ -9,8 +9,8 @@ namespace DriverCatalogService.Infrastructure
         void DropTable();
         void Save(Driver driver);
         Driver Load(string driverId);
-        bool Exists(string driverFirstName, string driverLastName);
-        bool ContainsAnother(string driverId, string driverFirstName, string driverLastName);
+        bool Exists(Name driverName);
+        bool ContainsAnother(string driverId, Name driverName);
         void Delete(string driverId);
         Driver[] List(string sortByField, string sortOrder);
     }

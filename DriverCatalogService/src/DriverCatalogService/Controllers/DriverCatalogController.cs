@@ -86,8 +86,8 @@ namespace DriverCatalogService.Controllers
                 return new ErrorResponse { Errors = new []{ new Error { Problem = "Not found", Where = nameof(Driver)} }};
             }
 
-            target.FirstName = driver.FirstName;
-            target.LastName = driver.LastName;
+            target.Name.FirstName = driver.Name.FirstName;
+            target.Name.LastName = driver.Name.LastName;
             target.ModifiedAt = DateTime.UtcNow;
 
             _repository.Save(target);
@@ -96,7 +96,7 @@ namespace DriverCatalogService.Controllers
             return null;
         }
         
-        // PUT api/driver
+        // DELETE api/driver/{id}
         [HttpDelete("{id}")]
         [LambdaSerializer(typeof(JsonSerializer))]
         public object Delete(string id)

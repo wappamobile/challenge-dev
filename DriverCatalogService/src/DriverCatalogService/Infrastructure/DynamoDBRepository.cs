@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Threading;
 using System.Threading.Tasks;
 using Amazon;
@@ -110,33 +111,53 @@ namespace DriverCatalogService.Infrastructure
 
         private static Driver InstantiateDriver(Document doc)
         {
+            var nameDoc = doc[nameof(Driver.Name)].AsDocument();
+
             return new Driver
             {
                 Id = doc[nameof(Driver.Id)],
-                FirstName = doc[nameof(Driver.FirstName)],
-                LastName = doc[nameof(Driver.LastName)],
+                Name = new Name
+                {
+                    FirstName = nameDoc[nameof(Name.FirstName)],
+                    LastName = nameDoc[nameof(Name.LastName)]
+                },
                 CreatedAt = DateTime.Parse(doc[nameof(Driver.CreatedAt)]),
-                ModifiedAt = !Equals(doc[nameof(Driver.ModifiedAt)], DynamoDBNull.Null)? DateTime.Parse(doc[nameof(Driver.ModifiedAt)]) : (DateTime?) null
+                ModifiedAt = !Equals(doc[nameof(Driver.ModifiedAt)], DynamoDBNull.Null) ? DateTime.Parse(doc[nameof(Driver.ModifiedAt)]) : (DateTime?) null
             };
         }
 
-        public bool Exists(string driverFirstName, string driverLastName)
+        public bool Exists(Name driverName)
         {
-            var table = _ddbContext.GetTargetTable<Driver>();
-            var filter = new ScanFilter();
-            filter.AddCondition(nameof(Driver.FirstName), ScanOperator.Equal, driverFirstName);
-            filter.AddCondition(nameof(Driver.LastName), ScanOperator.Equal, driverLastName);
+            var request = new ScanRequest
+            {
+                TableName = _targetTableName,
+                //AttributesToGet = new List<string> {nameof(Driver.Id)},
+                ExpressionAttributeValues = new Dictionary<string, AttributeValue>
+                {
+                    {":firstName", new AttributeValue { S = driverName.FirstName}},
+                    {":lastName", new AttributeValue { S = driverName.LastName}}
+                },
+                ExpressionAttributeNames = new Dictionary<string, string>
+                {
+                    {"#n", "Name"}
+                },
+                FilterExpression = "#n.FirstName = :firstName and #n.LastName = :lastName",
+                Limit = 1
+            };
 
-            var search = table.Scan(filter);
-            return search.GetNextSetAsync().Result.Any();
+            using (var client = new AmazonDynamoDBClient(_region))
+            {
+                var response = client.ScanAsync(request).Result;
+                return response.Count > 0;
+            }
         }
 
-        public bool ContainsAnother(string driverId, string driverFirstName, string driverLastName)
+        public bool ContainsAnother(string driverId, Name driverName)
         {
             var table = _ddbContext.GetTargetTable<Driver>();
             var filter = new ScanFilter();
-            filter.AddCondition(nameof(Driver.FirstName), ScanOperator.Equal, driverFirstName);
-            filter.AddCondition(nameof(Driver.LastName), ScanOperator.Equal, driverLastName);
+            filter.AddCondition($"{nameof(Driver.Name)}.{nameof(Name.FirstName)}", ScanOperator.Equal, driverName.FirstName);
+            filter.AddCondition($"{nameof(Driver.Name)}.{nameof(Name.LastName)}", ScanOperator.Equal, driverName.LastName);
             filter.AddCondition(nameof(Driver.Id), ScanOperator.NotEqual, driverId);
 
             var search = table.Scan(filter);
@@ -154,7 +175,14 @@ namespace DriverCatalogService.Infrastructure
             var search = table.Scan(new ScanFilter());
 
             var docs = search.GetNextSetAsync().Result;
-            docs = sortOrder == "asc" ? docs.OrderBy(d => d[sortByField].AsString()).ToList() : docs.OrderByDescending(d => d[sortByField].AsString()).ToList();
+
+            string KeySelector(Document d)
+            {
+                var n = d[nameof(Driver.Name)].AsDocument();
+                return n[sortByField].AsString();
+            }
+
+            docs = sortOrder == "asc" ? docs.OrderBy(KeySelector).ToList() : docs.OrderByDescending(KeySelector).ToList();
 
             return docs.Select(InstantiateDriver).ToArray();
         }
