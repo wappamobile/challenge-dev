@@ -38,4 +38,4 @@ Além do cadastro também será necessário disponibilizar uma **listagem dos ca
 ### Desejável
  - Documentação da API
  - Testes
- - Nos informe também o nível de dificuldade e um feedback sobre o desafio proposto [nesta pesquisa] (https://goo.gl/forms/qui1n636NKY2w96V2)
+ - Nos informe também o nível de dificuldade e um feedback sobre o desafio proposto [nesta pesquisa](https://goo.gl/forms/qui1n636NKY2w96V2)
