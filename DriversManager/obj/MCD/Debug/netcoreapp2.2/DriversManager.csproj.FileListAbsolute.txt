@@ -1,0 +1,14 @@
+C:\projetos\driversmanager\driversmanager\obj\MCD\Debug\netcoreapp2.2\DriversManager.csprojAssemblyReference.cache
+C:\projetos\driversmanager\driversmanager\obj\MCD\Debug\netcoreapp2.2\DriversManager.csproj.CoreCompileInputs.cache
+C:\projetos\driversmanager\driversmanager\obj\MCD\Debug\netcoreapp2.2\DriversManager.RazorAssemblyInfo.cache
+C:\projetos\driversmanager\driversmanager\obj\MCD\Debug\netcoreapp2.2\DriversManager.RazorAssemblyInfo.cs
+C:\projetos\driversmanager\driversmanager\obj\MCD\Debug\netcoreapp2.2\DriversManager.AssemblyInfoInputs.cache
+C:\projetos\driversmanager\driversmanager\obj\MCD\Debug\netcoreapp2.2\DriversManager.AssemblyInfo.cs
+C:\projetos\driversmanager\driversmanager\bin\MCD\Debug\netcoreapp2.2\DriversManager.deps.json
+C:\projetos\driversmanager\driversmanager\bin\MCD\Debug\netcoreapp2.2\DriversManager.runtimeconfig.json
+C:\projetos\driversmanager\driversmanager\bin\MCD\Debug\netcoreapp2.2\DriversManager.runtimeconfig.dev.json
+C:\projetos\driversmanager\driversmanager\bin\MCD\Debug\netcoreapp2.2\DriversManager.dll
+C:\projetos\driversmanager\driversmanager\bin\MCD\Debug\netcoreapp2.2\DriversManager.pdb
+C:\projetos\driversmanager\driversmanager\obj\MCD\Debug\netcoreapp2.2\DriversManager.RazorTargetAssemblyInfo.cache
+C:\projetos\driversmanager\driversmanager\obj\MCD\Debug\netcoreapp2.2\DriversManager.dll
+C:\projetos\driversmanager\driversmanager\obj\MCD\Debug\netcoreapp2.2\DriversManager.pdb
