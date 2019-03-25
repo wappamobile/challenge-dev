@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using Cadastro.Data;
@@ -14,6 +15,19 @@ namespace Cadastro.Model
     {
         private  readonly AppDBContext _dbContext = new AppDBContext();
 
+        public IEnumerable<Motorista> RetornaTodos()
+        {
+            try
+            {
+                return _dbContext.Motoristas;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return null;
+            }
+           
+        }
 
         public bool NovoCadastro(Motorista novoMotorista)
         {
@@ -33,16 +47,39 @@ namespace Cadastro.Model
 
         public bool AtualizaCadastro(Motorista motorista)
         {
+            try
+            {
+                var result = _dbContext.Motoristas.Find(motorista.Id);
+                result.Nome = motorista.Nome;
+                result.Sobrenome = motorista.Sobrenome;
+                result.Endereco = motorista.Endereco;
+                result.Veiculo = motorista.Veiculo;
 
-            //var motorista = _dbContext.Motoristas.Find(motorista.Id);
-            return true;
+                _dbContext.Motoristas.Update(result);
+                return _dbContext.SaveChanges() > 0;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+          
         }
 
         public bool DeleteCadastro(int id)
         {
-            var motorista = _dbContext.Motoristas.Find(id);
-            _dbContext.Motoristas.Remove(motorista);
-            return _dbContext.SaveChanges() > 0;
+            try
+            {
+                var motorista = _dbContext.Motoristas.Find(id);
+                _dbContext.Motoristas.Remove(motorista);
+                return _dbContext.SaveChanges() > 0;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+           
         }
 
     }

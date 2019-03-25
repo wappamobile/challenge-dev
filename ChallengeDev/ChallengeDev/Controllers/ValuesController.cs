@@ -6,6 +6,7 @@ using Cadastro.Entities;
 using Cadastro.Interface;
 using Cadastro.Model;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace ChallengeDev.Controllers
 {
@@ -14,18 +15,13 @@ namespace ChallengeDev.Controllers
     public class ValuesController : ControllerBase
     {
         private readonly ICadastroModel _cadastro =  new CadastroModel();
-  
+
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public JsonResult Get()
         {
-            
-            _cadastro.NovoCadastro(new Motorista()
-            {
-
-            });
-
-            return new string[] { "value1", "value2" };
+            var motoristas = JsonConvert.SerializeObject(_cadastro.RetornaTodos());
+            return new JsonResult(motoristas);
         }
 
         // GET api/values/5
@@ -37,17 +33,23 @@ namespace ChallengeDev.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Motorista novoMotorista)
         {
-
+            _cadastro.NovoCadastro(novoMotorista);
         }
 
         // PUT api/values/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
+           
         }
 
+        [HttpPost]
+        public bool Teste()
+        {
+            return true;
+        }
         // DELETE api/values/5
         [HttpDelete("{id}")]
         public void Delete(int id)

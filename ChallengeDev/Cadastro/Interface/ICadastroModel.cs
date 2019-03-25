@@ -1,4 +1,5 @@
-﻿using Cadastro.Entities;
+﻿using System.Collections.Generic;
+using Cadastro.Entities;
 
 namespace Cadastro.Interface
 {
@@ -7,5 +8,7 @@ namespace Cadastro.Interface
         bool NovoCadastro(Motorista novoMotorista);
         bool DeleteCadastro(int id);
         bool AtualizaCadastro(Motorista motorista);
+
+        IEnumerable<Motorista> RetornaTodos();
     }
 }
