@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WappaMobile.Application\WappaMobile.Application.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Geocoding.Google" Version="4.0.1" />
+  </ItemGroup>
+</Project>

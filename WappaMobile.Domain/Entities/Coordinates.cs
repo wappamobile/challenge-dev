@@ -9,23 +9,23 @@
         /// Gets the longitude.
         /// </summary>
         /// <value>The longitude.</value>
-        public float Longitude { get; }
+        public double Longitude { get; }
 
         /// <summary>
-        /// Gets the latidude.
+        /// Gets the latitude.
         /// </summary>
-        /// <value>The latidude.</value>
-        public float Latidude { get; }
+        /// <value>The latitude.</value>
+        public double Latitude { get; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="T:WappaMobile.Domain.Coordinates"/> struct.
         /// </summary>
+        /// <param name="latitude">Latitude.</param>
         /// <param name="longitude">Longitude.</param>
-        /// <param name="latidude">Latidude.</param>
-        public Coordinates(float longitude, float latidude)
+        public Coordinates(double latitude, double longitude)
         {
             Longitude = longitude;
-            Latidude = latidude;
+            Latitude = latitude;
         }
     }
 }

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using WappaMobile.Application;
-using Microsoft.AspNetCore.Mvc;
 using MediatR;
+using Microsoft.AspNetCore.Mvc;
+using WappaMobile.Application;
 using WappaMobile.Domain;
 
 namespace WappaMobile.WebAPI.Controllers
@@ -133,7 +133,7 @@ namespace WappaMobile.WebAPI.Controllers
             }
             catch (NotFoundException ex)
             {
-                return NotFound();
+                return NotFound(ex.Message);
             }
         }
     }

@@ -40,5 +40,17 @@
         /// </summary>
         /// <value>The coordinates.</value>
         public Coordinates Coordinates { get; set; }
+
+        /// <summary>
+        /// Returns a <see cref="T:System.String"/> that represents the current <see cref="T:WappaMobile.Domain.Address"/>.
+        /// </summary>
+        /// <returns>A <see cref="T:System.String"/> that represents the current <see cref="T:WappaMobile.Domain.Address"/>.</returns>
+        public override string ToString()
+        {
+            return $@"{Line1}
+{Line2}
+{Municipality}, {State}
+{ZipCode}";
+        }
     }
 }

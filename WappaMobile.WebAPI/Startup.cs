@@ -1,23 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using Microsoft.EntityFrameworkCore;
-using Swashbuckle.AspNetCore.Swagger;
-using WappaMobile.Application;
-using WappaMobile.Persistence;
+using System.Reflection;
 using FluentValidation.AspNetCore;
 using Hellang.Middleware.ProblemDetails;
-using WappaMobile.Domain;
-using System.Reflection;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Swashbuckle.AspNetCore.Swagger;
+using WappaMobile.Application;
+using WappaMobile.Infrastructure;
+using WappaMobile.Persistence;
 
 namespace WappaMobile.WebAPI
 {
@@ -44,6 +38,8 @@ namespace WappaMobile.WebAPI
             services.AddDbContext<DriverContext>(options => options.UseInMemoryDatabase("driverDb"));
 
             services.AddCommonInfrastructure();
+
+            services.AddGoogleGeocoder(Configuration.GetSection("GoogleGeocoder").GetValue<string>("ApiKey"));
 
             services.AddSwaggerGen(c =>
             {

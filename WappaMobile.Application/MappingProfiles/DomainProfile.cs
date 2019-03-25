@@ -13,7 +13,7 @@ namespace WappaMobile.Application
             CreateMap<Driver, ModifyDriverDto>().ReverseMap();
 
             CreateMap<Driver, ViewDriverDto>()
-                .ForMember(d => d.AddressLatitude, opt => opt.MapFrom(d => d.Address.Coordinates.Latidude))
+                .ForMember(d => d.AddressLatitude, opt => opt.MapFrom(d => d.Address.Coordinates.Latitude))
                 .ForMember(d => d.AddressLongitude, opt => opt.MapFrom(d => d.Address.Coordinates.Longitude));
         }
     }

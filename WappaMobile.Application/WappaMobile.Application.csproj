@@ -14,6 +14,8 @@
         <Folder Include="Queries\GetDriver\" />
         <Folder Include="DTOs\" />
         <Folder Include="Validators\" />
+        <Folder Include="Services\" />
+        <Folder Include="Services\Geocoding\" />
     </ItemGroup>
     <ItemGroup>
         <Compile Remove="Class1.cs" />

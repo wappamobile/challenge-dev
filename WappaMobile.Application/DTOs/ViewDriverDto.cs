@@ -74,12 +74,12 @@ namespace WappaMobile.Application
         /// Gets or sets the address latitude.
         /// </summary>
         /// <value>The address latitude.</value>
-        public float AddressLatitude { get; set; }
+        public double AddressLatitude { get; set; }
 
         /// <summary>
         /// Gets or sets the address longitude.
         /// </summary>
         /// <value>The address longitude.</value>
-        public float AddressLongitude { get; set; }
+        public double AddressLongitude { get; set; }
     }
 }
