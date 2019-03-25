@@ -1,10 +1,10 @@
-﻿using ShareBook.Domain;
-using ShareBook.Domain.Common;
-using ShareBook.Service.Generic;
+﻿using DriverLib.Domain;
+using DriverLib.Domain.Common;
+using DriverLib.Service.Generic;
 using System;
 using System.Collections.Generic;
 
-namespace ShareBook.Service
+namespace DriverLib.Service
 {
     public interface IUserService : IBaseService<User>
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ShareBook.Service.Authorization
+namespace DriverLib.Service.Authorization
 {
     public class Permissions
     {

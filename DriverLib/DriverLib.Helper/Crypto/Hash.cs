@@ -2,7 +2,7 @@
 using System.Text;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 
-namespace ShareBook.Helper.Crypto
+namespace DriverLib.Helper.Crypto
 {
     public class Hash
     {

@@ -1,12 +1,12 @@
-﻿using ShareBook.Domain.Common;
-using ShareBook.Domain.Enums;
-using ShareBook.Helper.Crypto;
+﻿using DriverLib.Domain.Common;
+using DriverLib.Domain.Enums;
+using DriverLib.Helper.Crypto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace ShareBook.Domain
+namespace DriverLib.Domain
 {
     public class User : BaseEntity
     {
@@ -20,8 +20,6 @@ namespace ShareBook.Domain
         public  string Phone{ get; set; }
         public Profile Profile { get;  set; } = Profile.User;
         public virtual Address Address { get; set; }
-        public virtual ICollection<BookUser> BookUsers { get; set; }
-        public virtual ICollection<Book> BooksDonated { get; set; }
 
         public bool PasswordIsStrong()
         {
@@ -69,9 +67,5 @@ namespace ShareBook.Domain
         }
 
         public string Location() => Address.City + "-" + Address.State;
-
-        public int TotalBooksWon() => BookUsers.Where(b => b.Status == DonationStatus.Donated).ToList().Count ;
-
-        public int TotalBooksDonated() => BooksDonated.Count;
     }
 }

@@ -1,7 +1,7 @@
-﻿using ShareBook.Helper.Extensions;
+﻿using DriverLib.Helper.Extensions;
 using System.IO;
 
-namespace ShareBook.Helper.Image
+namespace DriverLib.Helper.Image
 {
     public static class ImageHelper
     {

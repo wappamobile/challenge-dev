@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ShareBook.Api.ViewModels
+namespace DriverLib.Api.ViewModels
 {
     public class LoginUserVM
     {

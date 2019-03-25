@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace ShareBook.Helper.Extensions
+namespace DriverLib.Helper.Extensions
 {
     public static class StringExtension
     {

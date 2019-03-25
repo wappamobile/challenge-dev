@@ -1,7 +1,7 @@
-﻿using ShareBook.Domain;
-using ShareBook.Infra.CrossCutting.Identity;
+﻿using DriverLib.Domain;
+using DriverLib.Infra.CrossCutting.Identity;
 
-namespace ShareBook.Infra.CrossCutting.Identity.Interfaces
+namespace DriverLib.Infra.CrossCutting.Identity.Interfaces
 {
     public interface IApplicationSignInManager
     {

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ShareBook.Domain.Exceptions
+namespace DriverLib.Domain.Exceptions
 {
-    public class ShareBookException : Exception
+    public class DriverLibException : Exception
     {
         public static Dictionary<Error, string> ErrorMessages = new Dictionary<Error, string>()
         {
@@ -22,9 +22,9 @@ namespace ShareBook.Domain.Exceptions
 
         public Error ErrorType { get; set; }
 
-        public ShareBookException(string message) : this(Error.BadRequest, message) { }
-        public ShareBookException(Error error) : this(error, ErrorMessages[error]) { }
-        public ShareBookException(Error error, string message) : base(message)
+        public DriverLibException(string message) : this(Error.BadRequest, message) { }
+        public DriverLibException(Error error) : this(error, ErrorMessages[error]) { }
+        public DriverLibException(Error error, string message) : base(message)
         {
             ErrorType = error;
         }

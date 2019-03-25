@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace ShareBook.Service
+namespace DriverLib.Service
 {
     public class EmailTemplate : IEmailTemplate
     {

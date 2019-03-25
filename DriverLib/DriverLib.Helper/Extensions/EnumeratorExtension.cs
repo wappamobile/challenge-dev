@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace ShareBook.Helper.Extensions
+namespace DriverLib.Helper.Extensions
 {
     public static class EnumeratorExtension
     {

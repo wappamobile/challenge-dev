@@ -10,65 +10,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ShareBook.Helper\DriverLib.Helper.csproj" />
-    <ProjectReference Include="..\ShareBook.Repository\DriverLib.Infra.Data.csproj" />
+    <Folder Include="Email\Templates\" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="Email\Templates\ChooseDateRenewTemplate.html" />
-    <None Remove="Email\Templates\LateDonationNotification.html" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Update="Email\Templates\BookDonatedNotifyDonorTemplate.html">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Email\Templates\BookNoticeDeclinedUsersTemplate.html">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Email\Templates\BookNoticeDonorTemplate.html">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Email\Templates\ForgotPasswordTemplate.html">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Email\Templates\BookApprovedTemplate.html">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Email\Templates\BookDonatedTemplate.html">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Email\Templates\BookRequestedTemplate.html">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Email\Templates\ContactUsNotificationTemplate.html">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Email\Templates\ContactUsTemplate.html">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Email\Templates\NewBookInsertedTemplate.html">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Email\Templates\WaitingApprovalTemplate.html">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Email\Templates\BookCanceledNoticeUsersTemplate.html">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Email\Templates\ChooseDateReminderTemplate.html">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Email\Templates\BookTrackingNumberNoticeWinnerTemplate.html">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Email\Templates\LateDonationNotification.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Email\Templates\ChooseDateRenewTemplate.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <ProjectReference Include="..\DriverLib.Helper\DriverLib.Helper.csproj" />
+    <ProjectReference Include="..\DriverLib.Repository\DriverLib.Infra.Data.csproj" />
   </ItemGroup>
 </Project>

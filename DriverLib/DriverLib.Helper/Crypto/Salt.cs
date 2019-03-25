@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Security.Cryptography;
 
-namespace ShareBook.Helper.Crypto
+namespace DriverLib.Helper.Crypto
 {
     public class Salt
     {

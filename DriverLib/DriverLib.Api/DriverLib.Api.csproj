@@ -22,9 +22,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ShareBook.Infra.CrossCutting.Identity\DriverLib.Infra.CrossCutting.Identity.csproj" />
-    <ProjectReference Include="..\Sharebook.Jobs\DriverLib.Jobs.csproj" />
-    <ProjectReference Include="..\ShareBook.Service\DriverLib.Service.csproj" />
+    <ProjectReference Include="..\DriverLib.Infra.CrossCutting.Identity\DriverLib.Infra.CrossCutting.Identity.csproj" />
+    <ProjectReference Include="..\DriverLib.Jobs\DriverLib.Jobs.csproj" />
+    <ProjectReference Include="..\DriverLib.Service\DriverLib.Service.csproj" />
   </ItemGroup>
 
 </Project>

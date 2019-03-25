@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using ShareBook.Domain;
+using DriverLib.Domain;
 
-namespace ShareBook.Repository.Mapping
+namespace DriverLib.Repository.Mapping
 {
     public class LogEntryMap
     {

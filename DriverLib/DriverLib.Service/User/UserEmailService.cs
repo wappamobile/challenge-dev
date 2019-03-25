@@ -1,13 +1,13 @@
 ﻿using Microsoft.Extensions.Options;
-using ShareBook.Domain;
-using ShareBook.Service.Server;
+using DriverLib.Domain;
+using DriverLib.Service.Server;
 
-namespace ShareBook.Service
+namespace DriverLib.Service
 {
     public class UserEmailService : IUserEmailService
     {
         private const string ForgotPasswordTemplate = "ForgotPasswordTemplate";
-        private const string ForgotPasswordTitle = "Esqueceu sua senha - Sharebook";
+        private const string ForgotPasswordTitle = "Esqueceu sua senha - DriverLib";
 
         private readonly IEmailService _emailService;
         private readonly IEmailTemplate _emailTemplate;

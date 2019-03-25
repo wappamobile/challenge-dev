@@ -1,12 +1,12 @@
 ﻿using FluentValidation;
-using ShareBook.Domain.Common;
-using ShareBook.Repository;
-using ShareBook.Repository.Repository;
-using ShareBook.Repository.UoW;
+using DriverLib.Domain.Common;
+using DriverLib.Repository;
+using DriverLib.Repository.Repository;
+using DriverLib.Repository.UoW;
 using System;
 using System.Linq.Expressions;
 
-namespace ShareBook.Service.Generic
+namespace DriverLib.Service.Generic
 {
     public class BaseService<TEntity> : IBaseService<TEntity> where TEntity : class
     {

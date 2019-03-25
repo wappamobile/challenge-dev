@@ -1,7 +1,7 @@
 ﻿using System;
-using ShareBook.Domain.Common;
+using DriverLib.Domain.Common;
 
-namespace Sharebook.Jobs
+namespace DriverLib.Jobs
 {
     public interface IJobExecutor
     {

@@ -1,7 +1,7 @@
-﻿using ShareBook.Domain;
+﻿using DriverLib.Domain;
 using System;
 
-namespace ShareBook.Api.ViewModels
+namespace DriverLib.Api.ViewModels
 {
     public class UserVM : BaseViewModel
     {

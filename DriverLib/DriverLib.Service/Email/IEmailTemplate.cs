@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace ShareBook.Service
+namespace DriverLib.Service
 {
     public interface IEmailTemplate
     {

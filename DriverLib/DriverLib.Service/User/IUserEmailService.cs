@@ -1,6 +1,6 @@
-﻿using ShareBook.Domain;
+﻿using DriverLib.Domain;
 
-namespace ShareBook.Service
+namespace DriverLib.Service
 {
     public interface IUserEmailService
     {

@@ -1,4 +1,4 @@
-﻿namespace ShareBook.Service.Upload
+﻿namespace DriverLib.Service.Upload
 {
     public interface IUploadService
     {

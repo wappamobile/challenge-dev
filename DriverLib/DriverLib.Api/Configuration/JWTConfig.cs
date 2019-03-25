@@ -3,10 +3,10 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
-using ShareBook.Infra.CrossCutting.Identity;
+using DriverLib.Infra.CrossCutting.Identity;
 using System;
 
-namespace ShareBook.Api.Configuration
+namespace DriverLib.Api.Configuration
 {
     public static class JWTConfig
     {

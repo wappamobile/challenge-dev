@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ShareBook.Domain.Common
+namespace DriverLib.Domain.Common
 {
     public class JobExecutorResult
     {

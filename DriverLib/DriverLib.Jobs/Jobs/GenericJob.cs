@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Linq;
-using ShareBook.Domain;
-using ShareBook.Domain.Enums;
-using ShareBook.Repository;
-using ShareBook.Helper;
+using DriverLib.Domain;
+using DriverLib.Domain.Enums;
+using DriverLib.Repository;
+using DriverLib.Helper;
 
-namespace Sharebook.Jobs
+namespace DriverLib.Jobs
 {
     public class GenericJob
     {

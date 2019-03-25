@@ -1,6 +1,6 @@
 ﻿
 
-namespace ShareBook.Infra.CrossCutting.Identity
+namespace DriverLib.Infra.CrossCutting.Identity
 
 {
     public class TokenConfigurations

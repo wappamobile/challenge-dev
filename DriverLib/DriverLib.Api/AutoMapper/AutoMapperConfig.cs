@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-namespace ShareBook.Api.AutoMapper
+namespace DriverLib.Api.AutoMapper
 {
     public class AutoMapperConfig
     {

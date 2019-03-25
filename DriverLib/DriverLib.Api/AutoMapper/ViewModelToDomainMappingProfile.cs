@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using ShareBook.Api.ViewModels;
-using ShareBook.Domain;
+using DriverLib.Api.ViewModels;
+using DriverLib.Domain;
 
-namespace ShareBook.Api.AutoMapper
+namespace DriverLib.Api.AutoMapper
 {
     public class ViewModelToDomainMappingProfile : Profile
     {
@@ -10,11 +10,6 @@ namespace ShareBook.Api.AutoMapper
 
         protected ViewModelToDomainMappingProfile(string profileName) : base(profileName)
         {
-            #region [ Book ]
-            CreateMap<CreateBookVM, Book>().ReverseMap();
-            CreateMap<UpdateBookVM, Book>().ReverseMap();
-            CreateMap<DonateBookUserVM, BookUser>().ReverseMap();
-            #endregion
 
             #region [ User ]
             CreateMap<LoginUserVM, User>();
@@ -32,9 +27,6 @@ namespace ShareBook.Api.AutoMapper
             CreateMap<UpdateUserVM, User>();
             #endregion
 
-            #region [ ContactUs ]
-            CreateMap<ContactUsVM, ContactUs>();
-            #endregion
         }
     }
 }

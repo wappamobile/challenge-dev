@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ShareBook.Domain.Common
+namespace DriverLib.Domain.Common
 {
     public class PagedList<T>
     {

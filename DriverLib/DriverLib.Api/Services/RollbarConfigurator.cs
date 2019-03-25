@@ -1,6 +1,6 @@
 ﻿using Rollbar;
 
-namespace ShareBook.Api.Services
+namespace DriverLib.Api.Services
 {
     public static class RollbarConfigurator
     {

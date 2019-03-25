@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using ShareBook.Domain;
-using ShareBook.Domain.Common;
-using ShareBook.Repository;
+using DriverLib.Domain;
+using DriverLib.Domain.Common;
+using DriverLib.Repository;
 using System.Diagnostics;
 
-namespace Sharebook.Jobs
+namespace DriverLib.Jobs
 {
     // inspirado no design pattern chain of responsability
     // https://pt.wikipedia.org/wiki/Chain_of_Responsibility
@@ -16,18 +16,13 @@ namespace Sharebook.Jobs
         private readonly IJobHistoryRepository _jobHistoryRepo;
         private Stopwatch _stopwatch;
 
-        public JobExecutor(IJobHistoryRepository jobHistoryRepo,
-                           ChooseDateReminder job1,
-                           LateDonationNotification job2,
-                           RemoveBookFromShowcase job3)
+        public JobExecutor(IJobHistoryRepository jobHistoryRepo)
         {
             _jobHistoryRepo = jobHistoryRepo;
 
             _jobs = new List<IJob>
             {
-                job1,
-                job2,
-                job3
+
             };
 
         }

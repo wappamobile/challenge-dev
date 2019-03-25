@@ -1,7 +1,7 @@
-﻿using ShareBook.Domain;
+﻿using DriverLib.Domain;
 using System.Threading.Tasks;
 
-namespace ShareBook.Repository
+namespace DriverLib.Repository
 {
     public class UserRepository : RepositoryGeneric<User>, IUserRepository
     {

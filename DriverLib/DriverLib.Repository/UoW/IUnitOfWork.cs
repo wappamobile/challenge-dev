@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ShareBook.Repository.UoW
+namespace DriverLib.Repository.UoW
 {
     public interface IUnitOfWork : IDisposable
     {

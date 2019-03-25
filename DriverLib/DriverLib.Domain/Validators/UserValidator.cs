@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
 using System.Text.RegularExpressions;
 
-namespace ShareBook.Domain.Validators
+namespace DriverLib.Domain.Validators
 {
     public class UserValidator : AbstractValidator<User>
     {

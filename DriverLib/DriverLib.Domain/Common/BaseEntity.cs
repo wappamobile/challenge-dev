@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ShareBook.Domain.Common
+namespace DriverLib.Domain.Common
 {
     public abstract class BaseEntity : IIdProperty
     {

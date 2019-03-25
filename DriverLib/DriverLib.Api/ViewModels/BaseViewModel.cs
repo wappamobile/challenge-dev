@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
-using ShareBook.Domain.Common;
+using DriverLib.Domain.Common;
 using System;
 
-namespace ShareBook.Api.ViewModels
+namespace DriverLib.Api.ViewModels
 {
     public abstract class BaseViewModel : IIdProperty
     {

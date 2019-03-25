@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using ShareBook.Domain.Common;
-using ShareBook.Domain.Enums;
+using DriverLib.Domain.Common;
+using DriverLib.Domain.Enums;
 
-namespace ShareBook.Domain
+namespace DriverLib.Domain
 {
     public class JobHistory : BaseEntity
     {

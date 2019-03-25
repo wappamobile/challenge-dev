@@ -1,7 +1,7 @@
-﻿using ShareBook.Domain.Enums;
+﻿using DriverLib.Domain.Enums;
 using System;
 
-namespace Sharebook.Jobs
+namespace DriverLib.Jobs
 {
     public interface IJob
     {

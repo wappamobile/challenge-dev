@@ -4,10 +4,10 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 using Rollbar;
-using ShareBook.Domain.Common;
-using ShareBook.Domain.Exceptions;
+using DriverLib.Domain.Common;
+using DriverLib.Domain.Exceptions;
 
-namespace ShareBook.Api.Middleware
+namespace DriverLib.Api.Middleware
 {
     // You may need to install the Microsoft.AspNetCore.Http.Abstractions package into your project
     public class ExceptionHandlerMiddleware
@@ -25,7 +25,7 @@ namespace ShareBook.Api.Middleware
             {
                 await _next(httpContext);
             }
-            catch (ShareBookException ex)
+            catch (DriverLibException ex)
             {
                 var result = new Result();
                 result.Messages.Add(ex.Message);

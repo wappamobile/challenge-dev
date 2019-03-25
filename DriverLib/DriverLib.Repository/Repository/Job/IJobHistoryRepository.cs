@@ -1,6 +1,6 @@
-﻿using ShareBook.Domain;
+﻿using DriverLib.Domain;
 
-namespace ShareBook.Repository
+namespace DriverLib.Repository
 {
     public interface IJobHistoryRepository : IRepositoryGeneric<JobHistory>
     {

@@ -1,5 +1,5 @@
 ﻿
-namespace ShareBook.Domain.Enums
+namespace DriverLib.Domain.Enums
 {
     public enum Profile
     {

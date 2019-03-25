@@ -1,10 +1,10 @@
-﻿using ShareBook.Domain;
-using ShareBook.Domain.Enums;
+﻿using DriverLib.Domain;
+using DriverLib.Domain.Enums;
 using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 
-namespace ShareBook.Test.Unit.Mocks
+namespace DriverLib.Test.Unit.Mocks
 {
     public class UserMock
     {
@@ -35,7 +35,7 @@ namespace ShareBook.Test.Unit.Mocks
                 Name = "Rodrigo",
                 Password = PASSWORD_HASH,
                 PasswordSalt = PASSWORD_SALT,
-                Email = "rodrigo@sharebook.com",
+                Email = "rodrigo@DriverLib.com",
                 Linkedin = "linkedin.com/rodrigo",
                 Profile = Profile.User
             };
@@ -50,7 +50,7 @@ namespace ShareBook.Test.Unit.Mocks
                 Name = "Walter Vinicius",
                 Password = PASSWORD_HASH,
                 PasswordSalt = PASSWORD_SALT,
-                Email = "walter@sharebook.com",
+                Email = "walter@DriverLib.com",
                 Linkedin = "linkedin.com/walter",
                 Profile = Profile.User
             };
@@ -64,7 +64,7 @@ namespace ShareBook.Test.Unit.Mocks
                 Name = "Cussa Mitre",
                 Password = PASSWORD_HASH,
                 PasswordSalt = PASSWORD_SALT,
-                Email = "cussa@sharebook.com",
+                Email = "cussa@DriverLib.com",
                 Profile = Profile.Administrator
             };
         }

@@ -1,21 +1,21 @@
 ﻿using Moq;
-using ShareBook.Domain;
-using ShareBook.Domain.Common;
-using ShareBook.Domain.Validators;
-using ShareBook.Repository;
-using ShareBook.Repository.Repository;
-using ShareBook.Service;
-using ShareBook.Test.Unit.Mocks;
+using DriverLib.Domain;
+using DriverLib.Domain.Common;
+using DriverLib.Domain.Validators;
+using DriverLib.Repository;
+using DriverLib.Repository.Repository;
+using DriverLib.Service;
+using DriverLib.Test.Unit.Mocks;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading;
 using Xunit;
-using ShareBook.Repository.UoW;
-using ShareBook.Infra.CrossCutting.Identity.Interfaces;
+using DriverLib.Repository.UoW;
+using DriverLib.Infra.CrossCutting.Identity.Interfaces;
 
-namespace ShareBook.Test.Unit.Services
+namespace DriverLib.Test.Unit.Services
 {
     public class UserServiceTests
     {
@@ -77,7 +77,7 @@ namespace ShareBook.Test.Unit.Services
 
             Result<User> result = service.Insert(new User()
             {
-                Email = "jose@sharebook.com",
+                Email = "jose@DriverLib.com",
                 Password = "Password.123",
                 Name = "José da Silva",
                 Linkedin = @"linkedin.com\jose-silva",
@@ -121,7 +121,7 @@ namespace ShareBook.Test.Unit.Services
                 Address = new Address ()
                 {
                     PostalCode = "04473-140",
-                    Street = "Av sharebook",
+                    Street = "Av DriverLib",
                     Number = "5",
                     City = "São Paulo",
                     Country = "Brasil",
@@ -175,7 +175,7 @@ namespace ShareBook.Test.Unit.Services
             var service = new UserService(userRepositoryMock.Object, unitOfWorkMock.Object, new UserValidator(), userEmailServiceMock.Object);
             Result<User> result = service.AuthenticationByEmailAndPassword(new User()
             {
-                Email = "walter@sharebook.com",
+                Email = "walter@DriverLib.com",
                 Password = "123456"
             });
             Assert.NotNull(result);
@@ -191,7 +191,7 @@ namespace ShareBook.Test.Unit.Services
             var service = new UserService(userRepositoryMock.Object, unitOfWorkMock.Object, new UserValidator(), userEmailServiceMock.Object);
             Result<User> result = service.AuthenticationByEmailAndPassword(new User()
             {
-                Email = "walter@sharebook.com",
+                Email = "walter@DriverLib.com",
                 Password = "wrongpassword"
             });
             Assert.Equal("Email ou senha incorretos", result.Messages[0]);
@@ -204,7 +204,7 @@ namespace ShareBook.Test.Unit.Services
             var service = new UserService(userRepositoryMock.Object, unitOfWorkMock.Object, new UserValidator(), userEmailServiceMock.Object);
             Result<User> result = service.AuthenticationByEmailAndPassword(new User()
             {
-                Email = "joao@sharebook.com",
+                Email = "joao@DriverLib.com",
                 Password = "wrongpassword"
             });
             Assert.Equal("Email ou senha incorretos", result.Messages[0]);

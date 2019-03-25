@@ -15,10 +15,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ShareBook.Api\DriverLib.Api.csproj" />
-    <ProjectReference Include="..\ShareBook.Domain\DriverLib.Domain.csproj" />
-    <ProjectReference Include="..\ShareBook.Infra.CrossCutting.Identity\DriverLib.Infra.CrossCutting.Identity.csproj" />
-    <ProjectReference Include="..\ShareBook.Service\DriverLib.Service.csproj" />
+    <ProjectReference Include="..\DriverLib.Api\DriverLib.Api.csproj" />
+    <ProjectReference Include="..\DriverLib.Domain\DriverLib.Domain.csproj" />
+    <ProjectReference Include="..\DriverLib.Infra.CrossCutting.Identity\DriverLib.Infra.CrossCutting.Identity.csproj" />
+    <ProjectReference Include="..\DriverLib.Service\DriverLib.Service.csproj" />
   </ItemGroup>
 
   <ItemGroup>

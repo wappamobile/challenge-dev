@@ -3,7 +3,7 @@ using Microsoft.Extensions.Options;
 using MimeKit;
 using System.Threading.Tasks;
 
-namespace ShareBook.Service
+namespace DriverLib.Service
 {
     public class EmailService : IEmailService
     {
@@ -15,7 +15,7 @@ namespace ShareBook.Service
         }
 
         public async Task SendToAdmins(string messageText, string subject)
-            => await Send(_settings.Username, "Administradores Sharebook", messageText, subject, false);
+            => await Send(_settings.Username, "Administradores DriverLib", messageText, subject, false);
 
         public async Task Send(string emailRecipient, string nameRecipient, string messageText, string subject)
             => await Send(emailRecipient, nameRecipient, messageText, subject, false);
@@ -43,11 +43,11 @@ namespace ShareBook.Service
         private MimeMessage FormatEmail(string emailRecipient, string nameRecipient, string messageText, string subject, bool copyAdmins)
         {
             var message = new MimeMessage();
-            message.From.Add(new MailboxAddress("Sharebook", _settings.Username));
+            message.From.Add(new MailboxAddress("DriverLib", _settings.Username));
             message.To.Add(new MailboxAddress(nameRecipient, emailRecipient));
 
             if (copyAdmins)
-                message.To.Add(new MailboxAddress("Sharebook", _settings.Username));
+                message.To.Add(new MailboxAddress("DriverLib", _settings.Username));
 
             message.Subject = subject;
             message.Body = new TextPart("HTML")

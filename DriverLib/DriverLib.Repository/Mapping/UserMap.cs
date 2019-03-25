@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using ShareBook.Domain;
+using DriverLib.Domain;
 
-namespace ShareBook.Repository.Mapping
+namespace DriverLib.Repository.Mapping
 {
     public class UserMap
     {
@@ -45,8 +45,6 @@ namespace ShareBook.Repository.Mapping
             entityBuilder.Property(t => t.HashCodePasswordExpiryDate)
                 .HasColumnType("datetime2(7)");
 
-            entityBuilder.HasMany(t => t.BooksDonated)
-                .WithOne(b => b.User);
   
 
         }

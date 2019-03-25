@@ -2,7 +2,7 @@
 using Newtonsoft.Json.Converters;
 using System.ComponentModel;
 
-namespace ShareBook.Domain.Enums
+namespace DriverLib.Domain.Enums
 {
     [JsonConverter(typeof(StringEnumConverter))]
     public enum FreightOption

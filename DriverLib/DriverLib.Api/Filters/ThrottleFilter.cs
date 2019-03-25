@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Caching.Memory;
 
-namespace ShareBook.Api.Filters
+namespace DriverLib.Api.Filters
 {
     [AttributeUsage(AttributeTargets.Method)]
     public class ThrottleAttribute : ActionFilterAttribute

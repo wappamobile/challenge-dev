@@ -1,9 +1,9 @@
 ﻿using FluentValidation.Results;
-using ShareBook.Domain;
-using ShareBook.Domain.Validators;
+using DriverLib.Domain;
+using DriverLib.Domain.Validators;
 using Xunit;
 
-namespace ShareBook.Test.Unit.Validators
+namespace DriverLib.Test.Unit.Validators
 {
     public class UserValidatorTests
     {
@@ -22,7 +22,7 @@ namespace ShareBook.Test.Unit.Validators
         {
 			User user = new User()
 			{
-				Email = "joão@sharebook.com",
+				Email = "joão@DriverLib.com",
 				Password = "Password.123",
 				Name = "João da Silva",
 				Linkedin = "linkedin.com/joao-silva",
@@ -38,7 +38,7 @@ namespace ShareBook.Test.Unit.Validators
         {
             User user = new User()
             {
-                Email = "joão@sharebook.com",
+                Email = "joão@DriverLib.com",
                 Password = null,
 				Name = null,
 				Linkedin = "linkedin.com/joao-silva",

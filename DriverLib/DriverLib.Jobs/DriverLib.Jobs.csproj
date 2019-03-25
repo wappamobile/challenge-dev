@@ -8,8 +8,8 @@
     <Folder Include="Executor\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ShareBook.Domain\DriverLib.Domain.csproj" />
-    <ProjectReference Include="..\ShareBook.Repository\DriverLib.Infra.Data.csproj" />
-    <ProjectReference Include="..\ShareBook.Service\DriverLib.Service.csproj" />
+    <ProjectReference Include="..\DriverLib.Domain\DriverLib.Domain.csproj" />
+    <ProjectReference Include="..\DriverLib.Repository\DriverLib.Infra.Data.csproj" />
+    <ProjectReference Include="..\DriverLib.Service\DriverLib.Service.csproj" />
   </ItemGroup>
 </Project>

@@ -1,4 +1,4 @@
-﻿namespace ShareBook.Api.ViewModels
+﻿namespace DriverLib.Api.ViewModels
 {
     public class ChangePasswordUserVM
     {

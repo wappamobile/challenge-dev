@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using System;
 
-namespace ShareBook.Helper.Mapper
+namespace DriverLib.Helper.Mapper
 {
     public static class Mapper
     {

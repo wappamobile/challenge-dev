@@ -1,11 +1,11 @@
-﻿using ShareBook.Domain.Common;
-using ShareBook.Repository.Repository;
+﻿using DriverLib.Domain.Common;
+using DriverLib.Repository.Repository;
 using System;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace ShareBook.Repository
+namespace DriverLib.Repository
 {
     public interface IRepositoryGeneric<TEntity> where TEntity : class
     {
@@ -42,7 +42,7 @@ namespace ShareBook.Repository
         /// Find in the DbSet an entity that matches the specified filter.
         /// </summary>
         /// <returns>Entity with the child objects</returns>
-        /// <exception cref="ShareBook.Domain.Exceptions.ShareBookException">In case that more than 1 entity could be returned for the filter specified.</exception>
+        /// <exception cref="DriverLib.Domain.Exceptions.DriverLibException">In case that more than 1 entity could be returned for the filter specified.</exception>
         TEntity Find(Expression<Func<TEntity, bool>> filter);
 
         /// <summary>
@@ -50,7 +50,7 @@ namespace ShareBook.Repository
         /// </summary>
         /// <param name="includes">Includes (child objects) to be returned.</param>
         /// <returns>Entity with the child objects</returns>
-        /// <exception cref="ShareBook.Domain.Exceptions.ShareBookException">In case that more than 1 entity could be returned for the filter specified.</exception>
+        /// <exception cref="DriverLib.Domain.Exceptions.DriverLibException">In case that more than 1 entity could be returned for the filter specified.</exception>
         TEntity Find(IncludeList<TEntity> includes, Expression<Func<TEntity, bool>> filter);
 
         /// <summary>

@@ -20,9 +20,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Migrations\" />
+    <Folder Include="SeedImages\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ShareBook.Domain\DriverLib.Domain.csproj" />
+    <ProjectReference Include="..\DriverLib.Domain\DriverLib.Domain.csproj" />
   </ItemGroup>
 </Project>

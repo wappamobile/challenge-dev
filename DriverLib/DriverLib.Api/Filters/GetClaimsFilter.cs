@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc.Filters;
 using System.Threading;
 
-namespace ShareBook.Api.Filters
+namespace DriverLib.Api.Filters
 {
     public class GetClaimsFilterAttribute : ActionFilterAttribute
     {

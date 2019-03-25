@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ShareBook.Domain.Common
+namespace DriverLib.Domain.Common
 {
     public class Result : Result<object>
     {

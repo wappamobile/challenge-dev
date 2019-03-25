@@ -1,8 +1,8 @@
-﻿using ShareBook.Helper.Extensions;
-using ShareBook.Helper.Image;
+﻿using DriverLib.Helper.Extensions;
+using DriverLib.Helper.Image;
 using Xunit;
 
-namespace ShareBook.Test.Unit.Helpers
+namespace DriverLib.Test.Unit.Helpers
 {
     public class HelperTests
     {
@@ -46,8 +46,8 @@ namespace ShareBook.Test.Unit.Helpers
         [Fact]
         public void ImageUrlValid()
         {
-            var expected = @"http://dev.sharebook.com.br/Images/Books/image.jpg";
-            var actual = ImageHelper.GenerateImageUrl("image.jpg", "wwwroot/Images/Books", "http://dev.sharebook.com.br");
+            var expected = @"http://dev.DriverLib.com.br/Images/Books/image.jpg";
+            var actual = ImageHelper.GenerateImageUrl("image.jpg", "wwwroot/Images/Books", "http://dev.DriverLib.com.br");
 
             Assert.Equal(expected, actual);
         }

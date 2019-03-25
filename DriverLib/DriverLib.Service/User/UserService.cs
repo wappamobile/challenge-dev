@@ -1,20 +1,20 @@
 ﻿using FluentValidation;
 using Microsoft.EntityFrameworkCore;
-using ShareBook.Domain;
-using ShareBook.Domain.Common;
-using ShareBook.Domain.Enums;
-using ShareBook.Helper.Crypto;
-using ShareBook.Repository;
+using DriverLib.Domain;
+using DriverLib.Domain.Common;
+using DriverLib.Domain.Enums;
+using DriverLib.Helper.Crypto;
+using DriverLib.Repository;
 
-using ShareBook.Repository.Repository;
-using ShareBook.Repository.UoW;
-using ShareBook.Service.Generic;
+using DriverLib.Repository.Repository;
+using DriverLib.Repository.UoW;
+using DriverLib.Service.Generic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 
-namespace ShareBook.Service
+namespace DriverLib.Service
 {
     public class UserService : BaseService<User>, IUserService
     {

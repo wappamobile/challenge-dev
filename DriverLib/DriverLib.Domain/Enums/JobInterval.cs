@@ -1,5 +1,5 @@
 ﻿using System;
-namespace ShareBook.Domain.Enums
+namespace DriverLib.Domain.Enums
 {
     public enum Interval
     {

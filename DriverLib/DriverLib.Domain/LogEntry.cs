@@ -1,7 +1,7 @@
-﻿using ShareBook.Domain.Common;
+﻿using DriverLib.Domain.Common;
 using System;
 
-namespace ShareBook.Domain
+namespace DriverLib.Domain
 {
     public class LogEntry : BaseEntity
     {

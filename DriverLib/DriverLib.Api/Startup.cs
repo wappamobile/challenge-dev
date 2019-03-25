@@ -4,19 +4,19 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using ShareBook.Api.AutoMapper;
-using ShareBook.Api.Configuration;
-using ShareBook.Api.Middleware;
-using ShareBook.Api.Services;
-using ShareBook.Repository;
-using ShareBook.Service;
-using ShareBook.Service.Server;
-using ShareBook.Service.Upload;
+using DriverLib.Api.AutoMapper;
+using DriverLib.Api.Configuration;
+using DriverLib.Api.Middleware;
+using DriverLib.Api.Services;
+using DriverLib.Repository;
+using DriverLib.Service;
+using DriverLib.Service.Server;
+using DriverLib.Service.Upload;
 using Swashbuckle.AspNetCore.Swagger;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ShareBook.Api
+namespace DriverLib.Api
 {
     public class Startup
     {
@@ -55,7 +55,7 @@ namespace ShareBook.Api
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "SHAREBOOK API", Version = "v1" });
+                c.SwaggerDoc("v1", new Info { Title = "DriverLib API", Version = "v1" });
                 c.ResolveConflictingActions(x => x.First());
                 c.AddSecurityDefinition("Bearer", new ApiKeyScheme
                 {
@@ -100,7 +100,7 @@ namespace ShareBook.Api
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "SHAREBOOK API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "DriverLib API V1");
             });
 
             // IMPORTANT: Make sure UseCors() is called BEFORE this
@@ -122,8 +122,8 @@ namespace ShareBook.Api
                 context.Database.Migrate();
                 if (env.IsDevelopment() || env.IsStaging())
                 {
-                    var sharebookSeeder = new ShareBookSeeder(context);
-                    sharebookSeeder.Seed();
+                    var Seeder = new Seeder(context);
+                    Seeder.Seed();
                 }
             }     
         }

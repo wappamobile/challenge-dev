@@ -1,4 +1,4 @@
-﻿namespace ShareBook.Service.Server
+﻿namespace DriverLib.Service.Server
 {
     public class ServerSettings
     {

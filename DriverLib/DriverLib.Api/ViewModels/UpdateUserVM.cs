@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
-using ShareBook.Domain;
+using DriverLib.Domain;
 using System.ComponentModel.DataAnnotations;
 
-namespace ShareBook.Api.ViewModels
+namespace DriverLib.Api.ViewModels
 {
     public class UpdateUserVM : BaseViewModel
     {

@@ -1,4 +1,4 @@
-﻿namespace ShareBook.Service
+﻿namespace DriverLib.Service
 {
    public class EmailSettings
     {

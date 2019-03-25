@@ -1,13 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ShareBook.Domain.Common;
-using ShareBook.Domain.Exceptions;
-using ShareBook.Repository.Repository;
+using DriverLib.Domain.Common;
+using DriverLib.Domain.Exceptions;
+using DriverLib.Repository.Repository;
 using System;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace ShareBook.Repository
+namespace DriverLib.Repository
 {
     public class RepositoryGeneric<TEntity> : IRepositoryGeneric<TEntity> where TEntity : class
     {
@@ -44,7 +44,7 @@ namespace ShareBook.Repository
 
             var count = await query.CountAsync();
             if (count > 1)
-                throw new ShareBookException("More than one entity find for the specified filter");
+                throw new DriverLibException("More than one entity find for the specified filter");
 
             return query.FirstOrDefault();
         }
@@ -113,7 +113,7 @@ namespace ShareBook.Repository
         {
             var entity = await FindAsync(keyValues);
             if (entity == null)
-                throw new ShareBookException(ShareBookException.Error.NotFound);
+                throw new DriverLibException(DriverLibException.Error.NotFound);
             await DeleteAsync(entity);
         }
 

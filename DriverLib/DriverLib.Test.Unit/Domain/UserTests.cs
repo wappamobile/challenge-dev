@@ -1,11 +1,11 @@
-﻿using ShareBook.Domain;
-using ShareBook.Helper.Crypto;
+﻿using DriverLib.Domain;
+using DriverLib.Helper.Crypto;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
-namespace ShareBook.Test.Unit.Domain
+namespace DriverLib.Test.Unit.Domain
 {
     public class UserTests
     {
