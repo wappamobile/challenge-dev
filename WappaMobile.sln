@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WappaMobile.Application", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WappaMobile.Infrastructure.GoogleGeocoding", "WappaMobile.Infrastructure.GoogleGeocoding\WappaMobile.Infrastructure.GoogleGeocoding.csproj", "{CAAE767F-04F6-4F4E-8B2C-425150E9F669}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WappaMobile.Application.Tests", "WappaMobile.Application.Tests\WappaMobile.Application.Tests.csproj", "{9A9EC811-16C3-4B59-B459-F009A6CB4EEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WappaMobile.WebAPI.Tests", "WappaMobile.WebAPI.Tests\WappaMobile.WebAPI.Tests.csproj", "{5B2F6E2B-6F4D-44DC-BD4B-B86075DCBCA9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,5 +41,13 @@ Global
 		{CAAE767F-04F6-4F4E-8B2C-425150E9F669}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAAE767F-04F6-4F4E-8B2C-425150E9F669}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAAE767F-04F6-4F4E-8B2C-425150E9F669}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A9EC811-16C3-4B59-B459-F009A6CB4EEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A9EC811-16C3-4B59-B459-F009A6CB4EEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A9EC811-16C3-4B59-B459-F009A6CB4EEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A9EC811-16C3-4B59-B459-F009A6CB4EEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B2F6E2B-6F4D-44DC-BD4B-B86075DCBCA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B2F6E2B-6F4D-44DC-BD4B-B86075DCBCA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B2F6E2B-6F4D-44DC-BD4B-B86075DCBCA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B2F6E2B-6F4D-44DC-BD4B-B86075DCBCA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
