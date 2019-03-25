@@ -1,11 +1,11 @@
-﻿using ShareBook.Domain;
-using ShareBook.Domain.Enums;
+﻿using DriverLib.Domain;
+using DriverLib.Domain.Enums;
 using System;
 using System.Linq;
 
 namespace ShareBook.Repository
 {
-    public  class ShareBookSeeder
+    public  class Seeder
     {
 
         private readonly ApplicationDbContext _context;
@@ -15,7 +15,7 @@ namespace ShareBook.Repository
         private const string PASSWORD_SALT = "xP+CoqfrCbbfIU9HPCd4rA==";
 
 
-        public ShareBookSeeder(ApplicationDbContext context)
+        public Seeder(ApplicationDbContext context)
         {
             _context = context;
         }
