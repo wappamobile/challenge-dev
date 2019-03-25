@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Cadastro.Entities;
+using Cadastro.Interface;
+using Cadastro.Model;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ChallengeDev.Controllers
@@ -10,10 +13,18 @@ namespace ChallengeDev.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private readonly ICadastroModel _cadastro =  new CadastroModel();
+  
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
+            
+            _cadastro.NovoCadastro(new Motorista()
+            {
+
+            });
+
             return new string[] { "value1", "value2" };
         }
 
@@ -28,6 +39,7 @@ namespace ChallengeDev.Controllers
         [HttpPost]
         public void Post([FromBody] string value)
         {
+
         }
 
         // PUT api/values/5
