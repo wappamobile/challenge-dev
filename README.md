@@ -1,41 +1,44 @@
-# challenge-dev - Desafio para backend Software Engineer
+Sr. Avaliador segue o resumo de execução do meu teste:
 
-## Objetivo e avaliação
+Tempo total de desenvolvimento: 7h10min.
 
-Objetivo deste teste é avaliar como você irá considerar questões como **arquitetura e design de software, modelagem e aplicação de técnicas e conceitos de programação** e não simplesmente resolver o problema proposto, visto que o mesmo não oferece dificuldades reais para implementação.  
+Para testar a criação de motoristas é necessário configurar uma chave de API válida para o serviço do GoogleMaps, isso deve ser feito editando o arquivo `appsettings.Development.json` se for ser executado em modo de desenvolvimento e `appsettings.json` se for ser executado em modo de produção:
 
-## Entrega do projeto
+```json
+"GoogleGeocoder": {
+    "ApiKey": "<<please insert a valid API KEY here>>"
+}
+```
 
-Faça um fork deste projeto e ao concluir envie um pull request (PR) com sua implementação. Ao enviar o PR nos informe:
+Para testar a solução basta abrir no Visual Studio 2017+ e uma vez restaurado todas as dependências, executar o projeto. A API está documentada via Swagger e via XML comments.
 
- - Explicação sobre a solução desenvolvida (Markdown/Plain Text);
- - Quanto tempo você levou para desenvolver a solução.
+### Organização da solução
 
-## Escopo
+A solução foi codificada com nomenclatura em Inglês para permitir a utilização por times multinacionais e foi dividida em vários projetos respeitando o padrão DDD (*Domain Driven Design*):
 
-Precisamos de uma biblioteca para gerenciar o cadastro de motoristas.
+ - **WappaMobile.Domain**: Entidades e exceções que são comum a todo domínio: Driver, Address, Car e Coordinates.
+ - **WappaMobile.Persistence**: Camada de persistência, implementada utilizando EntityFramework Core utilizando um banco de dados em memória.
+ - **WappaMobile.Application**: Lógica de negócio estruturada de acordo com o respeitando CQRS (*Command Query Responsibility Segregation*) utilizando o Mediator Pattern.
+ - **WappaMobile.WebAPI**: Camada de apresentação utilizando Web API incluindo documentação via Swagger.
+ - **WappaMobile.Infrastructure.GoogleGeocoding**: Serviço de geocoding injetável utilizando GoogleMaps APIs.
+ - **WappaMobile.Application.Tests** e **WappaMobile.WebAPI.Tests**: Testes unitários para camada de lógica de negócio e de apresentação.
 
-**Front-end não é necessário e não será avaliado**, porém precisamos de uma API que permita:
+### Ferramentas utilizadas:
 
- - criar, editar e excluir um motorista.
+ - AspNetCore 2.2;
+ - EntityFramework Core 2.2;
+ - AutoMapper;
+ - MediatR;
+ - FluentValidation;
+ - Geocoding.Google;
+ - Moq;
+ - Health checks;
+ - ProblemDetails ([RFC 7807](https://tools.ietf.org/html/rfc7807));
+ - Swashbucle.AspNetCore; e
+ - xUnit;
 
-Um cadastro de motorista possui os campos:
+### Screenshots
 
- - Nome (primeiro e último);
- - Carro (marca, modelo e placa);
- - Endereço completo.
-
-Adicionamente, ao cadastrar um endereço deve ser **buscada as coordenadas** utilizando a [API do Google Maps](https://developers.google.com/maps/documentation/geocoding) e elas devem ser armazenadas junto com o cadastro.
-
-Além do cadastro também será necessário disponibilizar uma **listagem dos cadastros em ordem alfabética** por nome **ou** sobrenome.
-
-### Obrigatório
- - .NET Core - C#
- - WebAPI
- - IoC
- - Código limpo
-
-### Desejável
- - Documentação da API
- - Testes
- - Nos informe também o nível de dificuldade e um feedback sobre o desafio proposto [nesta pesquisa](https://goo.gl/forms/qui1n636NKY2w96V2)
+ ![Screenshot 1](/images/screenshot1.png)
+ ![Screenshot 2](/images/screenshot2.png)
+ ![Screenshot 3](/images/screenshot3.png)
