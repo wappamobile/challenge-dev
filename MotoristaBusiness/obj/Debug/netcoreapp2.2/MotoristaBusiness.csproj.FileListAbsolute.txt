@@ -1,0 +1,14 @@
+C:\Projects\MotoristaDev\MotoristaBusiness\bin\Debug\netcoreapp2.2\MotoristaBusiness.deps.json
+C:\Projects\MotoristaDev\MotoristaBusiness\bin\Debug\netcoreapp2.2\MotoristaBusiness.dll
+C:\Projects\MotoristaDev\MotoristaBusiness\bin\Debug\netcoreapp2.2\MotoristaBusiness.pdb
+C:\Projects\MotoristaDev\MotoristaBusiness\obj\Debug\netcoreapp2.2\MotoristaBusiness.csprojAssemblyReference.cache
+C:\Projects\MotoristaDev\MotoristaBusiness\obj\Debug\netcoreapp2.2\MotoristaBusiness.csproj.CoreCompileInputs.cache
+C:\Projects\MotoristaDev\MotoristaBusiness\obj\Debug\netcoreapp2.2\MotoristaBusiness.AssemblyInfoInputs.cache
+C:\Projects\MotoristaDev\MotoristaBusiness\obj\Debug\netcoreapp2.2\MotoristaBusiness.AssemblyInfo.cs
+C:\Projects\MotoristaDev\MotoristaBusiness\obj\Debug\netcoreapp2.2\MotoristaBusiness.dll
+C:\Projects\MotoristaDev\MotoristaBusiness\obj\Debug\netcoreapp2.2\MotoristaBusiness.pdb
+C:\Projects\MotoristaDev\MotoristaBusiness\bin\Debug\netcoreapp2.2\MotoristaEntity.dll
+C:\Projects\MotoristaDev\MotoristaBusiness\bin\Debug\netcoreapp2.2\MotoristaEntity.pdb
+C:\Projects\MotoristaDev\MotoristaBusiness\obj\Debug\netcoreapp2.2\MotoristaBusiness.csproj.CopyComplete
+C:\Projects\MotoristaDev\MotoristaBusiness\bin\Debug\netcoreapp2.2\MotoristaDB.dll
+C:\Projects\MotoristaDev\MotoristaBusiness\bin\Debug\netcoreapp2.2\MotoristaDB.pdb

@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "5c7358a5-d167-4d6a-942d-41c56446f012",
+		"name": "Motorista",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Adicionar Motorista",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 0,\r\n  \"primeiroNome\": null,\r\n  \"ultimoNome\": null,\r\n  \"carros\": null,\r\n  \"enderecos\": null\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:50258/api/motorista",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50258",
+					"path": [
+						"api",
+						"motorista"
+					]
+				},
+				"description": "Adiciona Motorista"
+			},
+			"response": []
+		},
+		{
+			"name": "Pesquisar um Motorista",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:50258/api/motorista/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50258",
+					"path": [
+						"api",
+						"motorista",
+						"1"
+					]
+				},
+				"description": "Pesquisar um Motorista"
+			},
+			"response": []
+		},
+		{
+			"name": "Retornar todos os Motoristas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:50258/api/motorista",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50258",
+					"path": [
+						"api",
+						"motorista"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alterar Motorista",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"primeiroNome\": \"Alex\",\n    \"ultimoNome\": \"Antunes\",\n    \"carros\": [\n        {\n            \"marca\": \"Peugeot\",\n            \"modelo\": \"208\",\n            \"placa\": \"DDD-1990\",\n        }\n    ],\n    \"enderecos\": [\n        {\n            \"logradouro\": \"Rua Itu\",\n            \"numero\": \"51\",\n            \"bairro\": \"Jardim Santa Rosa\",\n            \"cidade\": \"Porto Feliz\",\n            \"estado\": \"SP\",\n            \"googlePlaceId\": null,\n            \"latitude\": null,\n            \"longitude\": null\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:50258/api/motorista/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50258",
+					"path": [
+						"api",
+						"motorista",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Apagar Motorista",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:50258/api/motorista/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50258",
+					"path": [
+						"api",
+						"motorista",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,14 @@
+C:\Projects\Motorista\bin\Debug\netcoreapp2.1\Motorista.deps.json
+C:\Projects\Motorista\bin\Debug\netcoreapp2.1\Motorista.runtimeconfig.json
+C:\Projects\Motorista\bin\Debug\netcoreapp2.1\Motorista.runtimeconfig.dev.json
+C:\Projects\Motorista\bin\Debug\netcoreapp2.1\Motorista.dll
+C:\Projects\Motorista\bin\Debug\netcoreapp2.1\Motorista.pdb
+C:\Projects\Motorista\obj\Debug\netcoreapp2.1\Motorista.csprojAssemblyReference.cache
+C:\Projects\Motorista\obj\Debug\netcoreapp2.1\Motorista.csproj.CoreCompileInputs.cache
+C:\Projects\Motorista\obj\Debug\netcoreapp2.1\Motorista.RazorAssemblyInfo.cache
+C:\Projects\Motorista\obj\Debug\netcoreapp2.1\Motorista.RazorAssemblyInfo.cs
+C:\Projects\Motorista\obj\Debug\netcoreapp2.1\Motorista.AssemblyInfoInputs.cache
+C:\Projects\Motorista\obj\Debug\netcoreapp2.1\Motorista.AssemblyInfo.cs
+C:\Projects\Motorista\obj\Debug\netcoreapp2.1\Motorista.RazorTargetAssemblyInfo.cache
+C:\Projects\Motorista\obj\Debug\netcoreapp2.1\Motorista.dll
+C:\Projects\Motorista\obj\Debug\netcoreapp2.1\Motorista.pdb
