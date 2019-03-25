@@ -26,9 +26,9 @@ namespace WappaMobile.Infrastructure.GoogleGeocoding
         /// </summary>
         /// <returns>The lat/long coordinates for address.</returns>
         /// <param name="address">The address.</param>
-        public async Task<Coordinates> GetCoordinatesForAddress(string address)
+        public async Task<Coordinates> GetCoordinatesForAddress(Address address)
         {
-            var results = await _client.GeocodeAsync(address);
+            var results = await _client.GeocodeAsync(address.ToString());
             var top = results.FirstOrDefault();
 
             if (top == null)

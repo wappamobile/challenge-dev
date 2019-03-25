@@ -36,7 +36,7 @@ namespace WappaMobile.Application
 
             _mapper.Map(request.DriverDto, driver, typeof(ModifyDriverDto), typeof(Driver));
 
-            driver.Address.Coordinates = await _geocoder.GetCoordinatesForAddress(driver.Address.ToString());
+            driver.Address.Coordinates = await _geocoder.GetCoordinatesForAddress(driver.Address);
 
             await _driverContext.SaveChangesAsync(cancellationToken);
 

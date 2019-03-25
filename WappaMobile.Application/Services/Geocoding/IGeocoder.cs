@@ -15,6 +15,6 @@ namespace WappaMobile.Application.Services.Geocoding
         /// </summary>
         /// <returns>The lat/long coordinates for address.</returns>
         /// <param name="address">The address.</param>
-        Task<Coordinates> GetCoordinatesForAddress(string address);
+        Task<Coordinates> GetCoordinatesForAddress(Address address);
     }
 }
