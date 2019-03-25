@@ -11,6 +11,7 @@ namespace DriverLib.Domain
     public class User : BaseEntity
     {
         public string Name { get; set; }
+        public string LastName { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
         public string PasswordSalt { get; set; }
@@ -18,8 +19,9 @@ namespace DriverLib.Domain
         public DateTime HashCodePasswordExpiryDate { get; set; }
         public string Linkedin { get; set; }
         public  string Phone{ get; set; }
-        public Profile Profile { get;  set; } = Profile.User;
+        public Profile Profile { get;  set; } = Profile.Driver;
         public virtual Address Address { get; set; }
+        public virtual Car Car { get; set; }
 
         public bool PasswordIsStrong()
         {

@@ -51,14 +51,6 @@ namespace DriverLib.Api.Controllers
         }
 
 
-        [Authorize("Bearer")]
-        [HttpGet("ListFacilitators/{userIdDonator}")]
-        public IActionResult ListFacilitators(Guid userIdDonator)
-        {
-            var facilitators = _userService.GetFacilitators(userIdDonator);
-            var facilitatorsClean = Mapper.Map<List<UserFacilitatorVM>>(facilitators);
-            return Ok(facilitatorsClean);
-        }
         #endregion
 
 

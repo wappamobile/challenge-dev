@@ -15,6 +15,7 @@ namespace DriverLib.Repository
         public DbSet<LogEntry> LogEntries { get; set; }
         public DbSet<Address> Addresses { get; set; }
         public DbSet<JobHistory> JobHistories { get; set; }
+        public DbSet<Car> Cars { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -23,6 +24,7 @@ namespace DriverLib.Repository
             new UserMap(modelBuilder.Entity<User>());
             new AddressMap(modelBuilder.Entity<Address>());
             new JobHistoryMap(modelBuilder.Entity<JobHistory>());
+            new CarMap(modelBuilder.Entity<Car>());
         }
 
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default(CancellationToken))

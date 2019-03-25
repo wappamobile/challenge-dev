@@ -37,7 +37,7 @@ namespace DriverLib.Test.Unit.Mocks
                 PasswordSalt = PASSWORD_SALT,
                 Email = "rodrigo@DriverLib.com",
                 Linkedin = "linkedin.com/rodrigo",
-                Profile = Profile.User
+                Profile = Profile.Driver
             };
         }
 
@@ -52,7 +52,7 @@ namespace DriverLib.Test.Unit.Mocks
                 PasswordSalt = PASSWORD_SALT,
                 Email = "walter@DriverLib.com",
                 Linkedin = "linkedin.com/walter",
-                Profile = Profile.User
+                Profile = Profile.Driver
             };
         }
 

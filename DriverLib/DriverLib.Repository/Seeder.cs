@@ -26,30 +26,11 @@ namespace DriverLib.Repository
 
             if ( !_context.Users.Any() )
             {
-                var grantee = new User()
-                {
-                    Name = "Walter Vinicius Lopes Cardoso",
-                    Email = "walter@driverlib.com",
-                    Linkedin = "linkedin.com/walter.cardoso",
-                    Password = PASSWORD_HASH,
-                    PasswordSalt = PASSWORD_SALT,
-                    CreationDate = DateTime.Now,
-                    Address = new Address()
-                    {
-                        Street = "Rua teste",
-                        Number = "1",
-                        Complement = "apto 1",
-                        Neighborhood = "Bairro teste",
-                        PostalCode = "11111-111",
-                        City = "São Paulo",
-                        State = "SP",
-                        Country = "Brasil"
-                    }
-                };
 
-                var @operator = new User()
+                var adm = new User()
                 {
                     Name = "Vagner",
+                    LastName = "Administrador",
                     Email = "vagner@driverlib.com",
                     Linkedin = "linkedin.com/vagner",
                     Profile = Profile.Administrator,
@@ -69,9 +50,38 @@ namespace DriverLib.Repository
                     }
                 };
 
-                var donor = new User()
+                var driver1 = new User()
                 {
-                    Name = "Rodrigo",
+                    Name = "João",
+                    LastName = "Motorista",
+                    Email = "walter@driverlib.com",
+                    Linkedin = "linkedin.com/walter.cardoso",
+                    Password = PASSWORD_HASH,
+                    PasswordSalt = PASSWORD_SALT,
+                    CreationDate = DateTime.Now,
+                    Address = new Address()
+                    {
+                        Street = "Rua teste",
+                        Number = "1",
+                        Complement = "apto 1",
+                        Neighborhood = "Bairro teste",
+                        PostalCode = "11111-111",
+                        City = "São Paulo",
+                        State = "SP",
+                        Country = "Brasil"
+                    },
+                    Car = new Car()
+                    {
+                        Brand = "Chevrolet",
+                        Model = "Blazer",
+                        LicensePlate = "AAA 1111-1111"
+                    }
+                };
+
+                var driver2 = new User()
+                {
+                    Name = "Mário",
+                    LastName = "Motorista",
                     Email = "rodrigo@driverlib.com",
                     Linkedin = "linkedin.com/rodrigo",
                     Password = PASSWORD_HASH,
@@ -87,12 +97,19 @@ namespace DriverLib.Repository
                         City = "São Paulo",
                         State = "SP",
                         Country = "Brasil"
+                    },
+                    Car = new Car()
+                    {
+                        Brand = "Chevrolet",
+                        Model = "S10",
+                        LicensePlate = "BBB 2222-2222"
                     }
                 };
 
-                var facilitator = new User()
+                var driver3 = new User()
                 {
-                    Name = "Cussa",
+                    Name = "Fernando",
+                    LastName = "Motorista",
                     Email = "cussa@driverlib.com",
                     Linkedin = "linkedin.com/cussa",
                     Profile = Profile.Administrator,
@@ -109,10 +126,16 @@ namespace DriverLib.Repository
                         City = "São Paulo",
                         State = "SP",
                         Country = "Brasil"
+                    },
+                    Car = new Car()
+                    {
+                        Brand = "Fiat",
+                        Model = "Palio",
+                        LicensePlate = "CCC 3333-3333"
                     }
                 };
 
-                _context.Users.AddRange(grantee, @operator);
+                _context.Users.AddRange(adm, driver1, driver2, driver3);
 
                 _context.SaveChanges();
             }
