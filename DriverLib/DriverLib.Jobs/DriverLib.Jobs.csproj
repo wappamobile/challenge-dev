@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Executor\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ShareBook.Domain\DriverLib.Domain.csproj" />
+    <ProjectReference Include="..\ShareBook.Repository\DriverLib.Infra.Data.csproj" />
+    <ProjectReference Include="..\ShareBook.Service\DriverLib.Service.csproj" />
+  </ItemGroup>
+</Project>
