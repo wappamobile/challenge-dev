@@ -1,0 +1,35 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WappaMobile.Domain", "WappaMobile.Domain\WappaMobile.Domain.csproj", "{53FBCF74-661C-4460-A92D-8BAAEB2775FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WappaMobile.WebAPI", "WappaMobile.WebAPI\WappaMobile.WebAPI.csproj", "{90FEED1D-867C-438C-8A8F-32E21D641E61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WappaMobile.Persistence", "WappaMobile.Persistence\WappaMobile.Persistence.csproj", "{0BD81497-FF91-4BEB-A8EF-14EDDA0B2AC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WappaMobile.Application", "WappaMobile.Application\WappaMobile.Application.csproj", "{7B9B62DE-087B-4826-ACF8-ACC10B2DCCAB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53FBCF74-661C-4460-A92D-8BAAEB2775FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53FBCF74-661C-4460-A92D-8BAAEB2775FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53FBCF74-661C-4460-A92D-8BAAEB2775FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53FBCF74-661C-4460-A92D-8BAAEB2775FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90FEED1D-867C-438C-8A8F-32E21D641E61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90FEED1D-867C-438C-8A8F-32E21D641E61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90FEED1D-867C-438C-8A8F-32E21D641E61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90FEED1D-867C-438C-8A8F-32E21D641E61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BD81497-FF91-4BEB-A8EF-14EDDA0B2AC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BD81497-FF91-4BEB-A8EF-14EDDA0B2AC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BD81497-FF91-4BEB-A8EF-14EDDA0B2AC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BD81497-FF91-4BEB-A8EF-14EDDA0B2AC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B9B62DE-087B-4826-ACF8-ACC10B2DCCAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B9B62DE-087B-4826-ACF8-ACC10B2DCCAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B9B62DE-087B-4826-ACF8-ACC10B2DCCAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B9B62DE-087B-4826-ACF8-ACC10B2DCCAB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

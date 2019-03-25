@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+    </PropertyGroup>
+    <ItemGroup>
+        <Folder Include="Commands\" />
+        <Folder Include="Queries\" />
+        <Folder Include="Commands\CreateDriver\" />
+        <Folder Include="Commands\DeleteDriver\" />
+        <Folder Include="Commands\UpdateDriver\" />
+        <Folder Include="Queries\ListDrivers\" />
+        <Folder Include="MappingProfiles\" />
+        <Folder Include="Queries\GetDriver\" />
+        <Folder Include="DTOs\" />
+        <Folder Include="Validators\" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Remove="Class1.cs" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\WappaMobile.Persistence\WappaMobile.Persistence.csproj" />
+        <ProjectReference Include="..\WappaMobile.Domain\WappaMobile.Domain.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="MediatR" Version="6.0.0" />
+        <PackageReference Include="AutoMapper" Version="8.0.0" />
+        <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="6.0.1" />
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.0.0" />
+        <PackageReference Include="FluentValidation" Version="8.1.3" />
+    </ItemGroup>
+</Project>
