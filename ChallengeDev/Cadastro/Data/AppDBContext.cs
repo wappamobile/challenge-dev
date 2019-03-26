@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Cadastro.Entities;
+﻿using Cadastro.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Cadastro.Data

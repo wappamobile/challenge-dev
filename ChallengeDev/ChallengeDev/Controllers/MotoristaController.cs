@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Cadastro.Entities;
+﻿using Cadastro.Entities;
 using Cadastro.Interface;
 using Cadastro.Model;
 using Microsoft.AspNetCore.Mvc;
@@ -12,9 +8,10 @@ namespace ChallengeDev.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class MotoristaController : ControllerBase
     {
         private readonly ICadastroModel _cadastro =  new CadastroModel();
+        private readonly IBuscaCoordenadas _buscaCoordenadas;
 
         // GET api/values
         [HttpGet]
@@ -26,34 +23,32 @@ namespace ChallengeDev.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public ActionResult<Motorista> Get(int id)
         {
-            return "value";
+            return _cadastro.RetornaPorId(id);
         }
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody] Motorista novoMotorista)
+        public ActionResult Cadastro([FromBody] Motorista novoMotorista)
         {
+            novoMotorista.Endereco = _buscaCoordenadas.RetornaEnderecoComCoordenadas(novoMotorista.Endereco);
             _cadastro.NovoCadastro(novoMotorista);
+            return new JsonResult("Success");
         }
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put([FromBody] Motorista motorista)
         {
-           
+            _cadastro.AtualizaCadastro(motorista);
         }
 
-        [HttpPost]
-        public bool Teste()
-        {
-            return true;
-        }
         // DELETE api/values/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            _cadastro.DeleteCadastro(id);
         }
     }
 }

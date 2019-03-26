@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
-using System.Text;
 using Cadastro.Data;
 using Cadastro.Entities;
 using Cadastro.Interface;
-using Microsoft.EntityFrameworkCore.Migrations.Operations;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Cadastro.Model
 {
@@ -15,6 +10,10 @@ namespace Cadastro.Model
     {
         private  readonly AppDBContext _dbContext = new AppDBContext();
 
+        public Motorista RetornaPorId(int id)
+        {
+            return _dbContext.Motoristas.Find(id);
+        }
         public IEnumerable<Motorista> RetornaTodos()
         {
             try
@@ -33,6 +32,7 @@ namespace Cadastro.Model
         {
             try
             {
+
                 _dbContext.Motoristas.Add(novoMotorista);
                 return _dbContext.SaveChanges() > 0;
             }

@@ -5,6 +5,7 @@ namespace Cadastro.Interface
 {
     public interface ICadastroModel
     {
+        Motorista RetornaPorId(int id);
         bool NovoCadastro(Motorista novoMotorista);
         bool DeleteCadastro(int id);
         bool AtualizaCadastro(Motorista motorista);
