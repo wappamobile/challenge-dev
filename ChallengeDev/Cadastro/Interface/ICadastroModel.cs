@@ -11,5 +11,7 @@ namespace Cadastro.Interface
         bool AtualizaCadastro(Motorista motorista);
 
         IEnumerable<Motorista> RetornaTodos();
+        IEnumerable<Motorista> RetornaPorNomeAlfabeticamente(string nome);
+        IEnumerable<Motorista> RetornaPorSobreNomeAlfabeticamente(string sobrenome);
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Cadastro.Data;
 using Cadastro.Entities;
 using Cadastro.Interface;
@@ -27,6 +28,18 @@ namespace Cadastro.Model
             }
            
         }
+
+        public IEnumerable<Motorista> RetornaPorNomeAlfabeticamente(string nome)
+        {
+           return RetornaTodos().OrderBy(x => x.Nome);
+        }
+
+
+        public IEnumerable<Motorista> RetornaPorSobreNomeAlfabeticamente(string sobrenome)
+        {
+            return RetornaTodos().OrderBy(x => x.Sobrenome);
+        }
+
 
         public bool NovoCadastro(Motorista novoMotorista)
         {

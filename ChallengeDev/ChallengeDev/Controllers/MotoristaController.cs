@@ -28,6 +28,16 @@ namespace ChallengeDev.Controllers
             return _cadastro.RetornaPorId(id);
         }
 
+        public JsonResult MotoristasPorNome(string nome)
+        {
+            return new JsonResult(_cadastro.RetornaPorNomeAlfabeticamente(nome));
+        }
+
+        public JsonResult MotoristasPorSobrenome(string sobbrenome)
+        {
+            return new JsonResult(_cadastro.RetornaPorSobreNomeAlfabeticamente(sobbrenome));
+        }
+
         // POST api/values
         [HttpPost]
         public ActionResult Cadastro([FromBody] Motorista novoMotorista)
