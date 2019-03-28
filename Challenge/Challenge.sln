@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge.Api", "Challenge.Api\Challenge.Api.csproj", "{ABE10331-13BB-459F-B0D1-490F721702AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge.Domain", "Challenge.Domain\Challenge.Domain.csproj", "{22059686-670F-4F41-B9FE-C7F5771F494F}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABE10331-13BB-459F-B0D1-490F721702AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABE10331-13BB-459F-B0D1-490F721702AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABE10331-13BB-459F-B0D1-490F721702AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABE10331-13BB-459F-B0D1-490F721702AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22059686-670F-4F41-B9FE-C7F5771F494F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22059686-670F-4F41-B9FE-C7F5771F494F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22059686-670F-4F41-B9FE-C7F5771F494F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22059686-670F-4F41-B9FE-C7F5771F494F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection

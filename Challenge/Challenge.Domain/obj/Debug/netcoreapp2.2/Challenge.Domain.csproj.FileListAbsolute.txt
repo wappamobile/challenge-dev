@@ -1,0 +1,6 @@
+C:\Users\atinchant\Source\Repos\challenge-dev\Challenge\Challenge.Domain\bin\Debug\netcoreapp2.2\Challenge.Domain.deps.json
+C:\Users\atinchant\Source\Repos\challenge-dev\Challenge\Challenge.Domain\bin\Debug\netcoreapp2.2\Challenge.Domain.dll
+C:\Users\atinchant\Source\Repos\challenge-dev\Challenge\Challenge.Domain\obj\Debug\netcoreapp2.2\Challenge.Domain.csprojAssemblyReference.cache
+C:\Users\atinchant\Source\Repos\challenge-dev\Challenge\Challenge.Domain\obj\Debug\netcoreapp2.2\Challenge.Domain.csproj.CoreCompileInputs.cache
+C:\Users\atinchant\Source\Repos\challenge-dev\Challenge\Challenge.Domain\obj\Debug\netcoreapp2.2\Challenge.Domain.AssemblyInfoInputs.cache
+C:\Users\atinchant\Source\Repos\challenge-dev\Challenge\Challenge.Domain\obj\Debug\netcoreapp2.2\Challenge.Domain.AssemblyInfo.cs
