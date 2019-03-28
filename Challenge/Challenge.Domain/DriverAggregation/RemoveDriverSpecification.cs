@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Challenge.Domain.DriverAggregation
 {
-    public class UpdateDriverSpecification : AbstractValidator<UpdateDriverDto>
+    public class RemoveDriverSpecification : AbstractValidator<RemoveDriverDto>
     {
     }
 }
