@@ -1,0 +1,82 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{28CEEFD2-A053-4C08-9004-87CB7B76C6F6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{9BF33CEC-DD4B-4EA0-9E2F-913A0240E5B4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. WebApi", "1. WebApi", "{049A960B-F25C-4F77-9C0F-308C94147CC3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Application", "2. Application", "{1E7E8873-602B-4E0D-8894-799C7E7B3477}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Domain", "3. Domain", "{E6ADF5D4-9ACF-4A7D-812B-F0CF6DE49375}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Infrastructure", "4. Infrastructure", "{04020275-831D-4CB2-A21D-C4F4917211DB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1. Data.MongoDb", "4.1. Data.MongoDb", "{05D12D4D-6FDA-48E4-8F81-17F0D895031C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DriverRegistration.WebApi", "DriverRegistration.WebApi\DriverRegistration.WebApi.csproj", "{1D15B6A5-14C5-4943-B227-3F51E1E253C4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DriverRegistration.Application", "DriverRegistration.Application\DriverRegistration.Application.csproj", "{6072EB01-4961-48BF-9758-D27D55DF8279}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DriverRegistration.Domain", "DriverRegistration.Domain\DriverRegistration.Domain.csproj", "{B0CE9658-CEE2-4030-A568-1B5FCDEE3D45}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DriverRegistration.Data.MongoDb", "DriverRegistration.Data.InMemoryDB\DriverRegistration.Data.MongoDb.csproj", "{04CC8BEE-3DDA-4AD8-9F09-14EA949886F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleMaps.WebApi", "GoogleMaps.WebApi\GoogleMaps.WebApi.csproj", "{B44CBEF3-DCEB-44CE-BBFE-AF553AC39C55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriverRegistration.Tests", "DriverRegistration.Tests\DriverRegistration.Tests.csproj", "{7FA3F3EA-90CB-43EE-9D43-1364BFC2BE4B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1D15B6A5-14C5-4943-B227-3F51E1E253C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D15B6A5-14C5-4943-B227-3F51E1E253C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D15B6A5-14C5-4943-B227-3F51E1E253C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D15B6A5-14C5-4943-B227-3F51E1E253C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6072EB01-4961-48BF-9758-D27D55DF8279}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6072EB01-4961-48BF-9758-D27D55DF8279}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6072EB01-4961-48BF-9758-D27D55DF8279}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6072EB01-4961-48BF-9758-D27D55DF8279}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0CE9658-CEE2-4030-A568-1B5FCDEE3D45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0CE9658-CEE2-4030-A568-1B5FCDEE3D45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0CE9658-CEE2-4030-A568-1B5FCDEE3D45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0CE9658-CEE2-4030-A568-1B5FCDEE3D45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04CC8BEE-3DDA-4AD8-9F09-14EA949886F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04CC8BEE-3DDA-4AD8-9F09-14EA949886F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04CC8BEE-3DDA-4AD8-9F09-14EA949886F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04CC8BEE-3DDA-4AD8-9F09-14EA949886F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B44CBEF3-DCEB-44CE-BBFE-AF553AC39C55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B44CBEF3-DCEB-44CE-BBFE-AF553AC39C55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B44CBEF3-DCEB-44CE-BBFE-AF553AC39C55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B44CBEF3-DCEB-44CE-BBFE-AF553AC39C55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FA3F3EA-90CB-43EE-9D43-1364BFC2BE4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FA3F3EA-90CB-43EE-9D43-1364BFC2BE4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FA3F3EA-90CB-43EE-9D43-1364BFC2BE4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FA3F3EA-90CB-43EE-9D43-1364BFC2BE4B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{049A960B-F25C-4F77-9C0F-308C94147CC3} = {28CEEFD2-A053-4C08-9004-87CB7B76C6F6}
+		{1E7E8873-602B-4E0D-8894-799C7E7B3477} = {28CEEFD2-A053-4C08-9004-87CB7B76C6F6}
+		{E6ADF5D4-9ACF-4A7D-812B-F0CF6DE49375} = {28CEEFD2-A053-4C08-9004-87CB7B76C6F6}
+		{04020275-831D-4CB2-A21D-C4F4917211DB} = {28CEEFD2-A053-4C08-9004-87CB7B76C6F6}
+		{05D12D4D-6FDA-48E4-8F81-17F0D895031C} = {04020275-831D-4CB2-A21D-C4F4917211DB}
+		{1D15B6A5-14C5-4943-B227-3F51E1E253C4} = {049A960B-F25C-4F77-9C0F-308C94147CC3}
+		{6072EB01-4961-48BF-9758-D27D55DF8279} = {1E7E8873-602B-4E0D-8894-799C7E7B3477}
+		{B0CE9658-CEE2-4030-A568-1B5FCDEE3D45} = {E6ADF5D4-9ACF-4A7D-812B-F0CF6DE49375}
+		{04CC8BEE-3DDA-4AD8-9F09-14EA949886F1} = {05D12D4D-6FDA-48E4-8F81-17F0D895031C}
+		{B44CBEF3-DCEB-44CE-BBFE-AF553AC39C55} = {049A960B-F25C-4F77-9C0F-308C94147CC3}
+		{7FA3F3EA-90CB-43EE-9D43-1364BFC2BE4B} = {9BF33CEC-DD4B-4EA0-9E2F-913A0240E5B4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4DCC8259-7C8F-4631-B79D-298EAE71898E}
+	EndGlobalSection
+EndGlobal

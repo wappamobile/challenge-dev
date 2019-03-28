@@ -1,0 +1,17 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/DriverRegistration.Application/bin/Debug/netcoreapp2.2
+/DriverRegistration.Application/obj
+/DriverRegistration.Data.InMemoryDB/bin/Debug/netcoreapp2.2
+/DriverRegistration.Data.InMemoryDB/obj
+/DriverRegistration.Domain/bin/Debug/netcoreapp2.2
+/DriverRegistration.Domain/obj
+/DriverRegistration.Tests/bin/Debug/netcoreapp2.2
+/DriverRegistration.Tests/obj
+/DriverRegistration.WebApi/bin/Debug/netcoreapp2.2
+/DriverRegistration.WebApi/obj
+/GoogleMaps.WebApi/bin/Debug/netcoreapp2.2
+/GoogleMaps.WebApi/obj
+/.vs
