@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Challenge.Domain.DriverAggregation
 {
-    public interface ICordinatesService
+    public interface IGeocodingService
     {
+        string GetGeocodingByAddress(string address);
     }
 }

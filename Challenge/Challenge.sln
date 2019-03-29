@@ -1,11 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.168
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28516.95
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge.Api", "Challenge.Api\Challenge.Api.csproj", "{ABE10331-13BB-459F-B0D1-490F721702AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Challenge.Api", "Challenge.Api\Challenge.Api.csproj", "{ABE10331-13BB-459F-B0D1-490F721702AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge.Domain", "Challenge.Domain\Challenge.Domain.csproj", "{22059686-670F-4F41-B9FE-C7F5771F494F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Challenge.Domain", "Challenge.Domain\Challenge.Domain.csproj", "{22059686-670F-4F41-B9FE-C7F5771F494F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge.Infra.Google", "Challenge.Infra.Google\Challenge.Infra.Google.csproj", "{A7A2A866-60D1-4122-B63D-8D8344CED49D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge.Infra.Mongo", "Challenge.Infra.Mongo\Challenge.Infra.Mongo.csproj", "{147624AE-7312-4106-AB15-9852F90F3AD0}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{EB0D107A-E10E-4010-843A-D06B16C8714A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +27,18 @@ Global
 		{22059686-670F-4F41-B9FE-C7F5771F494F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22059686-670F-4F41-B9FE-C7F5771F494F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22059686-670F-4F41-B9FE-C7F5771F494F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7A2A866-60D1-4122-B63D-8D8344CED49D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7A2A866-60D1-4122-B63D-8D8344CED49D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7A2A866-60D1-4122-B63D-8D8344CED49D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7A2A866-60D1-4122-B63D-8D8344CED49D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{147624AE-7312-4106-AB15-9852F90F3AD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{147624AE-7312-4106-AB15-9852F90F3AD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{147624AE-7312-4106-AB15-9852F90F3AD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{147624AE-7312-4106-AB15-9852F90F3AD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB0D107A-E10E-4010-843A-D06B16C8714A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB0D107A-E10E-4010-843A-D06B16C8714A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB0D107A-E10E-4010-843A-D06B16C8714A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB0D107A-E10E-4010-843A-D06B16C8714A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

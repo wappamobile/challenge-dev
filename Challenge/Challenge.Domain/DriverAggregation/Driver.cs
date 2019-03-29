@@ -13,14 +13,14 @@ namespace Challenge.Domain.DriverAggregation
 
         }
 
-        public Driver(AddDriverDto dto, ICordinatesService coodinatesService)
+        public Driver(AddDriverDto dto, IGeocodingService geocodingService)
         {
             Id = ObjectId.GenerateNewId();
             FirstName = dto.FirstName;
             LastName = dto.LastName;
             Car = dto.Car;
             Address = dto.Address;
-            
+            Geocode = geocodingService.GetGeocodingByAddress(dto.Address);
         }
         [BsonId]
         public ObjectId Id { get; set; }
@@ -28,13 +28,15 @@ namespace Challenge.Domain.DriverAggregation
         public string LastName { get; set; }
         public Car Car { get; set; }
         public string Address { get; set; }
+        public string Geocode { get; set; }
 
-        public void Update(UpdateDriverDto dto, ICordinatesService cordinatesService)
+        public void Update(UpdateDriverDto dto, IGeocodingService geocodingService)
         {
             FirstName = dto.FirstName;
             LastName = dto.LastName;
             Car = dto.Car;
             Address = dto.Address;
+            Geocode = geocodingService.GetGeocodingByAddress(dto.Address);
         }
     }
 }

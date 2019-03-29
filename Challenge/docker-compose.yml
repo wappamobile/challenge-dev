@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  challenge.api:
+    image: ${DOCKER_REGISTRY-}challengeapi
+    build:
+      context: .
+      dockerfile: Challenge.Api/Dockerfile
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo:latest
+    ports:
+        - 27017:27017
+
+

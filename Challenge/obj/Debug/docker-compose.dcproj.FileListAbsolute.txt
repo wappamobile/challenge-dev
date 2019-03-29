@@ -1,0 +1,11 @@
+C:\Users\Windows\source\repos\challenge-dev\Challenge\bin\Debug\Challenge.Api.dll
+C:\Users\Windows\source\repos\challenge-dev\Challenge\bin\Debug\Challenge.Domain.dll
+C:\Users\Windows\source\repos\challenge-dev\Challenge\bin\Debug\Challenge.Infra.Mongo.dll
+C:\Users\Windows\source\repos\challenge-dev\Challenge\bin\Debug\Challenge.Infra.Google.dll
+C:\Users\Windows\source\repos\challenge-dev\Challenge\bin\Debug\Challenge.Api.pdb
+C:\Users\Windows\source\repos\challenge-dev\Challenge\bin\Debug\Challenge.Domain.pdb
+C:\Users\Windows\source\repos\challenge-dev\Challenge\bin\Debug\Challenge.Infra.Mongo.pdb
+C:\Users\Windows\source\repos\challenge-dev\Challenge\bin\Debug\Challenge.Infra.Google.pdb
+C:\Users\Windows\source\repos\challenge-dev\Challenge\obj\Debug\docker-compose.dcprojAssemblyReference.cache
+C:\Users\Windows\source\repos\challenge-dev\Challenge\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
+C:\Users\Windows\source\repos\challenge-dev\Challenge\obj\Debug\docker-compose.dcproj.CopyComplete

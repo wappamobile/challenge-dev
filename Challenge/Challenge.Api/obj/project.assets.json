@@ -3228,6 +3228,63 @@
           }
         }
       },
+      "Swashbuckle.AspNetCore/4.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Swashbuckle.AspNetCore.Swagger": "4.0.1",
+          "Swashbuckle.AspNetCore.SwaggerGen": "4.0.1",
+          "Swashbuckle.AspNetCore.SwaggerUI": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.dll": {}
+        }
+      },
+      "Swashbuckle.AspNetCore.Swagger/4.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Core": "2.0.0",
+          "Microsoft.AspNetCore.Mvc.Formatters.Json": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.dll": {}
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerGen/4.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.ApiExplorer": "2.0.0",
+          "Microsoft.AspNetCore.Mvc.Core": "2.0.0",
+          "Microsoft.AspNetCore.Mvc.DataAnnotations": "2.0.0",
+          "Swashbuckle.AspNetCore.Swagger": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerUI/4.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Routing": "2.0.0",
+          "Microsoft.AspNetCore.StaticFiles": "2.0.0",
+          "Microsoft.Extensions.FileProviders.Embedded": "2.0.0",
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -5096,6 +5153,35 @@
         },
         "runtime": {
           "bin/placeholder/Challenge.Domain.dll": {}
+        }
+      },
+      "Challenge.Infra.Google/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Challenge.Domain": "1.0.0",
+          "Microsoft.Extensions.Configuration": "2.2.0"
+        },
+        "compile": {
+          "bin/placeholder/Challenge.Infra.Google.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Challenge.Infra.Google.dll": {}
+        }
+      },
+      "Challenge.Infra.Mongo/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Challenge.Domain": "1.0.0",
+          "Microsoft.Extensions.Configuration": "2.2.0",
+          "MongoDB.Driver": "2.8.0"
+        },
+        "compile": {
+          "bin/placeholder/Challenge.Infra.Mongo.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Challenge.Infra.Mongo.dll": {}
         }
       }
     }
@@ -8956,6 +9042,57 @@
         "runtimes/win-x86/native/sni.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Swashbuckle.AspNetCore/4.0.1": {
+      "sha512": "Zq6lkFieuFPNDwXwQ+e8i5zy2VMrexcRFU8mQORxqIc8r7Y+qKX63vg57yL1HeGCINHQGGzxGfw2rP63IeEqhg==",
+      "type": "package",
+      "path": "swashbuckle.aspnetcore/4.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.dll",
+        "swashbuckle.aspnetcore.4.0.1.nupkg.sha512",
+        "swashbuckle.aspnetcore.nuspec"
+      ]
+    },
+    "Swashbuckle.AspNetCore.Swagger/4.0.1": {
+      "sha512": "rqzS3vHrjz+tR5j0nZOKZyaMTDfLGbVYkwMq205aYuGbsiGwbOlNU0Q8lq4Q0ptQPMKVkUf8XouCIdJ3qpK17w==",
+      "type": "package",
+      "path": "swashbuckle.aspnetcore.swagger/4.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.dll",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.xml",
+        "swashbuckle.aspnetcore.swagger.4.0.1.nupkg.sha512",
+        "swashbuckle.aspnetcore.swagger.nuspec"
+      ]
+    },
+    "Swashbuckle.AspNetCore.SwaggerGen/4.0.1": {
+      "sha512": "ztAj0T1U+2AqQNA8b+nr8yVkDW9XzNaAfez6d1jO13sdn2A/JW5Syn9TThsakrHxYNLt6y6aQCXbyBfQXpcQwA==",
+      "type": "package",
+      "path": "swashbuckle.aspnetcore.swaggergen/4.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
+        "swashbuckle.aspnetcore.swaggergen.4.0.1.nupkg.sha512",
+        "swashbuckle.aspnetcore.swaggergen.nuspec"
+      ]
+    },
+    "Swashbuckle.AspNetCore.SwaggerUI/4.0.1": {
+      "sha512": "d2U7NyV0e4UhyCzAVK9QHm0iz2QoVPUa9XzJ/Gr0rn/jBZWFpVLvigKv0vxFzO2E793sY605+4h885gvCdKSxQ==",
+      "type": "package",
+      "path": "swashbuckle.aspnetcore.swaggerui/4.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.dll",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
+        "swashbuckle.aspnetcore.swaggerui.4.0.1.nupkg.sha512",
+        "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -13942,16 +14079,29 @@
       "type": "project",
       "path": "../Challenge.Domain/Challenge.Domain.csproj",
       "msbuildProject": "../Challenge.Domain/Challenge.Domain.csproj"
+    },
+    "Challenge.Infra.Google/1.0.0": {
+      "type": "project",
+      "path": "../Challenge.Infra.Google/Challenge.Infra.Google.csproj",
+      "msbuildProject": "../Challenge.Infra.Google/Challenge.Infra.Google.csproj"
+    },
+    "Challenge.Infra.Mongo/1.0.0": {
+      "type": "project",
+      "path": "../Challenge.Infra.Mongo/Challenge.Infra.Mongo.csproj",
+      "msbuildProject": "../Challenge.Infra.Mongo/Challenge.Infra.Mongo.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "Challenge.Domain >= 1.0.0",
+      "Challenge.Infra.Google >= 1.0.0",
+      "Challenge.Infra.Mongo >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.0.2105168",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.0"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.0",
+      "Swashbuckle.AspNetCore >= 4.0.1"
     ]
   },
   "packageFolders": {
@@ -13961,11 +14111,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Windows\\Source\\Repos\\challenge-dev\\Challenge\\Challenge.Api\\Challenge.Api.csproj",
+      "projectUniqueName": "C:\\Users\\Windows\\source\\repos\\challenge-dev\\Challenge\\Challenge.Api\\Challenge.Api.csproj",
       "projectName": "Challenge.Api",
-      "projectPath": "C:\\Users\\Windows\\Source\\Repos\\challenge-dev\\Challenge\\Challenge.Api\\Challenge.Api.csproj",
+      "projectPath": "C:\\Users\\Windows\\source\\repos\\challenge-dev\\Challenge\\Challenge.Api\\Challenge.Api.csproj",
       "packagesPath": "C:\\Users\\Windows\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Windows\\Source\\Repos\\challenge-dev\\Challenge\\Challenge.Api\\obj\\",
+      "outputPath": "C:\\Users\\Windows\\source\\repos\\challenge-dev\\Challenge\\Challenge.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13984,8 +14134,14 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\Windows\\Source\\Repos\\challenge-dev\\Challenge\\Challenge.Domain\\Challenge.Domain.csproj": {
-              "projectPath": "C:\\Users\\Windows\\Source\\Repos\\challenge-dev\\Challenge\\Challenge.Domain\\Challenge.Domain.csproj"
+            "C:\\Users\\Windows\\source\\repos\\challenge-dev\\Challenge\\Challenge.Domain\\Challenge.Domain.csproj": {
+              "projectPath": "C:\\Users\\Windows\\source\\repos\\challenge-dev\\Challenge\\Challenge.Domain\\Challenge.Domain.csproj"
+            },
+            "C:\\Users\\Windows\\source\\repos\\challenge-dev\\Challenge\\Challenge.Infra.Google\\Challenge.Infra.Google.csproj": {
+              "projectPath": "C:\\Users\\Windows\\source\\repos\\challenge-dev\\Challenge\\Challenge.Infra.Google\\Challenge.Infra.Google.csproj"
+            },
+            "C:\\Users\\Windows\\source\\repos\\challenge-dev\\Challenge\\Challenge.Infra.Mongo\\Challenge.Infra.Mongo.csproj": {
+              "projectPath": "C:\\Users\\Windows\\source\\repos\\challenge-dev\\Challenge\\Challenge.Infra.Mongo\\Challenge.Infra.Mongo.csproj"
             }
           }
         }
@@ -14023,6 +14179,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[2.2.0, )"
+          },
+          "Swashbuckle.AspNetCore": {
+            "target": "Package",
+            "version": "[4.0.1, )"
           }
         },
         "imports": [

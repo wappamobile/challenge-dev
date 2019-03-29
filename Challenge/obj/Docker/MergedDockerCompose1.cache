@@ -1,0 +1,34 @@
+services:
+  challenge.api:
+    build:
+      context: C:\Users\Windows\source\repos\challenge-dev\Challenge
+      dockerfile: Challenge.Api/Dockerfile
+      target: base
+    depends_on:
+    - mongodb
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
+    image: challengeapi:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages  bin/Debug/netcoreapp2.2/Challenge.Api.dll'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - target: 80
+    volumes:
+    - C:\Users\Windows\source\repos\challenge-dev\Challenge\Challenge.Api:/app:rw
+    - C:\Users\Windows\vsdbg\vs2017u5:/remote_debugger:ro
+    - C:\Program Files\dotnet\sdk\NuGetFallbackFolder:/root/.nuget/fallbackpackages:ro
+    - C:\Users\Windows\.nuget\packages:/root/.nuget/packages:ro
+  mongodb:
+    image: mongo:latest
+    ports:
+    - published: 27017
+      target: 27017
+version: '3.4'

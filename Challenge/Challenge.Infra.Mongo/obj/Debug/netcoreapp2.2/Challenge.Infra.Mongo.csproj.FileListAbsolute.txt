@@ -1,0 +1,12 @@
+C:\Users\Windows\source\repos\challenge-dev\Challenge\Challenge.Infra.Mongo\bin\Debug\netcoreapp2.2\Challenge.Infra.Mongo.deps.json
+C:\Users\Windows\source\repos\challenge-dev\Challenge\Challenge.Infra.Mongo\bin\Debug\netcoreapp2.2\Challenge.Infra.Mongo.dll
+C:\Users\Windows\source\repos\challenge-dev\Challenge\Challenge.Infra.Mongo\bin\Debug\netcoreapp2.2\Challenge.Infra.Mongo.pdb
+C:\Users\Windows\source\repos\challenge-dev\Challenge\Challenge.Infra.Mongo\bin\Debug\netcoreapp2.2\Challenge.Domain.dll
+C:\Users\Windows\source\repos\challenge-dev\Challenge\Challenge.Infra.Mongo\bin\Debug\netcoreapp2.2\Challenge.Domain.pdb
+C:\Users\Windows\source\repos\challenge-dev\Challenge\Challenge.Infra.Mongo\obj\Debug\netcoreapp2.2\Challenge.Infra.Mongo.csprojAssemblyReference.cache
+C:\Users\Windows\source\repos\challenge-dev\Challenge\Challenge.Infra.Mongo\obj\Debug\netcoreapp2.2\Challenge.Infra.Mongo.csproj.CoreCompileInputs.cache
+C:\Users\Windows\source\repos\challenge-dev\Challenge\Challenge.Infra.Mongo\obj\Debug\netcoreapp2.2\Challenge.Infra.Mongo.AssemblyInfoInputs.cache
+C:\Users\Windows\source\repos\challenge-dev\Challenge\Challenge.Infra.Mongo\obj\Debug\netcoreapp2.2\Challenge.Infra.Mongo.AssemblyInfo.cs
+C:\Users\Windows\source\repos\challenge-dev\Challenge\Challenge.Infra.Mongo\obj\Debug\netcoreapp2.2\Challenge.Infra.Mongo.csproj.CopyComplete
+C:\Users\Windows\source\repos\challenge-dev\Challenge\Challenge.Infra.Mongo\obj\Debug\netcoreapp2.2\Challenge.Infra.Mongo.dll
+C:\Users\Windows\source\repos\challenge-dev\Challenge\Challenge.Infra.Mongo\obj\Debug\netcoreapp2.2\Challenge.Infra.Mongo.pdb

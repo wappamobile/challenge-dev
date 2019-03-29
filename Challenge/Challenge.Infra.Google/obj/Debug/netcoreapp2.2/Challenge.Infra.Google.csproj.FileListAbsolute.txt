@@ -1,0 +1,12 @@
+C:\Users\Windows\source\repos\challenge-dev\Challenge\Challenge.Infra.Google\bin\Debug\netcoreapp2.2\Challenge.Infra.Google.deps.json
+C:\Users\Windows\source\repos\challenge-dev\Challenge\Challenge.Infra.Google\bin\Debug\netcoreapp2.2\Challenge.Infra.Google.dll
+C:\Users\Windows\source\repos\challenge-dev\Challenge\Challenge.Infra.Google\bin\Debug\netcoreapp2.2\Challenge.Infra.Google.pdb
+C:\Users\Windows\source\repos\challenge-dev\Challenge\Challenge.Infra.Google\bin\Debug\netcoreapp2.2\Challenge.Domain.dll
+C:\Users\Windows\source\repos\challenge-dev\Challenge\Challenge.Infra.Google\bin\Debug\netcoreapp2.2\Challenge.Domain.pdb
+C:\Users\Windows\source\repos\challenge-dev\Challenge\Challenge.Infra.Google\obj\Debug\netcoreapp2.2\Challenge.Infra.Google.csprojAssemblyReference.cache
+C:\Users\Windows\source\repos\challenge-dev\Challenge\Challenge.Infra.Google\obj\Debug\netcoreapp2.2\Challenge.Infra.Google.csproj.CoreCompileInputs.cache
+C:\Users\Windows\source\repos\challenge-dev\Challenge\Challenge.Infra.Google\obj\Debug\netcoreapp2.2\Challenge.Infra.Google.AssemblyInfoInputs.cache
+C:\Users\Windows\source\repos\challenge-dev\Challenge\Challenge.Infra.Google\obj\Debug\netcoreapp2.2\Challenge.Infra.Google.AssemblyInfo.cs
+C:\Users\Windows\source\repos\challenge-dev\Challenge\Challenge.Infra.Google\obj\Debug\netcoreapp2.2\Challenge.Infra.Google.csproj.CopyComplete
+C:\Users\Windows\source\repos\challenge-dev\Challenge\Challenge.Infra.Google\obj\Debug\netcoreapp2.2\Challenge.Infra.Google.dll
+C:\Users\Windows\source\repos\challenge-dev\Challenge\Challenge.Infra.Google\obj\Debug\netcoreapp2.2\Challenge.Infra.Google.pdb

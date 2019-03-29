@@ -11,5 +11,6 @@ namespace Challenge.Domain.DriverAggregation
         Task Update(Driver driver);
         Task Remove(Driver driver);
         Task<Driver> GetById(IQueryableById queryableById);
+        Task<IEnumerable<Driver>> Get(GetDriversOrderType orderType);
     }
 }
