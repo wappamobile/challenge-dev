@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Challenge.Domain.DriverAggregation
 {
-    public class UpdateDriverDto
+    public class UpdateDriverDto : IQueryableById
     {
         public string Id { get; set; }
         public string FirstName { get; set; }
