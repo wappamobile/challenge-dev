@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MG.WappaDriverAPI", "MG.WappaDriverAPI\MG.WappaDriverAPI.csproj", "{0F683217-26F5-44FE-B7B4-7DEEBC260B5F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MG.WappaDriverAPI.Core", "MG.WappaDriverAPI.Core\MG.WappaDriverAPI.Core.csproj", "{964AAC85-4BBD-4A39-992E-DDBB46B77324}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MG.WappaDriverAPI.Test", "MG.WappaDriverAPI.Test\MG.WappaDriverAPI.Test.csproj", "{1B604C92-9396-48B9-A5BD-3181AC7616B9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F683217-26F5-44FE-B7B4-7DEEBC260B5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F683217-26F5-44FE-B7B4-7DEEBC260B5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F683217-26F5-44FE-B7B4-7DEEBC260B5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F683217-26F5-44FE-B7B4-7DEEBC260B5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{964AAC85-4BBD-4A39-992E-DDBB46B77324}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{964AAC85-4BBD-4A39-992E-DDBB46B77324}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{964AAC85-4BBD-4A39-992E-DDBB46B77324}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{964AAC85-4BBD-4A39-992E-DDBB46B77324}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B604C92-9396-48B9-A5BD-3181AC7616B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B604C92-9396-48B9-A5BD-3181AC7616B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B604C92-9396-48B9-A5BD-3181AC7616B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B604C92-9396-48B9-A5BD-3181AC7616B9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DFDAA357-A5B2-494F-86CB-DF5FDFAB99EB}
+	EndGlobalSection
+EndGlobal

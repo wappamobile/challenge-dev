@@ -1,0 +1,137 @@
+﻿{
+  "results": [
+    {
+      "address_components": [
+        {
+          "long_name": "600",
+          "short_name": "600",
+          "types": [ "street_number" ]
+        },
+        {
+          "long_name": "East Washington Boulevard",
+          "short_name": "E Washington Blvd",
+          "types": [ "route" ]
+        },
+        {
+          "long_name": "South Los Angeles",
+          "short_name": "South Los Angeles",
+          "types": [ "neighborhood", "political" ]
+        },
+        {
+          "long_name": "Los Angeles",
+          "short_name": "Los Angeles",
+          "types": [ "locality", "political" ]
+        },
+        {
+          "long_name": "Los Angeles County",
+          "short_name": "Los Angeles County",
+          "types": [ "administrative_area_level_2", "political" ]
+        },
+        {
+          "long_name": "California",
+          "short_name": "CA",
+          "types": [ "administrative_area_level_1", "political" ]
+        },
+        {
+          "long_name": "Estados Unidos",
+          "short_name": "US",
+          "types": [ "country", "political" ]
+        },
+        {
+          "long_name": "90015",
+          "short_name": "90015",
+          "types": [ "postal_code" ]
+        }
+      ],
+      "formatted_address": "600 E Washington Blvd, Los Angeles, CA 90015, EUA",
+      "geometry": {
+        "location": {
+          "lat": 34.0277828,
+          "lng": -118.2593318
+        },
+        "location_type": "ROOFTOP",
+        "viewport": {
+          "northeast": {
+            "lat": 34.0291317802915,
+            "lng": -118.2579828197085
+          },
+          "southwest": {
+            "lat": 34.0264338197085,
+            "lng": -118.2606807802915
+          }
+        }
+      },
+      "place_id": "ChIJAQDAsdbHwoAR8IcKrSMrpvA",
+      "types": [ "establishment", "point_of_interest" ]
+    },
+    {
+      "address_components": [
+        {
+          "long_name": "11212",
+          "short_name": "11212",
+          "types": [ "street_number" ]
+        },
+        {
+          "long_name": "West 75th Street",
+          "short_name": "W 75th St",
+          "types": [ "route" ]
+        },
+        {
+          "long_name": "Shawnee",
+          "short_name": "Shawnee",
+          "types": [ "locality", "political" ]
+        },
+        {
+          "long_name": "Johnson County",
+          "short_name": "Johnson County",
+          "types": [ "administrative_area_level_2", "political" ]
+        },
+        {
+          "long_name": "Kansas",
+          "short_name": "KS",
+          "types": [ "administrative_area_level_1", "political" ]
+        },
+        {
+          "long_name": "Estados Unidos",
+          "short_name": "US",
+          "types": [ "country", "political" ]
+        },
+        {
+          "long_name": "66214",
+          "short_name": "66214",
+          "types": [ "postal_code" ]
+        },
+        {
+          "long_name": "1201",
+          "short_name": "1201",
+          "types": [ "postal_code_suffix" ]
+        }
+      ],
+      "formatted_address": "11212 W 75th St, Shawnee, KS 66214, EUA",
+      "geometry": {
+        "location": {
+          "lat": 38.9932984,
+          "lng": -94.7160768
+        },
+        "location_type": "ROOFTOP",
+        "viewport": {
+          "northeast": {
+            "lat": 38.9946473802915,
+            "lng": -94.7147278197085
+          },
+          "southwest": {
+            "lat": 38.9919494197085,
+            "lng": -94.71742578029151
+          }
+        }
+      },
+      "place_id": "ChIJ9WUs6LnswIcRlA799nGL5Og",
+      "plus_code": {
+        "compound_code": "X7VM+8H Shawnee, Shawnee Mission, KS, Estados Unidos",
+        "global_code": "86C7X7VM+8H"
+      },
+      "types": [ "beauty_salon", "establishment", "point_of_interest" ]
+    }
+  ],
+  "status": "OK"
+}

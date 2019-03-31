@@ -1,0 +1,68 @@
+﻿{
+  "results": [
+    {
+      "address_components": [
+        {
+          "long_name": "198",
+          "short_name": "198",
+          "types": [ "street_number" ]
+        },
+        {
+          "long_name": "Rua Ramos Batista",
+          "short_name": "R. Ramos Batista",
+          "types": [ "route" ]
+        },
+        {
+          "long_name": "Vila Olímpia",
+          "short_name": "Vila Olímpia",
+          "types": [ "political", "sublocality", "sublocality_level_1" ]
+        },
+        {
+          "long_name": "São Paulo",
+          "short_name": "São Paulo",
+          "types": [ "administrative_area_level_2", "political" ]
+        },
+        {
+          "long_name": "São Paulo",
+          "short_name": "SP",
+          "types": [ "administrative_area_level_1", "political" ]
+        },
+        {
+          "long_name": "Brasil",
+          "short_name": "BR",
+          "types": [ "country", "political" ]
+        },
+        {
+          "long_name": "04552-020",
+          "short_name": "04552-020",
+          "types": [ "postal_code" ]
+        }
+      ],
+      "formatted_address": "R. Ramos Batista, 198 - Vila Olímpia, São Paulo - SP, 04552-020, Brasil",
+      "geometry": {
+        "location": {
+          "lat": -23.5924528,
+          "lng": -46.68441379999999
+        },
+        "location_type": "ROOFTOP",
+        "viewport": {
+          "northeast": {
+            "lat": -23.5911038197085,
+            "lng": -46.68306481970849
+          },
+          "southwest": {
+            "lat": -23.5938017802915,
+            "lng": -46.68576278029149
+          }
+        }
+      },
+      "place_id": "ChIJ-71z7UVXzpQRRcgMUa9ARxY",
+      "plus_code": {
+        "compound_code": "C858+26 São Paulo, SP, Brasil",
+        "global_code": "588MC858+26"
+      },
+      "types": [ "establishment", "point_of_interest" ]
+    }
+  ],
+  "status": "OK"
+}

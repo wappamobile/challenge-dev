@@ -1,0 +1,75 @@
+{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "2016",
+               "short_name" : "2016",
+               "types" : [ "street_number" ]
+            },
+            {
+               "long_name" : "Rua Vergueiro",
+               "short_name" : "Rua Vergueiro",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "Vila Mariana",
+               "short_name" : "Vila Mariana",
+               "types" : [ "political", "sublocality", "sublocality_level_1" ]
+            },
+            {
+               "long_name" : "São Paulo",
+               "short_name" : "São Paulo",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "São Paulo",
+               "short_name" : "SP",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Brasil",
+               "short_name" : "BR",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "04009-010",
+               "short_name" : "04009-010",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "Rua Vergueiro, 2016 - Vila Mariana, São Paulo - SP, 04009-010, Brasil",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : -23.5799241,
+                  "lng" : -46.6396622
+               },
+               "southwest" : {
+                  "lat" : -23.5801423,
+                  "lng" : -46.6399216
+               }
+            },
+            "location" : {
+               "lat" : -23.5800087,
+               "lng" : -46.6397974
+            },
+            "location_type" : "ROOFTOP",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -23.5786842197085,
+                  "lng" : -46.6384429197085
+               },
+               "southwest" : {
+                  "lat" : -23.5813821802915,
+                  "lng" : -46.64114088029149
+               }
+            }
+         },
+         "partial_match" : true,
+         "place_id" : "ChIJc2iQGYVZzpQRFAPJ7jGkaP4",
+         "types" : [ "premise" ]
+      }
+   ],
+   "status" : "OK"
+}
