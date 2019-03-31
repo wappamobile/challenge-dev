@@ -39,3 +39,16 @@ Além do cadastro também será necessário disponibilizar uma **listagem dos ca
  - Documentação da API
  - Testes
  - Nos informe também o nível de dificuldade e um feedback sobre o desafio proposto [nesta pesquisa](https://goo.gl/forms/qui1n636NKY2w96V2)
+ 
+ 
+ 
+ ### Teste _ Marcio Guilherme
+ 
+ Para executar é necessário 
+1) Configurar a AppKey da API do Google 
+2) Configurar a string de conexão para um MongoDB
+![](MG.WappaDriverAPI/configuracao.PNG)
+3) Acessar o mongo criar o banco e as coleções 
+![](MG.WappaDriverAPI/MongoDB.PNG)
+
+
