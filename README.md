@@ -1,41 +1,40 @@
 # challenge-dev - Desafio para backend Software Engineer
 
-## Objetivo e avaliação
+Segue o resumo de execução do meu teste:
 
-Objetivo deste teste é avaliar como você irá considerar questões como **arquitetura e design de software, modelagem e aplicação de técnicas e conceitos de programação** e não simplesmente resolver o problema proposto, visto que o mesmo não oferece dificuldades reais para implementação.  
+Tempo de desenvolvimento: 12h00min.
 
-## Entrega do projeto
+Executar o migrator para criacao do banco de dados.
 
-Faça um fork deste projeto e ao concluir envie um pull request (PR) com sua implementação. Ao enviar o PR nos informe:
+Para testar o serviço do GoogleMaps, e necessario configurar uma chave valida no arquivo `appsettings.Development.json` ou `appsettings.json`:
 
- - Explicação sobre a solução desenvolvida (Markdown/Plain Text);
- - Quanto tempo você levou para desenvolver a solução.
+```
+"GoogleMapsConfigurations": {
+    "BaseUrl": "https://maps.google.com/maps/",
+    "ApiUrlAddress": "api/geocode/json",
+    "Key": "Insira a chave aqui"
+  }
+```
 
-## Escopo
+A API está documentada via Swagger.
 
-Precisamos de uma biblioteca para gerenciar o cadastro de motoristas.
+### Arquitetura da solução
 
-**Front-end não é necessário e não será avaliado**, porém precisamos de uma API que permita:
+A aruitetura utlizada para solucao porposta foi o design pattern DDD e TDD baseada em micro servicos:
 
- - criar, editar e excluir um motorista.
+ - **`Wappa.Middleware.Domain`**: Entidades e objetos comuns.
+ - **`Wappa.Middleware.EntityFrameworkCore`**: EntityFramework Core com SqlServer.
+ - **`Wappa.Middleware.Core`**: Regras de negocio e consome o repositorio.
+ - **`Wappa.Middleware.Application`**: Regras de validacao e consome o servico(core).
+ - **`Wappa.Middleware.Host`**: Web API e documentação via Swagger.
+ - **`Wappa.Middleware.Application.Tests`**: Testes unitários.
 
-Um cadastro de motorista possui os campos:
+### Ferramentas utilizadas:
 
- - Nome (primeiro e último);
- - Carro (marca, modelo e placa);
- - Endereço completo.
-
-Adicionamente, ao cadastrar um endereço deve ser **buscada as coordenadas** utilizando a [API do Google Maps](https://developers.google.com/maps/documentation/geocoding) e elas devem ser armazenadas junto com o cadastro.
-
-Além do cadastro também será necessário disponibilizar uma **listagem dos cadastros em ordem alfabética** por nome **ou** sobrenome.
-
-### Obrigatório
- - .NET Core - C#
- - WebAPI
- - IoC
- - Código limpo
-
-### Desejável
- - Documentação da API
- - Testes
- - Nos informe também o nível de dificuldade e um feedback sobre o desafio proposto [nesta pesquisa](https://goo.gl/forms/qui1n636NKY2w96V2)
+ - AspNetCore 2.2;
+ - EntityFramework Core 2.2;
+ - AutoMapper;
+ - FluentValidation;
+ - Geocoding.Google;
+ - Swashbucle.AspNetCore;
+ - xUnit;
