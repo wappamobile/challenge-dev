@@ -51,4 +51,6 @@ Além do cadastro também será necessário disponibilizar uma **listagem dos ca
 3) Acessar o mongo criar o banco e as coleções 
 ![](MG.WappaDriverAPI/MongoDB.PNG)
 
-
+use DriverStore
+db.Drivers.insert({ Name: "Teste" })
+db.DriversAddresses.insert({ Name: "Teste" })
