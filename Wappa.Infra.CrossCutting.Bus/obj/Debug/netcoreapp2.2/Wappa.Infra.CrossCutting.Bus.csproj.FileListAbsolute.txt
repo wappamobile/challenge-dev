@@ -1,0 +1,12 @@
+C:\Wappa\Wappa.Infra.CrossCutting.Bus\bin\Debug\netcoreapp2.2\Wappa.Infra.CrossCutting.Bus.deps.json
+C:\Wappa\Wappa.Infra.CrossCutting.Bus\bin\Debug\netcoreapp2.2\Wappa.Infra.CrossCutting.Bus.dll
+C:\Wappa\Wappa.Infra.CrossCutting.Bus\obj\Debug\netcoreapp2.2\Wappa.Infra.CrossCutting.Bus.csprojAssemblyReference.cache
+C:\Wappa\Wappa.Infra.CrossCutting.Bus\obj\Debug\netcoreapp2.2\Wappa.Infra.CrossCutting.Bus.csproj.CoreCompileInputs.cache
+C:\Wappa\Wappa.Infra.CrossCutting.Bus\obj\Debug\netcoreapp2.2\Wappa.Infra.CrossCutting.Bus.AssemblyInfoInputs.cache
+C:\Wappa\Wappa.Infra.CrossCutting.Bus\obj\Debug\netcoreapp2.2\Wappa.Infra.CrossCutting.Bus.AssemblyInfo.cs
+C:\Wappa\Wappa.Infra.CrossCutting.Bus\bin\Debug\netcoreapp2.2\Wappa.Infra.CrossCutting.Bus.pdb
+C:\Wappa\Wappa.Infra.CrossCutting.Bus\bin\Debug\netcoreapp2.2\Wappa.Domain.Core.dll
+C:\Wappa\Wappa.Infra.CrossCutting.Bus\bin\Debug\netcoreapp2.2\Wappa.Domain.Core.pdb
+C:\Wappa\Wappa.Infra.CrossCutting.Bus\obj\Debug\netcoreapp2.2\Wappa.Infra.CrossCutting.Bus.csproj.CopyComplete
+C:\Wappa\Wappa.Infra.CrossCutting.Bus\obj\Debug\netcoreapp2.2\Wappa.Infra.CrossCutting.Bus.dll
+C:\Wappa\Wappa.Infra.CrossCutting.Bus\obj\Debug\netcoreapp2.2\Wappa.Infra.CrossCutting.Bus.pdb

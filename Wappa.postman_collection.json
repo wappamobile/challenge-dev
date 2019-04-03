@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "42e8cde3-5548-4434-b8c7-d1f3b3fb202f",
+		"name": "Wappa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://localhost:44388/api/v1/driver-management?order=lastName",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44388",
+					"path": [
+						"api",
+						"v1",
+						"driver-management"
+					],
+					"query": [
+						{
+							"key": "order",
+							"value": "lastName"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Driver Insert",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"disabled": false
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Name\" : \"Leandro\",\n\t\"LastName\" : \"Andrade\",\n\t\"CarModel\" : \"Palio\",\n\t\"CarBrand\" : \"Fiat\",\n\t\"CarPlate\" : \"DNQ5392\",\n\t\"Zipcode\" : \"08290-420\",\n\t\"Address\" : \"Rua serra de santa marta, 485 Vila Carmosina São Paulo\"\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44388/api/v1/driver-management",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44388",
+					"path": [
+						"api",
+						"v1",
+						"driver-management"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Driver Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"21367AF3-FECB-4260-AE45-08D6B7E489E6\",\n\t\"Name\" : \"Leonardo\",\n\t\"LastName\" : \"Moreno\",\n\t\"CarModel\" : \"Corsa\",\n\t\"CarBrand\" : \"GMC\",\n\t\"CarPlate\" : \"ELP9086\",\n\t\"Zipcode\" : \"08290-400\",\n\t\"Address\" : \"Rua capitania de itamaracá, 400 Vila Carmosina São Paulo\"\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44388/api/v1/driver-management",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44388",
+					"path": [
+						"api",
+						"v1",
+						"driver-management"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,8 @@
+C:\Wappa\Wappa.Domain.Core\bin\Debug\netcoreapp2.2\Wappa.Domain.Core.deps.json
+C:\Wappa\Wappa.Domain.Core\bin\Debug\netcoreapp2.2\Wappa.Domain.Core.dll
+C:\Wappa\Wappa.Domain.Core\obj\Debug\netcoreapp2.2\Wappa.Domain.Core.csproj.CoreCompileInputs.cache
+C:\Wappa\Wappa.Domain.Core\obj\Debug\netcoreapp2.2\Wappa.Domain.Core.AssemblyInfoInputs.cache
+C:\Wappa\Wappa.Domain.Core\obj\Debug\netcoreapp2.2\Wappa.Domain.Core.AssemblyInfo.cs
+C:\Wappa\Wappa.Domain.Core\bin\Debug\netcoreapp2.2\Wappa.Domain.Core.pdb
+C:\Wappa\Wappa.Domain.Core\obj\Debug\netcoreapp2.2\Wappa.Domain.Core.dll
+C:\Wappa\Wappa.Domain.Core\obj\Debug\netcoreapp2.2\Wappa.Domain.Core.pdb
