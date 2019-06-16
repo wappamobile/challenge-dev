@@ -1,41 +1,28 @@
-# challenge-dev - Desafio para backend Software Engineer
+# Code Challenge Grupo Zap
 
-## Objetivo e avaliação
+Para realizar o desafio utilizei o Visual Studio 2019 e criada uma API em ASP.NET Core 2.0 utilizando MediatR.
 
-Objetivo deste teste é avaliar como você irá considerar questões como **arquitetura e design de software, modelagem e aplicação de técnicas e conceitos de programação** e não simplesmente resolver o problema proposto, visto que o mesmo não oferece dificuldades reais para implementação.  
+# Sobre o código
 
-## Entrega do projeto
+O projeto está basicamente dividido em três componentes principais:
 
-Faça um fork deste projeto e ao concluir envie um pull request (PR) com sua implementação. Ao enviar o PR nos informe:
+- Motoristas: contém a API que será exposta
+- Motorista.Core: contém as entidades de negócio, mapeamentos e as interfaces de Repositório e Serviço de Geolocalização
+- Motoristas.Handlers: contém os commands da API, validações e os handlers de implementação dos comandos
+- Interface com API de Geolocalização do Google implementada no componentes GoogleGeolocationService
+- Projeto MicroservicesPlatform e Motoristas.Helpers dão suporte a infra estrutura necessária para implementação do microserviço e classes úteis sem implementação de regra de negócio
+- Motoristas.Core.Data.MongoDB: contém a implementação do DAO (Utilizando MongoDB)
 
- - Explicação sobre a solução desenvolvida (Markdown/Plain Text);
- - Quanto tempo você levou para desenvolver a solução.
+# Sobre os testes
 
-## Escopo
+- Foram implementados dois testes unitários utilizando XUnit: para testar os handlers e para testar o componente responsável pela interface com o Google Geocode API.
+- Na pasta Postman os testes das API's com Json de entrada.
 
-Precisamos de uma biblioteca para gerenciar o cadastro de motoristas.
+# Sobre o tempo de desenvolvimento:
 
-**Front-end não é necessário e não será avaliado**, porém precisamos de uma API que permita:
+Início do desenvolvimento: 11/06 (3 horas)
+Dia 2: 13/06 (3 horas)
+Dia 3: 14/06 (3 horas)
+Dia 4: 15/06 (4 horas)
+Último dia de entrega: 16/06 (3 horas)
 
- - criar, editar e excluir um motorista.
-
-Um cadastro de motorista possui os campos:
-
- - Nome (primeiro e último);
- - Carro (marca, modelo e placa);
- - Endereço completo.
-
-Adicionamente, ao cadastrar um endereço deve ser **buscada as coordenadas** utilizando a [API do Google Maps](https://developers.google.com/maps/documentation/geocoding) e elas devem ser armazenadas junto com o cadastro.
-
-Além do cadastro também será necessário disponibilizar uma **listagem dos cadastros em ordem alfabética** por nome **ou** sobrenome.
-
-### Obrigatório
- - .NET Core - C#
- - WebAPI
- - IoC
- - Código limpo
-
-### Desejável
- - Documentação da API
- - Testes
- - Nos informe também o nível de dificuldade e um feedback sobre o desafio proposto [nesta pesquisa](https://goo.gl/forms/qui1n636NKY2w96V2)

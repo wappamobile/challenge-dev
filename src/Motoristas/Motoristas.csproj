@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Flurl.Http" Version="2.4.2" />
+    <PackageReference Include="MediatR" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Nancy" Version="2.0.0" />
+    <PackageReference Include="Serilog" Version="2.8.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GoogleGeolocationService\GoogleGeolocationService.csproj" />
+    <ProjectReference Include="..\MicroservicesPlatform\MicroservicesPlatform.csproj" />
+    <ProjectReference Include="..\Motoristas.Core.Data.MongoDB\Motoristas.Core.Data.MongoDB.csproj" />
+    <ProjectReference Include="..\Motoristas.Core\Motoristas.Core.csproj" />
+    <ProjectReference Include="..\Motoristas.Handlers\Motoristas.Handlers.csproj" />
+  </ItemGroup>
+
+</Project>
