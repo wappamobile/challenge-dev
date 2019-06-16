@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "dc45f479-af61-4420-9e85-14815c22d92e",
+		"name": "Wappa_Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "{{base_url}}/motoristas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Nome\": \"PrimeiroNome\",\n\t\"UltimoNome\": \"Sobrenome\",\n\t\"Veiculo\" :\n\t    {\n\t        \"Marca\": \"MarcaCarro\",\n\t        \"Modelo\": \"ModeloCarro\",\n\t        \"Placa\": \"PLA-0123\"\n\t    },\t\n\t\"Endereco\":\n\t\t{\n\t\t    \"Bairro\": \"Bairro Teste\",\n\t\t    \"Cep\": \"09812-180\",\n\t\t    \"Cidade\": \"Cidade Teste\",\n\t\t    \"Complemento\": \"Complemento Teste\",\n\t\t    \"Descricao\": \"Avenida Paulista, 1009\",\n\t\t    \"Estado\": \"SP\",\n\t\t    \"Logradouro\": \"Avenida Paulista, 1009\",\n\t\t    \"Numero\" : \"1009A\"\n\t\t}    \n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/motoristas",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"motoristas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/motoristas/{{perfilId}}/remover-cadastro",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/motoristas/{{perfilId}}/remover-cadastro",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"motoristas",
+						"{{perfilId}}",
+						"remover-cadastro"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/motoristas/{{perfilId}}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/motoristas/{{perfilId}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"motoristas",
+						"{{perfilId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/motoristas?sort=Nome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/motoristas?sort=Nome",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"motoristas"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "Nome"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
