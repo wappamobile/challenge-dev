@@ -1,0 +1,11 @@
+C:\teste\challenge-dev\Wappa.Teste.Project.Core\bin\Debug\netcoreapp3.0\Wappa.Teste.Project.Core.deps.json
+C:\teste\challenge-dev\Wappa.Teste.Project.Core\bin\Debug\netcoreapp3.0\Wappa.Teste.Project.Core.dll
+C:\teste\challenge-dev\Wappa.Teste.Project.Core\bin\Debug\netcoreapp3.0\Wappa.Teste.Project.Core.pdb
+C:\teste\challenge-dev\Wappa.Teste.Project.Core\bin\Debug\netcoreapp3.0\Wappa.Teste.Project.Infra.dll
+C:\teste\challenge-dev\Wappa.Teste.Project.Core\bin\Debug\netcoreapp3.0\Wappa.Teste.Project.Infra.pdb
+C:\teste\challenge-dev\Wappa.Teste.Project.Core\obj\Debug\netcoreapp3.0\Wappa.Teste.Project.Core.csprojAssemblyReference.cache
+C:\teste\challenge-dev\Wappa.Teste.Project.Core\obj\Debug\netcoreapp3.0\Wappa.Teste.Project.Core.AssemblyInfoInputs.cache
+C:\teste\challenge-dev\Wappa.Teste.Project.Core\obj\Debug\netcoreapp3.0\Wappa.Teste.Project.Core.AssemblyInfo.cs
+C:\teste\challenge-dev\Wappa.Teste.Project.Core\obj\Debug\netcoreapp3.0\Wappa.Teste.Project.Core.csproj.CopyComplete
+C:\teste\challenge-dev\Wappa.Teste.Project.Core\obj\Debug\netcoreapp3.0\Wappa.Teste.Project.Core.dll
+C:\teste\challenge-dev\Wappa.Teste.Project.Core\obj\Debug\netcoreapp3.0\Wappa.Teste.Project.Core.pdb

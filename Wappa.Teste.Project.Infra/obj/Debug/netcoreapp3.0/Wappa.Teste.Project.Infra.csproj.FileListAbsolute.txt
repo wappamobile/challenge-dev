@@ -1,0 +1,7 @@
+C:\teste\challenge-dev\Wappa.Teste.Project.Infra\bin\Debug\netcoreapp3.0\Wappa.Teste.Project.Infra.deps.json
+C:\teste\challenge-dev\Wappa.Teste.Project.Infra\bin\Debug\netcoreapp3.0\Wappa.Teste.Project.Infra.dll
+C:\teste\challenge-dev\Wappa.Teste.Project.Infra\bin\Debug\netcoreapp3.0\Wappa.Teste.Project.Infra.pdb
+C:\teste\challenge-dev\Wappa.Teste.Project.Infra\obj\Debug\netcoreapp3.0\Wappa.Teste.Project.Infra.AssemblyInfoInputs.cache
+C:\teste\challenge-dev\Wappa.Teste.Project.Infra\obj\Debug\netcoreapp3.0\Wappa.Teste.Project.Infra.AssemblyInfo.cs
+C:\teste\challenge-dev\Wappa.Teste.Project.Infra\obj\Debug\netcoreapp3.0\Wappa.Teste.Project.Infra.dll
+C:\teste\challenge-dev\Wappa.Teste.Project.Infra\obj\Debug\netcoreapp3.0\Wappa.Teste.Project.Infra.pdb
