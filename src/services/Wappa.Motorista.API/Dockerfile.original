@@ -3,15 +3,13 @@
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
 WORKDIR /app
 EXPOSE 80
-EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["src/services/Wappa.Motorista.API/Wappa.Motoristas.API.csproj", "src/services/Wappa.Motorista.API/"]
-COPY ["src/building blocks/Wappa.Core/Wappa.Core.csproj", "src/building blocks/Wappa.Core/"]
-RUN dotnet restore "src/services/Wappa.Motorista.API/Wappa.Motoristas.API.csproj"
+COPY ["src/services/Wappa.Motoristas.API/Wappa.Motoristas.API.csproj", "src/services/Wappa.Motoristas.API/"]
+RUN dotnet restore "src/services/Wappa.Motoristas.API/Wappa.Motoristas.API.csproj"
 COPY . .
-WORKDIR "/src/src/services/Wappa.Motorista.API"
+WORKDIR "/src/src/services/Wappa.Motoristas.API"
 RUN dotnet build "Wappa.Motoristas.API.csproj" -c Release -o /app/build
 
 FROM build AS publish

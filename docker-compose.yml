@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  wappa.motoristas.api:
+    image: ${DOCKER_REGISTRY-}wappamotoristasapi
+    build:
+      context: .
+      dockerfile: src/services/Wappa.Motorista.API/Dockerfile

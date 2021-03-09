@@ -7,3 +7,6 @@
 /src/building blocks/Wappa.Core/obj
 /src/services/Wappa.Motorista.API/bin/Debug/netcoreapp3.1
 /src/services/Wappa.Motorista.API/obj
+/obj
+/bin/Debug
+/src/services/Wappa.Motoristas.API/obj/Docker
