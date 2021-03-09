@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using NSE.Pedidos.API.Application.Queries;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +14,13 @@ namespace Wappa.Motoristas.API.Controllers
 	public class MotoristaController : MainController
 	{
 		private readonly IMediatorHandler _mediator;
+		private readonly IMotoristaQueries _motoristaQueries;
 
-		public MotoristaController(IMediatorHandler mediator)
+		public MotoristaController(IMediatorHandler mediator,
+			IMotoristaQueries motoristaQueries)
 		{
 			_mediator = mediator;
+			_motoristaQueries = motoristaQueries;
 		}
 
 		[HttpPost]
@@ -35,6 +39,14 @@ namespace Wappa.Motoristas.API.Controllers
 		public async Task<IActionResult> DeletarMotorista(DeletarMotoristaCommand motorista)
 		{
 			return CustomResponse(await _mediator.EnviarComando(motorista));
+		}
+
+		[HttpGet]
+		public async Task<IActionResult> ListarMotorista()
+		{
+			var motoristas = await _motoristaQueries.ObterListaMotoristas();
+
+			return motoristas == null ? NotFound() : CustomResponse(motoristas);
 		}
 	}
 }
