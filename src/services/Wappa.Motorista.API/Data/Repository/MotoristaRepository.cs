@@ -3,7 +3,6 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Wappa.Core.Data;
 using Wappa.Motoristas.API.Models;
-using Wappa.Motoristas.API.Data;
 
 namespace Wappa.Motoristas.API.Data.Repository
 {
@@ -23,14 +22,25 @@ namespace Wappa.Motoristas.API.Data.Repository
             return await _context.Motorista.AsNoTracking().ToListAsync();
         }
         
-        public void Adicionar(Motorista cliente)
+        public void Adicionar(Motorista motorista)
         {
-            _context.Motorista.Add(cliente);
+            _context.Motorista.Add(motorista);
         }
+
+
+		public void Atualizar(Motorista motorista)
+		{
+            _context.Motorista.Update(motorista);
+		}
+
+		public void Deletar(Motorista motorista)
+		{
+            _context.Motorista.Remove(motorista);
+		}
 
         public void Dispose()
         {
             _context.Dispose();
         }
-    }
+	}
 }
