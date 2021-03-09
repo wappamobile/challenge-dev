@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Wappa.Core.Data;
@@ -17,6 +18,7 @@ namespace Wappa.Motoristas.API.Data.Repository
         }
 
         public IUnitOfWork UnitOfWork => _context;
+        public DbConnection ObterConexao() => _context.Database.GetDbConnection();
 
         public async Task<IEnumerable<Motorista>> ObterTodos()
         {
