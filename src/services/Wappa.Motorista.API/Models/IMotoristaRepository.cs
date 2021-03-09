@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Threading.Tasks;
 using Wappa.Core.Data;
 
@@ -13,5 +14,7 @@ namespace Wappa.Motoristas.API.Models
 
         Task<Motorista> ObterPorId(Guid id);
         Task<IEnumerable<Motorista>> ObterTodos();
+
+        DbConnection ObterConexao();
     }
 }
