@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Wappa.Motoristas.API.Configuration;
+using Wappa.Motoristas.API.Data;
 
 namespace Wappa.Motoristas.API
 {
@@ -36,11 +37,11 @@ namespace Wappa.Motoristas.API
             services.RegisterServices();
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, MotoristaContext motoristaContext)
         {
             app.UseSwaggerConfiguration();
 
-            app.UseApiConfiguration(env);
+            app.UseApiConfiguration(env, motoristaContext);
         }
     }
 }

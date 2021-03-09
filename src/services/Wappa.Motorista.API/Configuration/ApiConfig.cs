@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
 using Wappa.Motoristas.API.Data;
 
 namespace Wappa.Motoristas.API.Configuration
@@ -12,8 +13,15 @@ namespace Wappa.Motoristas.API.Configuration
     {
         public static void AddApiConfiguration(this IServiceCollection services, IConfiguration configuration)
         {
+            var conn = "";
+
+            if (Environment.GetEnvironmentVariable("CONTAINER") == "true")
+                conn = configuration.GetConnectionString("Container");
+            else
+                conn = configuration.GetConnectionString("Localhost");
+
             services.AddDbContext<MotoristaContext>(options =>
-                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(conn, m => m.MigrationsAssembly("Wappa.Motoristas.API")));
 
             services.AddControllers();
 
@@ -28,12 +36,14 @@ namespace Wappa.Motoristas.API.Configuration
             });
         }
 
-        public static void UseApiConfiguration(this IApplicationBuilder app, IWebHostEnvironment env)
+        public static void UseApiConfiguration(this IApplicationBuilder app, IWebHostEnvironment env, MotoristaContext motoristaContext)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            //motoristaContext.Database.Migrate();
 
             app.UseRouting();
 
