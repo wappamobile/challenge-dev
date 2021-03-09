@@ -1,6 +1,7 @@
 ﻿using FluentValidation.Results;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using NSE.Pedidos.API.Application.Queries;
 using Wappa.Core.Mediator;
 using Wappa.Motoristas.API.Application.Commands;
 using Wappa.Motoristas.API.Data;
@@ -20,6 +21,7 @@ namespace Wappa.Motoristas.API.Configuration
 
             // Application
             services.AddScoped<IMediatorHandler, MediatorHandler>();
+            services.AddScoped<IMotoristaQueries, MotoristaQueries>();
 
             // Data
             services.AddScoped<IMotoristaRepository, MotoristaRepository>();
