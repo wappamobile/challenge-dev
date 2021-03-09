@@ -1,8 +1,5 @@
 ﻿using FluentValidation.Results;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Wappa.Core.Messages;
@@ -13,7 +10,8 @@ namespace Wappa.Motoristas.API.Application.Commands
 {
 	public class MotoristaCommandHandler : CommandHandler,
 		IRequestHandler<AdicionarMotoristaCommand, ValidationResult>,
-		IRequestHandler<AtualizarMotoristaCommand, ValidationResult>
+		IRequestHandler<AtualizarMotoristaCommand, ValidationResult>,
+		IRequestHandler<DeletarMotoristaCommand, ValidationResult>
 	{
 		private readonly IMotoristaRepository _motoristaRepository;
 
@@ -52,6 +50,21 @@ namespace Wappa.Motoristas.API.Application.Commands
 			return await PersistirDados(_motoristaRepository.UnitOfWork);
 		}
 
-		
+		public async Task<ValidationResult> Handle(DeletarMotoristaCommand message, CancellationToken cancellationToken)
+		{
+			if (!message.EhValido()) return message.ValidationResult;
+
+			var motorista = await _motoristaRepository.ObterPorId(message.Id);
+
+			if (motorista == null)
+			{
+				AdicionarErro("Motorista não foi encontrado");
+				return ValidationResult;
+			}
+
+			_motoristaRepository.Deletar(motorista);
+
+			return await PersistirDados(_motoristaRepository.UnitOfWork);
+		}
 	}
 }
