@@ -2,6 +2,7 @@
 using Wappa.Core.Messages;
 using System;
 using Wappa.Motoristas.API.Application.DTO;
+using Wappa.Motoristas.API.Models;
 
 namespace Wappa.Motoristas.API.Application.Commands
 {
@@ -21,7 +22,7 @@ namespace Wappa.Motoristas.API.Application.Commands
         {
             ValidationResult = new AdicionarMotoristaValidation().Validate(this);
             return ValidationResult.IsValid;
-        }
+        }        
 
         public class AdicionarMotoristaValidation : AbstractValidator<AdicionarMotoristaCommand>
         {
