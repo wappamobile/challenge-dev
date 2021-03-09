@@ -15,6 +15,7 @@ namespace Wappa.Motoristas.API.Configuration
         {
             // Commands
             services.AddScoped<IRequestHandler<AdicionarMotoristaCommand, ValidationResult>, MotoristaCommandHandler>();
+            services.AddScoped<IRequestHandler<AtualizarMotoristaCommand, ValidationResult>, MotoristaCommandHandler>();
 
             // Application
             services.AddScoped<IMediatorHandler, MediatorHandler>();
