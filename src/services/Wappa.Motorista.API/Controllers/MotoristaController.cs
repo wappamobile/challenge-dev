@@ -30,5 +30,11 @@ namespace Wappa.Motoristas.API.Controllers
 		{
 			return CustomResponse(await _mediator.EnviarComando(motorista));
 		}
+
+		[HttpDelete]
+		public async Task<IActionResult> DeletarMotorista(DeletarMotoristaCommand motorista)
+		{
+			return CustomResponse(await _mediator.EnviarComando(motorista));
+		}
 	}
 }
