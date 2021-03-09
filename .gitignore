@@ -1,0 +1,9 @@
+﻿################################################################################
+# Este arquivo .gitignore foi criado automaticamente pelo Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/src/building blocks/Wappa.Core/bin/Debug/netcoreapp3.1
+/src/building blocks/Wappa.Core/obj
+/src/services/Wappa.Motorista.API/bin/Debug/netcoreapp3.1
+/src/services/Wappa.Motorista.API/obj

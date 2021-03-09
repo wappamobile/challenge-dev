@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Building Blocks", "Building Blocks", "{DC4A0A94-B314-410C-803D-95E4A3F5C0FA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{D7CC5A53-341D-41FD-9A24-0BD3C5569258}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{C5A6B0DC-3A32-46A4-858D-73410D1A81E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wappa.Core", "src\building blocks\Wappa.Core\Wappa.Core.csproj", "{F1EF41B4-CA77-4B64-8C64-8AA0E16626A1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Motorista", "Motorista", "{545ADEF2-79F6-4825-97A7-AD34D64A94EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wappa.Motorista.API", "src\services\Wappa.Motorista.API\Wappa.Motorista.API.csproj", "{9AB883F8-6E98-41BF-87A0-F7AA0B0F3C60}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1EF41B4-CA77-4B64-8C64-8AA0E16626A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1EF41B4-CA77-4B64-8C64-8AA0E16626A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1EF41B4-CA77-4B64-8C64-8AA0E16626A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1EF41B4-CA77-4B64-8C64-8AA0E16626A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AB883F8-6E98-41BF-87A0-F7AA0B0F3C60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AB883F8-6E98-41BF-87A0-F7AA0B0F3C60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AB883F8-6E98-41BF-87A0-F7AA0B0F3C60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AB883F8-6E98-41BF-87A0-F7AA0B0F3C60}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C5A6B0DC-3A32-46A4-858D-73410D1A81E9} = {DC4A0A94-B314-410C-803D-95E4A3F5C0FA}
+		{F1EF41B4-CA77-4B64-8C64-8AA0E16626A1} = {C5A6B0DC-3A32-46A4-858D-73410D1A81E9}
+		{545ADEF2-79F6-4825-97A7-AD34D64A94EC} = {D7CC5A53-341D-41FD-9A24-0BD3C5569258}
+		{9AB883F8-6E98-41BF-87A0-F7AA0B0F3C60} = {545ADEF2-79F6-4825-97A7-AD34D64A94EC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1ABF1BAA-6091-41E7-93DE-3428D39E26BC}
+	EndGlobalSection
+EndGlobal
