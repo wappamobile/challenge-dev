@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Wappa.Motoristas.API.Models;
 using Wappa.Core.Data;
 using Wappa.Core.DomainObjects;
+using FluentValidation.Results;
 
 namespace Wappa.Motoristas.API.Data
 {
@@ -23,7 +24,8 @@ namespace Wappa.Motoristas.API.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            
+            modelBuilder.Ignore<ValidationResult>();
+
             foreach (var property in modelBuilder.Model.GetEntityTypes().SelectMany(
                 e => e.GetProperties().Where(p => p.ClrType == typeof(string))))
                 property.SetColumnType("varchar(100)");
@@ -32,6 +34,8 @@ namespace Wappa.Motoristas.API.Data
                 .SelectMany(e => e.GetForeignKeys())) relationship.DeleteBehavior = DeleteBehavior.Cascade;
 
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(MotoristaContext).Assembly);
+
+            base.OnModelCreating(modelBuilder);
         }
 
         public async Task<bool> Commit()

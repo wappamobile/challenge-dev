@@ -7,14 +7,13 @@ namespace Wappa.Motoristas.API.Models
     {
         public string Nome { get; private set; }
         public string SobreNome { get; private set; }
-        public Carro Carro { get; private set; }
-        public Endereco Endereco { get; private set; }
+        public Carro Carro { get; set; }
+        public Endereco Endereco { get; set; }
 
         protected Motorista() { }
 
-        public Motorista(Guid id, string nome, string sobreNome)
+        public Motorista(string nome, string sobreNome)
         {
-            Id = id;
             Nome = nome;
             SobreNome = sobreNome;
         }
