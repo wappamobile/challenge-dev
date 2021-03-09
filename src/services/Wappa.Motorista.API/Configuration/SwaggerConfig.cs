@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 
-namespace NSE.Clientes.API.Configuration
+namespace Wappa.Motoristas.API.Configuration
 {
     public static class SwaggerConfig
     {

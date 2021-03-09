@@ -3,7 +3,7 @@ using Wappa.Motoristas.API.Data;
 using Wappa.Motoristas.API.Data.Repository;
 using Wappa.Motoristas.API.Models;
 
-namespace NSE.Clientes.API.Configuration
+namespace Wappa.Motoristas.API.Configuration
 {
 	public static class DependencyInjectionConfig
     {
