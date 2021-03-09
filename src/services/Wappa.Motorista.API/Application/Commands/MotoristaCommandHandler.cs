@@ -6,12 +6,14 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Wappa.Core.Messages;
+using Wappa.Motoristas.API.Application.Extensions;
 using Wappa.Motoristas.API.Models;
 
 namespace Wappa.Motoristas.API.Application.Commands
 {
 	public class MotoristaCommandHandler : CommandHandler,
-		IRequestHandler<AdicionarMotoristaCommand, ValidationResult>
+		IRequestHandler<AdicionarMotoristaCommand, ValidationResult>,
+		IRequestHandler<AtualizarMotoristaCommand, ValidationResult>
 	{
 		private readonly IMotoristaRepository _motoristaRepository;
 
@@ -24,34 +26,32 @@ namespace Wappa.Motoristas.API.Application.Commands
 		{
 			if (!message.EhValido()) return message.ValidationResult;
 
-			var motorista = MapearMotorista(message);
+			var motorista = message.MapearMotorista();
 
 			_motoristaRepository.Adicionar(motorista);
 
 			return await PersistirDados(_motoristaRepository.UnitOfWork);
 		}
 
-		private Motorista MapearMotorista(AdicionarMotoristaCommand message)
+		public async Task<ValidationResult> Handle(AtualizarMotoristaCommand message, CancellationToken cancellationToken)
 		{
-			var endereco = new Endereco
+			if (!message.EhValido()) return message.ValidationResult;
+			
+			var motorista = await _motoristaRepository.ObterPorId(message.Id);
+
+			if (motorista == null)
 			{
-				Logradouro = message.Endereco.Logradouro,
-				Numero = message.Endereco.Numero,
-				Complemento = message.Endereco.Complemento,
-				Bairro = message.Endereco.Bairro,
-				Cep = message.Endereco.Cep,
-				Cidade = message.Endereco.Cidade,
-				Estado = message.Endereco.Estado
-			};
+				AdicionarErro("Motorista não foi encontrado");
+				return ValidationResult;
+			}
 
-			var carro = new Carro(message.Carro.Marca, message.Carro.Modelo, message.Carro.Placa);
+			message.MapearMotorista(motorista);
 
-			var motorista = new Motorista(message.Nome, message.SobreNome);
+			_motoristaRepository.Atualizar(motorista);
 
-			motorista.Carro = carro;
-			motorista.Endereco = endereco;
-
-			return motorista;
+			return await PersistirDados(_motoristaRepository.UnitOfWork);
 		}
+
+		
 	}
 }
