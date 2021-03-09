@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Wappa.Core.Data;
 
@@ -10,6 +11,7 @@ namespace Wappa.Motoristas.API.Models
         void Atualizar(Motorista motorista);
         void Deletar(Motorista motorista);
 
+        Task<Motorista> ObterPorId(Guid id);
         Task<IEnumerable<Motorista>> ObterTodos();
     }
 }

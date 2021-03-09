@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Wappa.Core.Data;
@@ -38,9 +39,18 @@ namespace Wappa.Motoristas.API.Data.Repository
             _context.Motorista.Remove(motorista);
 		}
 
+		public Task<Motorista> ObterPorId(Guid id)
+		{
+            return _context.Motorista
+                .Include(d => d.Carro)
+                .Include(f=>f.Endereco)
+                .FirstOrDefaultAsync(f => f.Id == id);
+		}
+
         public void Dispose()
         {
             _context.Dispose();
         }
+
 	}
 }
