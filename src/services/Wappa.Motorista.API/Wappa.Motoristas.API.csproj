@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="8.6.2" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="3.1.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.3">
@@ -29,6 +30,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\building blocks\Wappa.Core\Wappa.Core.csproj" />
+    <ProjectReference Include="..\..\building blocks\Wappa.MessageBus\Wappa.MessageBus.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Application\Events\" />
+    <Folder Include="Application\Queries\" />
   </ItemGroup>
 
 
