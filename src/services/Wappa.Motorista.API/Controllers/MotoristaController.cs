@@ -24,5 +24,11 @@ namespace Wappa.Motoristas.API.Controllers
 		{
 			return CustomResponse(await _mediator.EnviarComando(motorista));
 		}
+
+		[HttpPut]
+		public async Task<IActionResult> AtualizarMotorista(AtualizarMotoristaCommand motorista)
+		{
+			return CustomResponse(await _mediator.EnviarComando(motorista));
+		}
 	}
 }
