@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Wappa.Motorista.API.Controllers
+namespace Wappa.Motoristas.API.Controllers
 {
 	[ApiController]
 	[Route("[controller]")]

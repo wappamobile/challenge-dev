@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NSE.Core.DomainObjects
+namespace Wappa.Core.DomainObjects
 {
     public abstract class Entity
     {

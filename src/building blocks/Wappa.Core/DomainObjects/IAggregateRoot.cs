@@ -1,4 +1,4 @@
-﻿namespace NSE.Core.DomainObjects
+﻿namespace Wappa.Core.DomainObjects
 {
     public interface IAggregateRoot { }
 }

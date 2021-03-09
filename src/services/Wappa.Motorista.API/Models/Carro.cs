@@ -1,7 +1,7 @@
-﻿using NSE.Core.DomainObjects;
+﻿using Wappa.Core.DomainObjects;
 using System;
 
-namespace Wappa.Motorista.API.Models
+namespace Wappa.Motoristas.API.Models
 {
 	public class Carro: Entity
 	{

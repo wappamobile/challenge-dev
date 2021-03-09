@@ -1,7 +1,7 @@
-﻿using NSE.Core.DomainObjects;
+﻿using Wappa.Core.DomainObjects;
 using System;
 
-namespace Wappa.Motorista.API.Models
+namespace Wappa.Motoristas.API.Models
 {
 	public class Endereco: Entity
 	{
@@ -14,7 +14,7 @@ namespace Wappa.Motorista.API.Models
         public string Estado { get; private set; }
         public Guid MotoristaId { get; private set; }
 
-        public Motorista Cliente { get; protected set; }
+        public Motorista Motorista { get; protected set; }
 
         public Endereco(string logradouro, string numero, string complemento, string bairro, string cep, string cidade, string estado)
         {

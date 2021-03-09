@@ -9,11 +9,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{D7
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{C5A6B0DC-3A32-46A4-858D-73410D1A81E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wappa.Core", "src\building blocks\Wappa.Core\Wappa.Core.csproj", "{F1EF41B4-CA77-4B64-8C64-8AA0E16626A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wappa.Core", "src\building blocks\Wappa.Core\Wappa.Core.csproj", "{F1EF41B4-CA77-4B64-8C64-8AA0E16626A1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Motorista", "Motorista", "{545ADEF2-79F6-4825-97A7-AD34D64A94EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wappa.Motorista.API", "src\services\Wappa.Motorista.API\Wappa.Motorista.API.csproj", "{9AB883F8-6E98-41BF-87A0-F7AA0B0F3C60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wappa.Motoristas.API", "src\services\Wappa.Motorista.API\Wappa.Motoristas.API.csproj", "{9AB883F8-6E98-41BF-87A0-F7AA0B0F3C60}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
