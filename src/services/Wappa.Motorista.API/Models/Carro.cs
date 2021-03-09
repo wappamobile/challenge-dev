@@ -5,11 +5,11 @@ namespace Wappa.Motoristas.API.Models
 {
 	public class Carro: Entity
 	{
-        public string Marca { get; private set; }
-        public string Modelo { get; private set; }
-        public string Placa { get; private set; }
+        public string Marca { get; set; }
+        public string Modelo { get; set; }
+        public string Placa { get; set; }
         
-        public Guid MotoristaId { get; private set; }
+        public Guid MotoristaId { get; set; }
 
         // EF Relation
         public Motorista Motorista { get; protected set; }
