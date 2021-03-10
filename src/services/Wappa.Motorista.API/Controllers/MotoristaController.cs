@@ -6,7 +6,6 @@ using System.Net;
 using FluentValidation.Results;
 using Swashbuckle.AspNetCore.Annotations;
 using Wappa.Motoristas.API.Application.Queries;
-using Wappa.Motoristas.API.Services;
 using Wappa.WebAPI.Core.Controllers;
 
 namespace Wappa.Motoristas.API.Controllers
