@@ -16,7 +16,7 @@ namespace Wappa.WebAPI.Core.Controllers
         {
             if (OperacaoValida())
             {
-                return Ok(result);
+                return Ok(result ?? new { sucesso = true});
             }
 
             return BadRequest(new ValidationProblemDetails(new Dictionary<string, string[]>
