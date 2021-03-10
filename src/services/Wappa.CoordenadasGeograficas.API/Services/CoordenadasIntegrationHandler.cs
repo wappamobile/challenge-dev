@@ -28,17 +28,19 @@ namespace Wappa.CoordenadasGeograficas.API.Services
 
 		private async Task<ResponseMessage> ConsultarCoordenada(SolicitouCadastroMotoristaIntegrationEvent request)
 		{
-			var enderecoConsultar = new Endereco(request.Logradouro,
-				request.Numero, 
-				request.Complemento, 
-				request.Bairro, 
-				request.Cep, 
-				request.Cidade, 
-				request.Estado);
+			var enderecoConsultar = new Endereco();
+
+			enderecoConsultar.Logradouro = request.Logradouro;
+			enderecoConsultar.Numero = request.Numero;
+			enderecoConsultar.Complemento = request.Complemento;
+			enderecoConsultar.Bairro = request.Bairro;
+			enderecoConsultar.Cep = request.Cep;
+			enderecoConsultar.Cidade = request.Cidade;
+			enderecoConsultar.Estado = request.Estado;
 
 			var result = await _googleGeocondingService.BuscarCoordenadas(enderecoConsultar);
 
-			var coordenadaResponse = new ResponseMessage(new ValidationResult(), result.Longitude, result.Latitude);		
+			var coordenadaResponse = new ResponseMessage(new ValidationResult(), result.Longitude, result.Latitude);
 
 			return coordenadaResponse;
 		}
