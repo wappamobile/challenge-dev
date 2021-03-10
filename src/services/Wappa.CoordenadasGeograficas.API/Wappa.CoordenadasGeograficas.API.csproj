@@ -23,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\building blocks\Wappa.MessageBus\Wappa.MessageBus.csproj" />
     <ProjectReference Include="..\..\building blocks\Wappa.WebAPI.Core\Wappa.WebAPI.Core.csproj" />
   </ItemGroup>
 
