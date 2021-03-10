@@ -9,6 +9,7 @@ using Wappa.Motoristas.API.Application.Queries;
 using Wappa.WebAPI.Core.Controllers;
 using Wappa.MessageBus;
 using Wappa.Core.Messages.Integration;
+using Wappa.Motoristas.API.Application.DTO;
 
 namespace Wappa.Motoristas.API.Controllers
 {
@@ -52,7 +53,9 @@ namespace Wappa.Motoristas.API.Controllers
 			if (!solicitacaoCoordenadaEvent.EhValido())
 				return CustomResponse(solicitacaoCoordenadaEvent.ValidationResult);
 
-			var coordeandas = await _bus.RequestAsync<SolicitouCadastroMotoristaIntegrationEvent, ResponseMessage>(solicitacaoCoordenadaEvent);
+			var coordenadas = await _bus.RequestAsync<SolicitouCadastroMotoristaIntegrationEvent, ResponseMessage>(solicitacaoCoordenadaEvent);
+
+			motorista.Endereco.Coordenadas = new CoordenadasDTO(coordenadas.Longitude, coordenadas.Latitude);
 
 			return CustomResponse(await _mediator.EnviarComando(motorista));
 		}
@@ -67,6 +70,21 @@ namespace Wappa.Motoristas.API.Controllers
 		[SwaggerResponse((int)HttpStatusCode.BadRequest, Description = "Retorna quando ocorre alguma falha.")]
 		public async Task<IActionResult> AtualizarMotorista(AtualizarMotoristaCommand motorista)
 		{
+			var solicitacaoCoordenadaEvent = new SolicitouCadastroMotoristaIntegrationEvent(motorista.Endereco.Logradouro,
+				motorista.Endereco.Numero,
+				motorista.Endereco.Complemento,
+				motorista.Endereco.Bairro,
+				motorista.Endereco.Cep,
+				motorista.Endereco.Cidade,
+				motorista.Endereco.Estado);
+
+			if (!solicitacaoCoordenadaEvent.EhValido())
+				return CustomResponse(solicitacaoCoordenadaEvent.ValidationResult);
+
+			var coordenadas = await _bus.RequestAsync<SolicitouCadastroMotoristaIntegrationEvent, ResponseMessage>(solicitacaoCoordenadaEvent);
+
+			motorista.Endereco.Coordenadas = new CoordenadasDTO(coordenadas.Longitude, coordenadas.Latitude);
+
 			return CustomResponse(await _mediator.EnviarComando(motorista));
 		}
 
