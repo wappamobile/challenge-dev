@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Wappa.Motoristas.API.Data;
 
 namespace Wappa.Motoristas.API.Migrations
 {
     [DbContext(typeof(MotoristaContext))]
-    partial class MotoristaContextModelSnapshot : ModelSnapshot
+    [Migration("20210310071419_Coordenadas")]
+    partial class Coordenadas
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -74,14 +76,14 @@ namespace Wappa.Motoristas.API.Migrations
                         .HasColumnType("varchar(50)");
 
                     b.Property<decimal>("Latitude")
-                        .HasColumnType("decimal(18,10)");
+                        .HasColumnType("decimal(18)");
 
                     b.Property<string>("Logradouro")
                         .IsRequired()
                         .HasColumnType("varchar(200)");
 
-                    b.Property<decimal>("Longitude")
-                        .HasColumnType("decimal(18,10)");
+                    b.Property<decimal>("Longitute")
+                        .HasColumnType("decimal(18)");
 
                     b.Property<Guid>("MotoristaId")
                         .HasColumnType("uniqueidentifier");
