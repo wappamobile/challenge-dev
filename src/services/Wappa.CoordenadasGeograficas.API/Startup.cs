@@ -32,9 +32,11 @@ namespace Wappa.CoordenadasGeograficas.API
         {
             services.AddApiConfiguration(Configuration);
 
-            services.AddSwaggerConfiguration();
+            services.AddSwaggerConfiguration();            
 
             services.RegisterServices();
+
+            services.AddMessageBusConfiguration(Configuration);
 
             services.Configure<AppSettings>(Configuration);
         }
