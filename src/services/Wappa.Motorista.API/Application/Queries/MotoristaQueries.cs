@@ -6,7 +6,7 @@ using Dapper;
 using Wappa.Motoristas.API.Application.DTO;
 using Wappa.Motoristas.API.Models;
 
-namespace NSE.Pedidos.API.Application.Queries
+namespace Wappa.Motoristas.API.Application.Queries
 {
     public interface IMotoristaQueries
     {

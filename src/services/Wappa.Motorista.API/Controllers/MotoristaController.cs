@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using NSE.Pedidos.API.Application.Queries;
 using System.Threading.Tasks;
 using Wappa.Core.Mediator;
 using Wappa.Motoristas.API.Application.Commands;
 using System.Net;
 using FluentValidation.Results;
 using Swashbuckle.AspNetCore.Annotations;
+using Wappa.Motoristas.API.Application.Queries;
 
 namespace Wappa.Motoristas.API.Controllers
 {
