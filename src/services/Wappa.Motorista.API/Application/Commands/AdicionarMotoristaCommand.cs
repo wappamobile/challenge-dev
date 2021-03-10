@@ -3,6 +3,7 @@ using Wappa.Core.Messages;
 using System;
 using Wappa.Motoristas.API.Application.DTO;
 using Wappa.Motoristas.API.Models;
+using System.Text.Json.Serialization;
 
 namespace Wappa.Motoristas.API.Application.Commands
 {
@@ -17,7 +18,7 @@ namespace Wappa.Motoristas.API.Application.Commands
 
         // Endereco
         public EnderecoDTO Endereco { get; set; }
-		
+
         public override bool EhValido()
         {
             ValidationResult = new AdicionarMotoristaValidation().Validate(this);

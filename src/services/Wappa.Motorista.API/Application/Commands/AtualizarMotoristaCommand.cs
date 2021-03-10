@@ -2,6 +2,7 @@
 using Wappa.Core.Messages;
 using System;
 using Wappa.Motoristas.API.Application.DTO;
+using System.Text.Json.Serialization;
 
 namespace Wappa.Motoristas.API.Application.Commands
 {
