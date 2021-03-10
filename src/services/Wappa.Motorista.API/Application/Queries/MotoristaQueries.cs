@@ -27,6 +27,8 @@ namespace Wappa.Motoristas.API.Application.Queries
 													E.COMPLEMENTO, 
 													E.CIDADE, 
 													E.ESTADO,
+													E.LATITUDE,
+                                                    E.LONGITUDE,
 													C.MARCA,
 													C.MODELO,
 													C.PLACA
