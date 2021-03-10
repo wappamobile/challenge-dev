@@ -38,6 +38,8 @@ namespace Wappa.Motoristas.API
             services.AddMediatR(typeof(Startup));
 
             services.RegisterServices();
+
+            services.AddMessageBusConfiguration(Configuration);
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, MotoristaContext motoristaContext)

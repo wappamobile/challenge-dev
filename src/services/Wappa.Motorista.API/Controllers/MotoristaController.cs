@@ -7,6 +7,8 @@ using FluentValidation.Results;
 using Swashbuckle.AspNetCore.Annotations;
 using Wappa.Motoristas.API.Application.Queries;
 using Wappa.WebAPI.Core.Controllers;
+using Wappa.MessageBus;
+using Wappa.Core.Messages.Integration;
 
 namespace Wappa.Motoristas.API.Controllers
 {
@@ -18,12 +20,15 @@ namespace Wappa.Motoristas.API.Controllers
 	{
 		private readonly IMediatorHandler _mediator;
 		private readonly IMotoristaQueries _motoristaQueries;
+		private readonly IMessageBus _bus;
 
 		public MotoristaController(IMediatorHandler mediator,
-			IMotoristaQueries motoristaQueries)
+			IMotoristaQueries motoristaQueries,
+			IMessageBus bus)
 		{
 			_mediator = mediator;
 			_motoristaQueries = motoristaQueries;
+			_bus = bus;
 		}
 
 		/// <summary>
@@ -36,6 +41,19 @@ namespace Wappa.Motoristas.API.Controllers
 		[SwaggerResponse((int)HttpStatusCode.BadRequest, Description = "Retorna quando ocorre alguma falha.")]
 		public async Task<IActionResult> AdicionarMotorista(AdicionarMotoristaCommand motorista)
 		{
+			var solicitacaoCoordenadaEvent = new SolicitouCadastroMotoristaIntegrationEvent(motorista.Endereco.Logradouro,
+				motorista.Endereco.Numero,
+				motorista.Endereco.Complemento,
+				motorista.Endereco.Bairro,
+				motorista.Endereco.Cep,
+				motorista.Endereco.Cidade,
+				motorista.Endereco.Estado);
+
+			if (!solicitacaoCoordenadaEvent.EhValido())
+				return CustomResponse(solicitacaoCoordenadaEvent.ValidationResult);
+
+			var coordeandas = await _bus.RequestAsync<SolicitouCadastroMotoristaIntegrationEvent, ResponseMessage>(solicitacaoCoordenadaEvent);
+
 			return CustomResponse(await _mediator.EnviarComando(motorista));
 		}
 
