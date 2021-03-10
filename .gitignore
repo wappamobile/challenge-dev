@@ -1,0 +1,21 @@
+﻿################################################################################
+# Este arquivo .gitignore foi criado automaticamente pelo Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/src/building blocks/Wappa.Core/bin/Debug/netcoreapp3.1
+/src/building blocks/Wappa.Core/obj
+/src/services/Wappa.Motorista.API/bin/Debug/netcoreapp3.1
+/src/services/Wappa.Motorista.API/obj
+/obj
+/bin/Debug
+/src/services/Wappa.Motoristas.API/obj/Docker
+/src/building blocks/Wappa.MessageBus/obj
+/src/building blocks/Wappa.MessageBus/bin/Debug/netcoreapp3.1
+/src/services/Wappa.Geolocalizacao.API/bin/Debug/netcoreapp3.1
+/src/services/Wappa.Geolocalizacao.API/obj
+/src/services/Wappa.CoordenadasGeograficas.API/bin/Debug/netcoreapp3.1
+/src/services/Wappa.CoordenadasGeograficas.API/obj
+/src/building blocks/Wappa.WebAPI.Core/bin/Debug/netcoreapp3.1
+/src/building blocks/Wappa.WebAPI.Core/obj
+/src/services/Wappa.Motorista.API/bin/Debug
