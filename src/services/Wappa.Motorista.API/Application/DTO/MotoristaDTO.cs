@@ -13,7 +13,7 @@ namespace Wappa.Motoristas.API.Application.DTO
         public string SobreNome { get; set; }
         
         public EnderecoDTO Endereco { get; set; }
-        public CarroDTO Carro { get; set; }
+        public CarroDTO Carro { get; set; }        
 
         public static List<MotoristaDTO> ParaMotoristaDTO(dynamic motoristas)
         {
@@ -39,6 +39,7 @@ namespace Wappa.Motoristas.API.Application.DTO
                     Cep = motorista.CEP,
                     Cidade = motorista.CIDADE,
                     Estado = motorista.ESTADO,
+                    Coordenadas = new CoordenadasDTO(motorista.LONGITUDE, motorista.LATITUDE)
                 };
 
                 motoristaDTO.Carro = new CarroDTO
