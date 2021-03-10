@@ -21,9 +21,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MessageBus", "MessageBus", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wappa.MessageBus", "src\building blocks\Wappa.MessageBus\Wappa.MessageBus.csproj", "{D4975541-0CC6-493B-90B2-AB3757D2A1B2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Geolocalizacao", "Geolocalizacao", "{951C0702-1109-463A-8FB3-276221ADB711}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Coordenadas Geograficas", "Coordenadas Geograficas", "{951C0702-1109-463A-8FB3-276221ADB711}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wappa.CoordenadasGeograficas.API", "src\services\Wappa.CoordenadasGeograficas.API\Wappa.CoordenadasGeograficas.API.csproj", "{B6B9227F-7CBE-426E-90C6-53D015B86357}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{DC09A6A3-F2B1-48A3-B3ED-268E650A7EB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wappa.WebAPI.Core", "src\building blocks\Wappa.WebAPI.Core\Wappa.WebAPI.Core.csproj", "{8155999B-3EB8-44D2-BA43-86C97F42AE38}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,10 @@ Global
 		{B6B9227F-7CBE-426E-90C6-53D015B86357}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6B9227F-7CBE-426E-90C6-53D015B86357}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6B9227F-7CBE-426E-90C6-53D015B86357}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8155999B-3EB8-44D2-BA43-86C97F42AE38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8155999B-3EB8-44D2-BA43-86C97F42AE38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8155999B-3EB8-44D2-BA43-86C97F42AE38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8155999B-3EB8-44D2-BA43-86C97F42AE38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +72,8 @@ Global
 		{D4975541-0CC6-493B-90B2-AB3757D2A1B2} = {C94A4B68-ABAF-4566-8E42-3D603870A4F2}
 		{951C0702-1109-463A-8FB3-276221ADB711} = {D7CC5A53-341D-41FD-9A24-0BD3C5569258}
 		{B6B9227F-7CBE-426E-90C6-53D015B86357} = {951C0702-1109-463A-8FB3-276221ADB711}
+		{DC09A6A3-F2B1-48A3-B3ED-268E650A7EB0} = {DC4A0A94-B314-410C-803D-95E4A3F5C0FA}
+		{8155999B-3EB8-44D2-BA43-86C97F42AE38} = {DC09A6A3-F2B1-48A3-B3ED-268E650A7EB0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1ABF1BAA-6091-41E7-93DE-3428D39E26BC}

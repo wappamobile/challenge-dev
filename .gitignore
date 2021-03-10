@@ -16,3 +16,5 @@
 /src/services/Wappa.Geolocalizacao.API/obj
 /src/services/Wappa.CoordenadasGeograficas.API/bin/Debug/netcoreapp3.1
 /src/services/Wappa.CoordenadasGeograficas.API/obj
+/src/building blocks/Wappa.WebAPI.Core/bin/Debug/netcoreapp3.1
+/src/building blocks/Wappa.WebAPI.Core/obj
