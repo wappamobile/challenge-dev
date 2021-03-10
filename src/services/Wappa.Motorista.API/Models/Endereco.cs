@@ -13,6 +13,9 @@ namespace Wappa.Motoristas.API.Models
         public string Cidade { get; set; }
         public string Estado { get; set; }
         public Guid MotoristaId { get; set; }
+        public decimal Longitude { get; set; }
+        public decimal Latitude{ get; set; }
+
 
         public Motorista Motorista { get; protected set; }
 

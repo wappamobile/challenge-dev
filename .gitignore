@@ -18,3 +18,4 @@
 /src/services/Wappa.CoordenadasGeograficas.API/obj
 /src/building blocks/Wappa.WebAPI.Core/bin/Debug/netcoreapp3.1
 /src/building blocks/Wappa.WebAPI.Core/obj
+/src/services/Wappa.Motorista.API/bin/Debug
