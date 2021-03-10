@@ -37,6 +37,12 @@ namespace Wappa.Motoristas.API.Data.Mappings
                 .IsRequired()
                 .HasColumnType("varchar(50)");
 
+            builder.Property(c => c.Longitude)
+                .HasColumnType("decimal(18)");
+
+            builder.Property(c => c.Latitude)
+                .HasColumnType("decimal(18)");
+
             builder.ToTable("Enderecos");
         }
     }
