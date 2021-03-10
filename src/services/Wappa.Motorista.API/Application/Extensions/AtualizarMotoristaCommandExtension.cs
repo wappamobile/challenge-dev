@@ -19,6 +19,9 @@ namespace Wappa.Motoristas.API.Application.Extensions
             motorista.Endereco.Cidade = message.Endereco.Cidade;
             motorista.Endereco.Estado = message.Endereco.Estado;
 
+            motorista.Endereco.Longitude = message.Endereco.Coordenadas.Longitude;
+            motorista.Endereco.Latitude = message.Endereco.Coordenadas.Latitude;
+
             motorista.Nome = message.Nome;
             motorista.SobreNome = message.SobreNome;
 

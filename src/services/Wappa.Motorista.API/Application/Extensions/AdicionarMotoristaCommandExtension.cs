@@ -15,7 +15,9 @@ namespace Wappa.Motoristas.API.Application.Extensions
                 Bairro = message.Endereco.Bairro,
                 Cep = message.Endereco.Cep,
                 Cidade = message.Endereco.Cidade,
-                Estado = message.Endereco.Estado
+                Estado = message.Endereco.Estado,
+                Latitude = message.Endereco.Coordenadas.Latitude,
+                Longitude = message.Endereco.Coordenadas.Longitude,
             };
 
             var carro = new Carro(message.Carro.Marca, message.Carro.Modelo, message.Carro.Placa);
