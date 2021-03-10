@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Wappa.CoordenadasGeograficas.API.Configuration;
+using Wappa.Core.Extensions;
 
 namespace Wappa.CoordenadasGeograficas.API
 {
@@ -32,6 +33,10 @@ namespace Wappa.CoordenadasGeograficas.API
             services.AddApiConfiguration(Configuration);
 
             services.AddSwaggerConfiguration();
+
+            services.RegisterServices();
+
+            services.Configure<AppSettings>(Configuration);
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
