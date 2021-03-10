@@ -12,3 +12,7 @@
 /src/services/Wappa.Motoristas.API/obj/Docker
 /src/building blocks/Wappa.MessageBus/obj
 /src/building blocks/Wappa.MessageBus/bin/Debug/netcoreapp3.1
+/src/services/Wappa.Geolocalizacao.API/bin/Debug/netcoreapp3.1
+/src/services/Wappa.Geolocalizacao.API/obj
+/src/services/Wappa.CoordenadasGeograficas.API/bin/Debug/netcoreapp3.1
+/src/services/Wappa.CoordenadasGeograficas.API/obj
